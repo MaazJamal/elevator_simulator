@@ -5,7 +5,7 @@
  * \brief structure for to store important information about a passenger.
  * 
  * Stores the arrival time and floor and destination floor of the passenger.
- * as well as the passenger id 
+ * as well as the passenger id. There is a next passenger pointer to create queues
  */
 
 struct passenger{
@@ -13,6 +13,7 @@ unsigned int	arrival_time; //!< stores arrival time of the passenger
 unsigned int	arrival_floor; //!< stores the arrival_floor of the passenger
 unsigned int	dest_floor; //!< stores the destination floor of the passenger
 unsigned int 	id; //!< stores the passenger_id of the passenger
+struct passenger* next; //! stores address of the next node in case of creation of queues
 };
 
 /** 
@@ -36,4 +37,8 @@ unsigned int	cur_floor; //!
 unsigned int 	timer; //! Time clock untill the next floor
 struct passenger *passenger_arr; //! points to a array of struct pasenger of size max_passenger.   
 };
+
+/** 
+ * \brief a linked list that will be used to form a queue of passenger requests.
+ */
 
