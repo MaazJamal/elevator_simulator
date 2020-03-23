@@ -2,10 +2,10 @@
 #include<stdlib.h>
 int count_passenger()
 {
-    int passenger_count=0;
+    passenger_count=0;
     FILE *f;
     char a[10];
-    f=fopen("D:\\Software in C\\fwdinputfiles\\input.txt","r");
+    f=fopen("inputfiles/input.txt","r");
     while(fscanf(f,"%s",a)!=EOF)
     {
         passenger_count++;
