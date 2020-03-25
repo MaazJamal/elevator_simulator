@@ -14,11 +14,12 @@
  */
 
 struct passenger{
+bool	in_elevator; //!< Stores whether passegner is in elevator. 
 unsigned int	arrival_time; //!< stores arrival time of the passenger
 unsigned int	arrival_floor; //!< stores the arrival_floor of the passenger
 unsigned int	dest_floor; //!< stores the destination floor of the passenger
 unsigned int 	id; //!< stores the passenger_id of the passenger
-struct passenger* next; //! stores address of the next node in case of creation of queues
+struct passenger*next; //! stores address of the next node in case of creation of queues
 };
 
 /** 
