@@ -13,13 +13,14 @@
 
 extern void test_input_lifts(void);
 extern void test_moving_lift_down(void);
+extern void test_add_request_queue();
 
 int main(void){
     
     printf("Testing All functions.\n");
     test_input_lifts();
     test_moving_lift_down();
-    
+    test_add_request_queue();
     return 1;
 }
 
