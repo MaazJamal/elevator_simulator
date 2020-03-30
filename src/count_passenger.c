@@ -17,6 +17,11 @@ int count_passenger()
     FILE *f;
     char a[10];
     f=fopen("datafolder/input.txt","r");
+    if (f==NULL) 
+    { 
+        printf("no input file exists"); 
+        return 0; 
+    }
     while(fscanf(f,"%s",a)!=EOF)
     {
         if((passenger_count==0)||(passenger_count%4)==0)
