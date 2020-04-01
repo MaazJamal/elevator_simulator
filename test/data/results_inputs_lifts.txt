@@ -1,0 +1,13 @@
+FAIL: Input: abd, Expected Output: -1, Output: 1 .
+FAIL: Input: wbb120, Expected Output: -1, Output: 1 .
+FAIL: Input: 0, Expected Output: -1, Output: 1 .
+FAIL: Input: -100, Expected Output: -1, Output: 1 .
+FAIL: Input: 101, Expected Output: -1, Output: 1 .
+PASS: Input: 1, Expected Output: 1, Output: 1 .
+FAIL: Input: 100, Expected Output: 100, Output: 1 .
+FAIL: Input: 50, Expected Output: 50, Output: 1 .
+FAIL: Input: 23.3, Expected Output: 23, Output: 1 .
+FAIL: Input: 0.9, Expected Output: -1, Output: 1 .
+PASS: Input: 1.0, Expected Output: 1, Output: 1 .
+FAIL: Input: 100.1, Expected Output: 100, Output: 1 .
+FAIL: Input: 100.0, Expected Output: 100, Output: 1 .
