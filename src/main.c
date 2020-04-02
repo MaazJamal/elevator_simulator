@@ -8,6 +8,7 @@
 
 int main(){
 	is_lift_empty();
+	//printf("The lift is empty")
 	return 0;
 }
 
