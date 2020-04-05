@@ -5,7 +5,7 @@
 #include "../include/moving_lift_up.h"
 
 /*
- * @brief To set the direction of the lift
+ * @brief To set the direction of the lift to Upward direction
  *
  * @detail The function is to set the direction of the lift to UP. The function calls with two
  * parameters: an array of elevators of elevator type and an integer value which indicated the
