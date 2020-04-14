@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include"structure.h"
 #include"create_elevator_array.h"
 
 /**
@@ -22,16 +23,16 @@ Returns the array of elevators.
 
 struct elevator * create_elevator_array(int no_of_elevators)
 {
-	if((no_of_elevators==0)||(no_of_elevators>100)||(no_of_elevators<1))
+	if((no_of_elevators==0)||(no_of_elevators>100)||(no_of_elevators<1))//checks if the input parameter is valid.
 	{
-		printf("Input parameter -Number of elevators enetered is invalid ");
+		printf("Input parameter -Number of elevators entered is invalid \n");
 		return 0;
 	}
 	struct elevator *ele;
-	ele=malloc (no_of_elevators * sizeof(struct elevator));
-	if(ele==NULL)
+	ele=malloc (no_of_elevators * sizeof(struct elevator));//creates memory for the input-no_of_elevators.
+	if(ele==NULL)//checks if the memory allocation is success
 	{
-		printf("Memory allocation failed ");
+		printf("Memory allocation failed \n");
 		return 0;
 	}
 	else
