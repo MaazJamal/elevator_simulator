@@ -10,7 +10,7 @@
  *  */
  struct passenger * create_floor_array(int no_of_floors)
  {
-    if((no_of_floors==0)||(no_of_floors>100)||(no_of_floors<1))
+    if(no_of_floors>floor_count)
 	{
 		return 0;
 	}
