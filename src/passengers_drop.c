@@ -4,6 +4,7 @@
 #include<stdlib.h>
 #include <stdbool.h>
 #include "globals.h"
+#inclue "structures.h"
 /**
  * The function takes in the elevator_array
  *
@@ -19,9 +20,9 @@ int passengers_drop(struct elevator elevator_arr[], int index, struct passenger*
 	assert(cur_floor != elevator_arr[index].cur_floor);
 
 	
-	int passenger_dropped = passenger_capacity;
+	int passenger_dropped = 0;
     //Loop to iterate the overall passengers in the elevator
-	for(int i = 0; i < passenger_capacity; i++)
+	for(int i = 0; i < max_passenger; i++)
 	{
 		if(elevator_arr[index].passenger_arr[i].dest_floor == cur_floor)
 		{
