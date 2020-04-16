@@ -2,7 +2,7 @@
 #include "../include/globals.h"
 #include "../include/average_waiting_time.h"
 
-/*
+/**
 *@brief Calculates the average waiting time for the passengers
 *
 *@detail The function is to measure the average time the passengers took to wait to get into
@@ -19,7 +19,7 @@
 * get the average waiting time.
 *
 * @return float Returns the average waiting time.
-*/
+**/
 
 float average_waiting_time(float time_difference){
 	static int counter;

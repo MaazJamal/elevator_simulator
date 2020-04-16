@@ -6,7 +6,7 @@
  * 
  * Stores the arrival time and floor and destination floor of the passenger.
  * as well as the passenger id 
- */
+ **/
 
 struct passenger{
 unsigned int	arrival_time; //!< stores arrival time of the passenger
@@ -22,7 +22,7 @@ unsigned int 	id; //!< stores the passenger_id of the passenger
  * the floors to stop at. The maximum number of passengers the lift can accomodate 
  * and the current passengers in the lift and their information.
  * and time it takes to go to the reach next floor. 
- */
+ **/
 
 struct elevator{
 bool	moving; //! Is the elevator moving? True 1 or False(stationary) 0.

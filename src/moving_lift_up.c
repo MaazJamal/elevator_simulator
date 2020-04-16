@@ -4,7 +4,7 @@
 #include "../include/structures.h"
 #include "../include/moving_lift_up.h"
 
-/*
+/**
  * @brief To set the direction of the lift to Upward direction
  *
  * @detail The function is to set the direction of the lift to UP. The function calls with two
@@ -15,7 +15,7 @@
  *  message and will return -1
  * Otherwise, it will set the direction of that particular elevator to UP.
  * @returns integer value 1 if everything goes well.
- */
+ **/
 
 int moving_lift_up(struct elevator elevator_arr[], unsigned int index){
 

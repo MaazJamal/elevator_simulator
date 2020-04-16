@@ -2,7 +2,7 @@
 #include "../include/globals.h"
 #include "../include/is_lift_empty.h"
 
-/*
+/**
 *@brief Checks if there is any space in the elevator to add more passengers
 *
 *@detail The function is to check if the elevator has any space to accommodate any
@@ -18,7 +18,7 @@
 *
 * @return integer Returns -1 if errors in input and 1 if it has any space
 * for any passenger and 0 if not.
-*/
+**/
 unsigned int elevator_count; //definition of the global variable
 int is_lift_empty(struct elevator elevator_arr[], unsigned int index){
     int has_space;

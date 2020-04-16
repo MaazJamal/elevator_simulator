@@ -2,7 +2,7 @@
 #include "../include/globals.h"
 #include "../include/max_waiting_time.h"
 
-/*
+/**
 *@brief Calculates the maximum waiting time for the passengers
 *
 *@detail The function is to measure the maximum time the passengers took to wait to get into
@@ -14,7 +14,7 @@
 * passenger arrived and the time passenger got into the elevator
 *
 * @return float Returns the maximum waiting time.
-*/
+**/
 
 float max_waiting_time(float time_difference){
 	static float max_time;
