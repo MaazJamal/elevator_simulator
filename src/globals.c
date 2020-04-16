@@ -8,3 +8,4 @@ unsigned int passenger_count;
 
 /** The floor count of the building*/
 unsigned int floor_count;
+

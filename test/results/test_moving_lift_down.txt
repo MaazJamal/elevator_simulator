@@ -1,0 +1,6 @@
+PASS:: Function returned -1 Expected -1 . Array out of bound check working.
+PASS:: Array values properly changed: direction_up = 0 .						direction_down = 1, Return = 1
+PASS:: Rest of Array Unchanged direction_up = 0 .direction_down = 0
+PASS:: Pointer: Function returned -1 Expected -1 . Array out of bound check working.
+PASS:: Pointer: Array values properly changed: direction_up = 0 .						direction_down = 1, Return = 1
+PASS:: Pointer: Rest of Array Unchanged direction_up = 70 .direction_down = 105

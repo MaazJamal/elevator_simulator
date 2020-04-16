@@ -1,2 +1,5 @@
-.exe
-.o
+*.exe
+*.o
+*.cbp
+*.json
+test_makefile
