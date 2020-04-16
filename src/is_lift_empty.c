@@ -3,20 +3,20 @@
 #include "../include/is_lift_empty.h"
 
 /*
-* Checks if there is any space in the elevator to add more passengers
+*@brief Checks if there is any space in the elevator to add more passengers
 *
-* The function is to check if the elevator has any space to accomodate any
+*@detail The function is to check if the elevator has any space to accommodate any
 * other passenger or not.
 * Firstly, it checks if the elevator number entered is less than the total
 * number of elevators in the building.
 * If it is greater than the total number of elevators in the building
 * then it will give the error message and will return -1
 * Then, it checks if the number of the passengers in the elevator is
-* more than or equal to the max number of passengers it can accomodate,
+* more than or equal to the max number of passengers it can accommodate,
 * then it prints that the lift is full and returns 0.
 * Else, it returns 1.
 *
-* @return int Returns -1 if errors in input and 1 if it has any space
+* @return integer Returns -1 if errors in input and 1 if it has any space
 * for any passenger and 0 if not.
 */
 unsigned int elevator_count; //definition of the global variable
