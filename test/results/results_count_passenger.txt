@@ -1,0 +1,10 @@
+1)PASS: Input: Invlaid file, Expected Output: -1, Output: -1 .
+2)PASS: Input: Empty file, Expected Output: 0, Output: 0 .
+3)PASS: Input: valid file, Expected Output: 37, Output: 37 .
+4)PASS: Input: Varying Passenger ID in file, Expected Output: 44, Output: 44 .
+5)PASS: Input: Repeating the Passenger ID, Expected Output: 41, Output: 41 .
+6)PASS: Input: Giving Character strings to Passenger ID , Expected Output: 34, Output: 34 .
+7)PASS: Input: Giving Emergency stop situtation 911 to Passenger ID - Count ignores 911 , Expected Output: 35, Output: 35 .
+8)PASS: Input: Giving Emergency stop situtation 911 to Timestamp - Count should include the record, Expected Output: 36, Output: 36 .
+9)PASS: Input: Giving Emergency stop situtation 911 to Start floor - Count should include the record, Expected Output: 37, Output: 37 .
+10)PASS: Input: Giving Emergency stop situtation 911 to Destination floor - Count should include the record, Expected Output: 37, Output: 37 .
