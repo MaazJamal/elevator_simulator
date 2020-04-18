@@ -18,7 +18,7 @@ struct passenger* remove_passenger_queue(int index, struct passenger* head){
     
     
     assert( head != NULL); //?< Precondition that head not be Null
-    assert( index < 0); //?< Precondition that index not be negative
+    assert( index > -1); //?< Precondition that index not be negative
 
 
     struct passenger* temp = NULL;
@@ -31,21 +31,24 @@ struct passenger* remove_passenger_queue(int index, struct passenger* head){
     }
     else{
         int i = 0;
-        
+
         /** Iterate through the queue until we are one node behind the 
          * node we want to delete. Or next node is null. Set next of previous 
          * node to next node and store the node to delete in temp. use free to 
          * delete current node. 
          * */ 
         
-        while (i < index - 1 && temp->next != NULL){
+        while (i < index -1 && cur->next != NULL){
             cur = cur->next;
             i++;
         }
         
         /** This is precondition checks if index was greater than queue length and 
-          this cannot be done at start as we do not know total length of queue at begining* */
-        assert( i < index - 1);
+          this cannot be done at start as we do not know total length of queue at begining. 
+          the check is cur->nect != NULL as we stop before element to be removed. if cur->next = NULL
+          it means the index is greater than length as we are at end list and should have stopped 
+          at index-1.*/
+        assert( cur->next != NULL);
 
         temp = cur->next;
         cur->next = temp->next;

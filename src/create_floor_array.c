@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "create_floor_array.h"
+#include "globals.h"
+#include "structures.h"
+
 /**
  * The function create arrays for every floor
  *
@@ -8,14 +11,14 @@
  *
  * @return structure of arrays for the given number of floors.
  *  */
- struct passenger * create_floor_array(int no_of_floors)
+ struct passenger ** create_floor_array(int no_of_floors)
  {
     if(no_of_floors>floor_count)
 	{
 		return 0;
 	}
-	struct floor *fla;
-	fla=malloc (no_of_floors * sizeof(struct passenger));
+	struct passenger **fla;
+	fla=(struct passenger **) calloc (no_of_floors,sizeof(struct passenger*));
 	if(fla==NULL)
 	{
 		return 0;

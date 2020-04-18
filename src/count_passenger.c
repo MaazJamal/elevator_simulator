@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "count_passenger.h"
+#include "globals.h"
+#include "structures.h"
+
 /**
  * The function opens the input file
  *

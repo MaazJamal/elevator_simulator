@@ -19,28 +19,28 @@ The function accepts only values between 1 and 100 and returns the value;otherwi
 int input_floors(void)
 
 {
-	int floor_count;
+	int local_floor_count;
 
 	printf("Enter the number of floors in the building-VALID INPUTS ARE FROM 1 TO 100\n");
-    scanf("%d",&floor_count);
+    scanf("%d",&local_floor_count);
     //Following checks are performed to see if the entered value is erraneous.
-	if(floor_count==0)
+	if(local_floor_count==0)
 	{
 		printf("Entered number of floor invalid \n");
-		floor_count = -1;
+		local_floor_count = -1;
 	}
-    else if(floor_count<1)
+    else if(local_floor_count<1)
 	{
 		printf("Entered number of floor is negative value and hence invalid \n");
-		floor_count=-1;
+		local_floor_count=-1;
 	}
-	else if(floor_count>100)
+	else if(local_floor_count>100)
 	{
 		printf("Entered number of floor is greater than 100 and hence invalid \n");
-		floor_count=-1;
+		local_floor_count=-1;
 	}
 	scanf("%*[^\n]");//discards the values stored in stdin buffer.
-	return floor_count;	
+	return local_floor_count;	
 }
 
 

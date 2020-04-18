@@ -17,21 +17,21 @@ Return 1 if its  on floor(i.e)between_floors is 0.
 
 **/
 
-unsigned int elevator_count;//elevator count is globally defined which gives the number of elevators in commercial building.
 
 int is_lift_on_floor(struct elevator elev[] ,int index )
 {
 	if(index >= elevator_count)//check on the input parameter which cannot be more than the number of elevators in the building.
 	{
         fprintf(stderr, "Input parameter -Index is greater than the array ele[]-------- %d >= %d \n",index, elevator_count);
-        return -1;
+        exit();
+		return -1;
     }
 	
-	if(elev[index].between_floors==1)//check on the value of between_floors that makes evident if the lift is on floor or in between.
+	if(elev[index].between_floor==1)//check on the value of between_floors that makes evident if the lift is on floor or in between.
 	{
 		return 0;
 	}
-	else if(elev[index].between_floors==0)
+	else if(elev[index].between_floor==0)
 	{
 		return 1;
 	}

@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include "globals.h"
+#include "stdio.h"
 
 /**
 Removes the passenger details from floor specified.
