@@ -1,7 +1,5 @@
 /**@file is_lift_on_floor.h 
-Contains declaration for is_lift_on_floor function -Reads the elevator structure's attribute moving_floor.
-
-The function  defination is found in is_lift_on_floor.c. 
+ *@brief Contains declaration for is_lift_on_floor function -Reads the elevator structure's attribute moving_floor.
 */
 #ifndef __IS_LIFT_ON_FLOOR_H__
 #define __IS_LIFT_ON_FLOOR_H__

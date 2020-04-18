@@ -1,8 +1,6 @@
-/** @file function.h
- * @brief Simply contains all the headers of the different function
- * to make main.c file cleaner.
- * */
-
+/**@file functions.h  
+ *@brief Simply contains all the headers of the different function
+*/
 #ifndef __FUNCTION_H__
 #define __FUNCTION_H__
 

@@ -1,9 +1,5 @@
 /**@file create_elevator_array.h 
-Contains declaration for create_elevator_array function -creates an array for elevators with respective to input entered by user.
-
-Returns the array of elevators.
-
-The function  defination is found in create_elevator_array.c 
+ *@brief declaration for create_elevator_array function -creates an array for elevators with respective to input entered by user.
 */
 #ifndef __CREATE_ELEVATOR_ARRAY_H__
 #define __CREATE_ELEVATOR_ARRAY_H__
