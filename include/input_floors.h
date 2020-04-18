@@ -6,4 +6,4 @@
 
 extern int input_floors(void);
 
-#endifgit  
+#endif

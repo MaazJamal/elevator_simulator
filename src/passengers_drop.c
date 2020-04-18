@@ -1,10 +1,10 @@
 #include "passengers_drop.h"
 #include <assert.h>
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include "globals.h"
-#inclue "structures.h"
+#include "structures.h"
 /**
  * The function takes in the elevator_array
  *
@@ -17,10 +17,11 @@ int passengers_drop(struct elevator elevator_arr[], int index, struct passenger*
 
 	assert(index <= elevator_count);
 	assert(cur_floor <= floor_count);
-	assert(cur_floor != elevator_arr[index].cur_floor);
+	assert(cur_floor == elevator_arr[index].cur_floor);
 
 	
 	int passenger_dropped = 0;
+	int max_passenger = elevator_arr[index].max_passenger;
     //Loop to iterate the overall passengers in the elevator
 	for(int i = 0; i < max_passenger; i++)
 	{
@@ -35,6 +36,7 @@ int passengers_drop(struct elevator elevator_arr[], int index, struct passenger*
 			break;
 		}
 	
-	return 1;
+	
    }
+   return passenger_dropped;
 }

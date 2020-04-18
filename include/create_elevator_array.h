@@ -4,7 +4,7 @@
 #ifndef __CREATE_ELEVATOR_ARRAY_H__
 #define __CREATE_ELEVATOR_ARRAY_H__
 
-extern struct elevator * create_elevator_array(int no_of_elevators)
+extern struct elevator * create_elevator_array(int no_of_elevators);
 
 
 #endif

@@ -1,6 +1,6 @@
-/**@file add_request_queue.h 
+/** @file add_request_queue.h 
  *@brief contains declarations for add_request_queue function. Used to add 
- passenger to queue
+ * passenger to queue
 */
 #ifndef __ADD_REQUEST_QUEUE_H__
 #define __ADD_REQUEST_QUEUE_H__

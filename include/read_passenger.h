@@ -5,6 +5,6 @@
 #define __READ_PASSENGER_H__
 #include "structures.h"
 
-extern int read_passenger(struct passenger*p);
+extern void read_passenger(struct passenger*p);
 
 #endif
