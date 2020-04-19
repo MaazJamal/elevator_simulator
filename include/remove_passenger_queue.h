@@ -5,6 +5,7 @@
 #define __REMOVE_PASSENGER_QUEUE_H__
 
 #include "structures.h"
+#include "globals.h"
 
 extern struct passenger* remove_passenger_queue(int index, struct passenger* head);
 

@@ -21,4 +21,6 @@
 #include "read_passenger.h"
 #include "remove_passenger_floor.h"
 #include "remove_passenger_queue.h"
+#include "is_lift_on_floor.h"
+#include "moving_lift_up.h"
 #endif

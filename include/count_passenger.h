@@ -5,6 +5,9 @@
 #ifndef __COUNT_PASSENGER_H__
 #define __COUNT_PASSENGER_H__
 
+#include "structures.h"
+#include "globals.h"
+
 extern int count_passenger();
 
 #endif

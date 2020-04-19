@@ -1,4 +1,4 @@
-/** @file remove_passenger_floor
+/** @file remove_passenger_floor.h
  * @brief contains the declaration for the remove_passenger_floor.
  * 
  * */

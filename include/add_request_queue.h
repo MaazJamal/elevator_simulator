@@ -4,6 +4,7 @@
 */
 #ifndef __ADD_REQUEST_QUEUE_H__
 #define __ADD_REQUEST_QUEUE_H__
+
 #include "structures.h"
 
 extern struct passenger* add_request_queue(struct passenger* head, struct passenger passenger_queue);

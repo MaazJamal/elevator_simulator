@@ -2,6 +2,7 @@
 #include"globals.h"
 #include"structures.h"
 #include"is_lift_on_floor.h"
+#include<stdlib.h>
 /**
 Reads the elevator structure's attribute between_floors.
 
@@ -23,7 +24,7 @@ int is_lift_on_floor(struct elevator elev[] ,int index )
 	if(index >= elevator_count)//check on the input parameter which cannot be more than the number of elevators in the building.
 	{
         fprintf(stderr, "Input parameter -Index is greater than the array ele[]-------- %d >= %d \n",index, elevator_count);
-        exit();
+        exit(1);
 		return -1;
     }
 	
@@ -35,7 +36,10 @@ int is_lift_on_floor(struct elevator elev[] ,int index )
 	{
 		return 1;
 	}
-	
+	else{
+		fprintf(stderr, "Incorrect elev[index].between_floor Value : %d \n",elev[index].between_floor);
+        exit(1);
+	}
 }
 
 

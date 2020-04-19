@@ -16,13 +16,13 @@ int static_simulation(void)
 {
 
 	elevator_count = -1;
-	while (elevator_count != -1)
+	while (elevator_count == -1)
 	{
 		elevator_count = input_lifts();
 	}
 	floor_count = -1;
 
-	while (floor_count != -1)
+	while (floor_count == -1)
 	{
 		floor_count = input_floors();
 	}
@@ -49,6 +49,7 @@ int static_simulation(void)
 			//prev_time_index prevents us from starting at previous index
 			if (passenger_array[i].arrival_time == t)
 			{
+				printf("Adding to request queue From file. %d\n",t);
 				add_request_queue(passenger_queue, passenger_array[i]);
 				prev_time_index++;
 			}
@@ -65,12 +66,16 @@ int static_simulation(void)
 			{
 				int drop_delay = 0;
 				int add_delay = 0;
-				//remove any passengers that need to get off
-				drop_delay = passengers_drop(&elevator_arr[i]);
-
-				while (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger)
+				if (elevator_arr[i].passenger_count >0)
 				{
-					add_delay = passenger_takein(&elevator_arr[i]);
+				//remove any passengers that need to get off
+				drop_delay = passengers_drop(elevator_arr,i,floor_array,elevator_arr[i].cur_floor);
+				printf("Dropping Passengers, Delay:%d time:%d\n",drop_delay,t);
+				}
+				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger)
+				{
+					add_delay = passengers_take_in(elevator_arr,i,floor_array,elevator_arr[i].cur_floor);
+					printf("Adding Passengers, Delay%d: time:%d\n",add_delay,t);
 				}
 				int total_delay = 2*drop_delay+2*add_delay;
 				elevator_arr[i].timer += total_delay;
@@ -83,12 +88,14 @@ int static_simulation(void)
 
 				bool direction_up = (cur->arrival_floor < cur->dest_floor);
 				bool direction_down = (cur->arrival_floor > cur->dest_floor);
-				if (elevator_arr[i].direction_up == direction_up || elevator_arr[i].direction_up == direction_down)
+				if (elevator_arr[i].direction_up == direction_up || elevator_arr[i].direction_down == direction_down)
 				{
 					struct passenger temp = *cur;
 					temp.next = NULL; // removing this from passenger queue list
+					printf("Add Passenger Floor Up=Up or Down=Down: t%d\n",t);
 					add_passenger_floor(floor_array, index, temp);
 					remove_passenger_queue(index, passenger_queue);
+					printf("Add Remove Passenger queue Up=Up or Down=Down: t%d\n",t);
 				}
 
 				else
@@ -105,8 +112,11 @@ int static_simulation(void)
 						}
 						struct passenger temp = *cur;
 						temp.next = NULL; // removing this from passenger queue list
+						printf("Add Passenger Floor change to Down: t%d\n",t);
 						add_passenger_floor(floor_array, index, temp);
 						remove_passenger_queue(index, passenger_queue);
+						printf("Add Remove Passenger change to Down=Down: t%d\n",t);
+						
 					}
 
 					//is elevator at ground floor. Can cause issues at start.
@@ -116,13 +126,17 @@ int static_simulation(void)
 						moving_lift_up(elevator_arr, i);
 						struct passenger temp = *cur;
 						temp.next = NULL; // removing this from passenger queue list
+						printf("Add passenger floor change to up: t%d\n",t);
 						add_passenger_floor(floor_array, index, temp);
 						remove_passenger_queue(index, passenger_queue);
+						printf("Add Remove Passenger change to up: t%d\n",t);
+						
 					}
 
-					// bool to check if elevator and passenger inside are travelling in same direction
+					
 					else
 					{
+						// bool to check if elevator and passenger inside are travelling in same direction
 						bool passenger_elevator_dir = false;
 						for (int j = 0; j < elevator_arr[i].passenger_count; i++)
 						{
@@ -151,8 +165,11 @@ int static_simulation(void)
 
 							struct passenger temp = *cur;
 							temp.next = NULL; // removing this from passenger queue list
+							printf("Add passenger floor No pass in lift direction. t%d\n",t);
 							add_passenger_floor(floor_array, index, temp);
 							remove_passenger_queue(index, passenger_queue);
+							printf("Remove passenger queue No pass in lift direction. t%d\n",t);
+							
 						}
 					}
 				}
@@ -164,11 +181,13 @@ int static_simulation(void)
 				}
 				index++;
 
-			} //End of while loop
+			} //End of while loop iterating over queue
 
-			t++;
-		}
+			
+		} //end of elevator loop
 
-		output_data_metric();
-		return 1;
+		// output_data_metric();
+		t++;
+	}
+	return 1;
 }
