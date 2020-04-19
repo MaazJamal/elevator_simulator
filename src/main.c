@@ -42,15 +42,15 @@ int static_simulation(void)
 
 		// Add passenger with current time step to queue
 
-		for (int i = prev_time_index; i < passenger_count; i++)
+		for (int i_pass = prev_time_index; i_pass < passenger_count; i_pass++)
 		{
 
 			//Assume the passenger_array is sorted by arrival time.
 			//prev_time_index prevents us from starting at previous index
-			if (passenger_array[i].arrival_time == t)
+			if (passenger_array[i_pass].arrival_time == t)
 			{
 				printf("Adding to request queue From file. %d\n",t);
-				passenger_queue = add_request_queue(passenger_queue, passenger_array[i]);
+				passenger_queue = add_request_queue(passenger_queue, passenger_array[i_pass]);
 				prev_time_index++;
 			}
 			else
@@ -70,6 +70,8 @@ int static_simulation(void)
 				{
 				//remove any passengers that need to get off
 				drop_delay = passengers_drop(elevator_arr,i,floor_array,elevator_arr[i].cur_floor);
+				int stop_change = elevator_arr[i].cur_floor -1;
+				elevator_arr[i].stop_at_floor[stop_change] = false; //dropped passengers here
 				printf("Dropping Passengers, Delay:%d time:%d\n",drop_delay,t);
 				}
 				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger)
@@ -92,9 +94,12 @@ int static_simulation(void)
 				{
 					struct passenger temp = *cur;
 					temp.next = NULL; // removing this from passenger queue list
+					int arrival_floor_index = temp.arrival_floor -1; //-1 because of mismatch between array and input file 
 					printf("Add Passenger Floor Up=Up or Down=Down: t%d\n",t);
-					add_passenger_floor(floor_array, index, temp);
+					add_passenger_floor(floor_array, arrival_floor_index, temp);
+					elevator_arr[i].stop_at_floor[temp.dest_floor-1] = true;
 					passenger_queue = remove_passenger_queue(index, passenger_queue);
+					index--; //list is smaller by one node.
 					printf("Add Remove Passenger queue Up=Up or Down=Down: t%d\n",t);
 				}
 
@@ -113,8 +118,12 @@ int static_simulation(void)
 						struct passenger temp = *cur;
 						temp.next = NULL; // removing this from passenger queue list
 						printf("Add Passenger Floor change to Down: t%d\n",t);
-						add_passenger_floor(floor_array, index, temp);
+						int arrival_floor_index = temp.arrival_floor -1;
+						add_passenger_floor(floor_array, arrival_floor_index, temp);
+						int dest_floor_index = temp.dest_floor -1;
+						elevator_arr[i].stop_at_floor[dest_floor_index] = true; 
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
+						index--; //list is smaller by one node.
 						printf("Add Remove Passenger change to Down=Down: t%d\n",t);
 						
 					}
@@ -127,8 +136,12 @@ int static_simulation(void)
 						struct passenger temp = *cur;
 						temp.next = NULL; // removing this from passenger queue list
 						printf("Add passenger floor change to up: t%d\n",t);
-						add_passenger_floor(floor_array, index, temp);
+						int arrival_floor_index = temp.arrival_floor -1;
+						add_passenger_floor(floor_array, arrival_floor_index, temp);
+						int dest_floor_index = temp.dest_floor -1;
+						elevator_arr[i].stop_at_floor[dest_floor_index] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
+						index--; //list is smaller by one node.
 						printf("Add Remove Passenger change to up: t%d\n",t);
 						
 					}
@@ -138,7 +151,7 @@ int static_simulation(void)
 					{
 						// bool to check if elevator and passenger inside are travelling in same direction
 						bool passenger_elevator_dir = false;
-						for (int j = 0; j < elevator_arr[i].passenger_count; i++)
+						for (int j = 0; j < elevator_arr[i].passenger_count; j++)
 						{
 							if (elevator_arr[i].passenger_arr[j].in_elevator)
 							{
@@ -166,8 +179,12 @@ int static_simulation(void)
 							struct passenger temp = *cur;
 							temp.next = NULL; // removing this from passenger queue list
 							printf("Add passenger floor No pass in lift direction. t%d\n",t);
-							add_passenger_floor(floor_array, index, temp);
+							int arrival_floor_index = temp.arrival_floor -1;
+							add_passenger_floor(floor_array, arrival_floor_index, temp);
+							int dest_floor_index = temp.dest_floor -1;
+							elevator_arr[i].stop_at_floor[dest_floor_index] = true;
 							passenger_queue = remove_passenger_queue(index, passenger_queue);
+							index--; //list is smaller by one node.
 							printf("Remove passenger queue No pass in lift direction. t%d\n",t);
 							
 						}
@@ -179,7 +196,7 @@ int static_simulation(void)
 				cur = passenger_queue; //bug fix start
 				if (cur != NULL) //incase we deleted only node queue
 				{ 
-					for(int q_index = 0; q_index <index;q_index++)
+					for(int q_index = 0; q_index <index+1;q_index++)
 					{
 						cur = cur->next; //iterate until we reach the spot of deletion
 					} 
@@ -187,8 +204,47 @@ int static_simulation(void)
 				index++;
 
 			} //End of while loop iterating over queue
+		//move elevator here
+		if(elevator_arr[i].passenger_count >0){
+			elevator_arr[i].moving = true;
+			elevator_arr[i].between_floor = true;
+		}
+		else{
+			elevator_arr[i].moving = false; //elevator is empty now
+			if(elevator_arr[i].timer != 0){
+				elevator_arr[i].between_floor = true; //time for passenger to drop out.
+			}
+			else{
+			elevator_arr[i].between_floor = false; //elevator is stationary at current floor and can be used again			
+			}
+		}
 
-			
+		if(elevator_arr[i].timer > 0){
+			elevator_arr[i].timer--;
+		}
+		if(elevator_arr[i].timer == 0){ //we may have moved to another floor
+			if(elevator_arr[i].moving){ //are we moving or stationary on ground floor at start?
+				int current_floor = elevator_arr[i].cur_floor; 
+				if(elevator_arr[i].direction_up){
+					if(current_floor < floor_count){
+						current_floor++;
+					}
+				}
+				else if(elevator_arr[i].direction_down){
+					if(current_floor > 1){
+						current_floor--;
+					}										
+				}
+				elevator_arr[i].cur_floor = current_floor;//changed the floor
+				if(elevator_arr[i].stop_at_floor[current_floor-1]){ //do we need to stop at this floor
+					elevator_arr[i].moving = false;
+					elevator_arr[i].between_floor = false; //
+				}
+				else if(elevator_arr[i].passenger_count>0){//are there passenger in the lift? if yess we need to move
+					elevator_arr[i].timer += 3; //add 3 sec till next floor
+				}
+			}
+		}
 		} //end of elevator loop
 
 		// output_data_metric();

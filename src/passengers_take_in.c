@@ -33,6 +33,7 @@ int passengers_take_in(struct elevator elevator_arr[], int index, struct passeng
 			elevator_arr[index].passenger_arr[i] = *(floor_arr[floor_index]);
 			elevator_arr[index].passenger_arr[i].in_elevator = true;
 			elevator_arr[index].passenger_count++;
+			elevator_arr[index].stop_at_floor[floor_index] = true; //stop at this floor from drop off
 			passenger_added++;
 			remove_passenger_floor(floor_arr,cur_floor);
 			}
