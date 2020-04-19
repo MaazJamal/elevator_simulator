@@ -3,3 +3,4 @@
 *.cbp
 *.json
 test_makefile
+/.metadata/

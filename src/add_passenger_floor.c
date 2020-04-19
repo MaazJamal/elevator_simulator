@@ -12,7 +12,9 @@ void add_passenger_floor(struct passenger* floor[], int index, struct passenger 
 	struct passenger* cur;
 	cur = floor[index];
 	if(cur == NULL){
-		*floor[index] = passenger_info;
+		struct passenger* temp = (struct passenger*) malloc(sizeof(struct passenger));
+		*temp = passenger_info;
+		floor[index] = temp;
 		floor[index]->next = NULL;
 		return;
 	}

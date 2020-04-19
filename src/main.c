@@ -37,7 +37,7 @@ int static_simulation(void)
 
 	int prev_time_index = 0;
 
-	while (t < 86400)
+	while (t < 5000) //864000 for whole day
 	{
 
 		// Add passenger with current time step to queue
@@ -50,7 +50,7 @@ int static_simulation(void)
 			if (passenger_array[i].arrival_time == t)
 			{
 				printf("Adding to request queue From file. %d\n",t);
-				add_request_queue(passenger_queue, passenger_array[i]);
+				passenger_queue = add_request_queue(passenger_queue, passenger_array[i]);
 				prev_time_index++;
 			}
 			else
@@ -94,7 +94,7 @@ int static_simulation(void)
 					temp.next = NULL; // removing this from passenger queue list
 					printf("Add Passenger Floor Up=Up or Down=Down: t%d\n",t);
 					add_passenger_floor(floor_array, index, temp);
-					remove_passenger_queue(index, passenger_queue);
+					passenger_queue = remove_passenger_queue(index, passenger_queue);
 					printf("Add Remove Passenger queue Up=Up or Down=Down: t%d\n",t);
 				}
 
@@ -114,7 +114,7 @@ int static_simulation(void)
 						temp.next = NULL; // removing this from passenger queue list
 						printf("Add Passenger Floor change to Down: t%d\n",t);
 						add_passenger_floor(floor_array, index, temp);
-						remove_passenger_queue(index, passenger_queue);
+						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						printf("Add Remove Passenger change to Down=Down: t%d\n",t);
 						
 					}
@@ -128,7 +128,7 @@ int static_simulation(void)
 						temp.next = NULL; // removing this from passenger queue list
 						printf("Add passenger floor change to up: t%d\n",t);
 						add_passenger_floor(floor_array, index, temp);
-						remove_passenger_queue(index, passenger_queue);
+						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						printf("Add Remove Passenger change to up: t%d\n",t);
 						
 					}
@@ -167,7 +167,7 @@ int static_simulation(void)
 							temp.next = NULL; // removing this from passenger queue list
 							printf("Add passenger floor No pass in lift direction. t%d\n",t);
 							add_passenger_floor(floor_array, index, temp);
-							remove_passenger_queue(index, passenger_queue);
+							passenger_queue = remove_passenger_queue(index, passenger_queue);
 							printf("Remove passenger queue No pass in lift direction. t%d\n",t);
 							
 						}
@@ -175,10 +175,15 @@ int static_simulation(void)
 				}
 
 				//potential bug here due to deleting nodes in remove_passenger_queue
-				if (cur != NULL)
-				{ //bug fix
-					cur = cur->next;
-				}
+				
+				cur = passenger_queue; //bug fix start
+				if (cur != NULL) //incase we deleted only node queue
+				{ 
+					for(int q_index = 0; q_index <index;q_index++)
+					{
+						cur = cur->next; //iterate until we reach the spot of deletion
+					} 
+				} //bug fix end
 				index++;
 
 			} //End of while loop iterating over queue

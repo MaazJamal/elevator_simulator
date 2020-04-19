@@ -18,9 +18,10 @@
 int passengers_take_in(struct elevator elevator_arr[], int index, struct passenger* floor_arr[], int cur_floor){
 
 	assert(index < elevator_count && index >= 0); 
-	assert(cur_floor < floor_count && cur_floor >= 0);
+	assert(cur_floor <= floor_count && cur_floor > 0);
 	assert(cur_floor == elevator_arr[index].cur_floor); //? test the case that both elevator and passenger are at same floor.
 
+	int floor_index = cur_floor-1; //input file floor start from 1 while floor array is indexed from 0 so this is needed
 	int passenger_capacity = elevator_arr[index].max_passenger;
 	int passenger_added = 0;
 
@@ -28,8 +29,8 @@ int passengers_take_in(struct elevator elevator_arr[], int index, struct passeng
 
 		if(!(elevator_arr[index].passenger_arr[i].in_elevator)){
 		
-			if(floor_arr[cur_floor] != NULL && elevator_arr[index].passenger_count < passenger_capacity){
-			elevator_arr[index].passenger_arr[i] = *(floor_arr[cur_floor]);
+			if(floor_arr[floor_index] != NULL && elevator_arr[index].passenger_count < passenger_capacity){
+			elevator_arr[index].passenger_arr[i] = *(floor_arr[floor_index]);
 			elevator_arr[index].passenger_arr[i].in_elevator = true;
 			elevator_arr[index].passenger_count++;
 			passenger_added++;
