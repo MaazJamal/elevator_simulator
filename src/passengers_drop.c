@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include "globals.h"
 #include "structures.h"
+#include "travel_log_file.h"
 /**
  * The function takes in the elevator_array
  *
@@ -12,7 +13,7 @@
  *
  * @return elevator array
  **/
-int passengers_drop(struct elevator elevator_arr[], int index, struct passenger* floor_arr[], int cur_floor)
+int passengers_drop(struct elevator elevator_arr[], int index, struct passenger* floor_arr[], int cur_floor,unsigned int event_time)
 {
 
 	assert(index <= elevator_count);
@@ -30,6 +31,8 @@ int passengers_drop(struct elevator elevator_arr[], int index, struct passenger*
 			elevator_arr[index].passenger_arr[i].in_elevator = false; //setting the status
 			elevator_arr[index].passenger_count--;
 			passenger_dropped++;
+			struct passenger temp = elevator_arr[index].passenger_arr[i];
+			travel_log_file(temp,event_time,index,1); //choose mode to write to travel_log as we are removing passenger.
 		}
 		else
 		{

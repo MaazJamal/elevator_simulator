@@ -69,14 +69,14 @@ int static_simulation(void)
 				if (elevator_arr[i].passenger_count >0)
 				{
 				//remove any passengers that need to get off
-				drop_delay = passengers_drop(elevator_arr,i,floor_array,elevator_arr[i].cur_floor);
+				drop_delay = passengers_drop(elevator_arr,i,floor_array,elevator_arr[i].cur_floor,t);
 				int stop_change = elevator_arr[i].cur_floor -1;
 				elevator_arr[i].stop_at_floor[stop_change] = false; //dropped passengers here
 				printf("Dropping Passengers, Delay:%d time:%d\n",drop_delay,t);
 				}
 				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger)
 				{
-					add_delay = passengers_take_in(elevator_arr,i,floor_array,elevator_arr[i].cur_floor);
+					add_delay = passengers_take_in(elevator_arr,i,floor_array,elevator_arr[i].cur_floor,t);
 					printf("Adding Passengers, Delay%d: time:%d\n",add_delay,t);
 				}
 				int total_delay = 2*drop_delay+2*add_delay;
@@ -250,5 +250,7 @@ int static_simulation(void)
 		// output_data_metric();
 		t++;
 	}
+	struct passenger dummy; //placeholder to pass to log. it should not be used.
+	travel_log_file(dummy,0,0,3); //choose mode to write max,avg time to file.
 	return 1;
 }

@@ -4,6 +4,7 @@
 #include "globals.h"
 #include "remove_passenger_floor.h"
 #include <stdio.h>
+#include "travel_log_file.h"
 
 /** This function removes adds a passenger from a queue to the elevator_array 
  * 
@@ -13,9 +14,10 @@
  * @param[in, out] elevator_arr pointer to elevator array.
  * @param[in, out] floor_arr array of pointers to passengers on floor.
  * @param[in] cur_florr int value that specifies the current floor. index start at 0.
+ * @param[in] event_time unsigned int the time the event has happened.
  * @return return the number of passengers added to the elevator.
  * */
-int passengers_take_in(struct elevator elevator_arr[], int index, struct passenger* floor_arr[], int cur_floor){
+int passengers_take_in(struct elevator elevator_arr[], int index, struct passenger* floor_arr[], int cur_floor, unsigned int event_time){
 
 	assert(index < elevator_count && index >= 0); 
 	assert(cur_floor <= floor_count && cur_floor > 0);
@@ -35,6 +37,7 @@ int passengers_take_in(struct elevator elevator_arr[], int index, struct passeng
 			elevator_arr[index].passenger_count++;
 			elevator_arr[index].stop_at_floor[floor_index] = true; //stop at this floor from drop off
 			passenger_added++;
+			travel_log_file(*(floor_arr[floor_index]),event_time, index,2); //choose mode to calculate avg,max times.
 			remove_passenger_floor(floor_arr,cur_floor);
 			}
 			else{
