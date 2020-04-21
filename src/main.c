@@ -26,7 +26,7 @@ int static_simulation(void)
 	{
 		floor_count = input_floors();
 	}
-
+	bool* stop_at_floor_global =(bool*) calloc(floor_count,sizeof(bool));
 	struct elevator *elevator_arr = create_elevator_array(elevator_count);
 	struct passenger **floor_array = create_floor_array(floor_count);
 	passenger_count = count_passenger();
@@ -42,7 +42,7 @@ int static_simulation(void)
 
 		// Add passenger with current time step to queue
 
-		for (int i_pass = prev_time_index; i_pass < passenger_count; i_pass++)
+		for (int i_pass = prev_time_index; i_pass < passenger_count; i_pass++) //debugged works perfectly
 		{
 
 			//Assume the passenger_array is sorted by arrival time.
@@ -66,16 +66,25 @@ int static_simulation(void)
 			{
 				int drop_delay = 0;
 				int add_delay = 0;
+				int stop_change = elevator_arr[i].cur_floor - 1;
 				if (elevator_arr[i].passenger_count > 0)
 				{
-					//remove any passengers that need to get off
-					drop_delay = passengers_drop(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
-					int stop_change = elevator_arr[i].cur_floor - 1;
-					elevator_arr[i].stop_at_floor[stop_change] = false; //dropped passengers here
+					if(elevator_arr[i].stop_at_floor[stop_change]){//remove any passengers that need to get off
+						drop_delay = passengers_drop(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
+					
+						if (drop_delay > 0) //dropped passengers here
+						{
+							elevator_arr[i].stop_at_floor[stop_change] = false; //dropped passengers here
+						}
+					}
 				}
-				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger)
+				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger && stop_at_floor_global[stop_change])
 				{
 					add_delay = passengers_take_in(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
+					if(floor_array[stop_change] == NULL)
+					{
+						stop_at_floor_global[stop_change] = false;
+					}
 				}
 				int total_delay = 2 * drop_delay + 2 * add_delay;
 				elevator_arr[i].timer += total_delay;
@@ -86,18 +95,23 @@ int static_simulation(void)
 			while (cur != NULL)
 			{ //iterating over passenger queue
 
-				bool direction_up = (cur->arrival_floor < cur->dest_floor);
-				bool direction_down = (cur->arrival_floor > cur->dest_floor);
+				bool direction_up = (cur->arrival_floor <= cur->dest_floor); //passenger direction up
+				bool direction_down = (cur->arrival_floor >= cur->dest_floor);
 				if (elevator_arr[i].direction_up == direction_up || elevator_arr[i].direction_down == direction_down)
 				{
-					struct passenger temp = *cur;
-					temp.next = NULL;								  // removing this from passenger queue list
-					int arrival_floor_index = temp.arrival_floor - 1; //-1 because of mismatch between array and input file
+					bool is_above = cur->arrival_floor >= elevator_arr[i].cur_floor;
+					bool is_below = cur->arrival_floor <= elevator_arr[i].cur_floor;
+					if(elevator_arr[i].direction_up == is_above || elevator_arr[i].direction_down == is_below){ //elevator can pick this person up
+						struct passenger temp = *cur;
+						temp.next = NULL;								  // removing this from passenger queue list
+						int arrival_floor_index = temp.arrival_floor - 1; //-1 because of mismatch between array and input file
 
-					add_passenger_floor(floor_array, arrival_floor_index, temp);
-					elevator_arr[i].stop_at_floor[temp.dest_floor - 1] = true;
-					passenger_queue = remove_passenger_queue(index, passenger_queue);
-					index--; //list is smaller by one node.
+						add_passenger_floor(floor_array, arrival_floor_index, temp);
+						//elevator_arr[i].stop_at_floor[temp.dest_floor - 1] = true;
+						stop_at_floor_global[temp.arrival_floor-1] = true;
+						passenger_queue = remove_passenger_queue(index, passenger_queue);
+						index--; //list is smaller by one node.
+					}
 				}
 
 				else
@@ -117,8 +131,9 @@ int static_simulation(void)
 
 						int arrival_floor_index = temp.arrival_floor - 1;
 						add_passenger_floor(floor_array, arrival_floor_index, temp);
-						int dest_floor_index = temp.dest_floor - 1;
-						elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+						//int dest_floor_index = temp.dest_floor - 1;
+						//elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+						stop_at_floor_global[temp.arrival_floor-1] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						index--; //list is smaller by one node.
 					}
@@ -133,13 +148,14 @@ int static_simulation(void)
 
 						int arrival_floor_index = temp.arrival_floor - 1;
 						add_passenger_floor(floor_array, arrival_floor_index, temp);
-						int dest_floor_index = temp.dest_floor - 1;
-						elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+						//int dest_floor_index = temp.dest_floor - 1;
+						//elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+						stop_at_floor_global[temp.arrival_floor-1] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						index--; //list is smaller by one node.
 					}
 
-					else
+					else //passenger in lift go in opposite direction of the lift
 					{
 						// bool to check if elevator and passenger inside are travelling in same direction
 						bool passenger_elevator_dir = false;
@@ -173,8 +189,9 @@ int static_simulation(void)
 
 							int arrival_floor_index = temp.arrival_floor - 1;
 							add_passenger_floor(floor_array, arrival_floor_index, temp);
-							int dest_floor_index = temp.dest_floor - 1;
-							elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+							//int dest_floor_index = temp.dest_floor - 1;
+							//elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+							stop_at_floor_global[temp.arrival_floor-1] = true;
 							passenger_queue = remove_passenger_queue(index, passenger_queue);
 							index--; //list is smaller by one node.
 						}
@@ -195,7 +212,7 @@ int static_simulation(void)
 
 			} //End of while loop iterating over queue
 			//move elevator here
-			if (elevator_arr[i].passenger_count > 0)
+			if (elevator_arr[i].passenger_count > 0) //if there are passengers then lift needs to move
 			{
 				elevator_arr[i].moving = true;
 				elevator_arr[i].between_floor = true;
@@ -214,7 +231,7 @@ int static_simulation(void)
 					{ //elevator at ground floor can only move up.
 						moving_lift_up(elevator_arr, i);
 					}
-					else if (elevator_arr[i].cur_floor == floor_count)
+					else if (elevator_arr[i].cur_floor == floor_count) //At top floor and can only move down
 					{
 						moving_lift_down(elevator_arr, i);
 					}
@@ -250,7 +267,7 @@ int static_simulation(void)
 							}
 						}
 						elevator_arr[i].cur_floor = current_floor; //changed the floor
-						if (elevator_arr[i].stop_at_floor[current_floor - 1])
+						if (elevator_arr[i].stop_at_floor[current_floor - 1] || stop_at_floor_global[current_floor - 1])
 						{ //do we need to stop at this floor
 							elevator_arr[i].moving = false;
 							elevator_arr[i].between_floor = false; //
@@ -258,10 +275,16 @@ int static_simulation(void)
 						else if (elevator_arr[i].passenger_count > 0)
 						{								//are there passenger in the lift? if yess we need to move
 							elevator_arr[i].timer += 3; //add 3 sec till next floor
+							elevator_arr[i].moving = true;
+							elevator_arr[i].between_floor = true;
 						}
 					}
 				
 				}
+				FILE *f = fopen("elevator_journey.txt","a+");
+				fprintf(f,"Elevator at floor: %d.\n",elevator_arr[i].cur_floor);
+				fflush(f);
+				fclose(f);
 		} //end of elevator loop
 
 		// output_data_metric();

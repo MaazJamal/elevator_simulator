@@ -20,12 +20,13 @@ struct passenger* remove_passenger_queue(int index, struct passenger* head){
     assert( head != NULL); //?< Precondition that head not be Null
     assert( index > -1); //?< Precondition that index not be negative
 
-
+    static int removal_count =0;
     struct passenger* temp = NULL;
     struct passenger* cur = head; //?< stores the current position of pointer to be used in while loop 
     if (index == 0){
         temp = head;
         head = head->next;
+        printf("The passenger Removed from cue is:%d count is:%d \n.",temp->id,++removal_count);
         free(temp);
         return head;
     }
@@ -52,6 +53,7 @@ struct passenger* remove_passenger_queue(int index, struct passenger* head){
 
         temp = cur->next;
         cur->next = temp->next;
+        printf("The passenger Removed from cue is:%d count is:%d \n.",temp->id,++removal_count);
         free(temp);
     }
     return head;
