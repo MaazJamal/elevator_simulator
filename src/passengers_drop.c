@@ -26,7 +26,8 @@ int passengers_drop(struct elevator elevator_arr[], int index, struct passenger*
     //Loop to iterate the overall passengers in the elevator
 	for(int i = 0; i < max_passenger; i++)
 	{
-		if(elevator_arr[index].passenger_arr[i].dest_floor == cur_floor)
+		bool in_elevator = elevator_arr[index].passenger_arr[i].in_elevator;
+		if(elevator_arr[index].passenger_arr[i].dest_floor == cur_floor && in_elevator)
 		{
 			elevator_arr[index].passenger_arr[i].in_elevator = false; //setting the status
 			elevator_arr[index].passenger_count--;
@@ -34,11 +35,6 @@ int passengers_drop(struct elevator elevator_arr[], int index, struct passenger*
 			struct passenger temp = elevator_arr[index].passenger_arr[i];
 			travel_log_file(temp,event_time,index,1); //choose mode to write to travel_log as we are removing passenger.
 		}
-		else
-		{
-			break;
-		}
-	
 	
    }
    return passenger_dropped;
