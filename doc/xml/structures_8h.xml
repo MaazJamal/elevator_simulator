@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structures_8h" kind="file" language="C++">
+    <compoundname>structures.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="add__passenger__floor_8h" local="yes">add_passenger_floor.h</includedby>
+    <includedby refid="add__request__queue_8h" local="yes">add_request_queue.h</includedby>
+    <includedby refid="functions_8h" local="yes">functions.h</includedby>
+    <includedby refid="moving__lift__down_8h" local="yes">moving_lift_down.h</includedby>
+    <includedby refid="remove__passenger__queue_8h" local="yes">remove_passenger_queue.h</includedby>
+    <includedby refid="passengers__take__in_8h" local="yes">passengers_take_in.h</includedby>
+    <includedby refid="read__passenger_8h" local="yes">read_passenger.h</includedby>
+    <includedby refid="remove__passenger__floor_8h" local="yes">remove_passenger_floor.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="1">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>functions.h</label>
+        <link refid="functions_8h"/>
+      </node>
+      <node id="6">
+        <label>remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>add_request_queue.h</label>
+        <link refid="add__request__queue_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>remove_passenger_floor.h</label>
+        <link refid="remove__passenger__floor_8h"/>
+      </node>
+      <node id="8">
+        <label>read_passenger.h</label>
+        <link refid="read__passenger_8h"/>
+      </node>
+      <node id="5">
+        <label>moving_lift_down.h</label>
+        <link refid="moving__lift__down_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>passengers_take_in.h</label>
+        <link refid="passengers__take__in_8h"/>
+      </node>
+      <node id="2">
+        <label>add_passenger_floor.h</label>
+        <link refid="add__passenger__floor_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpassenger" prot="public">passenger</innerclass>
+    <innerclass refid="structelevator" prot="public">elevator</innerclass>
+    <briefdescription>
+<para>contains declarations for structure passenger, elevator to be used in the program. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#ifndef<sp/>__STRUCTURES_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__STRUCTURES_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="structpassenger" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>{</highlight></codeline>
+<codeline lineno="17" refid="structpassenger_1acaaf5adf80fe8fd8e9b1b5401c2a39e2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1acaaf5adf80fe8fd8e9b1b5401c2a39e2" kindref="member">in_elevator</ref>;<sp/></highlight></codeline>
+<codeline lineno="18" refid="structpassenger_1ac5750ae7307cd77866c3fc94ad058b8c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1ac5750ae7307cd77866c3fc94ad058b8c" kindref="member">arrival_time</ref>;<sp/></highlight></codeline>
+<codeline lineno="19" refid="structpassenger_1a4d2f3bc200903acf57f6a277c309ad96" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1a4d2f3bc200903acf57f6a277c309ad96" kindref="member">arrival_floor</ref>;<sp/></highlight></codeline>
+<codeline lineno="20" refid="structpassenger_1a1166dc7971a5d5e3b766c719b885a8d1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1a1166dc7971a5d5e3b766c719b885a8d1" kindref="member">dest_floor</ref>;<sp/></highlight></codeline>
+<codeline lineno="21" refid="structpassenger_1ab7ce6f462afaf105224b0ca772a33c43" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1ab7ce6f462afaf105224b0ca772a33c43" kindref="member">id</ref>;<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>*next;<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structelevator" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelevator" kindref="compound">elevator</ref>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>moving;<sp/></highlight></codeline>
+<codeline lineno="36" refid="structelevator_1ab9db9c40c0582877c0eb1e40208bce7f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1ab9db9c40c0582877c0eb1e40208bce7f" kindref="member">between_floor</ref>;<sp/></highlight></codeline>
+<codeline lineno="37" refid="structelevator_1a4a24a1828511061b35d68613f6205c71" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1a4a24a1828511061b35d68613f6205c71" kindref="member">direction_up</ref>;<sp/></highlight></codeline>
+<codeline lineno="38" refid="structelevator_1ae1d85507e558e66edd33a940fd85cb83" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1ae1d85507e558e66edd33a940fd85cb83" kindref="member">direction_down</ref>;<sp/></highlight></codeline>
+<codeline lineno="39" refid="structelevator_1abcf67c62096d397bf09fad7c61c43e3a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>*<ref refid="structelevator_1abcf67c62096d397bf09fad7c61c43e3a" kindref="member">stop_at_floor</ref>;<sp/></highlight></codeline>
+<codeline lineno="40" refid="structelevator_1aafbf17dfb8c07dadb99b3e0faadef32d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1aafbf17dfb8c07dadb99b3e0faadef32d" kindref="member">passenger_count</ref>;<sp/></highlight></codeline>
+<codeline lineno="41" refid="structelevator_1ab997145d0c77ff2c31df5e80d84387db" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1ab997145d0c77ff2c31df5e80d84387db" kindref="member">max_passenger</ref>;<sp/></highlight></codeline>
+<codeline lineno="42" refid="structelevator_1aff6a26008372ae6df6b9e89db676516c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1aff6a26008372ae6df6b9e89db676516c" kindref="member">cur_floor</ref>;<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>timer;<sp/></highlight></codeline>
+<codeline lineno="44" refid="structelevator_1aa49275fd21211fa8103ebc37c5dcd730" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*<ref refid="structelevator_1aa49275fd21211fa8103ebc37c5dcd730" kindref="member">passenger_arr</ref>;<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+    </programlisting>
+    <location file="structures.h"/>
+  </compounddef>
+</doxygen>

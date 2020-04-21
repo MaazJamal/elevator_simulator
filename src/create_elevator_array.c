@@ -3,25 +3,23 @@
 #include"structures.h"
 #include"create_elevator_array.h"
 #include"globals.h"
-
 /**
-creates an array for elevators with respective to input entered by user.
-
-
-Constraints
-
-checks the input parameter-no of elevators .
-
-No of elevators should be in range(1-100).
-
-Prints error message if the no of elevators is out of range and if memory allocation fails.
-
-Returns the array of elevators.
-
-**/
-
-
-
+ * @file create_elevator_array.c
+ *
+ * @brief The function creates array for each elevator.
+ *
+ * @author Divyalakshmi Padmanaban  - Dpadm049@uottawa.ca
+ *
+ */
+ 
+/** @details Constraints
+ *checks the input parameter-no of elevators .
+ *No of elevators should be in range(1-100).
+ *Prints error message if the no of elevators is out of range and if memory allocation fails.
+ * @param[in] The function takes number of lifts as input.
+ * @return Returns the array of elevators.
+ */ 
+ 
 struct elevator * create_elevator_array(int no_of_elevators)
 {
 	

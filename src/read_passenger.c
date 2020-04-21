@@ -1,26 +1,26 @@
+/**
+ * @file read_passenger.c
+ *
+ * @brief Reads the input file for passenger id,arrival time,starting floor and destination floor.
+ * Enables to read the data from file and store in a structure of maximum capacity 100.
+ *
+ * @author Divyalakshmi Padmanaban  - Dpadm049@uottawa.ca
+ *
+ */
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 #include"read_passenger.h"
 #include"structures.h"
-/**
-Reads the input file for passenger id,arrival time,starting floor and destination floor.
+/** @details Constraints If the file does not exists ,the function displays a error message.
+ *The input file is checked for valid values for passenegr id in range (1-99) and print error message if the values are out of range.
+ *The input file is checked for valid values for arrival time in range (1-150)and print error message if the values are out of range
+ *The input file is checked for valid values for arrival floor in range (1-100)and print error message if the values are out of range
+ *The input file is checked for valid values for destination floor in range (1-100)and print error message if the values are out of range
+ * @param[in] No input parameter. The function uses the input file
+ * @return the function returns void
+ */ 
 
-Enables to read the data from file and store in a structure of maximum capacity 100.
-
-Constraints
-If the file does not exists ,the function displays a error message.
-
-The input file is checked for valid values for passenegr id in range (1-99) and print error message if the values are out of range.
-
-The input file is checked for valid values for arrival time in range (1-150)and print error message if the values are out of range
-
-The input file is checked for valid values for arrival floor in range (1-100)and print error message if the values are out of range
-
-The input file is checked for valid values for destination floor in range (1-100)and print error message if the values are out of range
-
-
-**/
 void read_passenger(struct passenger p[])
 {
 
