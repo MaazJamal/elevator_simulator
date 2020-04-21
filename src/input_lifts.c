@@ -20,7 +20,7 @@ int input_lifts(void){
     puts("Please Enter an integer number for the number of Elevator in building.");
     puts("Valid entries are 1-100");
     int result = scanf("%d", &temp);
-    printf("This is result %d \n",result);
+    //printf("This is result %d \n",result);
     
     /**  if the scanf does not read anything, clear from the stdin buffer and return -1*/
     if (result == 0){ 

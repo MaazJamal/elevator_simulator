@@ -19,7 +19,7 @@ int count_passenger()
     passenger_count=0; //global variable stores the passenger count
     FILE *f;
     char a[10];
-    f=fopen("datafolder/input.txt","r");
+    f=fopen("data/input.txt","r");
     if (f==NULL) 
     { 
         printf("no input file exists"); 

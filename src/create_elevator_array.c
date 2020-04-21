@@ -56,9 +56,9 @@ struct elevator * create_elevator_array(int no_of_elevators)
 			}
 			ele[i].passenger_count=0;
 			ele[i].max_passenger=10;
-			ele[i].cur_floor=0;
+			ele[i].cur_floor=1;
 			ele[i].timer=0;
-			ele[i].passenger_arr=malloc(ele[i].max_passenger*sizeof(struct passenger));
+			ele[i].passenger_arr = malloc(ele[i].max_passenger*sizeof(struct passenger));
 			for (j=0;j<ele[i].max_passenger;j++)
 			{
 			ele[i].passenger_arr[j].in_elevator=0;

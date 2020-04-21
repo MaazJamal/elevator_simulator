@@ -7,6 +7,6 @@
 #define __PASSENGERS_TAKE_IN_H__
 #include "structures.h"
 
-extern int passengers_take_in(struct elevator elevator_arr[], int index, struct passenger* floor_arr[], int cur_floor);
+extern int passengers_take_in(struct elevator elevator_arr[], int index, struct passenger* floor_arr[], int cur_floor, unsigned int event_time);
 
 #endif
