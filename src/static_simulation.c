@@ -28,7 +28,7 @@ int static_simulation(void)
 
 	int prev_time_index = 0;
 
-	while (t < 5000) //864000 for whole day
+	while (t < 86400) //86400 for whole day
 	{
 
 		// Add passenger with current time step to queue
