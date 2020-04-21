@@ -11,7 +11,7 @@ Read passeneger function is included in the prgram here and function call involv
 (i.e) structure array and input file,Inorder to test for various erraneous conditions of input file.
 
 **/
-void read_passenger(struct passenger p[],char* f)
+static void read_passenger(struct passenger p[],char* f)
 {
 
     int i=0;
