@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"structure.h"
+#include"structures.h"
 #include"create_elevator_array.h"
+#include"globals.h"
 
 /**
 creates an array for elevators with respective to input entered by user.
@@ -55,16 +56,16 @@ struct elevator * create_elevator_array(int no_of_elevators)
 			}
 			ele[i].passenger_count=0;
 			ele[i].max_passenger=10;
-			ele[i].cur_floor=0;
+			ele[i].cur_floor=1;
 			ele[i].timer=0;
-			ele[i].passenger_arr=malloc(ele[i].max_passenger*sizeof(struct passenger));
-			for (j=0;j<e[i].max_passeneger;j++)
+			ele[i].passenger_arr = malloc(ele[i].max_passenger*sizeof(struct passenger));
+			for (j=0;j<ele[i].max_passenger;j++)
 			{
-			ele[i].passenger[j]->in_elevator=0;
-			ele[i].passenger[j]->arrival_time=0;
-			ele[i].passenger[j]->arrival_floor=0;
-			ele[i].passenger[j]->dest_floor=0;
-			ele[i].passenger[j]->id=0;
+			ele[i].passenger_arr[j].in_elevator=0;
+			ele[i].passenger_arr[j].arrival_time=0;
+			ele[i].passenger_arr[j].arrival_floor=0;
+			ele[i].passenger_arr[j].dest_floor=0;
+			ele[i].passenger_arr[j].id=0;
 			}
 			
 		}

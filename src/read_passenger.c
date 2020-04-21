@@ -27,7 +27,7 @@ void read_passenger(struct passenger p[])
     FILE *f;
     int i=0;
     int count=0;
-    f=fopen("InputFiles/bigfloor.txt","r");
+    f=fopen("data/input.txt","r");
     int fd = fileno(f);//fileno function returns the mode of file.
     if(fd==-1)
     {

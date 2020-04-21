@@ -4,8 +4,8 @@
 /**
  * Prompt the user to enter the number of lifts and takes the input
  * 
- * The function prompts the user to enter the number of lifts. If the lift
- * is less than or greater than one the function displays an error message 
+ * The function prompts the user to enter the number of lifts. If the lift count
+ * is less than one or greater than 100 the function displays an error message 
  * and returns -1. 
  * If the user enters anythin other than a numeric entry. The function displays
  * and error message, discards all inputs in stdin stream and returns -1.
@@ -20,9 +20,9 @@ int input_lifts(void){
     puts("Please Enter an integer number for the number of Elevator in building.");
     puts("Valid entries are 1-100");
     int result = scanf("%d", &temp);
-    printf("This is result %d \n",result);
+    //printf("This is result %d \n",result);
     
-    /**  if the scanf does not read anthing clear the stdin buffer and return -1*/
+    /**  if the scanf does not read anything, clear from the stdin buffer and return -1*/
     if (result == 0){ 
         puts("Non-integer input entered. Please enter an integer.\n");
         temp = -1;

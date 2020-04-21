@@ -1,6 +1,6 @@
-/**@file moving_lift_down.h 
- *@brief contains declaration for structure moving_lift_down function that changes the direction of lift.
- the function is defination found in moving_lift_down.c 
+/** @file moving_lift_down.h 
+ * @brief contains declaration for moving_lift_down function that changes the direction of lift.
+ * the function is defination found in moving_lift_down.c 
 */
 #ifndef __MOVING_LIFT_DOWN_H__
 #define __MOVING_LIFT_DOWN_H__
