@@ -9,13 +9,13 @@
  * @author Divyalakshmi Padmanaban  - Dpadm049@uottawa.ca
  *
  */
-/**@details Constraints
-*If the floor count is 0 ,the function displays a error message and returns -1.
-*If the floor count is less than 1(negative values) ,the function displays a error message and returns -1.
-*If the floor count is greater than 100,the function displays a error message and returns -1.
-*Floating point values entered considered to near integers.
-*@return The function accepts only values between 1 and 100 and returns the value;otherwise returns -1 and displays error message.
-*/ 
+/** @details Constraints
+ *If the floor count is 0 ,the function displays a error message and returns -1.
+ *If the floor count is less than 1(negative values) ,the function displays a error message and returns -1.
+ *If the floor count is greater than 100,the function displays a error message and returns -1.
+ *Floating point values entered considered to near integers.
+ * @return The function accepts only values between 1 and 100 and returns the value;otherwise returns -1 and displays error message.
+ */ 
 int input_floors(void)
 {
 	int local_floor_count;
