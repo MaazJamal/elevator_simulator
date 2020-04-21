@@ -1,16 +1,26 @@
+/**
+ * @file create_floor_array.c
+ *
+ * @brief The function create arrays for every floor
+ *
+ * @author Hariprasad Munusamy  - HariprasadMunusamy@cmail.carleton.ca	
+ *
+ */
+ 
 #include<stdio.h>
 #include<stdlib.h>
 #include "create_floor_array.h"
 #include "globals.h"
 #include "structures.h"
 
-/**
- * The function create arrays for every floor
+/** @details Creates array for every floor to store the passenger with requests.
  *
- * Gets the number of floors as input and creates a list of array for every floor.
+ * @param[in] Gets the number of floors as input and creates a list of array for every floor.
  *
  * @return structure of arrays for the given number of floors.
- *  */
+ *
+ */
+ 
  struct passenger ** create_floor_array(int no_of_floors)
  {
     if(no_of_floors>floor_count)

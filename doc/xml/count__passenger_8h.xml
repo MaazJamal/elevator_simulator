@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="count__passenger_8h" kind="file" language="C++">
+    <compoundname>count_passenger.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="count__passenger_8h_1a949d5f5716500869b64977f0e9df9d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD=======&gt;&gt;&gt;&gt;&gt;&gt; int</type>
+        <definition>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ======= &gt;&gt;&gt;&gt;&gt;&gt; int count_passenger</definition>
+        <argsstring>()</argsstring>
+        <name>count_passenger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="count_passenger.h" line="13" column="12" declfile="count_passenger.h" declline="13" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Counts the number of passengers from the input file. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="normal">&lt;&lt;&lt;&lt;&lt;&lt;&lt;<sp/>HEAD</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">=======</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/>92f8ffc427d896af78865b6a889526d369a41ce1</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__COUNT_PASSENGER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__COUNT_PASSENGER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count_passenger();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="count_passenger.h"/>
+  </compounddef>
+</doxygen>

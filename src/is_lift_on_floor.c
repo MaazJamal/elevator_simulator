@@ -4,20 +4,20 @@
 #include"is_lift_on_floor.h"
 #include<stdlib.h>
 /**
-Reads the elevator structure's attribute between_floors.
-
-Checks if the input parameter index(i.e)elevator number;is within the range of number of elevators in building.
-
-If index is greater than the number of elevators actually present in building;error message will be displayed and returns -1. 
-
-Checks the condition of the lift .
-
-Return 0 if its not on floor(i.e)between_floors is 1.
-
-Return 1 if its  on floor(i.e)between_floors is 0.
-
-**/
-
+ * @file is_lift_on_floor.c
+ *
+ * @brief Reads the elevator structure's attribute between_floors.
+ *
+ * @author Divyalakshmi Padmanaban  - Dpadm049@uottawa.ca
+ *
+ */
+/**@ details Constraints
+ *Checks if the input parameter index(i.e)elevator number;is within the range of number of elevators in building.
+ *If index is greater than the number of elevators actually present in building;error message will be displayed and returns -1. 
+ *Checks the condition of the lift .
+ * @param[in] The function takes the elevator structure and index. 
+ *@ return The function 0 if lift is not on floor elso 0.
+*/ 
 
 int is_lift_on_floor(struct elevator elev[] ,int index )
 {

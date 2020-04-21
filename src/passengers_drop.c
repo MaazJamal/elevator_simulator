@@ -7,12 +7,20 @@
 #include "structures.h"
 #include "travel_log_file.h"
 /**
- * The function takes in the elevator_array
+ * @file passengers_drop.c
  *
- * Removes the passenger from the floor and the elevator array.
+ * @brief The function takes in the elevator_array
  *
- * @return elevator array
- **/
+ * @author Hariprasad Munusamy  - HariprasadMunusamy@cmail.carleton.ca	
+ *
+ */
+/** @details Removes the passenger from the floor and the elevator array.
+ *
+ * @param[in] The function takes in elevator structure,index,passenger floor array,current floor and time
+ *
+ * @return The function return elevator array
+ *
+ */
 int passengers_drop(struct elevator elevator_arr[], int index, struct passenger* floor_arr[], int cur_floor,unsigned int event_time)
 {
 

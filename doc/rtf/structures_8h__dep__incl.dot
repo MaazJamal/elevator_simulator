@@ -1,0 +1,26 @@
+digraph "structures.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="structures.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="contains declarations for structure passenger, elevator to be used in the program."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="add_passenger_floor.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$add__passenger__floor_8h.html",tooltip="add passengers to the floor array"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="add_request_queue.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$add__request__queue_8h.html",tooltip="contains declarations for add_request_queue function. Used to add passenger to queue"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="functions.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$functions_8h.html",tooltip="Simply contains all the headers of the different function."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="moving_lift_down.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$moving__lift__down_8h.html",tooltip="contains declaration for structure moving_lift_down function that changes the direction of lift...."];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="remove_passenger_queue.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remove__passenger__queue_8h.html",tooltip="contains the declaration for remove_passenger_queue function that remoove passenger from a queue"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="passengers_take_in.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$passengers__take__in_8h.html",tooltip="contains declarations for passenger_take_in function. Used to add passenger to the provided elevator ..."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="read_passenger.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__passenger_8h.html",tooltip="Reads the input file for passenger id,arrival time,starting floor and destination floor."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="remove_passenger_floor.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remove__passenger__floor_8h.html",tooltip="Removes the passenger details from floor specified.Returns 1 on successful deletion of passenger deta..."];
+}

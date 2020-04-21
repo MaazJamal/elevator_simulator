@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="create__elevator__array_8h" kind="file" language="C++">
+    <compoundname>create_elevator_array.h</compoundname>
+    <briefdescription>
+<para>declaration for create_elevator_array function -creates an array for elevators with respective to input entered by user. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="4"><highlight class="preprocessor">#ifndef<sp/>__CREATE_ELEVATOR_ARRAY_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CREATE_ELEVATOR_ARRAY_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelevator" kindref="compound">elevator</ref><sp/>*<sp/>create_elevator_array(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no_of_elevators)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="create_elevator_array.h"/>
+  </compounddef>
+</doxygen>

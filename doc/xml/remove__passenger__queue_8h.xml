@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="remove__passenger__queue_8h" kind="file" language="C++">
+    <compoundname>remove_passenger_queue.h</compoundname>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includedby refid="functions_8h" local="yes">functions.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="1">
+        <label>remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>functions.h</label>
+        <link refid="functions_8h"/>
+      </node>
+      <node id="1">
+        <label>remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> *</type>
+        <definition>struct passenger* remove_passenger_queue</definition>
+        <argsstring>(int index, struct passenger *head)</argsstring>
+        <name>remove_passenger_queue</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="remove_passenger_queue.h" line="9" column="24" declfile="remove_passenger_queue.h" declline="9" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>contains the declaration for remove_passenger_queue function that remoove passenger from a queue </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="4"><highlight class="preprocessor">#ifndef<sp/>__REMOVE_PASSENGER_QUEUE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__REMOVE_PASSENGER_QUEUE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>*<sp/>remove_passenger_queue(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>*<sp/>head);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="remove_passenger_queue.h"/>
+  </compounddef>
+</doxygen>
