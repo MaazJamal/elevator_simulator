@@ -1,139 +1,71 @@
+/*
+ * @file main.c
+ *
+ * @brief This function executes the Static and Dynamic version of elevator and performs Unit testing
+ *
+ * @author Maaz Jamal - maazjamal@cmail.carleton.ca
+ * @author Hariprasad Munusamy  - HariprasadMunusamy@cmail.carleton.ca
+ * @author Divyalakshmi Padmanaban  - Dpadm049@uottawa.ca
+ * @author Ritika Arora - ritikaarora@cmail.carleton.ca
+ *
+ */
+ 
 #include "functions.h"
+#include "simulations.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <unistd.h>
 
-int static_simulation(void);
-int dynamc_simulation(void);
+/*
+ * 
+ *
+ * @details This function takes the argument from user to perform testing,static and dynamic version of elevator and calls calls the associated function.
+ * h : Help Information
+ * t : Performs unit testing
+ * e : Performs elevator simlation
+ *
+ * @return This function returns an integer 0 (Zero) upon successful execution.
+ */
+int main(int argc, char *argv[]){
+	int opt;
 
-int main(){
-	static_simulation();
-	return 0;
+	while ((opt = getopt(argc, argv, "het")) != -1){
+
+		switch(opt){
+            		case 'h':
+                		printf("-t Runs automated unit testing and exits\n");
+                		printf("-e Runs main program elevator simulation and exits\n");
+                		return 0;
+                		break;
+            		case 't':
+                		/* Run automated unit testing */
+                		printf("Running automated unit testing\n");
+                		test_cases();
+                		printf("Automated testing has completed\n");
+                		return 0;
+               			break;
+            		case 'e':
+                		/* Main Elevator simulation program */
+                		printf("Running Elevator Simulation Program\n");
+                		int elevator_version=input_static_dynamic();
+                		if(elevator_version==1)
+                		{
+                			//dynamic_simulation;
+                			return 0;
+						}
+						if(elevator_version==0)
+						{
+							static_simulation();
+							return 0;
+						}
+						break;
+						default:
+							printf("Invalid argument \n");
+							return 0;
+					}
+	}
+					
+	
 }
 
-static_simulation(void){
-	
-	elevator_count = -1;
-	while(elevator_count != -1){
-	elevator_count = input_lifts();
-	}
-	floor_count = -1;
-
-	while(floor_count != -1){
-		floor_count = input_floors();
-	}
-	
-	struct elevator* elevator_arr = create_elevator_array(elevator_count);
-	struct passenger* floor_array = create_floor_array(floor_count);
-	passenger_count = count_passenger();
-	struct passenger* passenger_array; 
-	passenger_array = read_passnger();
-	unsigned int t = 0;
-	struct passenger* passenger_queue = NULL;
-	
-	int prev_time_index = 0;
-
-	while ( t < 86400 ){
-
-		// Add passenger with current time step to queue
-		
-		for(int i = prev_time_index; i < passenger_count; i++){
-			
-			//Assume the passenger_array is sorted by arrival time.
-			//prev_time_index prevents us from starting at previous index
-			if (passenger_array[i].arrival_time == t){
-				add_request_queue(passenger_queue, passenger_array[i]);
-				prev_time_index++;
-			}
-			else{
-				break;
-			}
-		}
-
-
-		for(int i = 0; i< elevator_count; i++){
-
-			if( is_lift_on_floor(elevator_arr,i)){
-				
-				//remove any passengers that need to get off
-				passengers_drop(&elevator_arr[i]);
-				
-				while(elevator_arr[i].passenger_count < elevator_arr[i].max_passenger){
-					passenger_takein(&elevator_arr[i]);
-				}
-
-			}
-
-			struct passenger* cur = passenger_queue;
-			int index = 0;
-			while(cur != NULL){
-			
-			bool direction_up = (cur->arrival_floor < cur->dest_floor);
-			bool direction_down =  (cur->arrival_floor > cur->dest_floor);
-			if (elevator_arr[i].direction_up == direction_up || elevator_arr[i].direction_up == direction_down){
-				add_passenger_floor(index, passenger_queue);
-				remove_passenger_queue(index, passenger_queue);
-			}
-
-			else{
-				
-				//is elevator at top floor
-				if(elevator_arr[i].cur_floor == floor_count){
-					//change direction to move down
-					int success = moving_lift_down(elevator_arr, i);
-					if( success == -1){
-						fprintf(stderr,"Could not change direction of elevator to Down. \n");
-					}
-					add_passenger_floor(index, passenger_queue);
-					remove_passenger_queue(index, passenger_queue);
-				}
-
-				//is elevator at ground floor. Can cause issues at start.
-				else if(elevator_arr[i].cur_floor == 1){
-					//change direction to move up
-					moving_lift_up(elevator_arr, i);
-					add_passenger_floor(index, passenger_queue);
-					remove_passenger_queue(index, passenger_queue);
-				}
-
-				// bool to check if elevator and passenger inside are travelling in same direction
-				else{
-					bool passenger_elevator_dir = false;
-					for(int j = 0; j<elevator_arr[i].passenger_count; i++){
-						if( elevator_arr[i].passenger_arr[j].in_elevator){
-							bool up = elevator_arr[i].passenger_arr[j].dest_floor > elevator_arr[i].passenger_arr[j].arrival_floor;
-							if(elevator_arr[i].direction_up == up || elevator_arr[i].direction_down != up){
-								passenger_elevator_dir = true;
-								break;
-							} 
-						}
-					}
-
-					//if no passengers are travelling in direction of lift change lift direction
-					if ( !passenger_elevator_dir){
-						if( elevator_arr[i].direction_up){
-							moving_lift_down(elevator_arr,i);
-						}
-						else if(elevator_arr[i].direction_down){
-							moving_lift_up(elevator_arr,i);
-						}
-						
-						add_passenger_floor(index, passenger_queue);
-						remove_passenger_queue(index, passenger_queue);
-					}
-				}
-			}
-
-			//potential bug here due to deleting nodes in remove_passenger_queue
-			cur = cur->next;
-			index++;
-		
-		} //End of elevator loop
-
-		t++;
-
-	}
-
-	output_data_metric();
-	return;
-}

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.18">
+  <compound refid="structelevator" kind="struct"><name>elevator</name>
+    <member refid="structelevator_1afdd7df977b812f9a8192fab08773efca" kind="variable"><name>moving</name></member>
+    <member refid="structelevator_1ab9db9c40c0582877c0eb1e40208bce7f" kind="variable"><name>between_floor</name></member>
+    <member refid="structelevator_1a4a24a1828511061b35d68613f6205c71" kind="variable"><name>direction_up</name></member>
+    <member refid="structelevator_1ae1d85507e558e66edd33a940fd85cb83" kind="variable"><name>direction_down</name></member>
+    <member refid="structelevator_1abcf67c62096d397bf09fad7c61c43e3a" kind="variable"><name>stop_at_floor</name></member>
+    <member refid="structelevator_1aafbf17dfb8c07dadb99b3e0faadef32d" kind="variable"><name>passenger_count</name></member>
+    <member refid="structelevator_1ab997145d0c77ff2c31df5e80d84387db" kind="variable"><name>max_passenger</name></member>
+    <member refid="structelevator_1aff6a26008372ae6df6b9e89db676516c" kind="variable"><name>cur_floor</name></member>
+    <member refid="structelevator_1abb33556650e8660ef9f37c08525ea2b0" kind="variable"><name>timer</name></member>
+    <member refid="structelevator_1aa49275fd21211fa8103ebc37c5dcd730" kind="variable"><name>passenger_arr</name></member>
+  </compound>
+  <compound refid="structpassenger" kind="struct"><name>passenger</name>
+    <member refid="structpassenger_1acaaf5adf80fe8fd8e9b1b5401c2a39e2" kind="variable"><name>in_elevator</name></member>
+    <member refid="structpassenger_1ac5750ae7307cd77866c3fc94ad058b8c" kind="variable"><name>arrival_time</name></member>
+    <member refid="structpassenger_1a4d2f3bc200903acf57f6a277c309ad96" kind="variable"><name>arrival_floor</name></member>
+    <member refid="structpassenger_1a1166dc7971a5d5e3b766c719b885a8d1" kind="variable"><name>dest_floor</name></member>
+    <member refid="structpassenger_1ab7ce6f462afaf105224b0ca772a33c43" kind="variable"><name>id</name></member>
+    <member refid="structpassenger_1a431ecdbaf4424eaa36a2eb954ce7e944" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="add__passenger__floor_8h" kind="file"><name>add_passenger_floor.h</name>
+    <member refid="add__passenger__floor_8h_1aba6a961fa1c1d9922c13b66c973fa62d" kind="function"><name>add_passenger_floor</name></member>
+  </compound>
+  <compound refid="add__request__queue_8h" kind="file"><name>add_request_queue.h</name>
+    <member refid="add__request__queue_8h_1a1aa0db2f2ecae31eaf0fc492d19414c6" kind="function"><name>add_request_queue</name></member>
+  </compound>
+  <compound refid="count__passenger_8h" kind="file"><name>count_passenger.h</name>
+    <member refid="count__passenger_8h_1a949d5f5716500869b64977f0e9df9d92" kind="function"><name>count_passenger</name></member>
+  </compound>
+  <compound refid="create__elevator__array_8h" kind="file"><name>create_elevator_array.h</name>
+  </compound>
+  <compound refid="create__floor__array_8h" kind="file"><name>create_floor_array.h</name>
+    <member refid="create__floor__array_8h_1a64498cd5b805fe8c1f80bccda9e2bc8b" kind="function"><name>create_floor_array</name></member>
+  </compound>
+  <compound refid="functions_8h" kind="file"><name>functions.h</name>
+  </compound>
+  <compound refid="globals_8h" kind="file"><name>globals.h</name>
+    <member refid="globals_8h_1a11ee4b54505479cda7e127a7030a76a7" kind="variable"><name>elevator_count</name></member>
+    <member refid="globals_8h_1aafbf17dfb8c07dadb99b3e0faadef32d" kind="variable"><name>passenger_count</name></member>
+    <member refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kind="variable"><name>floor_count</name></member>
+  </compound>
+  <compound refid="input__floor_8h" kind="file"><name>input_floor.h</name>
+    <member refid="input__floor_8h_1ac21b8029a111342aa5dde9daa28b65cb" kind="function"><name>input_floors</name></member>
+  </compound>
+  <compound refid="input__floors_8h" kind="file"><name>input_floors.h</name>
+    <member refid="input__floors_8h_1ac21b8029a111342aa5dde9daa28b65cb" kind="function"><name>input_floors</name></member>
+  </compound>
+  <compound refid="input__lifts_8h" kind="file"><name>input_lifts.h</name>
+    <member refid="input__lifts_8h_1aaf6e4f946cf083fed7f3b265e3421eb3" kind="function"><name>input_lifts</name></member>
+  </compound>
+  <compound refid="is__lift__on__floor_8h" kind="file"><name>is_lift_on_floor.h</name>
+    <member refid="is__lift__on__floor_8h_1a8331ecca3b0a14f407e7e9e354d01998" kind="function"><name>is_lift_on_floor</name></member>
+  </compound>
+  <compound refid="moving__lift__down_8h" kind="file"><name>moving_lift_down.h</name>
+    <member refid="moving__lift__down_8h_1a71965ccfee77f7e7469f4153836fb7ef" kind="function"><name>moving_lift_down</name></member>
+  </compound>
+  <compound refid="passengers__drop_8h" kind="file"><name>passengers_drop.h</name>
+    <member refid="passengers__drop_8h_1abf324a554d92e8182b223f0de8303d11" kind="function"><name>passengers_drop</name></member>
+  </compound>
+  <compound refid="passengers__take__in_8h" kind="file"><name>passengers_take_in.h</name>
+    <member refid="passengers__take__in_8h_1a287226a04968c197b9ffc9bfdaf4b85a" kind="function"><name>passengers_take_in</name></member>
+  </compound>
+  <compound refid="read__passenger_8h" kind="file"><name>read_passenger.h</name>
+    <member refid="read__passenger_8h_1a3635fae50736b720ab198905e12810fd" kind="function"><name>read_passenger</name></member>
+  </compound>
+  <compound refid="remove__passenger__floor_8h" kind="file"><name>remove_passenger_floor.h</name>
+    <member refid="remove__passenger__floor_8h_1a52fe046684880653f0e895c4d6631489" kind="function"><name>remove_passenger_floor</name></member>
+  </compound>
+  <compound refid="remove__passenger__queue_8h" kind="file"><name>remove_passenger_queue.h</name>
+    <member refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kind="function"><name>remove_passenger_queue</name></member>
+  </compound>
+  <compound refid="structures_8h" kind="file"><name>structures.h</name>
+  </compound>
+</doxygenindex>

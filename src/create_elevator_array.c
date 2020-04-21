@@ -1,26 +1,25 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"structure.h"
+#include"structures.h"
 #include"create_elevator_array.h"
-
+#include"globals.h"
 /**
-creates an array for elevators with respective to input entered by user.
-
-
-Constraints
-
-checks the input parameter-no of elevators .
-
-No of elevators should be in range(1-100).
-
-Prints error message if the no of elevators is out of range and if memory allocation fails.
-
-Returns the array of elevators.
-
-**/
-
-
-
+ * @file create_elevator_array.c
+ *
+ * @brief The function creates array for each elevator.
+ *
+ * @author Divyalakshmi Padmanaban  - Dpadm049@uottawa.ca
+ *
+ */
+ 
+/** @details Constraints
+ *checks the input parameter-no of elevators .
+ *No of elevators should be in range(1-100).
+ *Prints error message if the no of elevators is out of range and if memory allocation fails.
+ * @param[in] The function takes number of lifts as input.
+ * @return Returns the array of elevators.
+ */ 
+ 
 struct elevator * create_elevator_array(int no_of_elevators)
 {
 	
@@ -55,16 +54,16 @@ struct elevator * create_elevator_array(int no_of_elevators)
 			}
 			ele[i].passenger_count=0;
 			ele[i].max_passenger=10;
-			ele[i].cur_floor=0;
+			ele[i].cur_floor=1;
 			ele[i].timer=0;
-			ele[i].passenger_arr=malloc(ele[i].max_passenger*sizeof(struct passenger));
-			for (j=0;j<e[i].max_passeneger;j++)
+			ele[i].passenger_arr = malloc(ele[i].max_passenger*sizeof(struct passenger));
+			for (j=0;j<ele[i].max_passenger;j++)
 			{
-			ele[i].passenger[j]->in_elevator=0;
-			ele[i].passenger[j]->arrival_time=0;
-			ele[i].passenger[j]->arrival_floor=0;
-			ele[i].passenger[j]->dest_floor=0;
-			ele[i].passenger[j]->id=0;
+			ele[i].passenger_arr[j].in_elevator=0;
+			ele[i].passenger_arr[j].arrival_time=0;
+			ele[i].passenger_arr[j].arrival_floor=0;
+			ele[i].passenger_arr[j].dest_floor=0;
+			ele[i].passenger_arr[j].id=0;
 			}
 			
 		}

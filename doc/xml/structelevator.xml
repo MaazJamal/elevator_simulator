@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structelevator" kind="struct" language="C++" prot="public">
+    <compoundname>elevator</compoundname>
+    <includes refid="structures_8h" local="no">structures.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structelevator_1afdd7df977b812f9a8192fab08773efca" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool moving</definition>
+        <argsstring></argsstring>
+        <name>moving</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="35" column="5" bodyfile="structures.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1ab9db9c40c0582877c0eb1e40208bce7f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool between_floor</definition>
+        <argsstring></argsstring>
+        <name>between_floor</name>
+        <briefdescription>
+<para>Is the elevator moving? True 1 or False(stationary) 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="36" column="5" bodyfile="structures.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1a4a24a1828511061b35d68613f6205c71" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool direction_up</definition>
+        <argsstring></argsstring>
+        <name>direction_up</name>
+        <briefdescription>
+<para>Is elevator between floors. True 1 between floors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="37" column="5" bodyfile="structures.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1ae1d85507e558e66edd33a940fd85cb83" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool direction_down</definition>
+        <argsstring></argsstring>
+        <name>direction_down</name>
+        <briefdescription>
+<para>Is the elevator going up? True 1 for going up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="38" column="5" bodyfile="structures.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1abcf67c62096d397bf09fad7c61c43e3a" prot="public" static="no" mutable="no">
+        <type>bool *</type>
+        <definition>bool* stop_at_floor</definition>
+        <argsstring></argsstring>
+        <name>stop_at_floor</name>
+        <briefdescription>
+<para>Is the elevator going down? True 1 for going down. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="39" column="9" bodyfile="structures.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1aafbf17dfb8c07dadb99b3e0faadef32d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int passenger_count</definition>
+        <argsstring></argsstring>
+        <name>passenger_count</name>
+        <briefdescription>
+<para>points to boolean array of floors and shows if the elevator will stop at a certain floor or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="40" column="13" bodyfile="structures.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1ab997145d0c77ff2c31df5e80d84387db" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int max_passenger</definition>
+        <argsstring></argsstring>
+        <name>max_passenger</name>
+        <briefdescription>
+<para>count of passenger occupying the elevator </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="41" column="13" bodyfile="structures.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1aff6a26008372ae6df6b9e89db676516c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cur_floor</definition>
+        <argsstring></argsstring>
+        <name>cur_floor</name>
+        <briefdescription>
+<para>Maximum number of passengers the lift can accomodate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="42" column="13" bodyfile="structures.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1abb33556650e8660ef9f37c08525ea2b0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="43" column="14" bodyfile="structures.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelevator_1aa49275fd21211fa8103ebc37c5dcd730" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> *</type>
+        <definition>struct passenger* passenger_arr</definition>
+        <argsstring></argsstring>
+        <name>passenger_arr</name>
+        <briefdescription>
+<para>Time clock untill the next floor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="44" column="16" bodyfile="structures.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>structure for to store important information about a elevator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores information about the elevator such as direction of travel, the floors to stop at. The maximum number of passengers the lift can accomodate and the current passengers in the lift and their information. and time it takes to go to the reach next floor. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>passenger</label>
+        <link refid="structpassenger"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>elevator</label>
+        <link refid="structelevator"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>passenger_arr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="structures.h" line="34" column="1" bodyfile="structures.h" bodystart="34" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structelevator_1ab9db9c40c0582877c0eb1e40208bce7f" prot="public" virt="non-virtual"><scope>elevator</scope><name>between_floor</name></member>
+      <member refid="structelevator_1aff6a26008372ae6df6b9e89db676516c" prot="public" virt="non-virtual"><scope>elevator</scope><name>cur_floor</name></member>
+      <member refid="structelevator_1ae1d85507e558e66edd33a940fd85cb83" prot="public" virt="non-virtual"><scope>elevator</scope><name>direction_down</name></member>
+      <member refid="structelevator_1a4a24a1828511061b35d68613f6205c71" prot="public" virt="non-virtual"><scope>elevator</scope><name>direction_up</name></member>
+      <member refid="structelevator_1ab997145d0c77ff2c31df5e80d84387db" prot="public" virt="non-virtual"><scope>elevator</scope><name>max_passenger</name></member>
+      <member refid="structelevator_1afdd7df977b812f9a8192fab08773efca" prot="public" virt="non-virtual"><scope>elevator</scope><name>moving</name></member>
+      <member refid="structelevator_1aa49275fd21211fa8103ebc37c5dcd730" prot="public" virt="non-virtual"><scope>elevator</scope><name>passenger_arr</name></member>
+      <member refid="structelevator_1aafbf17dfb8c07dadb99b3e0faadef32d" prot="public" virt="non-virtual"><scope>elevator</scope><name>passenger_count</name></member>
+      <member refid="structelevator_1abcf67c62096d397bf09fad7c61c43e3a" prot="public" virt="non-virtual"><scope>elevator</scope><name>stop_at_floor</name></member>
+      <member refid="structelevator_1abb33556650e8660ef9f37c08525ea2b0" prot="public" virt="non-virtual"><scope>elevator</scope><name>timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

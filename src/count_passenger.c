@@ -1,14 +1,25 @@
+/**
+ * @file count_passenger.c
+ *
+ * @brief Reads line by line and counts the number of passenger based on passenger ID.
+ * When passenger ID equal to "911" it is considered as Emergency stop and wont be counted towards the passenger_count.
+ *
+ * @author Hariprasad Munusamy  - HariprasadMunusamy@cmail.carleton.ca	
+ *
+ */
 #include<stdio.h>
 #include<stdlib.h>
 #include "count_passenger.h"
-/**
- * The function opens the input file
+#include "globals.h"
+#include "structures.h"
+
+/** @details Counts the passenger requests
  *
- * Reads line by line and counts the number of passenger based on passenger ID.
- * When passenger ID equal to "911" it is considered as Emergency stop and wont be counted towards the passenger_count.
+ * @param[in] No input parameter. The function uses the input file
  *
- * @return int Returns the passenger count.
- *  */
+ * @return Returns count on successful execution and 0 if file doesn't exist.
+ *
+ */
 int count_passenger()
 {
     /**  es to store the number of emergency stop situations*/
@@ -16,7 +27,7 @@ int count_passenger()
     passenger_count=0; //global variable stores the passenger count
     FILE *f;
     char a[10];
-    f=fopen("datafolder/input.txt","r");
+    f=fopen("data/input.txt","r");
     if (f==NULL) 
     { 
         printf("no input file exists"); 

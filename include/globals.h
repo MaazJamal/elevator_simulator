@@ -1,4 +1,4 @@
-/**@file globals.h 
+/** @file globals.h 
  *@brief contains declarations for globals elevator_count, passenger_count
  and floor_count. 
 */

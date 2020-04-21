@@ -1,0 +1,58 @@
+\hypertarget{structelevator}{}\doxysection{elevator Struct Reference}
+\label{structelevator}\index{elevator@{elevator}}
+
+
+structure for to store important information about a elevator.  
+
+
+
+
+{\ttfamily \#include $<$structures.\+h$>$}
+
+
+
+Collaboration diagram for elevator\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structelevator_afdd7df977b812f9a8192fab08773efca}\label{structelevator_afdd7df977b812f9a8192fab08773efca}} 
+bool {\bfseries moving}
+\item 
+\mbox{\Hypertarget{structelevator_ab9db9c40c0582877c0eb1e40208bce7f}\label{structelevator_ab9db9c40c0582877c0eb1e40208bce7f}} 
+bool \mbox{\hyperlink{structelevator_ab9db9c40c0582877c0eb1e40208bce7f}{between\+\_\+floor}}
+\begin{DoxyCompactList}\small\item\em Is the elevator moving? True 1 or False(stationary) 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structelevator_a4a24a1828511061b35d68613f6205c71}\label{structelevator_a4a24a1828511061b35d68613f6205c71}} 
+bool \mbox{\hyperlink{structelevator_a4a24a1828511061b35d68613f6205c71}{direction\+\_\+up}}
+\begin{DoxyCompactList}\small\item\em Is elevator between floors. True 1 between floors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structelevator_ae1d85507e558e66edd33a940fd85cb83}\label{structelevator_ae1d85507e558e66edd33a940fd85cb83}} 
+bool \mbox{\hyperlink{structelevator_ae1d85507e558e66edd33a940fd85cb83}{direction\+\_\+down}}
+\begin{DoxyCompactList}\small\item\em Is the elevator going up? True 1 for going up. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structelevator_abcf67c62096d397bf09fad7c61c43e3a}\label{structelevator_abcf67c62096d397bf09fad7c61c43e3a}} 
+bool $\ast$ \mbox{\hyperlink{structelevator_abcf67c62096d397bf09fad7c61c43e3a}{stop\+\_\+at\+\_\+floor}}
+\begin{DoxyCompactList}\small\item\em Is the elevator going down? True 1 for going down. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structelevator_aafbf17dfb8c07dadb99b3e0faadef32d}\label{structelevator_aafbf17dfb8c07dadb99b3e0faadef32d}} 
+unsigned int \mbox{\hyperlink{structelevator_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em points to boolean array of floors and shows if the elevator will stop at a certain floor or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structelevator_ab997145d0c77ff2c31df5e80d84387db}\label{structelevator_ab997145d0c77ff2c31df5e80d84387db}} 
+unsigned int \mbox{\hyperlink{structelevator_ab997145d0c77ff2c31df5e80d84387db}{max\+\_\+passenger}}
+\begin{DoxyCompactList}\small\item\em count of passenger occupying the elevator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structelevator_aff6a26008372ae6df6b9e89db676516c}\label{structelevator_aff6a26008372ae6df6b9e89db676516c}} 
+unsigned int \mbox{\hyperlink{structelevator_aff6a26008372ae6df6b9e89db676516c}{cur\+\_\+floor}}
+\begin{DoxyCompactList}\small\item\em Maximum number of passengers the lift can accomodate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structelevator_abb33556650e8660ef9f37c08525ea2b0}\label{structelevator_abb33556650e8660ef9f37c08525ea2b0}} 
+unsigned int {\bfseries timer}
+\item 
+\mbox{\Hypertarget{structelevator_aa49275fd21211fa8103ebc37c5dcd730}\label{structelevator_aa49275fd21211fa8103ebc37c5dcd730}} 
+struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$ \mbox{\hyperlink{structelevator_aa49275fd21211fa8103ebc37c5dcd730}{passenger\+\_\+arr}}
+\begin{DoxyCompactList}\small\item\em Time clock untill the next floor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+structure for to store important information about a elevator. 
+
+Stores information about the elevator such as direction of travel, the floors to stop at. The maximum number of passengers the lift can accomodate and the current passengers in the lift and their information. and time it takes to go to the reach next floor. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structures_8h}{structures.\+h}}\end{DoxyCompactItemize}
