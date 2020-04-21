@@ -32,10 +32,11 @@ int passengers_take_in(struct elevator elevator_arr[], int index, struct passeng
 		if(!(elevator_arr[index].passenger_arr[i].in_elevator)){
 		
 			if(floor_arr[floor_index] != NULL && elevator_arr[index].passenger_count < passenger_capacity){
-			elevator_arr[index].passenger_arr[i] = *(floor_arr[floor_index]);
+			struct passenger temp = *(floor_arr[floor_index]);
+			elevator_arr[index].passenger_arr[i] = temp;
 			elevator_arr[index].passenger_arr[i].in_elevator = true;
 			elevator_arr[index].passenger_count++;
-			elevator_arr[index].stop_at_floor[floor_index] = true; //stop at this floor from drop off
+			elevator_arr[index].stop_at_floor[temp.dest_floor-1] = true; //stop at this floor from drop off
 			passenger_added++;
 			travel_log_file(*(floor_arr[floor_index]),event_time, index,2); //choose mode to calculate avg,max times.
 			remove_passenger_floor(floor_arr,cur_floor);

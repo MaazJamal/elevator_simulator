@@ -83,8 +83,12 @@ int static_simulation(void)
 				}
 				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger && stop_at_floor_global[stop_change])
 				{
+					if(stop_change == 49){
+						int iwillforgetthis =0;
+						iwillforgetthis = 33;
+					}
 					add_delay = passengers_take_in(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
-					if (floor_array[stop_change] == NULL)
+					if (floor_array[stop_change] == NULL )
 					{
 						stop_at_floor_global[stop_change] = false;
 					}
@@ -111,7 +115,7 @@ int static_simulation(void)
 						int arrival_floor_index = temp.arrival_floor - 1; //-1 because of mismatch between array and input file
 
 						add_passenger_floor(floor_array, arrival_floor_index, temp);
-						//elevator_arr[i].stop_at_floor[temp.dest_floor - 1] = true;
+						// elevator_arr[i].stop_at_floor[temp.dest_floor - 1] = true;
 						stop_at_floor_global[temp.arrival_floor - 1] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						index--; //list is smaller by one node.
@@ -134,8 +138,8 @@ int static_simulation(void)
 
 						int arrival_floor_index = temp.arrival_floor - 1;
 						add_passenger_floor(floor_array, arrival_floor_index, temp);
-						//int dest_floor_index = temp.dest_floor - 1;
-						//elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+						// int dest_floor_index = temp.dest_floor - 1;
+						// elevator_arr[i].stop_at_floor[dest_floor_index] = true;
 						stop_at_floor_global[temp.arrival_floor - 1] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						index--; //list is smaller by one node.
@@ -151,8 +155,8 @@ int static_simulation(void)
 
 						int arrival_floor_index = temp.arrival_floor - 1;
 						add_passenger_floor(floor_array, arrival_floor_index, temp);
-						//int dest_floor_index = temp.dest_floor - 1;
-						//elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+						// int dest_floor_index = temp.dest_floor - 1;
+						// elevator_arr[i].stop_at_floor[dest_floor_index] = true;
 						stop_at_floor_global[temp.arrival_floor - 1] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						index--; //list is smaller by one node.
@@ -192,8 +196,8 @@ int static_simulation(void)
 
 							int arrival_floor_index = temp.arrival_floor - 1;
 							add_passenger_floor(floor_array, arrival_floor_index, temp);
-							//int dest_floor_index = temp.dest_floor - 1;
-							//elevator_arr[i].stop_at_floor[dest_floor_index] = true;
+							// int dest_floor_index = temp.dest_floor - 1;
+							// elevator_arr[i].stop_at_floor[dest_floor_index] = true;
 							stop_at_floor_global[temp.arrival_floor - 1] = true;
 							passenger_queue = remove_passenger_queue(index, passenger_queue);
 							index--; //list is smaller by one node.
@@ -220,6 +224,11 @@ int static_simulation(void)
 			{
 				elevator_arr[i].moving = true;
 				elevator_arr[i].between_floor = true;
+				// for(int l=0;l<elevator_arr[i].max_passenger;l++){
+				// 	if(elevator_arr[i].passenger_arr[l].in_elevator){
+				// 		elevator_arr[i].stop_at_floor[elevator_arr[i].passenger_arr[l].dest_floor - 1] = true;
+				// 	}
+				// }
 			}
 			else
 			{
@@ -246,7 +255,10 @@ int static_simulation(void)
 					}
 				}
 			}
-
+			if(t == 4500){
+				int thisistupid = 0;
+				thisistupid =3;
+			}
 			if (elevator_arr[i].timer > 0)
 			{
 				elevator_arr[i].timer--;

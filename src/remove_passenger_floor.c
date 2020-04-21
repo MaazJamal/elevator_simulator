@@ -18,7 +18,7 @@ Returns 1 on successful deletion of passenger details from specified floor.
 int remove_passenger_floor(struct passenger* floordetails[], int cur_floor){
 
 	assert(cur_floor >0);//checks the value of cur_floor ;if it returns 0- terminates the program
-	assert(cur_floor<floor_count);
+	assert(cur_floor<=floor_count);
 	static int no_of_passengers_removed = 0;
 	int floor_index = cur_floor -1; //needed because floor array strt at 0 and elevator floor at 1
 	struct passenger* temp;
