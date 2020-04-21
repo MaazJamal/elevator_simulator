@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="create__floor__array_8h" kind="file" language="C++">
+    <compoundname>create_floor_array.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="create__floor__array_8h_1a64498cd5b805fe8c1f80bccda9e2bc8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> *</type>
+        <definition>struct passenger* create_floor_array</definition>
+        <argsstring>(int no_of_floors)</argsstring>
+        <name>create_floor_array</name>
+        <param>
+          <type>int</type>
+          <declname>no_of_floors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="create_floor_array.h" line="8" column="24" declfile="create_floor_array.h" declline="8" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>declaration for create_floor_array function -creates an array for floors with respective to input entered by user. Returns the array of floors. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#ifndef<sp/>__CREATE_FLOOR_ARRAY__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CREATE_FLOOR_ARRAY__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*<sp/>create_floor_array(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no_of_floors);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="create_floor_array.h"/>
+  </compounddef>
+</doxygen>

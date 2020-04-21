@@ -1,0 +1,24 @@
+digraph "functions.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="functions.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Simply contains all the headers of the different function."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="structures.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structures_8h.html",tooltip="contains declarations for structure passenger, elevator to be used in the program."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="stdbool.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="globals.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$globals_8h.html",tooltip="contains declarations for globals elevator_count, passenger_count and floor_count."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="moving_lift_down.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$moving__lift__down_8h.html",tooltip="contains declaration for structure moving_lift_down function that changes the direction of lift...."];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="input_lifts.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$input__lifts_8h.html",tooltip="Inputs the number of lifts from user."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="add_request_queue.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$add__request__queue_8h.html",tooltip="contains declarations for add_request_queue function. Used to add passenger to queue"];
+  Node7 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="remove_passenger_queue.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remove__passenger__queue_8h.html",tooltip="contains the declaration for remove_passenger_queue function that remoove passenger from a queue"];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+}

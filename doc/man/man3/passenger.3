@@ -1,0 +1,47 @@
+.TH "passenger" 3 "Mon Apr 20 2020" "Elevator simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+passenger \- structure for to store important information about a passenger\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <structures\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "bool \fBin_elevator\fP"
+.br
+.RI "Stores whether passegner is in elevator\&. "
+.ti -1c
+.RI "unsigned int \fBarrival_time\fP"
+.br
+.RI "stores arrival time of the passenger "
+.ti -1c
+.RI "unsigned int \fBarrival_floor\fP"
+.br
+.RI "stores the arrival_floor of the passenger "
+.ti -1c
+.RI "unsigned int \fBdest_floor\fP"
+.br
+.RI "stores the destination floor of the passenger "
+.ti -1c
+.RI "unsigned int \fBid\fP"
+.br
+.RI "stores the passenger_id of the passenger "
+.ti -1c
+.RI "struct \fBpassenger\fP * \fBnext\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+structure for to store important information about a passenger\&. 
+
+Stores the arrival time and floor and destination floor of the passenger\&. as well as the passenger id\&. There is a next passenger pointer to create queues 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator simulation from the source code\&.
