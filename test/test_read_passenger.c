@@ -1,3 +1,9 @@
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include"structures.h"
+
 /**
 On account of erraneous data in input file,the program exits.
 So test cases are executed by means of switch cases.
@@ -5,12 +11,6 @@ Read passeneger function is included in the prgram here and function call involv
 (i.e) structure array and input file,Inorder to test for various erraneous conditions of input file.
 
 **/
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-#include"structures.h"
-
-
 void read_passenger(struct passenger p[],char* f)
 {
 

@@ -2,16 +2,10 @@
 #include"input_floors.h"
 
 /**
-Obtains the floor count-Total number of floors in the building
 
-Enables the user to enter the total number of floors in the building .
-
-Constraints
-If the floor count is 0 ,the function displays a error message and returns -1.
-If the floor count is less than 1(negative values) ,the function displays a error message and returns -1.
-If the floor count is greater than 100,the function displays a error message and returns -1.
-Floating point values entered considered to near integers.
-The function accepts only values between 1 and 100 and returns the value;otherwise returns -1 and displays error message.
+Calls the function input_floors.c with input from input_input_floors.txt.
+Prints the PASS /FAIL status ,by accessing the  return from input_floors function.
+results_input_floors file contains the results.
 
 **/
 
