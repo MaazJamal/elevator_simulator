@@ -24,8 +24,7 @@ int remove_passenger_floor(struct passenger* floordetails[], int cur_floor){
 	struct passenger* temp;
 	temp = floordetails[floor_index];
 	floordetails[floor_index] = floordetails[floor_index]->next;
-	printf("Passenger %d from floor %d is removed. No of passengers removed: %d\n",temp->id,cur_floor,no_of_passengers_removed);
+	printf("Passenger %d from floor %d is removed. No of passengers removed: %d\n",temp->id,cur_floor,++no_of_passengers_removed);
 	free(temp);
-	no_of_passengers_removed++;
 		return 1;
 }
