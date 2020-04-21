@@ -1,3 +1,11 @@
+/** @file travel_log_file.c
+ * 
+ * @brief Contains the deifintion of travel_log_file() this function writes useful
+ * logs about the travel of the passengers.
+ * 
+ * @author Maaz Jamal
+ * */
+
 #include "travel_log_file.h"
 #include "structures.h"
 #include <stdlib.h>

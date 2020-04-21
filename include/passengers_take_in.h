@@ -1,6 +1,8 @@
 /** @file passengers_take_in.h 
  * @brief contains declarations for passenger_take_in function. Used to add 
  passenger to the provided elevator array entry 
+
+ @author Maaz Jamal
 */
 
 #ifndef __PASSENGERS_TAKE_IN_H__

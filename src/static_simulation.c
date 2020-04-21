@@ -1,8 +1,23 @@
+/** @file static_simulations.c
+ * 
+ * @brief This file contains the definition of static_simulation
+ * The function contains the algorithm for static release of the program
+ *  
+ * @author Maaz Jamal
+ * */
+
 #include "functions.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
+/** @brief This function contains the working logic of the elevator array function for static release.
+ * 
+ * Contains the logic for the static release. It contains the main logic loop for travel of
+ * elevators. The loop for placing passengers on floors and the complete flow of the program.
+ * 
+ * @return return 1 for succesfull completion.
+ * */
 int static_simulation(void)
 {
 
@@ -17,14 +32,14 @@ int static_simulation(void)
 	{
 		floor_count = input_floors();
 	}
-	bool *stop_at_floor_global = (bool *)calloc(floor_count, sizeof(bool));
-	struct elevator *elevator_arr = create_elevator_array(elevator_count);
-	struct passenger **floor_array = create_floor_array(floor_count);
+	bool *stop_at_floor_global = (bool *)calloc(floor_count, sizeof(bool)); //! A boolean array that shows if elevator needs to stop at a floor. to pick a passenger.
+	struct elevator *elevator_arr = create_elevator_array(elevator_count);	//! Array conatining Elevators
+	struct passenger **floor_array = create_floor_array(floor_count);		//! Array to pointer of type passenger. Stores passengers on floors.
 	passenger_count = count_passenger();
-	struct passenger *passenger_array = (struct passenger *)calloc(passenger_count, sizeof(struct passenger));
+	struct passenger *passenger_array = (struct passenger *)calloc(passenger_count, sizeof(struct passenger)); //! stores the passengers from input file.
 	read_passenger(passenger_array);
-	unsigned int t = 0;
-	struct passenger *passenger_queue = NULL;
+	unsigned int t = 0;						  //! main time counter
+	struct passenger *passenger_queue = NULL; //! A queue of request made by passengers
 
 	int prev_time_index = 0;
 
@@ -74,7 +89,7 @@ int static_simulation(void)
 				{
 
 					add_delay = passengers_take_in(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
-					if (floor_array[stop_change] == NULL )
+					if (floor_array[stop_change] == NULL)
 					{
 						stop_at_floor_global[stop_change] = false;
 					}
@@ -210,7 +225,6 @@ int static_simulation(void)
 			{
 				elevator_arr[i].moving = true;
 				elevator_arr[i].between_floor = true;
-
 			}
 			else
 			{
@@ -290,23 +304,27 @@ int static_simulation(void)
 				if (elevator_arr[i].stop_at_floor[current_floor - 1] || stop_at_floor_global[current_floor - 1])
 				{ //do we need to stop at this floor
 					elevator_arr[i].moving = false;
-					elevator_arr[i].between_floor = false; 
+					elevator_arr[i].between_floor = false;
 				}
 				else //we do not need to stop at this floor.
-				{	
+				{
 					elevator_arr[i].moving = true;
 					elevator_arr[i].between_floor = true;
 					elevator_arr[i].timer += 3; //add 3 sec till next floor
 				}
 
-				if(elevator_arr[i].direction_up && !passengers_above){ //if no passengers above then lift should change direction to down.
-					if(current_floor != 1 && elevator_arr[i].passenger_count > 0){
-					moving_lift_down(elevator_arr,i);
+				if (elevator_arr[i].direction_up && !passengers_above)
+				{ //if no passengers above then lift should change direction to down.
+					if (current_floor != 1 && elevator_arr[i].passenger_count > 0)
+					{
+						moving_lift_down(elevator_arr, i);
 					}
 				}
-				else if(elevator_arr[i].direction_down && !passengers_below){
-					if(current_floor != floor_count && elevator_arr[i].passenger_count > 0){
-						moving_lift_up(elevator_arr,i);
+				else if (elevator_arr[i].direction_down && !passengers_below)
+				{
+					if (current_floor != floor_count && elevator_arr[i].passenger_count > 0)
+					{
+						moving_lift_up(elevator_arr, i);
 					}
 				}
 			}

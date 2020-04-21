@@ -1,6 +1,8 @@
 /** @file simulations.h
  * @brief this file simply includes the header files 
- * of the two simulations
+ * of the two simulations.
+ * 
+ * @author Maaz Jamal
  * */
 
 #ifndef __SIMULATIONS_H__

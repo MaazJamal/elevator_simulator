@@ -4,18 +4,11 @@
 #include "globals.h" 
 #include "stdlib.h"
 
-// struct elevator{
-// bool	moving; //! Is the elevator moving? True 1 or False(stationary) 0.
-// bool	between_floor; //! Is elevator between floors. True 1 between floors.
-// bool	direction_up; //! Is the elevator going up? True 1 for going up
-// bool	direction_down; //! Is the elevator going down? True 1 for going down
-// bool    *stop_at_floor; //! points to boolean array of floors and shows if the elevator will stop at a certain floor or not.
-// unsigned int	passenger_count; //! count of passenger occupying the elevator
-// unsigned int	max_passenger; //! Maximum number of passengers the lift can accomodate
-// unsigned int	cur_floor; //!
-// unsigned int 	timer; //! Time clock untill the next floor
-// struct passenger *passenger_arr; //! points to a array of struct pasenger of size max_passenger.   
-// };
+/** @brief This function test the function moving_lift_down.
+ * 
+ * Function tests array out of bounds check. Change elevator direction test.
+ * 
+ * */ 
 
 void test_moving_lift_down(void){
 	struct elevator arr[3];

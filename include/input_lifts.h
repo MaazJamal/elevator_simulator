@@ -1,5 +1,7 @@
 /** @file input_lifts.h 
- * @brief contains declaration for the input_lifts function.
+ * @brief contains declaration for the input_lifts() function.
+ * 
+ * @author Maaz Jamal
 **/
 
 #ifndef __INPUT_LIFTS_H__

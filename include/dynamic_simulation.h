@@ -3,6 +3,7 @@
  * @brief this file contains the declaration of the function dynamic_simulation()
  * This function runs the dynamic mode of the project. 
  * 
+ * @author Maaz Jamal
  * */
 
 #ifndef __DYNAMIC_SIMULATION_H__
