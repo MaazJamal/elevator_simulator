@@ -24,7 +24,7 @@ void test_input_after_stop(void)
 	return 0;
 }
 
-int input_after_stop()
+static int input_after_stop()
  {
  	int st; //Stores the user status
  	printf("Enter\n");

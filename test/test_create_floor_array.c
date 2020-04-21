@@ -12,7 +12,7 @@
 #include<stdbool.h>
 //#include "functions.h"
 
-struct passenger{
+static struct passenger{
 bool	in_elevator; //!< Stores whether passegner is in elevator. 
 unsigned int	arrival_time; //!< stores arrival time of the passenger
 unsigned int	arrival_floor; //!< stores the arrival_floor of the passenger
@@ -21,7 +21,7 @@ unsigned int 	id; //!< stores the passenger_id of the passenger
 struct passenger*next; //! stores address of the next node in case of creation of queues
 };
 
-struct passenger ** create_floor_array(int no_of_floors)
+static struct passenger ** create_floor_array(int no_of_floors)
  {
     //if(no_of_floors>floor_count)
 	//{
