@@ -2,6 +2,7 @@
  * @brief This file contains the declaration of the function static_simulation
  * The function carries out the static simulation of the project.
  * 
+ * @author Maaz Jamal
  * */
 
 #ifndef __STATIC_SIMULATION_H__
