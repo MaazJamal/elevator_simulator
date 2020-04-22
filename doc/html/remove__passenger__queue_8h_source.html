@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Elevator simulation: remove_passenger_queue.h Source File</title>
+<title>Elevator Simulator: include/remove_passenger_queue.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Elevator simulation
+   <div id="projectname">Elevator Simulator
+   &#160;<span id="projectnumber">0.9</span>
    </div>
+   <div id="projectbrief">The project simulates elevators in a building</div>
   </td>
  </tr>
  </tbody>
@@ -86,22 +88,25 @@ $(document).ready(function(){initNavTree('remove__passenger__queue_8h_source.htm
 </div><!--header-->
 <div class="contents">
 <a href="remove__passenger__queue_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef __REMOVE_PASSENGER_QUEUE_H__</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define __REMOVE_PASSENGER_QUEUE_H__</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="structures_8h.html">structures.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __REMOVE_PASSENGER_QUEUE_H__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __REMOVE_PASSENGER_QUEUE_H__</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a>* remove_passenger_queue(<span class="keywordtype">int</span> index, <span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>* head);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="structures_8h.html">structures.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="globals_8h.html">globals.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *<a class="code" href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a>(<span class="keywordtype">int</span> index, <span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *head);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure for to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> structures.h:16</div></div>
+<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure for to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00016">structures.h:17</a></div></div>
 <div class="ttc" id="astructures_8h_html"><div class="ttname"><a href="structures_8h.html">structures.h</a></div><div class="ttdoc">contains declarations for structure passenger, elevator to be used in the program.</div></div>
+<div class="ttc" id="aremove__passenger__queue_8h_html_aaf649634b0615e3c784050409bd55e58"><div class="ttname"><a href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a></div><div class="ttdeci">struct passenger * remove_passenger_queue(int index, struct passenger *head)</div><div class="ttdef"><b>Definition:</b> <a href="remove__passenger__queue_8c_source.html#l00017">remove_passenger_queue.c:17</a></div></div>
+<div class="ttc" id="aglobals_8h_html"><div class="ttname"><a href="globals_8h.html">globals.h</a></div><div class="ttdoc">contains declarations for globals elevator_count, passenger_count and floor_count.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="remove__passenger__queue_8h.html">remove_passenger_queue.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="remove__passenger__queue_8h.html">remove_passenger_queue.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

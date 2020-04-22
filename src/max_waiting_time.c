@@ -20,9 +20,11 @@
  * @return float Returns the maximum waiting time.
 */
 
-float max_waiting_time(float time_difference){
+float max_waiting_time(float time_difference)
+{
 	static float max_time;
-	if(time_difference > max_time){
+	if (time_difference > max_time)
+	{
 		max_time = time_difference;
 	}
 	return max_time;

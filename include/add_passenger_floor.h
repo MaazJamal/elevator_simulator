@@ -8,6 +8,6 @@
 #include "structures.h"
 #include "globals.h"
 
-extern void add_passenger_floor(struct passenger* floor[], int index, struct passenger passenger_info);
+extern void add_passenger_floor(struct passenger *floor[], int index, struct passenger passenger_info);
 
 #endif

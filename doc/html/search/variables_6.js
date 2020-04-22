@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['passenger_5farr_63',['passenger_arr',['../structelevator.html#aa49275fd21211fa8103ebc37c5dcd730',1,'elevator']]],
-  ['passenger_5fcount_64',['passenger_count',['../structelevator.html#aafbf17dfb8c07dadb99b3e0faadef32d',1,'elevator']]]
+  ['id_184',['id',['../structpassenger.html#a25f6b216e5dc0bede72e133edcf4b03f',1,'passenger']]],
+  ['in_5felevator_185',['in_elevator',['../structpassenger.html#a8af124b4de91150e204a2374e98ee71f',1,'passenger']]]
 ];

@@ -21,7 +21,7 @@
  * @param[in] index int value that specifies the index of the elevator. index start at 0.
  * @param[in, out] elevator_arr pointer to elevator array.
  * @param[in, out] floor_arr array of pointers to passengers on floor.
- * @param[in] cur_florr int value that specifies the current floor. index start at 0.
+ * @param[in] cur_florr int value that specifies the current floor. As described in elevator so start at 1 and equal to max_floor_count.
  * @param[in] event_time unsigned int the time the event has happened.
  * @return return the number of passengers added to the elevator.
  * */

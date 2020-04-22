@@ -1,0 +1,1 @@
+FAIL;Input Parameter:Valid;is_lift_on_floor function cannot be accesssed  .

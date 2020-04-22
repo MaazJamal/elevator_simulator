@@ -17,13 +17,16 @@ static void case5(void);
 
 struct elevator dummy = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 struct elevator dummy_2 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-struct passenger dummy_pass = {1, 0, 0, 0, 0, 0};
+struct passenger dummy_pass = {1, 0, 0, 4, 0, 0};
+
+FILE *f;
 
 int test_passenger_take_in(void)
 {
+	f = fopen("test/results/test_passenger_take_in_result.txt", "w");
 	printf("chose between the test cases:\n");
-	puts("1- incorrect elevator array index");
-	puts("2- incorrect floor array index");
+	puts("1- incorrect elevator array index the program should exit.");
+	puts("2- incorrect floor array index the program should exit.");
 	puts("3- mismatched elevator current floor and floor index");
 	puts("4- add 3 passenger to 5 free spots from 3 passenger on floor");
 	puts("4- add 5 passenger to 5 free spots from 7 passenger on floor");
@@ -47,6 +50,7 @@ int test_passenger_take_in(void)
 	default:
 		break;
 	}
+	fclose(f);
 	return 0;
 }
 
@@ -108,6 +112,10 @@ void case4(void)
 	ell_arr[0] = dummy;
 	ell_arr[1] = dummy_2;
 	struct passenger **floor_arr = malloc(sizeof(struct passenger *) * 10);
+	for (int i = 0; i < elevator_count; i++)
+	{
+		ell_arr[i].stop_at_floor = (bool *)calloc(10, sizeof(bool));
+	}
 	for (int i = 0; i < 10; i++)
 	{
 		floor_arr[i] = NULL;
@@ -121,7 +129,7 @@ void case4(void)
 	one->next = two;
 	two->next = three;
 	three->next = NULL;
-	floor_arr[5] = one;
+	floor_arr[4] = one;
 	one->in_elevator = false;
 	two->in_elevator = false;
 	three->in_elevator = false;
@@ -153,19 +161,24 @@ void case4(void)
 	if (added == 3 && okay == 2)
 	{
 		printf("PASS 3 passengers added. \n");
+		fprintf(f, "PASS 3 passengers added. \n");
 	}
 	else
 	{
-		printf("FAIL: passenger not added properly addded:%d free space:%d", added, okay);
+		fprintf(f, "FAIL: passenger not added properly addded:%d free space:%d\n", added, okay);
+		fprintf(f, "FAIL: passenger not added properly addded:%d free space:%d\n", added, okay);
 	}
-	if (floor_arr[5] == NULL)
+	if (floor_arr[4] == NULL)
 	{
 		printf("PASS 3 passengers removed from floor. \n");
+		fprintf(f, "PASS 3 passengers removed from floor. \n");
 	}
 	else
 	{
 		printf("FAIL: 3 passengers not removed from floor. \n");
+		fprintf(f, "FAIL: 3 passengers not removed from floor. \n");
 	}
+	fflush(f);
 }
 
 /** This function tests the condition of removing passenger from floor with more passegner to elevator.
@@ -180,6 +193,10 @@ void case5(void)
 	ell_arr[0] = dummy;
 	ell_arr[1] = dummy_2;
 	struct passenger **floor_arr = malloc(sizeof(struct passenger *) * 10);
+	for (int i = 0; i < elevator_count; i++)
+	{
+		ell_arr[i].stop_at_floor = (bool *)calloc(10, sizeof(bool));
+	}
 	for (int i = 0; i < 10; i++)
 	{
 		floor_arr[i] = NULL;
@@ -206,7 +223,7 @@ void case5(void)
 	five->next = six;
 	six->next = seven;
 	seven->next = NULL;
-	floor_arr[5] = one;
+	floor_arr[4] = one;
 	one->in_elevator = false;
 	two->in_elevator = false;
 	three->in_elevator = false;
@@ -236,23 +253,28 @@ void case5(void)
 	{
 		if (ell_arr[1].passenger_arr[i].in_elevator == false)
 		{
-			okay++; //okay should equal to two as two spots will be free
+			okay++; //okay should equal to zero as two spots will be free
 		}
 	}
 	if (added == 5 && okay == 0)
 	{
 		printf("PASS 5 passengers added. \n");
+		fprintf(f, "PASS 5 passengers added. \n");
 	}
 	else
 	{
-		printf("FAIL: passenger not added properly addded:%d free space:%d", added, okay);
+		printf("FAIL: passenger not added properly addded:%d free space:%d\n", added, okay);
+		fprintf(f, "FAIL: passenger not added properly addded:%d free space:%d\n", added, okay);
 	}
-	if (floor_arr[5] == six)
+	if (floor_arr[4] == six)
 	{
 		printf("PASS 5 passenger removed and six passenger is first on the floor now \n");
+		fprintf(f, "PASS 5 passenger removed and six passenger is first on the floor now \n");
 	}
 	else
 	{
-		printf("FAIL: passenger not removed properly from floor should point to:%p points to %p", six, floor_arr[5]);
+		printf("FAIL: passenger not removed properly from floor should point to:%p points to %p\n", six, floor_arr[5]);
+		fprintf(f, "FAIL: passenger not removed properly from floor should point to:%p points to %p\n", six, floor_arr[5]);
 	}
+	fflush(f);
 }

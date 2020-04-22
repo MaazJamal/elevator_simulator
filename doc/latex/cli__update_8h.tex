@@ -1,0 +1,83 @@
+\hypertarget{cli__update_8h}{}\doxysection{include/cli\+\_\+update.h File Reference}
+\label{cli__update_8h}\index{include/cli\_update.h@{include/cli\_update.h}}
+
+
+contains declarations for cli\+\_\+update function. Used to update the command line interface of the function.  
+
+
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cli__update_8h_a341bad2ad42e52b7618d63140f8117a6}{cli\+\_\+update}} (struct \mbox{\hyperlink{structelevator}{elevator}} arr\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains declarations for cli\+\_\+update function. Used to update the command line interface of the function. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cli__update_8h_a341bad2ad42e52b7618d63140f8117a6}\label{cli__update_8h_a341bad2ad42e52b7618d63140f8117a6}} 
+\index{cli\_update.h@{cli\_update.h}!cli\_update@{cli\_update}}
+\index{cli\_update@{cli\_update}!cli\_update.h@{cli\_update.h}}
+\doxysubsubsection{\texorpdfstring{cli\_update()}{cli\_update()}}
+{\footnotesize\ttfamily void cli\+\_\+update (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structelevator}{elevator}}}]{arr\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Updates the command line interface with the elevator data.
+
+Clears the screen and repopulates it with the updated elevator data. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em arr} & struct elevator that is an array of elevators. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+Checks if we are in unix/cygwin environment or windows environment
+
+Definition at line 13 of file cli\+\_\+update.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                       \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{    \#if \_\_unix\_\_ || \_\_CYGWIN\_\_}}
+\DoxyCodeLine{18         system(\textcolor{stringliteral}{"clear"});}
+\DoxyCodeLine{19 \textcolor{preprocessor}{    \#elif \_WIN32}}
+\DoxyCodeLine{20         system(\textcolor{stringliteral}{"cls"});}
+\DoxyCodeLine{21 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}};i++)\{}
+\DoxyCodeLine{24         \textcolor{keywordtype}{int} current\_floor = arr[i].\mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\_floor}};}
+\DoxyCodeLine{25         \textcolor{keywordtype}{int} \mbox{\hyperlink{structpassenger}{passenger}} = arr[i].\mbox{\hyperlink{structelevator_a35976c62fece1a1887b39d2761e409e3}{passenger\_count}};}
+\DoxyCodeLine{26         \textcolor{keywordtype}{int} max\_passenger = arr[i].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}};}
+\DoxyCodeLine{27         \textcolor{keywordtype}{bool} direction\_down = arr[i].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}};}
+\DoxyCodeLine{28         \textcolor{keywordtype}{int} next\_floor\_time = arr[i].timer;}
+\DoxyCodeLine{29         \textcolor{keywordtype}{bool} moving = arr[i].moving;}
+\DoxyCodeLine{30         \textcolor{keywordtype}{char} direction[5] = \{\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'}\};}
+\DoxyCodeLine{31         \textcolor{keywordtype}{char} moving\_or\_not[4] = \{\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'}\};}
+\DoxyCodeLine{32         \textcolor{keywordflow}{if}(direction\_down)\{}
+\DoxyCodeLine{33             strcpy(direction,\textcolor{stringliteral}{"DOWN"});}
+\DoxyCodeLine{34         \}}
+\DoxyCodeLine{35         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{36             strcpy(direction,\textcolor{stringliteral}{"UP"});}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38         \textcolor{keywordflow}{if}(moving)\{}
+\DoxyCodeLine{39             strcpy(moving\_or\_not,\textcolor{stringliteral}{"YES"});}
+\DoxyCodeLine{40         \}}
+\DoxyCodeLine{41         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{42             strcpy(moving\_or\_not,\textcolor{stringliteral}{"NO"});}
+\DoxyCodeLine{43         \}}
+\DoxyCodeLine{44         printf(\textcolor{stringliteral}{"Elevator ID: \%d\(\backslash\)n"},i);}
+\DoxyCodeLine{45         printf(\textcolor{stringliteral}{"Current Floor: \(\backslash\)t\%d\(\backslash\)t\(\backslash\)t Passenger Count/Capacity: \%d/\%d\(\backslash\)n"},current\_floor,\mbox{\hyperlink{structpassenger}{passenger}},max\_passenger);}
+\DoxyCodeLine{46         printf(\textcolor{stringliteral}{"Direction of Travel: \(\backslash\)t\%s\(\backslash\)t\(\backslash\)t\(\backslash\)t Moving: \%s\(\backslash\)n"},direction,moving\_or\_not);}
+\DoxyCodeLine{47         printf(\textcolor{stringliteral}{"Time until next stop = \(\backslash\)t\%d\(\backslash\)n\(\backslash\)n"},next\_floor\_time);}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}

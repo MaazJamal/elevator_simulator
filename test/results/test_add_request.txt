@@ -1,0 +1,9 @@
+PASS: Addind to NULL, returning ptr is == to new head.
+PASS: ADDING to NULL, values succesfully copied.
+PASS: Addind to 2nd, returning ptr is == to old head.
+PASS: ADDING to 2nd, 1st position unchanged.
+PASS: ADDING to 2nd, 2nd position succesfully added.
+PASS: Addind to 3rd, returning ptr is == to old head.
+PASS: ADDING to 3rd, 1st position unchanged.
+PASS: ADDING to 3rd, 2nd position succesfully added.
+PASS: ADDING to 3rd, 3rd position succesfully added.

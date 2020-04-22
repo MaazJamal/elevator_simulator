@@ -1,54 +1,95 @@
 #include "functions.h"
+#include "test_functions.h"
 #include <stdio.h>
-void test_cases()
+
+void test_cases(void)
 {
-	int test_choice;//stores user input for testing
-	printf("Testing All functions.\n");
-	printf("Enter ur choice\n");
-	printf("1.To test count_passenger\n");
-	printf("2.To test read_passenger\n");
-	printf("3.To test input_floors\n");
-	printf("4.To test add_request_queue\n");
-	printf("5.To test input_lifts\n");
-	printf("6.To test moving_lift_down\n");
-	printf("7.To test passenger_take_in\n");
-	printf("8.To test remove_passenger_queue\n");
-	scanf("%d",&test_choice);
+	int test_choice; //stores user input for testing
+	puts("\nPlease note due to nature of the tests the program must be run again");
+	puts("to prevent the tests from interfering with each other.");
+	puts("Some tests are supposed to cause the program to exit.\n");
+	printf("\nEnter ur choice\n");
+	puts("1. To run test for add_request_queue().");
+	puts("2. To run tests for average_waiting_time().");
+	puts("3. To run tests for count_passenger().");
+	puts("4. To run tests for create_elevator_array().");
+	puts("5. To run tests for create_floor_array().");
+	puts("6. To run tests for input_after_stop().");
+	puts("7. To run tests for input_floors().");
+	puts("8. To run tests for input_lifts().");
+	puts("9. To run tests for is_lift_empty().");
+	puts("10. To run tests for is_lift_on_floor().");
+	puts("11. To run tests for max_waiting_time().");
+	puts("12. To run tests for moving_lift_down().");
+	puts("13. To run tests for passenger_take_in().");
+	puts("14. To run tests for read_passenger().");
+	puts("15. To run tests for remove_passenger_queue().");
+	scanf("%d", &test_choice);
 	//switch to execute
-	switch(test_choice)
+	switch (test_choice)
 	{
-		case 1: test_count_passenger();
-	           printf("Executed count_passenger test results log can be found in test/results \n");
-	           break;
-	    case 2:		       
-	           test_read_passenger();
-	           printf("Executed read_passenger test results log can be found in test/results \n");
-	           break;
-	    case 3:       
-	           test_input_floors();
-	           printf("Executed input_floors test results log can be found in test/results \n");
-	           break;
-	    case 4:   
-	           test_add_request_queue();
-	           printf("Executed add_request_queue test results log can be found in test/results \n");
-	           break;
-	    case 5:
-		       test_input_lifts();
-		       printf("Executed input_lifts test results log can be found in test/results \n");
-	           break;
-	    case 6:
-		       test_moving_lift_down();
-		       printf("Executed moving_lift_down test results log can be found in test/results \n");
-	           break;
-	    case 7:
-		       test_passenger_take_in();
-		       printf("Executed passenger_take_in test results log can be found in test/results \n");
-	           break;
-	    case 8:
-		       test_remove_passenger_queue();
-		       printf("Executed remove_passenger_queue test results log can be found in test/results \n");
-	           break;
-	    default: printf("Invalid option\n");       
-    }
-	return 0;
+	case 1:
+		test_add_request_queue();
+		puts("Tests for add_request_queue() Done. Results may be found in test/results.");
+		break;
+	case 2:
+		test_average_waiting_time();
+		puts("Tests for average_waiting_time() Done. Results may be found in test/results.");
+		break;
+	case 3:
+		test_count_passenger();
+		puts("Tests for count_passenger() Done. Results may be found in test/results.");
+		break;
+	case 4:
+		test_create_elevator_array();
+		puts("Tests for create_elevator_array() Done. Results may be found in test/results.");
+		break;
+	case 5:
+		test_create_floor_array();
+		puts("Tests for create_floor_array() Done. Results may be found in test/results.");
+		break;
+	case 6:
+		test_input_after_stop();
+		puts("Tests for input_after_stop() Done. Results may be found in test/results.");
+		break;
+	case 7:
+		test_input_floors();
+		puts("Tests for test_input_floors() Done. Results may be found in test/results.");
+		break;
+	case 8:
+		test_input_lifts();
+		puts("Tests for input_lifts() Done. Results may be found in test/results.");
+		break;
+	case 9:
+		test_is_lift_empty();
+		puts("Tests for is_lift_empty() Done. Results may be found in test/results.");
+		break;
+	case 10:
+		test_is_lift_on_floor();
+		puts("Tests for is_lift_on_floor Done. Results may be found in test/results.");
+		break;
+	case 11:
+		test_max_waiting_time();
+		puts("Tests for max_waiting_time Done. Results may be found in test/results.");
+		break;
+	case 12:
+		test_moving_lift_down();
+		puts("Tests for moving_lift_down() Done. Results may be found in test/results.");
+		break;
+	case 13:
+		test_passenger_take_in();
+		puts("Tests for passenger_take_in() Done. Results may be found in test/results.");
+		break;
+	case 14:
+		test_read_passenger();
+		puts("Tests for test_read_passenger() Done. Results may be found in test/results.");
+		break;
+	case 15:
+		test_remove_passenger_queue();
+		puts("Tests for remove_passenger_queue() Done. Results may be found in test/results.");
+		break;
+	default:
+		printf("Invalid option. Run program again.\n");
+		break;
+	}
 }

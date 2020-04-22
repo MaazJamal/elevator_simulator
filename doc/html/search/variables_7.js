@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stop_5fat_5ffloor_65',['stop_at_floor',['../structelevator.html#abcf67c62096d397bf09fad7c61c43e3a',1,'elevator']]]
+  ['max_5fpassenger_186',['max_passenger',['../structelevator.html#ae18c23ac67fc1e94d1dd831119d90f6f',1,'elevator']]]
 ];

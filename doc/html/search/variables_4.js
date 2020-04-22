@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['id_60',['id',['../structpassenger.html#ab7ce6f462afaf105224b0ca772a33c43',1,'passenger']]],
-  ['in_5felevator_61',['in_elevator',['../structpassenger.html#acaaf5adf80fe8fd8e9b1b5401c2a39e2',1,'passenger']]]
+  ['elevator_5fcount_182',['elevator_count',['../globals_8h.html#a11ee4b54505479cda7e127a7030a76a7',1,'globals.c']]]
 ];

@@ -1,0 +1,65 @@
+\hypertarget{moving__lift__down_8c}{}\doxysection{src/moving\+\_\+lift\+\_\+down.c File Reference}
+\label{moving__lift__down_8c}\index{src/moving\_lift\_down.c@{src/moving\_lift\_down.c}}
+
+
+contains the definition of moving\+\_\+lift\+\_\+down  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}moving\+\_\+lift\+\_\+down.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{moving__lift__down_8c_a71965ccfee77f7e7469f4153836fb7ef}{moving\+\_\+lift\+\_\+down}} (struct \mbox{\hyperlink{structelevator}{elevator}} elevator\+\_\+arr\mbox{[}$\,$\mbox{]}, unsigned int index)
+\begin{DoxyCompactList}\small\item\em changes the direction of lift to down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains the definition of moving\+\_\+lift\+\_\+down 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{moving__lift__down_8c_a71965ccfee77f7e7469f4153836fb7ef}\label{moving__lift__down_8c_a71965ccfee77f7e7469f4153836fb7ef}} 
+\index{moving\_lift\_down.c@{moving\_lift\_down.c}!moving\_lift\_down@{moving\_lift\_down}}
+\index{moving\_lift\_down@{moving\_lift\_down}!moving\_lift\_down.c@{moving\_lift\_down.c}}
+\doxysubsubsection{\texorpdfstring{moving\_lift\_down()}{moving\_lift\_down()}}
+{\footnotesize\ttfamily int moving\+\_\+lift\+\_\+down (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structelevator}{elevator}}}]{elevator\+\_\+arr\mbox{[}$\,$\mbox{]},  }\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+changes the direction of lift to down. 
+
+This function takes as input an elevator array and changes the direction of the elevator at the specified index position. sets \mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{elevator.\+direction\+\_\+up}} to false and \mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{elevator.\+direction\+\_\+down}} to true. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em elevator\+\_\+arr\mbox{[}$\,$\mbox{]}} & an array of type struct elevator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns -\/1 if errors in function call and 1 if function runs properly. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file moving\+\_\+lift\+\_\+down.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordflow}{if} (index >= \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}})}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         fprintf(stderr, \textcolor{stringliteral}{"index >= elevator\_arr size. \%d >= \%d \(\backslash\)n"}, index, \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}});}
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     elevator\_arr[index].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{34     elevator\_arr[index].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}

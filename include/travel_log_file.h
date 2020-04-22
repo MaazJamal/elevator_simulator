@@ -7,6 +7,6 @@
 #define __TRAVEL_LOG_FILE_H__
 #include "structures.h"
 
-extern void travel_log_file(struct passenger traveler,unsigned int event_time, int elevator_index, int mode);
+extern void travel_log_file(struct passenger traveler, unsigned int event_time, int elevator_index, int mode);
 
 #endif

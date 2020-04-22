@@ -1,12 +1,95 @@
-\hypertarget{create__elevator__array_8h}{}\doxysection{create\+\_\+elevator\+\_\+array.\+h File Reference}
-\label{create__elevator__array_8h}\index{create\_elevator\_array.h@{create\_elevator\_array.h}}
+\hypertarget{create__elevator__array_8h}{}\doxysection{include/create\+\_\+elevator\+\_\+array.h File Reference}
+\label{create__elevator__array_8h}\index{include/create\_elevator\_array.h@{include/create\_elevator\_array.h}}
 
 
 declaration for create\+\_\+elevator\+\_\+array function -\/creates an array for elevators with respective to input entered by user.  
 
 
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structelevator}{elevator}} $\ast$ \mbox{\hyperlink{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}{create\+\_\+elevator\+\_\+array}} (int no\+\_\+of\+\_\+elevators)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 declaration for create\+\_\+elevator\+\_\+array function -\/creates an array for elevators with respective to input entered by user. 
 
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}\label{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}} 
+\index{create\_elevator\_array.h@{create\_elevator\_array.h}!create\_elevator\_array@{create\_elevator\_array}}
+\index{create\_elevator\_array@{create\_elevator\_array}!create\_elevator\_array.h@{create\_elevator\_array.h}}
+\doxysubsubsection{\texorpdfstring{create\_elevator\_array()}{create\_elevator\_array()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structelevator}{elevator}}$\ast$ create\+\_\+elevator\+\_\+array (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+of\+\_\+elevators }\end{DoxyParamCaption})}
+
+Constraints checks the input parameter-\/no of elevators . No of elevators should be in range(1-\/100). Prints error message if the no of elevators is out of range and if memory allocation fails. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & function takes number of lifts as input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the array of elevators. 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file create\+\_\+elevator\+\_\+array.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26     \textcolor{keywordflow}{if}((no\_of\_elevators==0)||(no\_of\_elevators>100)||(no\_of\_elevators<1))\textcolor{comment}{//checks if the input parameter is valid.}}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         printf(\textcolor{stringliteral}{"Input parameter -\/Number of elevators entered is invalid \(\backslash\)n"});}
+\DoxyCodeLine{29         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} *ele;}
+\DoxyCodeLine{32     ele=malloc (no\_of\_elevators * \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structelevator}{elevator}}));\textcolor{comment}{//creates memory for the input-\/no\_of\_elevators.}}
+\DoxyCodeLine{33     \textcolor{keywordflow}{if}(ele==NULL)\textcolor{comment}{//checks if the memory allocation is success}}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         printf(\textcolor{stringliteral}{"Memory allocation failed \(\backslash\)n"});}
+\DoxyCodeLine{36         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         }
+\DoxyCodeLine{41         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{42         \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{43         \textcolor{keywordtype}{int} k;}
+\DoxyCodeLine{44         \textcolor{keywordflow}{for}(i=0;i<no\_of\_elevators;i++)\textcolor{comment}{//initialising the array elements}}
+\DoxyCodeLine{45         \{}
+\DoxyCodeLine{46             ele[i].moving=0;}
+\DoxyCodeLine{47             ele[i].\mbox{\hyperlink{structelevator_ab012a8d2102934af9ea97effdeea80cf}{between\_floor}}=0;}
+\DoxyCodeLine{48             ele[i].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{49             ele[i].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{50             ele[i].\mbox{\hyperlink{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}{stop\_at\_floor}}=malloc(\mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{51             \textcolor{keywordflow}{for}(k=0;k<\mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}};k++)}
+\DoxyCodeLine{52             \{}
+\DoxyCodeLine{53                 ele[i].\mbox{\hyperlink{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}{stop\_at\_floor}}[k]=0;}
+\DoxyCodeLine{54             \}}
+\DoxyCodeLine{55             ele[i].\mbox{\hyperlink{structelevator_a35976c62fece1a1887b39d2761e409e3}{passenger\_count}}=0;}
+\DoxyCodeLine{56             ele[i].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}}=10;}
+\DoxyCodeLine{57             ele[i].\mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\_floor}}=1;}
+\DoxyCodeLine{58             ele[i].timer=0;}
+\DoxyCodeLine{59             ele[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}} = malloc(ele[i].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}}*\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
+\DoxyCodeLine{60             \textcolor{keywordflow}{for} (j=0;j<ele[i].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}};j++)}
+\DoxyCodeLine{61             \{}
+\DoxyCodeLine{62             ele[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[j].\mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\_elevator}}=0;}
+\DoxyCodeLine{63             ele[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[j].\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}}=0;}
+\DoxyCodeLine{64             ele[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[j].\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}}=0;}
+\DoxyCodeLine{65             ele[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[j].\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}}=0;}
+\DoxyCodeLine{66             ele[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[j].\mbox{\hyperlink{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}{id}}=0;}
+\DoxyCodeLine{67             \}}
+\DoxyCodeLine{68             }
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70     }
+\DoxyCodeLine{71     \textcolor{keywordflow}{return} ele;}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73     }
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}

@@ -32,12 +32,13 @@
  * @return void The function returns nothing.
 */
 
-void test_is_lift_empty(){
+void test_is_lift_empty(void)
+{
 
-	FILE* test_results = fopen("test/results/results_is_lift_empty.txt", "w+");
+	FILE *test_results = fopen("test/results/results_is_lift_empty.txt", "w+");
 	struct elevator elevator_array[3];
 	struct elevator *ele_arr = NULL;
-	struct elevator values = { 0 };
+	struct elevator values = {0};
 	elevator_array[0] = values;
 
 	elevator_array[1].passenger_count = 5;
@@ -50,111 +51,125 @@ void test_is_lift_empty(){
 
 	int result;
 
-	result = is_lift_empty(elevator_array,0);
+	result = is_lift_empty(elevator_array, 0);
 
-	if (result == 0){
-	      char temp[100];
-	      sprintf(temp,"PASS: Input: Elevator with passengers equal to the maximum passenger,"
-	              " Expected Output: 0,"
-	              " Output: %d .\n",result);
-	      printf(temp);
-	      fprintf(test_results,temp);
+	if (result == 0)
+	{
+		char temp[200];
+		sprintf(temp, "PASS: Input: Elevator with passengers equal to the maximum passenger,"
+					  " Expected Output: 0,"
+					  " Output: %d .\n",
+				result);
+		printf(temp);
+		fprintf(test_results, temp);
 	}
-	else{
-	      char temp[100];
-	      sprintf(temp,"FAIL: Input: Elevator with passengers equal to the maximum passenger,"
-	              " Expected Output: 0,"
-	              " Output: %d .\n",result);
-	      printf(temp);
-	      fprintf(test_results,temp);
-	}
-
-
-	result = is_lift_empty(elevator_array,1);
-
-	if (result == 1){
-        char temp[100];
-        sprintf(temp,"PASS: Input: Elevator with passengers less than the maximum passenger,"
-                " Expected Output: 1,"
-                " Output: %d .\n",result);
-        printf(temp);
-        fprintf(test_results,temp);
-	}
-	else{
-        char temp[100];
-        sprintf(temp,"FAIL: Input: Elevator with passengers less than the maximum passenger,"
-                " Expected Output: 1,"
-                " Output: %d .\n",result);
-        printf(temp);
-        fprintf(test_results,temp);
+	else
+	{
+		char temp[200];
+		sprintf(temp, "FAIL: Input: Elevator with passengers equal to the maximum passenger,"
+					  " Expected Output: 0,"
+					  " Output: %d .\n",
+				result);
+		printf(temp);
+		fprintf(test_results, temp);
 	}
 
-    result = is_lift_empty(elevator_array,2);
+	result = is_lift_empty(elevator_array, 1);
 
-	if (result == 0){
-        char temp[100];
-        sprintf(temp,"PASS: Input: Elevator with passengers more than the maximum passenger,"
-                " Expected Output: 0,"
-                " Output: %d .\n",result);
-        printf(temp);
-        fprintf(test_results,temp);
+	if (result == 1)
+	{
+		char temp[200];
+		sprintf(temp, "PASS: Input: Elevator with passengers less than the maximum passenger,"
+					  " Expected Output: 1,"
+					  " Output: %d .\n",
+				result);
+		printf(temp);
+		fprintf(test_results, temp);
 	}
-	else{
-        char temp[100];
-        sprintf(temp,"FAIL: Input: Elevator with passengers more than the maximum passenger,"
-                " Expected Output: 0,"
-                " Output: %d .\n",result);
-        printf(temp);
-        fprintf(test_results,temp);
-	}
-
-
-
-	result = is_lift_empty(elevator_array,3);
-
-	if(result == -1){
-        char temp[100];
-        sprintf(temp,"PASS: Input: The index is greater than the elevators in the building,"
-                " Expected Output: -1,"
-                " Output: %d .\n",result);
-        printf(temp);
-        fprintf(test_results,temp);
-	}
-	else{
-        char temp[100];
-        sprintf(temp,"FAIL: Input: The index is greater than the elevators in the building,"
-                " Expected Output: -1,"
-                " Output: %d .\n",result);
-        printf(temp);
-        fprintf(test_results,temp);
+	else
+	{
+		char temp[200];
+		sprintf(temp, "FAIL: Input: Elevator with passengers less than the maximum passenger,"
+					  " Expected Output: 1,"
+					  " Output: %d .\n",
+				result);
+		printf(temp);
+		fprintf(test_results, temp);
 	}
 
+	result = is_lift_empty(elevator_array, 2);
 
-    result = is_lift_empty(ele_arr,4);
+	if (result == 0)
+	{
+		char temp[200];
+		sprintf(temp, "PASS: Input: Elevator with passengers more than the maximum passenger,"
+					  " Expected Output: 0,"
+					  " Output: %d .\n",
+				result);
+		printf(temp);
+		fprintf(test_results, temp);
+	}
+	else
+	{
+		char temp[200];
+		sprintf(temp, "FAIL: Input: Elevator with passengers more than the maximum passenger,"
+					  " Expected Output: 0,"
+					  " Output: %d .\n",
+				result);
+		printf(temp);
+		fprintf(test_results, temp);
+	}
 
-    if(result == -1){
-		if(ele_arr == NULL){
-			char temp[100];
+	result = is_lift_empty(elevator_array, 3);
+
+	if (result == -1)
+	{
+		char temp[200];
+		sprintf(temp, "PASS: Input: The index is greater than the elevators in the building,"
+					  " Expected Output: -1,"
+					  " Output: %d .\n",
+				result);
+		printf(temp);
+		fprintf(test_results, temp);
+	}
+	else
+	{
+		char temp[200];
+		sprintf(temp, "FAIL: Input: The index is greater than the elevators in the building,"
+					  " Expected Output: -1,"
+					  " Output: %d .\n",
+				result);
+		printf(temp);
+		fprintf(test_results, temp);
+	}
+
+	result = is_lift_empty(ele_arr, 4);
+
+	if (result == -1)
+	{
+		if (ele_arr == NULL)
+		{
+			char temp[200];
 			char *output = "There is no elevator!";
-			sprintf(temp,"PASS: Input: Empty elevator array,"
-					" Expected Output: Exit program after printing: There is no elevator!,"
-					" Output: %s .\n",output);
+			sprintf(temp, "PASS: Input: Empty elevator array,"
+						  " Expected Output: Exit program after printing: There is no elevator!,"
+						  " Output: %s .\n",
+					output);
 			printf(temp);
-			fprintf(test_results,temp);
+			fprintf(test_results, temp);
 			exit(1);
 		}
-		else{
-			char temp[100];
+		else
+		{
+			char temp[200];
 			char *output = "There is some problem!";
-			sprintf(temp,"FAIL: Input: Empty elevator array,"
-					" Expected Output: Exit program after printing: There is no elevator!,"
-					" Output: %s .\n",output);
+			sprintf(temp, "FAIL: Input: Empty elevator array,"
+						  " Expected Output: Exit program after printing: There is no elevator!,"
+						  " Output: %s .\n",
+					output);
 			printf(temp);
-			fprintf(test_results,temp);
+			fprintf(test_results, temp);
 			exit(1);
 		}
-    }
-
-
-
+	}
 }

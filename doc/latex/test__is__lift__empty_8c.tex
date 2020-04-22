@@ -1,0 +1,43 @@
+\hypertarget{test__is__lift__empty_8c}{}\doxysection{test/test\+\_\+is\+\_\+lift\+\_\+empty.c File Reference}
+\label{test__is__lift__empty_8c}\index{test/test\_is\_lift\_empty.c@{test/test\_is\_lift\_empty.c}}
+
+
+Tests if the is\+\_\+lift\+\_\+empty function works fine or not.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/is\+\_\+lift\+\_\+empty.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__is__lift__empty_8c_a926014f0f80a9a1b2e20849965d88833}\label{test__is__lift__empty_8c_a926014f0f80a9a1b2e20849965d88833}} 
+void {\bfseries test\+\_\+is\+\_\+lift\+\_\+empty} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tests if the is\+\_\+lift\+\_\+empty function works fine or not. 
+
+\begin{DoxyAuthor}{Author}
+Ritika Arora
+\end{DoxyAuthor}
+@detail The function tests with different values if the output comes correct or not. elevator\+\_\+count which is a global variable has been set to a fix value The test cases are as below\+:
+\begin{DoxyItemize}
+\item For array with passenger count equal to the maximum number of passengers of the lift, and index value as 0 or less than the elevator count the output is 0
+\item For array with passenger count less than the maximum number of passengers of the lift, and index value as 1 or less than the elevator count the output is 1
+\item For array with passenger count more than the maximum number of passengers of the lift, and index value as 2 or less than the elevator count the output is 0
+\item For array with index value as 3 or greater than or equal to the elevator count the output is -\/1
+\item For an empty array, the output is -\/1 and the program exits
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & function takes no input\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void The function returns nothing. 
+\end{DoxyReturn}

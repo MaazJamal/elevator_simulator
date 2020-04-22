@@ -1,0 +1,1 @@
+PASS;Input Parameter:Valid;array of structure elevator could be accessed .

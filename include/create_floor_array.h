@@ -5,6 +5,6 @@
 #define __CREATE_FLOOR_ARRAY_H_
 #include "structures.h"
 
-extern struct passenger ** create_floor_array(int no_of_floors);
+extern struct passenger **create_floor_array(int no_of_floors);
 
 #endif
