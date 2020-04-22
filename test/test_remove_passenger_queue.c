@@ -53,7 +53,6 @@ void test_remove_passenger_queue(void)
 	}
 	fflush(f);
 	fclose(f);
-	return 0;
 }
 
 /** This function tests case when empty head is passed.
