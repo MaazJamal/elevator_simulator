@@ -182,7 +182,7 @@ void test_count_passenger(void)
 }
 
 
-int count_passenger(char* f)
+static int count_passenger(char* f)
 {
     /**  es to store the number of emergency stop situation*/
     int es=0;
