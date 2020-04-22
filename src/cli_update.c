@@ -10,7 +10,7 @@
  * @param [in] arr struct elevator that is an array of elevators.
  * @return  
  *  */
-void cli_update(struct elevator arr[])
+void cli_update(struct elevator arr[],unsigned int loop_time)
 {
 
 /** Checks if we are in unix/cygwin environment or windows environment
@@ -23,7 +23,6 @@ void cli_update(struct elevator arr[])
 	puts("Elevator\tTime\tFloor\tPassengers\tDirection\tMoving\t");
 	int current_floor = 0;
 	int passenger = 0;
-	int max_passenger = 0;
 	bool direction_down = false;
 	bool direction_up = false;
 	int next_floor_time = 0;
@@ -60,4 +59,5 @@ void cli_update(struct elevator arr[])
 		}
 		printf("%d\t\t%d\t%d\t%d\t\t%s\t\t%s\n", i, next_floor_time, current_floor, passenger, direction, move_or_no);
 	}
+	printf("SIMULATION TIME: %d\n",loop_time);
 }

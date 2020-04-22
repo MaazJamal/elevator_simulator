@@ -9,6 +9,6 @@
 #include "structures.h"
 #include "globals.h"
 
-extern void cli_update(struct elevator arr[]);
+extern void cli_update(struct elevator arr[], unsigned int loop_time);
 
 #endif

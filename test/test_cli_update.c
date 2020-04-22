@@ -41,7 +41,7 @@ switch (chose){
 void case1(void){
 	printf("THIS LINE SHOULD NOT BE VISIBLE FAIL.\n");
 	struct elevator arr[3] = {dummy1,dummy2,dummy3};
-	cli_update(arr);
+	cli_update(arr, 0);
 }
 
 /** Test to check it can work properly with dynamic array
@@ -51,7 +51,7 @@ void case2(void){
 	arr[0]= dummy1;
 	arr[1]= dummy2;
 	arr[2]= dummy3;
-	cli_update(arr);
+	cli_update(arr, 0);
 }
 
 /** Test to check it can work properly with dynamic array
@@ -64,7 +64,7 @@ void case3(void){
 	arr[2]= dummy3;
 	for(int i=0;i<1000;i++){
 		printf("THIS LINE SHOULD NOT BE VISIBLE AT END.\n");
-		cli_update(arr);
+		cli_update(arr,(unsigned int)i);
 		arr[0].cur_floor = i%50;
 		arr[0].timer = 10 - i%10;
 		arr[0].passenger_count = 10-i%6;

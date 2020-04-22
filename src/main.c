@@ -24,7 +24,8 @@
 int main(void)
 {
 	int status = 0;
-	status = static_simulation();
+	//status = static_simulation();
+	status = dynamic_simulation();
 	if (status == 1)
 	{
 		printf("Simulation Run Succesfully.\n");
