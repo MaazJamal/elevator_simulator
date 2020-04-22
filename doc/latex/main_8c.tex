@@ -1,0 +1,61 @@
+\hypertarget{main_8c}{}\doxysection{src/main.c File Reference}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+This function executes the Static and Dynamic version of elevator and performs Unit testing.  
+
+
+{\ttfamily \#include \char`\"{}functions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}simulations.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This function executes the Static and Dynamic version of elevator and performs Unit testing. 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal ~\newline
+ 
+
+Hariprasad Munusamy 
+
+Divyalakshmi Padmanaban 
+
+Ritika Arora 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function serves as an entry point into the program.
+
+\begin{DoxyReturn}{Returns}
+This function returns an integer 0 (Zero) upon successful execution. 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file main.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} status = 0;}
+\DoxyCodeLine{27     status = \mbox{\hyperlink{static__simulation_8h_ad022020e38b9aa37a3e98b761c507a10}{static\_simulation}}();}
+\DoxyCodeLine{28     \textcolor{keywordflow}{if} (status == 1)}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         printf(\textcolor{stringliteral}{"Simulation Run Succesfully.\(\backslash\)n"});}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}

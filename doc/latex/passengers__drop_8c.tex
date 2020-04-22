@@ -1,0 +1,78 @@
+\hypertarget{passengers__drop_8c}{}\doxysection{src/passengers\+\_\+drop.c File Reference}
+\label{passengers__drop_8c}\index{src/passengers\_drop.c@{src/passengers\_drop.c}}
+
+
+The function takes in the elevator\+\_\+array.  
+
+
+{\ttfamily \#include \char`\"{}passengers\+\_\+drop.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}travel\+\_\+log\+\_\+file.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{passengers__drop_8c_a961490854f7de2df3e342a5ca6705a3a}{passengers\+\_\+drop}} (struct \mbox{\hyperlink{structelevator}{elevator}} elevator\+\_\+arr\mbox{[}$\,$\mbox{]}, int index, struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$floor\+\_\+arr\mbox{[}$\,$\mbox{]}, int cur\+\_\+floor, unsigned int event\+\_\+time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The function takes in the elevator\+\_\+array. 
+
+\begin{DoxyAuthor}{Author}
+Hariprasad Munusamy -\/ \href{mailto:HariprasadMunusamy@cmail.carleton.ca}{\texttt{ Hariprasad\+Munusamy@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{passengers__drop_8c_a961490854f7de2df3e342a5ca6705a3a}\label{passengers__drop_8c_a961490854f7de2df3e342a5ca6705a3a}} 
+\index{passengers\_drop.c@{passengers\_drop.c}!passengers\_drop@{passengers\_drop}}
+\index{passengers\_drop@{passengers\_drop}!passengers\_drop.c@{passengers\_drop.c}}
+\doxysubsubsection{\texorpdfstring{passengers\_drop()}{passengers\_drop()}}
+{\footnotesize\ttfamily int passengers\+\_\+drop (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structelevator}{elevator}}}]{elevator\+\_\+arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$}]{floor\+\_\+arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{cur\+\_\+floor,  }\item[{unsigned int}]{event\+\_\+time }\end{DoxyParamCaption})}
+
+Removes the passenger from the floor and the elevator array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & function takes in elevator structure,index,passenger floor array,current floor and time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function return elevator array 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file passengers\+\_\+drop.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     assert(index <= \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}});}
+\DoxyCodeLine{28     assert(cur\_floor <= \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}});}
+\DoxyCodeLine{29     assert(cur\_floor == elevator\_arr[index].cur\_floor);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} passenger\_dropped = 0;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} max\_passenger = elevator\_arr[index].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}};}
+\DoxyCodeLine{33     \textcolor{comment}{//Loop to iterate the overall passengers in the elevator}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < max\_passenger; i++)}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\_elevator}} = elevator\_arr[index].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[i].\mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\_elevator}};}
+\DoxyCodeLine{37         \textcolor{keywordflow}{if} (elevator\_arr[index].passenger\_arr[i].\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}} == cur\_floor \&\& \mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\_elevator}})}
+\DoxyCodeLine{38         \{}
+\DoxyCodeLine{39             elevator\_arr[index].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[i].\mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\_elevator}} = \textcolor{keyword}{false}; \textcolor{comment}{//setting the status}}
+\DoxyCodeLine{40             elevator\_arr[index].\mbox{\hyperlink{structelevator_a35976c62fece1a1887b39d2761e409e3}{passenger\_count}}-\/-\/;}
+\DoxyCodeLine{41             passenger\_dropped++;}
+\DoxyCodeLine{42             \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} temp = elevator\_arr[index].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[i];}
+\DoxyCodeLine{43             \mbox{\hyperlink{travel__log__file_8h_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\_log\_file}}(temp, event\_time, index, 1); \textcolor{comment}{//choose mode to write to travel\_log as we are removing passenger.}}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{45     \}}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} passenger\_dropped;}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}

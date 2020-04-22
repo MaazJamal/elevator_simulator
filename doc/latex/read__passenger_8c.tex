@@ -1,0 +1,140 @@
+\hypertarget{read__passenger_8c}{}\doxysection{src/read\+\_\+passenger.c File Reference}
+\label{read__passenger_8c}\index{src/read\_passenger.c@{src/read\_passenger.c}}
+
+
+Reads the input file for passenger id,arrival time,starting floor and destination floor. Enables to read the data from file and store in a structure of maximum capacity 100.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}read\+\_\+passenger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{read__passenger_8c_a37c372d14154c7f6d6d1af823cadf07d}{read\+\_\+passenger}} (struct \mbox{\hyperlink{structpassenger}{passenger}} p\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads the input file for passenger id,arrival time,starting floor and destination floor. Enables to read the data from file and store in a structure of maximum capacity 100. 
+
+\begin{DoxyAuthor}{Author}
+Divyalakshmi Padmanaban -\/ \href{mailto:Dpadm049@uottawa.ca}{\texttt{ Dpadm049@uottawa.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{read__passenger_8c_a37c372d14154c7f6d6d1af823cadf07d}\label{read__passenger_8c_a37c372d14154c7f6d6d1af823cadf07d}} 
+\index{read\_passenger.c@{read\_passenger.c}!read\_passenger@{read\_passenger}}
+\index{read\_passenger@{read\_passenger}!read\_passenger.c@{read\_passenger.c}}
+\doxysubsubsection{\texorpdfstring{read\_passenger()}{read\_passenger()}}
+{\footnotesize\ttfamily void read\+\_\+passenger (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structpassenger}{passenger}}}]{p\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Constraints If the file does not exists ,the function displays a error message. The input file is checked for valid values for passenegr id in range (1-\/99) and print error message if the values are out of range. The input file is checked for valid values for arrival time in range (1-\/150)and print error message if the values are out of range The input file is checked for valid values for arrival floor in range (1-\/100)and print error message if the values are out of range The input file is checked for valid values for destination floor in range (1-\/100)and print error message if the values are out of range 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em No} & input parameter. The function uses the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the function returns void 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file read\+\_\+passenger.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     FILE *f;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{30     f = fopen(\textcolor{stringliteral}{"data/input.txt"}, \textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} fd = fileno(f); \textcolor{comment}{//fileno function returns the mode of file.}}
+\DoxyCodeLine{32     \textcolor{keywordflow}{if} (fd == -\/1)}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         printf(\textcolor{stringliteral}{"Error -\/ input file\(\backslash\)n"});}
+\DoxyCodeLine{35         exit(1); \textcolor{comment}{//program ends incase of absence of file in specified path.}}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37     \textcolor{keywordflow}{if} (f == NULL)}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         printf(\textcolor{stringliteral}{"Error -\/opening the file\(\backslash\)n"});}
+\DoxyCodeLine{40         exit(1); \textcolor{comment}{//program ends incase of error in opening the  input file.}}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordflow}{if} (NULL != f)}
+\DoxyCodeLine{44     \{}
+\DoxyCodeLine{45         \textcolor{keywordtype}{int} size;}
+\DoxyCodeLine{46         fseek(f, 0, SEEK\_END);}
+\DoxyCodeLine{47         size = ftell(f);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{keywordflow}{if} (0 == size)}
+\DoxyCodeLine{50         \{}
+\DoxyCodeLine{51             printf(\textcolor{stringliteral}{"Input file is empty\(\backslash\)n"});}
+\DoxyCodeLine{52             exit(1);}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55     rewind(f);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{char} c[100];}
+\DoxyCodeLine{58     \textcolor{keywordflow}{while} (fscanf(f, \textcolor{stringliteral}{"\%s"}, c) != EOF)}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61         \textcolor{comment}{//  printf("\%s",c,);}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \textcolor{keywordflow}{if} (count == 0)}
+\DoxyCodeLine{64         \{}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66             p[i].\mbox{\hyperlink{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}{id}} = atoi(c);}
+\DoxyCodeLine{67             count++;}
+\DoxyCodeLine{68             \textcolor{keywordflow}{if} ((p[i].\textcolor{keywordtype}{id} == 0) || (p[i].\textcolor{keywordtype}{id} < 1))}
+\DoxyCodeLine{69             \{}
+\DoxyCodeLine{70                 printf(\textcolor{stringliteral}{"p[\%d] -\/Passenger ID column contains invalid data in  file (i.e)\%d\(\backslash\)n"}, i, p[i].\textcolor{keywordtype}{id});}
+\DoxyCodeLine{71                 exit(1); \textcolor{comment}{//program ends incase of erraneous data.}}
+\DoxyCodeLine{72             \}}
+\DoxyCodeLine{73         \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (count == 1)}
+\DoxyCodeLine{76         \{}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78             p[i].\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}} = atoi(c);}
+\DoxyCodeLine{79             count++;}
+\DoxyCodeLine{80             \textcolor{keywordflow}{if} ((p[i].\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}} == 0) || (p[i].\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}} > 86400) || (p[i].\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}} < 1))}
+\DoxyCodeLine{81             \{}
+\DoxyCodeLine{82                 printf(\textcolor{stringliteral}{"p[\%d].-\/arrival\_time column contains invalid data in file (i.e)\%d\(\backslash\)n"}, i, p[i].\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}});}
+\DoxyCodeLine{83                 exit(1); \textcolor{comment}{//program ends incase of erraneous data.}}
+\DoxyCodeLine{84             \}}
+\DoxyCodeLine{85         \}}
+\DoxyCodeLine{86         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (count == 2)}
+\DoxyCodeLine{87         \{}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89             p[i].\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} = atoi(c);}
+\DoxyCodeLine{90             count++;}
+\DoxyCodeLine{91             \textcolor{keywordflow}{if} ((p[i].\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} == 0) || (p[i].\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} > 100) || (p[i].\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} < 1))}
+\DoxyCodeLine{92             \{}
+\DoxyCodeLine{93                 printf(\textcolor{stringliteral}{"p[\%d].arrival\_floor column contains invalid data  in file (i.e)\%d\(\backslash\)n"}, i, p[i].\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}});}
+\DoxyCodeLine{94                 exit(1); \textcolor{comment}{//program ends incase of erraneous data.}}
+\DoxyCodeLine{95             \}}
+\DoxyCodeLine{96         \}}
+\DoxyCodeLine{97         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (count == 3)}
+\DoxyCodeLine{98         \{}
+\DoxyCodeLine{99             \textcolor{comment}{//printf("\(\backslash\)n\%s\(\backslash\)n",c);}}
+\DoxyCodeLine{100             p[i].\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}} = atoi(c);}
+\DoxyCodeLine{101             count = 0;}
+\DoxyCodeLine{102             \textcolor{keywordflow}{if} ((p[i].\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}} == 0) || (p[i].\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}} > 100) || (p[i].\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}} < 1))}
+\DoxyCodeLine{103             \{}
+\DoxyCodeLine{104                 printf(\textcolor{stringliteral}{"p[\%d].dest\_floor column contains invalid data in  file (i.e)\%d\(\backslash\)n"}, i, p[i].\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}});}
+\DoxyCodeLine{105                 exit(1); \textcolor{comment}{//program ends incase of erraneous data.}}
+\DoxyCodeLine{106             \}}
+\DoxyCodeLine{107             i++;}
+\DoxyCodeLine{108         \}}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     printf(\textcolor{stringliteral}{"read\_passenger is executed-\/Size of array of structure passenger is \%d \(\backslash\)n"}, i);}
+\DoxyCodeLine{112     fclose(f);}
+\DoxyCodeLine{113     printf(\textcolor{stringliteral}{"Input file is closed-\/read\_passenger function\(\backslash\)n"});}
+\DoxyCodeLine{114 \}}
+
+\end{DoxyCode}

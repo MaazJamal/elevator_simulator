@@ -1,0 +1,69 @@
+\hypertarget{is__lift__on__floor_8c}{}\doxysection{src/is\+\_\+lift\+\_\+on\+\_\+floor.c File Reference}
+\label{is__lift__on__floor_8c}\index{src/is\_lift\_on\_floor.c@{src/is\_lift\_on\_floor.c}}
+
+
+Reads the elevator structure\textquotesingle{}s attribute between\+\_\+floors.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}is\+\_\+lift\+\_\+on\+\_\+floor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{is__lift__on__floor_8c_a8331ecca3b0a14f407e7e9e354d01998}{is\+\_\+lift\+\_\+on\+\_\+floor}} (struct \mbox{\hyperlink{structelevator}{elevator}} elev\mbox{[}$\,$\mbox{]}, int index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads the elevator structure\textquotesingle{}s attribute between\+\_\+floors. 
+
+\begin{DoxyAuthor}{Author}
+Divyalakshmi Padmanaban -\/ \href{mailto:Dpadm049@uottawa.ca}{\texttt{ Dpadm049@uottawa.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{is__lift__on__floor_8c_a8331ecca3b0a14f407e7e9e354d01998}\label{is__lift__on__floor_8c_a8331ecca3b0a14f407e7e9e354d01998}} 
+\index{is\_lift\_on\_floor.c@{is\_lift\_on\_floor.c}!is\_lift\_on\_floor@{is\_lift\_on\_floor}}
+\index{is\_lift\_on\_floor@{is\_lift\_on\_floor}!is\_lift\_on\_floor.c@{is\_lift\_on\_floor.c}}
+\doxysubsubsection{\texorpdfstring{is\_lift\_on\_floor()}{is\_lift\_on\_floor()}}
+{\footnotesize\ttfamily int is\+\_\+lift\+\_\+on\+\_\+floor (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structelevator}{elevator}}}]{elev\mbox{[}$\,$\mbox{]},  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+@ details Constraints Checks if the input parameter index(i.\+e)elevator number;is within the range of number of elevators in building. If index is greater than the number of elevators actually present in building;error message will be displayed and returns -\/1. Checks the condition of the lift . 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & function takes the elevator structure and index. @ return The function 0 if lift is not on floor elso 0. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file is\+\_\+lift\+\_\+on\+\_\+floor.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     \textcolor{keywordflow}{if} (index >= \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}}) \textcolor{comment}{//check on the input parameter which cannot be more than the number of elevators in the building.}}
+\DoxyCodeLine{25     \{}
+\DoxyCodeLine{26         fprintf(stderr, \textcolor{stringliteral}{"Input parameter -\/Index is greater than the array ele[]-\/-\/-\/-\/-\/-\/-\/-\/ \%d >= \%d \(\backslash\)n"}, index, \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}});}
+\DoxyCodeLine{27         exit(1);}
+\DoxyCodeLine{28         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordflow}{if} (elev[index].between\_floor == 1) \textcolor{comment}{//check on the value of between\_floors that makes evident if the lift is on floor or in between.}}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (elev[index].between\_floor == 0)}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         fprintf(stderr, \textcolor{stringliteral}{"Incorrect elev[index].between\_floor Value : \%d \(\backslash\)n"}, elev[index].between\_floor);}
+\DoxyCodeLine{42         exit(1);}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}

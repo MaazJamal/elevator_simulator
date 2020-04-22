@@ -1,0 +1,126 @@
+\hypertarget{travel__log__file_8h}{}\doxysection{include/travel\+\_\+log\+\_\+file.h File Reference}
+\label{travel__log__file_8h}\index{include/travel\_log\_file.h@{include/travel\_log\_file.h}}
+
+
+contains the function declaration for \mbox{\hyperlink{travel__log__file_8h_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\+\_\+log\+\_\+file()}} function which writes the travel history of passenger in the lift.  
+
+
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{travel__log__file_8h_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\+\_\+log\+\_\+file}} (struct \mbox{\hyperlink{structpassenger}{passenger}} traveler, unsigned int event\+\_\+time, int elevator\+\_\+index, int mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains the function declaration for \mbox{\hyperlink{travel__log__file_8h_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\+\_\+log\+\_\+file()}} function which writes the travel history of passenger in the lift. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{travel__log__file_8h_af8d5fde3cc01745bf27550d1fb69bf3f}\label{travel__log__file_8h_af8d5fde3cc01745bf27550d1fb69bf3f}} 
+\index{travel\_log\_file.h@{travel\_log\_file.h}!travel\_log\_file@{travel\_log\_file}}
+\index{travel\_log\_file@{travel\_log\_file}!travel\_log\_file.h@{travel\_log\_file.h}}
+\doxysubsubsection{\texorpdfstring{travel\_log\_file()}{travel\_log\_file()}}
+{\footnotesize\ttfamily void travel\+\_\+log\+\_\+file (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structpassenger}{passenger}}}]{traveler,  }\item[{unsigned int}]{event\+\_\+time,  }\item[{int}]{elevator\+\_\+index,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+This function generates and updates the outputput files for data processin
+
+This function generates the output file waiting\+\_\+times.\+txt and travel\+\_\+log.\+txt which contain the average and max waiting time, and the user\+\_\+id,elevator\+\_\+id, passenger arrival time passenger leaving time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em traveler} & struct containing details about the passenger \\
+\hline
+\mbox{\texttt{ in}}  & {\em event\+\_\+time} & the time the event to be recorded happened. \\
+\hline
+\mbox{\texttt{ in}}  & {\em elevator\+\_\+index} & the index of the elevator the passenger was in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode} & 1 for writing to travel\+\_\+log.\+txt, 2 for calculating average and max time,3 for writing waiting\+\_\+times.\+txt log file)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+does not return an value 
+\end{DoxyReturn}
+This keeps track if the output path file is being opened for first time
+
+relative path to the travel\+\_\+log.\+txt file path
+
+Definition at line 30 of file travel\+\_\+log\+\_\+file.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} first\_call = \textcolor{keyword}{true};                             }
+\DoxyCodeLine{34     \textcolor{keywordtype}{char} *travel\_file\_path = \textcolor{stringliteral}{"data/travel\_log.txt"};            }
+\DoxyCodeLine{35     \textcolor{keywordtype}{char} *waiting\_times\_files\_path = \textcolor{stringliteral}{"data/waiting\_times.txt"}; \textcolor{comment}{//relative path to waiting\_times.txt file path}}
+\DoxyCodeLine{36     FILE *f;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{float} diff;}
+\DoxyCodeLine{38     \textcolor{keywordflow}{switch} (mode)}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordflow}{case} 1: \textcolor{comment}{//This case is to write to travel\_log file}}
+\DoxyCodeLine{42         \textcolor{keywordflow}{if} (first\_call)}
+\DoxyCodeLine{43         \{}
+\DoxyCodeLine{44             f = fopen(travel\_file\_path, \textcolor{stringliteral}{"w+"});}
+\DoxyCodeLine{45             \textcolor{keywordflow}{if} (f == NULL)}
+\DoxyCodeLine{46             \{}
+\DoxyCodeLine{47                 fprintf(stderr, \textcolor{stringliteral}{"Could not create/open travel\_log.txt file.\(\backslash\)n"});}
+\DoxyCodeLine{48                 exit(-\/1);}
+\DoxyCodeLine{49             \}}
+\DoxyCodeLine{50             first\_call = \textcolor{keyword}{false};}
+\DoxyCodeLine{51             fprintf(f, \textcolor{stringliteral}{"Passenger\_ID,Elevator\_ID,Passenger\_In\_time,Passenger\_Entry\_floor,Passenger\_Out\_time,Passenger\_Exit\_floor\(\backslash\)n"});}
+\DoxyCodeLine{52         \}}
+\DoxyCodeLine{53         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{54         \{}
+\DoxyCodeLine{55             f = fopen(travel\_file\_path, \textcolor{stringliteral}{"a+"});}
+\DoxyCodeLine{56             \textcolor{keywordflow}{if} (f == NULL)}
+\DoxyCodeLine{57             \{}
+\DoxyCodeLine{58                 fprintf(stderr, \textcolor{stringliteral}{"Could not create/open travel\_log.txt file.\(\backslash\)n"});}
+\DoxyCodeLine{59                 exit(-\/1);}
+\DoxyCodeLine{60             \}}
+\DoxyCodeLine{61         \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = traveler.\mbox{\hyperlink{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}{id}};}
+\DoxyCodeLine{64         \textcolor{keywordtype}{int} in\_time = traveler.\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}};}
+\DoxyCodeLine{65         \textcolor{keywordtype}{int} in\_floor = traveler.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}};}
+\DoxyCodeLine{66         \textcolor{keywordtype}{int} out\_floor = traveler.\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}};}
+\DoxyCodeLine{67         fprintf(f, \textcolor{stringliteral}{"\%d,\%d,\%d,\%d,\%d,\%d\(\backslash\)n"}, \textcolor{keywordtype}{id}, elevator\_index, in\_time, in\_floor, event\_time, out\_floor);}
+\DoxyCodeLine{68         fflush(f);}
+\DoxyCodeLine{69         fclose(f);}
+\DoxyCodeLine{70         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{71     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{72         \textcolor{comment}{//This case is to calculate max and average wait time.}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         diff = event\_time -\/ traveler.\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}};}
+\DoxyCodeLine{75         \textcolor{keywordflow}{if} (diff < 0.0)}
+\DoxyCodeLine{76         \{}
+\DoxyCodeLine{77             fprintf(stderr, \textcolor{stringliteral}{"Negative time difference.\(\backslash\)n"});}
+\DoxyCodeLine{78             exit(-\/1);}
+\DoxyCodeLine{79         \}}
+\DoxyCodeLine{80         average\_waiting\_time(diff);}
+\DoxyCodeLine{81         max\_waiting\_time(diff);}
+\DoxyCodeLine{82         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{83     \textcolor{keywordflow}{case} 3: \textcolor{comment}{//This case is to write to waiting time}}
+\DoxyCodeLine{84         f = fopen(waiting\_times\_files\_path, \textcolor{stringliteral}{"w+"});}
+\DoxyCodeLine{85         \textcolor{keywordflow}{if} (f == NULL)}
+\DoxyCodeLine{86         \{}
+\DoxyCodeLine{87             fprintf(stderr, \textcolor{stringliteral}{"Could not create waiting\_times.txt file.\(\backslash\)n"});}
+\DoxyCodeLine{88             exit(-\/1);}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90         \textcolor{keywordtype}{float} avg\_time = average\_waiting\_time(-\/1.0);}
+\DoxyCodeLine{91         \textcolor{keywordtype}{float} max\_time = max\_waiting\_time(-\/1.0);}
+\DoxyCodeLine{92         fprintf(f, \textcolor{stringliteral}{"Average Waiting time of Passenger: \%f\(\backslash\)n"}, avg\_time);}
+\DoxyCodeLine{93         fprintf(f, \textcolor{stringliteral}{"Maximum Waiting time of Passenger: \%f\(\backslash\)n"}, max\_time);}
+\DoxyCodeLine{94         fflush(f);}
+\DoxyCodeLine{95         fclose(f);}
+\DoxyCodeLine{96         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{97     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{98         fprintf(stderr, \textcolor{stringliteral}{"Incorrect mode selection."});}
+\DoxyCodeLine{99         exit(-\/1);}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101 \}}
+
+\end{DoxyCode}

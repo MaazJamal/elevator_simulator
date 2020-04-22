@@ -1,0 +1,375 @@
+\hypertarget{static__simulation_8h}{}\doxysection{include/static\+\_\+simulation.h File Reference}
+\label{static__simulation_8h}\index{include/static\_simulation.h@{include/static\_simulation.h}}
+
+
+This file contains the declaration of the function static\+\_\+simulation The function carries out the static simulation of the project.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{static__simulation_8h_ad022020e38b9aa37a3e98b761c507a10}{static\+\_\+simulation}} (void)
+\begin{DoxyCompactList}\small\item\em This function contains the working logic of the elevator array function for static release. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the declaration of the function static\+\_\+simulation The function carries out the static simulation of the project. 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{static__simulation_8h_ad022020e38b9aa37a3e98b761c507a10}\label{static__simulation_8h_ad022020e38b9aa37a3e98b761c507a10}} 
+\index{static\_simulation.h@{static\_simulation.h}!static\_simulation@{static\_simulation}}
+\index{static\_simulation@{static\_simulation}!static\_simulation.h@{static\_simulation.h}}
+\doxysubsubsection{\texorpdfstring{static\_simulation()}{static\_simulation()}}
+{\footnotesize\ttfamily int static\+\_\+simulation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function contains the working logic of the elevator array function for static release. 
+
+Contains the logic for the static release. It contains the main logic loop for travel of elevators. The loop for placing passengers on floors and the complete flow of the program.
+
+\begin{DoxyReturn}{Returns}
+return 1 for succesfull completion. 
+\end{DoxyReturn}
+A boolean array that shows if elevator needs to stop at a floor. to pick a passenger.
+
+Array conatining Elevators
+
+Array to pointer of type passenger. Stores passengers on floors.
+
+stores the passengers from input file.
+
+main time counter
+
+A queue of request made by passengers
+
+Definition at line 21 of file static\+\_\+simulation.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} = -\/1;}
+\DoxyCodeLine{25     \textcolor{keywordflow}{while} (\mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} == -\/1)}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} = \mbox{\hyperlink{input__lifts_8h_aaf6e4f946cf083fed7f3b265e3421eb3}{input\_lifts}}();}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29     \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}} = -\/1;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordflow}{while} (\mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}} == -\/1)}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}} = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} *stop\_at\_floor\_global = (\textcolor{keywordtype}{bool} *)calloc(\mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})); }
+\DoxyCodeLine{36     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} *elevator\_arr = \mbox{\hyperlink{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}{create\_elevator\_array}}(\mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}});   }
+\DoxyCodeLine{37     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} **floor\_array = \mbox{\hyperlink{create__floor__array_8h_aa7321679c44d6dcf3ff9241a44ab38c1}{create\_floor\_array}}(\mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}});     }
+\DoxyCodeLine{38     \mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}} = \mbox{\hyperlink{count__passenger_8h_ae332544a6584743f5c1444e2495becfe}{count\_passenger}}();}
+\DoxyCodeLine{39     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *passenger\_array = (\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *)calloc(\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}, \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}})); }
+\DoxyCodeLine{40     \mbox{\hyperlink{read__passenger_8c_a37c372d14154c7f6d6d1af823cadf07d}{read\_passenger}}(passenger\_array);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} t = 0;                       }
+\DoxyCodeLine{42     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *passenger\_queue = NULL; }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} prev\_time\_index = 0;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordflow}{while} (t < 86400) \textcolor{comment}{//86400 for whole day}}
+\DoxyCodeLine{47     \{}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{comment}{// Add passenger with current time step to queue}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_pass = prev\_time\_index; i\_pass < \mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}; i\_pass++) \textcolor{comment}{//debugged works perfectly}}
+\DoxyCodeLine{52         \{}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54             \textcolor{comment}{//Assume the passenger\_array is sorted by arrival time.}}
+\DoxyCodeLine{55             \textcolor{comment}{//prev\_time\_index prevents us from starting at previous index}}
+\DoxyCodeLine{56             \textcolor{keywordflow}{if} (passenger\_array[i\_pass].\mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\_time}} == t)}
+\DoxyCodeLine{57             \{}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59                 passenger\_queue = \mbox{\hyperlink{add__request__queue_8h_a1aa0db2f2ecae31eaf0fc492d19414c6}{add\_request\_queue}}(passenger\_queue, passenger\_array[i\_pass]);}
+\DoxyCodeLine{60                 prev\_time\_index++;}
+\DoxyCodeLine{61             \}}
+\DoxyCodeLine{62             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{63             \{}
+\DoxyCodeLine{64                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{65             \}}
+\DoxyCodeLine{66         \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}}; i++)}
+\DoxyCodeLine{69         \{}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71             \textcolor{keywordflow}{if} (\mbox{\hyperlink{is__lift__on__floor_8h_a8331ecca3b0a14f407e7e9e354d01998}{is\_lift\_on\_floor}}(elevator\_arr, i))}
+\DoxyCodeLine{72             \{}
+\DoxyCodeLine{73                 \textcolor{keywordtype}{int} drop\_delay = 0;}
+\DoxyCodeLine{74                 \textcolor{keywordtype}{int} add\_delay = 0;}
+\DoxyCodeLine{75                 \textcolor{keywordtype}{int} stop\_change = elevator\_arr[i].\mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\_floor}} -\/ 1;}
+\DoxyCodeLine{76                 \textcolor{keywordflow}{if} (elevator\_arr[i].\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}} > 0)}
+\DoxyCodeLine{77                 \{}
+\DoxyCodeLine{78                     \textcolor{keywordflow}{if} (elevator\_arr[i].stop\_at\_floor[stop\_change])}
+\DoxyCodeLine{79                     \{ \textcolor{comment}{//remove any passengers that need to get off}}
+\DoxyCodeLine{80                         drop\_delay = \mbox{\hyperlink{passengers__drop_8h_a961490854f7de2df3e342a5ca6705a3a}{passengers\_drop}}(elevator\_arr, i, floor\_array, elevator\_arr[i].cur\_floor, t);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82                         \textcolor{keywordflow}{if} (drop\_delay > 0) \textcolor{comment}{//dropped passengers here}}
+\DoxyCodeLine{83                         \{}
+\DoxyCodeLine{84                             elevator\_arr[i].\mbox{\hyperlink{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}{stop\_at\_floor}}[stop\_change] = \textcolor{keyword}{false}; \textcolor{comment}{//dropped passengers here}}
+\DoxyCodeLine{85                         \}}
+\DoxyCodeLine{86                     \}}
+\DoxyCodeLine{87                 \}}
+\DoxyCodeLine{88                 \textcolor{keywordflow}{if} (elevator\_arr[i].\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}} < elevator\_arr[i].max\_passenger \&\& stop\_at\_floor\_global[stop\_change])}
+\DoxyCodeLine{89                 \{}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91                     add\_delay = \mbox{\hyperlink{passengers__take__in_8h_ad76f630c9b48489803eeb11079f324a5}{passengers\_take\_in}}(elevator\_arr, i, floor\_array, elevator\_arr[i].cur\_floor, t);}
+\DoxyCodeLine{92                     \textcolor{keywordflow}{if} (floor\_array[stop\_change] == NULL)}
+\DoxyCodeLine{93                     \{}
+\DoxyCodeLine{94                         stop\_at\_floor\_global[stop\_change] = \textcolor{keyword}{false};}
+\DoxyCodeLine{95                     \}}
+\DoxyCodeLine{96                 \}}
+\DoxyCodeLine{97                 \textcolor{keywordtype}{int} total\_delay = 2 * drop\_delay + 2 * add\_delay;}
+\DoxyCodeLine{98                 elevator\_arr[i].timer += total\_delay;}
+\DoxyCodeLine{99             \}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101             \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *cur = passenger\_queue;}
+\DoxyCodeLine{102             \textcolor{keywordtype}{int} index = 0;}
+\DoxyCodeLine{103             \textcolor{keywordflow}{while} (cur != NULL)}
+\DoxyCodeLine{104             \{ \textcolor{comment}{//iterating over passenger queue}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106                 \textcolor{keywordtype}{bool} direction\_up = (cur-\/>\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} <= cur-\/>\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}}); \textcolor{comment}{//passenger direction up}}
+\DoxyCodeLine{107                 \textcolor{keywordtype}{bool} direction\_down = (cur-\/>\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} >= cur-\/>\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}});}
+\DoxyCodeLine{108                 \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_up == direction\_up || elevator\_arr[i].direction\_down == direction\_down)}
+\DoxyCodeLine{109                 \{}
+\DoxyCodeLine{110                     \textcolor{keywordtype}{bool} is\_above = cur-\/>\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} >= elevator\_arr[i].\mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\_floor}};}
+\DoxyCodeLine{111                     \textcolor{keywordtype}{bool} is\_below = cur-\/>\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} <= elevator\_arr[i].\mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\_floor}};}
+\DoxyCodeLine{112                     \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_up == is\_above || elevator\_arr[i].direction\_down == is\_below)}
+\DoxyCodeLine{113                     \{ \textcolor{comment}{//elevator can pick this person up}}
+\DoxyCodeLine{114                         \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} temp = *cur;}
+\DoxyCodeLine{115                         temp.next = NULL;                                 \textcolor{comment}{// removing this from passenger queue list}}
+\DoxyCodeLine{116                         \textcolor{keywordtype}{int} arrival\_floor\_index = temp.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} -\/ 1; \textcolor{comment}{//-\/1 because of mismatch between array and input file}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118                         add\_passenger\_floor(floor\_array, arrival\_floor\_index, temp);}
+\DoxyCodeLine{119                         \textcolor{comment}{// elevator\_arr[i].stop\_at\_floor[temp.dest\_floor -\/ 1] = true;}}
+\DoxyCodeLine{120                         stop\_at\_floor\_global[temp.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} -\/ 1] = \textcolor{keyword}{true};}
+\DoxyCodeLine{121                         passenger\_queue = \mbox{\hyperlink{remove__passenger__queue_8h_aaf649634b0615e3c784050409bd55e58}{remove\_passenger\_queue}}(index, passenger\_queue);}
+\DoxyCodeLine{122                         index-\/-\/; \textcolor{comment}{//list is smaller by one node.}}
+\DoxyCodeLine{123                     \}}
+\DoxyCodeLine{124                 \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{127                 \{}
+\DoxyCodeLine{128                     \textcolor{comment}{//is elevator at top floor}}
+\DoxyCodeLine{129                     \textcolor{keywordflow}{if} (elevator\_arr[i].cur\_floor == \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}})}
+\DoxyCodeLine{130                     \{}
+\DoxyCodeLine{131                         \textcolor{comment}{//change direction to move down}}
+\DoxyCodeLine{132                         \textcolor{keywordtype}{int} success = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(elevator\_arr, i);}
+\DoxyCodeLine{133                         \textcolor{keywordflow}{if} (success == -\/1)}
+\DoxyCodeLine{134                         \{}
+\DoxyCodeLine{135                             fprintf(stderr, \textcolor{stringliteral}{"Could not change direction of elevator to Down. \(\backslash\)n"});}
+\DoxyCodeLine{136                         \}}
+\DoxyCodeLine{137                         \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} temp = *cur;}
+\DoxyCodeLine{138                         temp.next = NULL; \textcolor{comment}{// removing this from passenger queue list}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140                         \textcolor{keywordtype}{int} arrival\_floor\_index = temp.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} -\/ 1;}
+\DoxyCodeLine{141                         add\_passenger\_floor(floor\_array, arrival\_floor\_index, temp);}
+\DoxyCodeLine{142                         \textcolor{comment}{// int dest\_floor\_index = temp.dest\_floor -\/ 1;}}
+\DoxyCodeLine{143                         \textcolor{comment}{// elevator\_arr[i].stop\_at\_floor[dest\_floor\_index] = true;}}
+\DoxyCodeLine{144                         stop\_at\_floor\_global[temp.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} -\/ 1] = \textcolor{keyword}{true};}
+\DoxyCodeLine{145                         passenger\_queue = \mbox{\hyperlink{remove__passenger__queue_8h_aaf649634b0615e3c784050409bd55e58}{remove\_passenger\_queue}}(index, passenger\_queue);}
+\DoxyCodeLine{146                         index-\/-\/; \textcolor{comment}{//list is smaller by one node.}}
+\DoxyCodeLine{147                     \}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149                     \textcolor{comment}{//is elevator at ground floor. Can cause issues at start.}}
+\DoxyCodeLine{150                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (elevator\_arr[i].cur\_floor == 1)}
+\DoxyCodeLine{151                     \{}
+\DoxyCodeLine{152                         \textcolor{comment}{//change direction to move up}}
+\DoxyCodeLine{153                         moving\_lift\_up(elevator\_arr, i);}
+\DoxyCodeLine{154                         \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} temp = *cur;}
+\DoxyCodeLine{155                         temp.next = NULL; \textcolor{comment}{// removing this from passenger queue list}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157                         \textcolor{keywordtype}{int} arrival\_floor\_index = temp.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} -\/ 1;}
+\DoxyCodeLine{158                         add\_passenger\_floor(floor\_array, arrival\_floor\_index, temp);}
+\DoxyCodeLine{159                         \textcolor{comment}{// int dest\_floor\_index = temp.dest\_floor -\/ 1;}}
+\DoxyCodeLine{160                         \textcolor{comment}{// elevator\_arr[i].stop\_at\_floor[dest\_floor\_index] = true;}}
+\DoxyCodeLine{161                         stop\_at\_floor\_global[temp.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} -\/ 1] = \textcolor{keyword}{true};}
+\DoxyCodeLine{162                         passenger\_queue = \mbox{\hyperlink{remove__passenger__queue_8h_aaf649634b0615e3c784050409bd55e58}{remove\_passenger\_queue}}(index, passenger\_queue);}
+\DoxyCodeLine{163                         index-\/-\/; \textcolor{comment}{//list is smaller by one node.}}
+\DoxyCodeLine{164                     \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166                     \textcolor{keywordflow}{else} \textcolor{comment}{//passenger in lift go in opposite direction of the lift}}
+\DoxyCodeLine{167                     \{}
+\DoxyCodeLine{168                         \textcolor{comment}{// bool to check if elevator and passenger inside are travelling in same direction}}
+\DoxyCodeLine{169                         \textcolor{keywordtype}{bool} passenger\_elevator\_dir = \textcolor{keyword}{false};}
+\DoxyCodeLine{170                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < elevator\_arr[i].\mbox{\hyperlink{structelevator_a35976c62fece1a1887b39d2761e409e3}{passenger\_count}}; j++)}
+\DoxyCodeLine{171                         \{}
+\DoxyCodeLine{172                             \textcolor{keywordflow}{if} (elevator\_arr[i].passenger\_arr[j].\mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\_elevator}})}
+\DoxyCodeLine{173                             \{}
+\DoxyCodeLine{174                                 \textcolor{keywordtype}{bool} up = elevator\_arr[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[j].\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}} > elevator\_arr[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[j].\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}};}
+\DoxyCodeLine{175                                 \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_up == up || elevator\_arr[i].direction\_down != up)}
+\DoxyCodeLine{176                                 \{}
+\DoxyCodeLine{177                                     passenger\_elevator\_dir = \textcolor{keyword}{true};}
+\DoxyCodeLine{178                                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{179                                 \}}
+\DoxyCodeLine{180                             \}}
+\DoxyCodeLine{181                         \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183                         \textcolor{comment}{//if no passengers are travelling in direction of lift change lift direction}}
+\DoxyCodeLine{184                         \textcolor{keywordflow}{if} (!passenger\_elevator\_dir)}
+\DoxyCodeLine{185                         \{}
+\DoxyCodeLine{186                             \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_up)}
+\DoxyCodeLine{187                             \{}
+\DoxyCodeLine{188                                 \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(elevator\_arr, i);}
+\DoxyCodeLine{189                             \}}
+\DoxyCodeLine{190                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_down)}
+\DoxyCodeLine{191                             \{}
+\DoxyCodeLine{192                                 moving\_lift\_up(elevator\_arr, i);}
+\DoxyCodeLine{193                             \}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195                             \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} temp = *cur;}
+\DoxyCodeLine{196                             temp.next = NULL; \textcolor{comment}{// removing this from passenger queue list}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198                             \textcolor{keywordtype}{int} arrival\_floor\_index = temp.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} -\/ 1;}
+\DoxyCodeLine{199                             add\_passenger\_floor(floor\_array, arrival\_floor\_index, temp);}
+\DoxyCodeLine{200                             \textcolor{comment}{// int dest\_floor\_index = temp.dest\_floor -\/ 1;}}
+\DoxyCodeLine{201                             \textcolor{comment}{// elevator\_arr[i].stop\_at\_floor[dest\_floor\_index] = true;}}
+\DoxyCodeLine{202                             stop\_at\_floor\_global[temp.\mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\_floor}} -\/ 1] = \textcolor{keyword}{true};}
+\DoxyCodeLine{203                             passenger\_queue = \mbox{\hyperlink{remove__passenger__queue_8h_aaf649634b0615e3c784050409bd55e58}{remove\_passenger\_queue}}(index, passenger\_queue);}
+\DoxyCodeLine{204                             index-\/-\/; \textcolor{comment}{//list is smaller by one node.}}
+\DoxyCodeLine{205                         \}}
+\DoxyCodeLine{206                     \}}
+\DoxyCodeLine{207                 \}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209                 \textcolor{comment}{//potential bug here due to deleting nodes in remove\_passenger\_queue}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211                 cur = passenger\_queue; \textcolor{comment}{//bug fix start}}
+\DoxyCodeLine{212                 \textcolor{keywordflow}{if} (cur != NULL)       \textcolor{comment}{//incase we deleted only node queue}}
+\DoxyCodeLine{213                 \{}
+\DoxyCodeLine{214                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} q\_index = 0; q\_index < index + 1; q\_index++)}
+\DoxyCodeLine{215                     \{}
+\DoxyCodeLine{216                         cur = cur-\/>next; \textcolor{comment}{//iterate until we reach the spot of deletion}}
+\DoxyCodeLine{217                     \}}
+\DoxyCodeLine{218                 \} \textcolor{comment}{//bug fix end}}
+\DoxyCodeLine{219                 index++;}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221             \} \textcolor{comment}{//End of while loop iterating over queue}}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223             \textcolor{comment}{//move elevator here}}
+\DoxyCodeLine{224             \textcolor{keywordflow}{if} (elevator\_arr[i].\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}} > 0) \textcolor{comment}{//if there are passengers then lift needs to move}}
+\DoxyCodeLine{225             \{}
+\DoxyCodeLine{226                 elevator\_arr[i].moving = \textcolor{keyword}{true};}
+\DoxyCodeLine{227                 elevator\_arr[i].\mbox{\hyperlink{structelevator_ab012a8d2102934af9ea97effdeea80cf}{between\_floor}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{228             \}}
+\DoxyCodeLine{229             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{230             \{}
+\DoxyCodeLine{231                 elevator\_arr[i].moving = \textcolor{keyword}{false}; \textcolor{comment}{//elevator is stopped and empty now}}
+\DoxyCodeLine{232                 \textcolor{keywordflow}{if} (elevator\_arr[i].timer != 0)}
+\DoxyCodeLine{233                 \{}
+\DoxyCodeLine{234                     elevator\_arr[i].\mbox{\hyperlink{structelevator_ab012a8d2102934af9ea97effdeea80cf}{between\_floor}} = \textcolor{keyword}{true}; \textcolor{comment}{//time for passenger to drop out.}}
+\DoxyCodeLine{235                 \}}
+\DoxyCodeLine{236                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{237                 \{}
+\DoxyCodeLine{238                     elevator\_arr[i].\mbox{\hyperlink{structelevator_ab012a8d2102934af9ea97effdeea80cf}{between\_floor}} = \textcolor{keyword}{false}; \textcolor{comment}{//elevator is stationary at current floor and can be used again.}}
+\DoxyCodeLine{239                     \textcolor{keywordflow}{if} (elevator\_arr[i].cur\_floor == 1)}
+\DoxyCodeLine{240                     \{ \textcolor{comment}{//elevator at ground floor can only move up.}}
+\DoxyCodeLine{241                         moving\_lift\_up(elevator\_arr, i);}
+\DoxyCodeLine{242                     \}}
+\DoxyCodeLine{243                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (elevator\_arr[i].cur\_floor == \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}}) \textcolor{comment}{//At top floor and can only move down}}
+\DoxyCodeLine{244                     \{}
+\DoxyCodeLine{245                         \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(elevator\_arr, i);}
+\DoxyCodeLine{246                     \}}
+\DoxyCodeLine{247                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{248                     \{ \textcolor{comment}{//elevator in middle can go anywhere}}
+\DoxyCodeLine{249                         elevator\_arr[i].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{250                         elevator\_arr[i].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{251                     \}}
+\DoxyCodeLine{252                 \}}
+\DoxyCodeLine{253             \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255             \textcolor{keywordflow}{if} (elevator\_arr[i].timer > 0)}
+\DoxyCodeLine{256             \{}
+\DoxyCodeLine{257                 elevator\_arr[i].timer-\/-\/;}
+\DoxyCodeLine{258             \}}
+\DoxyCodeLine{259             \textcolor{keywordflow}{if} (elevator\_arr[i].timer == 0)}
+\DoxyCodeLine{260             \{ \textcolor{comment}{//we may need to move to another floor}}
+\DoxyCodeLine{261                 \textcolor{keywordtype}{int} current\_floor = elevator\_arr[i].\mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\_floor}};}
+\DoxyCodeLine{262                 \textcolor{keywordtype}{bool} passengers\_above = \textcolor{keyword}{false}; \textcolor{comment}{//are there passengers above for drop or pickup?}}
+\DoxyCodeLine{263                 \textcolor{keywordtype}{bool} passengers\_below = \textcolor{keyword}{false}; \textcolor{comment}{//are there passengers below for drop or pickup?}}
+\DoxyCodeLine{264                 \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_up)}
+\DoxyCodeLine{265                 \{}
+\DoxyCodeLine{266                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = current\_floor; k < \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}}; k++) \textcolor{comment}{//start at current floor and search up}}
+\DoxyCodeLine{267                     \{                                                 \textcolor{comment}{//k = current floor becuse searching up and array numbering starts from 0 so curent\_floor as index is 1 floor above}}
+\DoxyCodeLine{268                         \textcolor{comment}{//if we are below a floor and need to stop on it to drop a passenger.}}
+\DoxyCodeLine{269                         \textcolor{keywordtype}{bool} condition\_a = elevator\_arr[i].\mbox{\hyperlink{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}{stop\_at\_floor}}[k];}
+\DoxyCodeLine{270                         \textcolor{comment}{// if we are below a floor and neee to stop on it to pick a passenger.}}
+\DoxyCodeLine{271                         \textcolor{keywordtype}{bool} condition\_b = stop\_at\_floor\_global[k];}
+\DoxyCodeLine{272                         \textcolor{keywordflow}{if} (condition\_a || condition\_b)}
+\DoxyCodeLine{273                         \{}
+\DoxyCodeLine{274                             passengers\_above = \textcolor{keyword}{true};}
+\DoxyCodeLine{275                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{276                         \}}
+\DoxyCodeLine{277                     \}}
+\DoxyCodeLine{278                 \}}
+\DoxyCodeLine{279                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_down)}
+\DoxyCodeLine{280                 \{}
+\DoxyCodeLine{281                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = current\_floor -\/ 2; k >= 0; k-\/-\/)}
+\DoxyCodeLine{282                     \{ \textcolor{comment}{//current\_floor-\/2 because of array numbering and file numbering mismatch}}
+\DoxyCodeLine{283                         \textcolor{comment}{//if we are above a floor and need to stop on it to drop passengers.}}
+\DoxyCodeLine{284                         \textcolor{keywordtype}{bool} condition\_a = elevator\_arr[i].\mbox{\hyperlink{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}{stop\_at\_floor}}[k];}
+\DoxyCodeLine{285                         \textcolor{comment}{//if we are above a floor and need to stop on it to pick a passenger.}}
+\DoxyCodeLine{286                         \textcolor{keywordtype}{bool} condition\_b = stop\_at\_floor\_global[k];}
+\DoxyCodeLine{287                         \textcolor{keywordflow}{if} (condition\_a || condition\_b)}
+\DoxyCodeLine{288                         \{}
+\DoxyCodeLine{289                             passengers\_below = \textcolor{keyword}{true};}
+\DoxyCodeLine{290                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{291                         \}}
+\DoxyCodeLine{292                     \}}
+\DoxyCodeLine{293                 \}}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{295                 \textcolor{keywordflow}{if} (passengers\_above)}
+\DoxyCodeLine{296                 \{}
+\DoxyCodeLine{297                     current\_floor++;}
+\DoxyCodeLine{298                 \}}
+\DoxyCodeLine{299                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (passengers\_below)}
+\DoxyCodeLine{300                 \{}
+\DoxyCodeLine{301                     current\_floor-\/-\/;}
+\DoxyCodeLine{302                 \}}
+\DoxyCodeLine{303                 elevator\_arr[i].\mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\_floor}} = current\_floor; \textcolor{comment}{//changed the floor}}
+\DoxyCodeLine{304                 \textcolor{keywordflow}{if} (elevator\_arr[i].stop\_at\_floor[current\_floor -\/ 1] || stop\_at\_floor\_global[current\_floor -\/ 1])}
+\DoxyCodeLine{305                 \{ \textcolor{comment}{//do we need to stop at this floor}}
+\DoxyCodeLine{306                     elevator\_arr[i].moving = \textcolor{keyword}{false};}
+\DoxyCodeLine{307                     elevator\_arr[i].\mbox{\hyperlink{structelevator_ab012a8d2102934af9ea97effdeea80cf}{between\_floor}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{308                 \}}
+\DoxyCodeLine{309                 \textcolor{keywordflow}{else} \textcolor{comment}{//we do not need to stop at this floor.}}
+\DoxyCodeLine{310                 \{}
+\DoxyCodeLine{311                     elevator\_arr[i].moving = \textcolor{keyword}{true};}
+\DoxyCodeLine{312                     elevator\_arr[i].\mbox{\hyperlink{structelevator_ab012a8d2102934af9ea97effdeea80cf}{between\_floor}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{313                     elevator\_arr[i].timer += 3; \textcolor{comment}{//add 3 sec till next floor}}
+\DoxyCodeLine{314                 \}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316                 \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_up \&\& !passengers\_above)}
+\DoxyCodeLine{317                 \{ \textcolor{comment}{//if no passengers above then lift should change direction to down.}}
+\DoxyCodeLine{318                     \textcolor{keywordflow}{if} (current\_floor != 1 \&\& elevator\_arr[i].\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}} > 0)}
+\DoxyCodeLine{319                     \{}
+\DoxyCodeLine{320                         \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(elevator\_arr, i);}
+\DoxyCodeLine{321                     \}}
+\DoxyCodeLine{322                 \}}
+\DoxyCodeLine{323                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (elevator\_arr[i].direction\_down \&\& !passengers\_below)}
+\DoxyCodeLine{324                 \{}
+\DoxyCodeLine{325                     \textcolor{keywordflow}{if} (current\_floor != \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}} \&\& elevator\_arr[i].\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}} > 0)}
+\DoxyCodeLine{326                     \{}
+\DoxyCodeLine{327                         moving\_lift\_up(elevator\_arr, i);}
+\DoxyCodeLine{328                     \}}
+\DoxyCodeLine{329                 \}}
+\DoxyCodeLine{330             \}}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{332         \} \textcolor{comment}{//end of elevator loop}}
+\DoxyCodeLine{333 }
+\DoxyCodeLine{334         \textcolor{comment}{// output\_data\_metric();}}
+\DoxyCodeLine{335         t++;}
+\DoxyCodeLine{336     \}}
+\DoxyCodeLine{337     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} dummy;             \textcolor{comment}{//placeholder to pass to log. it should not be used.}}
+\DoxyCodeLine{338     \mbox{\hyperlink{travel__log__file_8h_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\_log\_file}}(dummy, 0, 0, 3); \textcolor{comment}{//choose mode to write max,avg time to file.}}
+\DoxyCodeLine{339     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{340 \}}
+
+\end{DoxyCode}

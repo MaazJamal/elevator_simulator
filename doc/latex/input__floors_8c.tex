@@ -1,0 +1,67 @@
+\hypertarget{input__floors_8c}{}\doxysection{src/input\+\_\+floors.c File Reference}
+\label{input__floors_8c}\index{src/input\_floors.c@{src/input\_floors.c}}
+
+
+Obtains the floor count-\/\+Total number of floors in the building.\+Enables the user to enter the total number of floors in the building. based on availability. If none of those symptoms then patient is not admitted.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}input\+\_\+floors.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{input__floors_8c_ac21b8029a111342aa5dde9daa28b65cb}{input\+\_\+floors}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Obtains the floor count-\/\+Total number of floors in the building.\+Enables the user to enter the total number of floors in the building. based on availability. If none of those symptoms then patient is not admitted. 
+
+\begin{DoxyAuthor}{Author}
+Divyalakshmi Padmanaban -\/ \href{mailto:Dpadm049@uottawa.ca}{\texttt{ Dpadm049@uottawa.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{input__floors_8c_ac21b8029a111342aa5dde9daa28b65cb}\label{input__floors_8c_ac21b8029a111342aa5dde9daa28b65cb}} 
+\index{input\_floors.c@{input\_floors.c}!input\_floors@{input\_floors}}
+\index{input\_floors@{input\_floors}!input\_floors.c@{input\_floors.c}}
+\doxysubsubsection{\texorpdfstring{input\_floors()}{input\_floors()}}
+{\footnotesize\ttfamily int input\+\_\+floors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Constraints If the floor count is 0 ,the function displays a error message and returns -\/1. If the floor count is less than 1(negative values) ,the function displays a error message and returns -\/1. If the floor count is greater than 100,the function displays a error message and returns -\/1. Floating point values entered considered to near integers. \begin{DoxyReturn}{Returns}
+The function accepts only values between 1 and 100 and returns the value;otherwise returns -\/1 and displays error message. 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file input\+\_\+floors.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} local\_floor\_count;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     printf(\textcolor{stringliteral}{"Enter the number of floors in the building-\/VALID INPUTS ARE FROM 1 TO 100\(\backslash\)n"});}
+\DoxyCodeLine{25     scanf(\textcolor{stringliteral}{"\%d"}, \&local\_floor\_count);}
+\DoxyCodeLine{26     \textcolor{comment}{//Following checks are performed to see if the entered value is erraneous.}}
+\DoxyCodeLine{27     \textcolor{keywordflow}{if} (local\_floor\_count == 0)}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         printf(\textcolor{stringliteral}{"Entered number of floor invalid \(\backslash\)n"});}
+\DoxyCodeLine{30         local\_floor\_count = -\/1;}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (local\_floor\_count < 1)}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         printf(\textcolor{stringliteral}{"Entered number of floor is negative value and hence invalid \(\backslash\)n"});}
+\DoxyCodeLine{35         local\_floor\_count = -\/1;}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (local\_floor\_count > 100)}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         printf(\textcolor{stringliteral}{"Entered number of floor is greater than 100 and hence invalid \(\backslash\)n"});}
+\DoxyCodeLine{40         local\_floor\_count = -\/1;}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42     \textcolor{comment}{//discards the values stored in stdin buffer.}}
+\DoxyCodeLine{43     scanf(\textcolor{stringliteral}{"\%*[\string^\(\backslash\)n]"});}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} local\_floor\_count;}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}

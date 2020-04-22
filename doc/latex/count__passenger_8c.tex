@@ -1,0 +1,79 @@
+\hypertarget{count__passenger_8c}{}\doxysection{src/count\+\_\+passenger.c File Reference}
+\label{count__passenger_8c}\index{src/count\_passenger.c@{src/count\_passenger.c}}
+
+
+Reads line by line and counts the number of passenger based on passenger ID. When passenger ID equal to \char`\"{}911\char`\"{} it is considered as Emergency stop and wont be counted towards the passenger\+\_\+count.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}count\+\_\+passenger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{count__passenger_8c_ae332544a6584743f5c1444e2495becfe}{count\+\_\+passenger}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads line by line and counts the number of passenger based on passenger ID. When passenger ID equal to \char`\"{}911\char`\"{} it is considered as Emergency stop and wont be counted towards the passenger\+\_\+count. 
+
+\begin{DoxyAuthor}{Author}
+Hariprasad Munusamy -\/ \href{mailto:HariprasadMunusamy@cmail.carleton.ca}{\texttt{ Hariprasad\+Munusamy@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{count__passenger_8c_ae332544a6584743f5c1444e2495becfe}\label{count__passenger_8c_ae332544a6584743f5c1444e2495becfe}} 
+\index{count\_passenger.c@{count\_passenger.c}!count\_passenger@{count\_passenger}}
+\index{count\_passenger@{count\_passenger}!count\_passenger.c@{count\_passenger.c}}
+\doxysubsubsection{\texorpdfstring{count\_passenger()}{count\_passenger()}}
+{\footnotesize\ttfamily int count\+\_\+passenger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Counts the passenger requests
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em No} & input parameter. The function uses the input file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns count on successful execution and 0 if file doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}
+es to store the number of emergency stop situations
+
+Definition at line 23 of file count\+\_\+passenger.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} es=0;}
+\DoxyCodeLine{27     \mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}=0; \textcolor{comment}{//global variable stores the passenger count}}
+\DoxyCodeLine{28     FILE *f;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{char} a[10];}
+\DoxyCodeLine{30     f=fopen(\textcolor{stringliteral}{"data/input.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{31     \textcolor{keywordflow}{if} (f==NULL) }
+\DoxyCodeLine{32     \{ }
+\DoxyCodeLine{33         printf(\textcolor{stringliteral}{"no input file exists"}); }
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} 0; }
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36     \textcolor{keywordflow}{while}(fscanf(f,\textcolor{stringliteral}{"\%s"},a)!=EOF)}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38         \textcolor{keywordflow}{if}((\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}==0)||(\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}\%4)==0)}
+\DoxyCodeLine{39         \{}
+\DoxyCodeLine{40             \textcolor{keywordflow}{if}(atoi(a)==911)}
+\DoxyCodeLine{41             \{}
+\DoxyCodeLine{42             es++;}
+\DoxyCodeLine{43             \}}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{45         \mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}++;}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47     fclose(f);}
+\DoxyCodeLine{48     \mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}=\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}/4;}
+\DoxyCodeLine{49     \mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}=\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}}-\/es;}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} \mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}};  \textcolor{comment}{//returns the passenger count}}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}

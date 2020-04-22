@@ -27,7 +27,6 @@ The correct file structure
 ├── LICENSE 	-> License file
 ├── Makefile 	-> Makefile
 ├── README.md 	-> Readme file
-├── bin 	-> Binary directory
 ├── doc
 │   └── html 	-> Doxygen document
 ├── include 	-> Header files
