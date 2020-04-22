@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <conio.h>
 #include "globals.h"
 #include "structures.h"
 #include "is_lift_on_floor.h"
