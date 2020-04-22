@@ -22,10 +22,12 @@
  * @returns integer value 1 if everything goes well.
 */
 
-int moving_lift_up(struct elevator elevator_arr[], unsigned int index){
+int moving_lift_up(struct elevator elevator_arr[], unsigned int index)
+{
 
-    if(index >= elevator_count){
-        fprintf(stderr, "Index is greater than the elevator_arr size. %d >= %d \n",index, elevator_count);
+    if (index >= elevator_count)
+    {
+        fprintf(stderr, "Index is greater than the elevator_arr size. %d >= %d \n", index, elevator_count);
         return -1;
     }
     elevator_arr[index].direction_up = true;

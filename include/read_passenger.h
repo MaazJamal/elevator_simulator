@@ -1,4 +1,4 @@
-/**@file read_passenger.h 
+/** @file read_passenger.h 
  *@brief Reads the input file for passenger id,arrival time,starting floor and destination floor.
 */
 #ifndef __READ_PASSENGER_H__

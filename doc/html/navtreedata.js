@@ -24,24 +24,57 @@
 */
 var NAVTREE =
 [
-  [ "Elevator simulation", "index.html", [
-    [ "Data Structures", "annotated.html", [
-      [ "Data Structures", "annotated.html", "annotated_dup" ],
-      [ "Data Structure Index", "classes.html", null ],
-      [ "Data Fields", "functions.html", [
+  [ "Elevator Simulator", "index.html", [
+    [ "Introduction", "md_doc__developer__manual.html", [
+      [ "Requirement", "md_doc__developer__manual.html#autotoc_md1", null ],
+      [ "Assumption", "md_doc__developer__manual.html#autotoc_md2", null ],
+      [ "Program Flow", "md_doc__developer__manual.html#autotoc_md3", null ],
+      [ "Documentation", "md_doc__developer__manual.html#autotoc_md4", null ]
+    ] ],
+    [ "Introduction", "md_doc__user__manual.html", [
+      [ "Installation", "md_doc__user__manual.html#autotoc_md6", null ],
+      [ "Usage", "md_doc__user__manual.html#autotoc_md7", null ],
+      [ "Testing", "md_doc__user__manual.html#autotoc_md8", null ],
+      [ "Output Generation", "md_doc__user__manual.html#autotoc_md9", null ]
+    ] ],
+    [ "Installation", "md__i_n_s_t_a_l_l.html", [
+      [ "Supported Platforms:", "md__i_n_s_t_a_l_l.html#autotoc_md11", null ],
+      [ "Prerequisite", "md__i_n_s_t_a_l_l.html#autotoc_md12", null ],
+      [ "No Dependent External Libraries", "md__i_n_s_t_a_l_l.html#autotoc_md13", null ],
+      [ "Build Project:", "md__i_n_s_t_a_l_l.html#autotoc_md14", null ]
+    ] ],
+    [ "Elevator_Simulator", "md__r_e_a_d_m_e.html", [
+      [ "Authors", "md__r_e_a_d_m_e.html#autotoc_md16", null ],
+      [ "Installation", "md__r_e_a_d_m_e.html#autotoc_md17", null ],
+      [ "Usage", "md__r_e_a_d_m_e.html#autotoc_md18", null ],
+      [ "File Structure", "md__r_e_a_d_m_e.html#autotoc_md19", null ],
+      [ "For Developers", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
+      [ "License", "md__r_e_a_d_m_e.html#autotoc_md21", null ],
+      [ "Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md22", null ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"add__passenger__floor_8h.html"
+"add__passenger__floor_8c_source.html",
+"travel__log__file_8c_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

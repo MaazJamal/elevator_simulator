@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Elevator simulation: count_passenger.h File Reference</title>
+<title>Elevator Simulator: include/count_passenger.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Elevator simulation
+   <div id="projectname">Elevator Simulator
+   &#160;<span id="projectnumber">0.9</span>
    </div>
+   <div id="projectbrief">The project simulates elevators in a building</div>
   </td>
  </tr>
  </tbody>
@@ -90,23 +92,83 @@ $(document).ready(function(){initNavTree('count__passenger_8h.html',''); initRes
 
 <p>Counts the number of passengers from the input file.  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &quot;<a class="el" href="structures_8h_source.html">structures.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="globals_8h_source.html">globals.h</a>&quot;</code><br />
+</div>
 <p><a href="count__passenger_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a949d5f5716500869b64977f0e9df9d92"><td class="memItemLeft" align="right" valign="top"><a id="a949d5f5716500869b64977f0e9df9d92"></a>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD=======&gt;&gt;&gt;&gt;&gt;&gt; int&#160;</td><td class="memItemRight" valign="bottom"><b>count_passenger</b> ()</td></tr>
-<tr class="separator:a949d5f5716500869b64977f0e9df9d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae332544a6584743f5c1444e2495becfe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="count__passenger_8h.html#ae332544a6584743f5c1444e2495becfe">count_passenger</a> ()</td></tr>
+<tr class="separator:ae332544a6584743f5c1444e2495becfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Counts the number of passengers from the input file. </p>
-</div></div><!-- contents -->
+
+<p class="definition">Definition in file <a class="el" href="count__passenger_8h_source.html">count_passenger.h</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ae332544a6584743f5c1444e2495becfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae332544a6584743f5c1444e2495becfe">&#9670;&nbsp;</a></span>count_passenger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int count_passenger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Counts the passenger requests</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">No</td><td>input parameter. The function uses the input file</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns count on successful execution and 0 if file doesn't exist. </dd></dl>
+<p>es to store the number of emergency stop situations</p>
+
+<p class="definition">Definition at line <a class="el" href="count__passenger_8c_source.html#l00023">23</a> of file <a class="el" href="count__passenger_8c_source.html">count_passenger.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> es=0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>=0; <span class="comment">//global variable stores the passenger count</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    FILE *f;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">char</span> a[10];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    f=fopen(<span class="stringliteral">&quot;data/input.txt&quot;</span>,<span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (f==NULL) </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    { </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        printf(<span class="stringliteral">&quot;no input file exists&quot;</span>); </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> 0; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">while</span>(fscanf(f,<span class="stringliteral">&quot;%s&quot;</span>,a)!=EOF)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span>((<a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>==0)||(<a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>%4)==0)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span>(atoi(a)==911)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            es++;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>++;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    fclose(f);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>=<a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>/4;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>=<a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>-es;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a>;  <span class="comment">//returns the passenger count</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aglobals_8h_html_aafbf17dfb8c07dadb99b3e0faadef32d"><div class="ttname"><a href="globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d">passenger_count</a></div><div class="ttdeci">unsigned int passenger_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00007">globals.c:7</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="count__passenger_8h.html">count_passenger.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="count__passenger_8h.html">count_passenger.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

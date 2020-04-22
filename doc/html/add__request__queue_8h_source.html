@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Elevator simulation: add_request_queue.h Source File</title>
+<title>Elevator Simulator: include/add_request_queue.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Elevator simulation
+   <div id="projectname">Elevator Simulator
+   &#160;<span id="projectnumber">0.9</span>
    </div>
+   <div id="projectbrief">The project simulates elevators in a building</div>
   </td>
  </tr>
  </tbody>
@@ -86,21 +88,23 @@ $(document).ready(function(){initNavTree('add__request__queue_8h_source.html',''
 </div><!--header-->
 <div class="contents">
 <a href="add__request__queue_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef __ADD_REQUEST_QUEUE_H__</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define __ADD_REQUEST_QUEUE_H__</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="structures_8h.html">structures.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a>* add_request_queue(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>* head, <span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> passenger_queue);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef __ADD_REQUEST_QUEUE_H__</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define __ADD_REQUEST_QUEUE_H__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="structures_8h.html">structures.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *<a class="code" href="add__request__queue_8h.html#a1aa0db2f2ecae31eaf0fc492d19414c6">add_request_queue</a>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *head, <span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> passenger_queue);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure for to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> structures.h:16</div></div>
+<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure for to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00016">structures.h:17</a></div></div>
+<div class="ttc" id="aadd__request__queue_8h_html_a1aa0db2f2ecae31eaf0fc492d19414c6"><div class="ttname"><a href="add__request__queue_8h.html#a1aa0db2f2ecae31eaf0fc492d19414c6">add_request_queue</a></div><div class="ttdeci">struct passenger * add_request_queue(struct passenger *head, struct passenger passenger_queue)</div><div class="ttdoc">Adds a passenger struct to the passenger queue.</div><div class="ttdef"><b>Definition:</b> <a href="add__request__queue_8c_source.html#l00021">add_request_queue.c:21</a></div></div>
 <div class="ttc" id="astructures_8h_html"><div class="ttname"><a href="structures_8h.html">structures.h</a></div><div class="ttdoc">contains declarations for structure passenger, elevator to be used in the program.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="add__request__queue_8h.html">add_request_queue.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="add__request__queue_8h.html">add_request_queue.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

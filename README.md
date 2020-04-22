@@ -11,12 +11,12 @@ Elevator_Simulator is a software that simulates Elevators in a commercial buildi
 
 # Installation
 
-Installation steps are mentioned in [INSTALL.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/INSTALL.md)
+Installation steps are mentioned in [INSTALL.md](INSTALL.md)
 
 # Usage
 
-To run, you must first compile the repository. Follow the instructions in [INSTALL.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/INSTALL.md).Then you can follow instructions mentioned in
-[User_Manual.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/doc/User_Manual.md).
+To run, you must first compile the repository. Follow the instructions in [INSTALL.md](INSTALL.md).Then you can follow instructions mentioned in
+[User_Manual.md](doc/User_Manual.md).
 
 # File Structure
 
@@ -116,7 +116,7 @@ The correct file structure
 
 # For Developers
 
-The developer manual is available [here](https://github.com/MaazJamal/elevator_simulator/blob/devel/doc/Developer_Manual.md).
+The developer manual is available [here](doc/Developer_Manual.md).
 
 # License
 

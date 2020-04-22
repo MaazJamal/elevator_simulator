@@ -1,9 +1,9 @@
 var structpassenger =
 [
-    [ "arrival_floor", "structpassenger.html#a4d2f3bc200903acf57f6a277c309ad96", null ],
-    [ "arrival_time", "structpassenger.html#ac5750ae7307cd77866c3fc94ad058b8c", null ],
-    [ "dest_floor", "structpassenger.html#a1166dc7971a5d5e3b766c719b885a8d1", null ],
-    [ "id", "structpassenger.html#ab7ce6f462afaf105224b0ca772a33c43", null ],
-    [ "in_elevator", "structpassenger.html#acaaf5adf80fe8fd8e9b1b5401c2a39e2", null ],
-    [ "next", "structpassenger.html#a431ecdbaf4424eaa36a2eb954ce7e944", null ]
+    [ "arrival_floor", "structpassenger.html#a0a31a3de4943a83121587e2d11b3e2c0", null ],
+    [ "arrival_time", "structpassenger.html#a8dd292bfb4015a71df26b57eb23c8701", null ],
+    [ "dest_floor", "structpassenger.html#a1cd2d080a6795d30505e8722d329c7e2", null ],
+    [ "id", "structpassenger.html#a25f6b216e5dc0bede72e133edcf4b03f", null ],
+    [ "in_elevator", "structpassenger.html#a8af124b4de91150e204a2374e98ee71f", null ],
+    [ "next", "structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348", null ]
 ];

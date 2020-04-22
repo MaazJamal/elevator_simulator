@@ -49,4 +49,4 @@ The program flow for the application is as follows:
 
 # Documentation
 
-Complete documentation of the source code can be found [here](https://github.com/MaazJamal/elevator_simulator/blob/devel/doc/html/index.html).
+Complete documentation of the source code can be found [here](doc/html/index.html).
