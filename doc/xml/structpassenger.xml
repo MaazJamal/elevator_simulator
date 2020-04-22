@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structpassenger" kind="struct" language="C++" prot="public">
+    <compoundname>passenger</compoundname>
+    <includes refid="structures_8h" local="no">structures.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpassenger_1acaaf5adf80fe8fd8e9b1b5401c2a39e2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool in_elevator</definition>
+        <argsstring></argsstring>
+        <name>in_elevator</name>
+        <briefdescription>
+<para>Stores whether passegner is in elevator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="17" column="5" bodyfile="structures.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpassenger_1ac5750ae7307cd77866c3fc94ad058b8c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int arrival_time</definition>
+        <argsstring></argsstring>
+        <name>arrival_time</name>
+        <briefdescription>
+<para>stores arrival time of the passenger </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="18" column="13" bodyfile="structures.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpassenger_1a4d2f3bc200903acf57f6a277c309ad96" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int arrival_floor</definition>
+        <argsstring></argsstring>
+        <name>arrival_floor</name>
+        <briefdescription>
+<para>stores the arrival_floor of the passenger </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="19" column="13" bodyfile="structures.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpassenger_1a1166dc7971a5d5e3b766c719b885a8d1" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dest_floor</definition>
+        <argsstring></argsstring>
+        <name>dest_floor</name>
+        <briefdescription>
+<para>stores the destination floor of the passenger </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="20" column="13" bodyfile="structures.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpassenger_1ab7ce6f462afaf105224b0ca772a33c43" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>stores the passenger_id of the passenger </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="21" column="14" bodyfile="structures.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpassenger_1a431ecdbaf4424eaa36a2eb954ce7e944" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> *</type>
+        <definition>struct passenger* next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="structures.h" line="22" column="16" bodyfile="structures.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>structure for to store important information about a passenger. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores the arrival time and floor and destination floor of the passenger. as well as the passenger id. There is a next passenger pointer to create queues </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>passenger</label>
+        <link refid="structpassenger"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="structures.h" line="16" column="1" bodyfile="structures.h" bodystart="16" bodyend="23"/>
+    <listofallmembers>
+      <member refid="structpassenger_1a4d2f3bc200903acf57f6a277c309ad96" prot="public" virt="non-virtual"><scope>passenger</scope><name>arrival_floor</name></member>
+      <member refid="structpassenger_1ac5750ae7307cd77866c3fc94ad058b8c" prot="public" virt="non-virtual"><scope>passenger</scope><name>arrival_time</name></member>
+      <member refid="structpassenger_1a1166dc7971a5d5e3b766c719b885a8d1" prot="public" virt="non-virtual"><scope>passenger</scope><name>dest_floor</name></member>
+      <member refid="structpassenger_1ab7ce6f462afaf105224b0ca772a33c43" prot="public" virt="non-virtual"><scope>passenger</scope><name>id</name></member>
+      <member refid="structpassenger_1acaaf5adf80fe8fd8e9b1b5401c2a39e2" prot="public" virt="non-virtual"><scope>passenger</scope><name>in_elevator</name></member>
+      <member refid="structpassenger_1a431ecdbaf4424eaa36a2eb954ce7e944" prot="public" virt="non-virtual"><scope>passenger</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,90 @@
+\hypertarget{remove__passenger__queue_8h}{}\doxysection{include/remove\+\_\+passenger\+\_\+queue.h File Reference}
+\label{remove__passenger__queue_8h}\index{include/remove\_passenger\_queue.h@{include/remove\_passenger\_queue.h}}
+
+
+contains the declaration for remove\+\_\+passenger\+\_\+queue function that remoove passenger from a queue  
+
+
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$ \mbox{\hyperlink{remove__passenger__queue_8h_aaf649634b0615e3c784050409bd55e58}{remove\+\_\+passenger\+\_\+queue}} (int index, struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$head)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains the declaration for remove\+\_\+passenger\+\_\+queue function that remoove passenger from a queue 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{remove__passenger__queue_8h_aaf649634b0615e3c784050409bd55e58}\label{remove__passenger__queue_8h_aaf649634b0615e3c784050409bd55e58}} 
+\index{remove\_passenger\_queue.h@{remove\_passenger\_queue.h}!remove\_passenger\_queue@{remove\_passenger\_queue}}
+\index{remove\_passenger\_queue@{remove\_passenger\_queue}!remove\_passenger\_queue.h@{remove\_passenger\_queue.h}}
+\doxysubsubsection{\texorpdfstring{remove\_passenger\_queue()}{remove\_passenger\_queue()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structpassenger}{passenger}}$\ast$ remove\+\_\+passenger\+\_\+queue (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+This function removes a passenger from a queue at given index and frees the memory
+
+The function remomves and frees memory location at given index. if the given index is at the head the head is removed and new head is returned. If index is greater then length of queue the function causes program to exit.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & int value that points to index of queue to return. indices start at 0. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em head} & pointer to head of the queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return the value of the head. head will point to new value head if index is 0. 
+\end{DoxyReturn}
+Iterate through the queue until we are one node behind the node we want to delete. Or next node is null. Set next of previous node to next node and store the node to delete in temp. use free to delete current node.
+
+This is precondition checks if index was greater than queue length and this cannot be done at start as we do not know total length of queue at begining. the check is cur-\/$>$nect != N\+U\+LL as we stop before element to be removed. if cur-\/$>$next = N\+U\+LL it means the index is greater than length as we are at end list and should have stopped at index-\/1.
+
+Definition at line 17 of file remove\+\_\+passenger\+\_\+queue.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     assert(head != NULL); \textcolor{comment}{//?< Precondition that head not be Null}}
+\DoxyCodeLine{21     assert(index > -\/1);   \textcolor{comment}{//?< Precondition that index not be negative}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{static} \textcolor{keywordtype}{int} removal\_count = 0;}
+\DoxyCodeLine{24     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *temp = NULL;}
+\DoxyCodeLine{25     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *cur = head; \textcolor{comment}{//?< stores the current position of pointer to be used in while loop}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (index == 0)}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         temp = head;}
+\DoxyCodeLine{29         head = head-\/>next;}
+\DoxyCodeLine{30         printf(\textcolor{stringliteral}{"The passenger Removed from cue is:\%d count is:\%d \(\backslash\)n."}, temp-\/>\mbox{\hyperlink{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}{id}}, ++removal\_count);}
+\DoxyCodeLine{31         free(temp);}
+\DoxyCodeLine{32         \textcolor{keywordflow}{return} head;}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{44         \textcolor{keywordflow}{while} (i < index -\/ 1 \&\& cur-\/>next != NULL)}
+\DoxyCodeLine{45         \{}
+\DoxyCodeLine{46             cur = cur-\/>next;}
+\DoxyCodeLine{47             i++;}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{55         assert(cur-\/>next != NULL);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         temp = cur-\/>next;}
+\DoxyCodeLine{58         cur-\/>next = temp-\/>next;}
+\DoxyCodeLine{59         printf(\textcolor{stringliteral}{"The passenger Removed from cue is:\%d count is:\%d \(\backslash\)n."}, temp-\/>\mbox{\hyperlink{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}{id}}, ++removal\_count);}
+\DoxyCodeLine{60         free(temp);}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} head;}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}

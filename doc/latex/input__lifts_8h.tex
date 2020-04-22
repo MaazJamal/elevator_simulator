@@ -1,0 +1,74 @@
+\hypertarget{input__lifts_8h}{}\doxysection{include/input\+\_\+lifts.h File Reference}
+\label{input__lifts_8h}\index{include/input\_lifts.h@{include/input\_lifts.h}}
+
+
+contains declaration for the \mbox{\hyperlink{input__lifts_8h_aaf6e4f946cf083fed7f3b265e3421eb3}{input\+\_\+lifts()}} function.  
+
+
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{input__lifts_8h_aaf6e4f946cf083fed7f3b265e3421eb3}{input\+\_\+lifts}} (void)
+\begin{DoxyCompactList}\small\item\em Prompt the user to enter the number of lifts and takes the input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains declaration for the \mbox{\hyperlink{input__lifts_8h_aaf6e4f946cf083fed7f3b265e3421eb3}{input\+\_\+lifts()}} function. 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{input__lifts_8h_aaf6e4f946cf083fed7f3b265e3421eb3}\label{input__lifts_8h_aaf6e4f946cf083fed7f3b265e3421eb3}} 
+\index{input\_lifts.h@{input\_lifts.h}!input\_lifts@{input\_lifts}}
+\index{input\_lifts@{input\_lifts}!input\_lifts.h@{input\_lifts.h}}
+\doxysubsubsection{\texorpdfstring{input\_lifts()}{input\_lifts()}}
+{\footnotesize\ttfamily int input\+\_\+lifts (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Prompt the user to enter the number of lifts and takes the input. 
+
+The function prompts the user to enter the number of lifts. If the lift count is less than one or greater than 100 the function displays an error message and returns -\/1. If the user enters anything other than a numeric entry. The function displays and error message, discards all inputs in stdin stream and returns -\/1. If the user enters numeric value. It accepts the only Whole number part of the entry and returns the entered whole number value.
+
+\begin{DoxyReturn}{Returns}
+int Returns -\/1 if errors in input and integer if input is fine. 
+\end{DoxyReturn}
+if the scanf does not read anything, clear from the stdin buffer and return -\/1
+
+Definition at line 25 of file input\+\_\+lifts.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} temp;}
+\DoxyCodeLine{29     puts(\textcolor{stringliteral}{"Please Enter an integer number for the number of Elevator in building."});}
+\DoxyCodeLine{30     puts(\textcolor{stringliteral}{"Valid entries are 1-\/100"});}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} result = scanf(\textcolor{stringliteral}{"\%d"}, \&temp);}
+\DoxyCodeLine{32     \textcolor{comment}{//printf("This is result \%d \(\backslash\)n",result);}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35     \textcolor{keywordflow}{if} (result == 0)}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         puts(\textcolor{stringliteral}{"Non-\/integer input entered. Please enter an integer.\(\backslash\)n"});}
+\DoxyCodeLine{38         temp = -\/1;}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (temp < 1)}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         puts(\textcolor{stringliteral}{"Value entered is less than 1"});}
+\DoxyCodeLine{43         temp = -\/1;}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (temp > 100)}
+\DoxyCodeLine{46     \{}
+\DoxyCodeLine{47         puts(\textcolor{stringliteral}{"Value entered is greater than 100"});}
+\DoxyCodeLine{48         temp = -\/1;}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50     scanf(\textcolor{stringliteral}{"\%*[\string^\(\backslash\)n]"}); \textcolor{comment}{//discards the leftover inputs in stdin buffer}}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}

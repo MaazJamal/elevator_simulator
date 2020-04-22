@@ -1,0 +1,62 @@
+.TH "elevator" 3 "Mon Apr 20 2020" "Elevator simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+elevator \- structure for to store important information about a elevator\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <structures\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "bool \fBmoving\fP"
+.br
+.ti -1c
+.RI "bool \fBbetween_floor\fP"
+.br
+.RI "Is the elevator moving? True 1 or False(stationary) 0\&. "
+.ti -1c
+.RI "bool \fBdirection_up\fP"
+.br
+.RI "Is elevator between floors\&. True 1 between floors\&. "
+.ti -1c
+.RI "bool \fBdirection_down\fP"
+.br
+.RI "Is the elevator going up? True 1 for going up\&. "
+.ti -1c
+.RI "bool * \fBstop_at_floor\fP"
+.br
+.RI "Is the elevator going down? True 1 for going down\&. "
+.ti -1c
+.RI "unsigned int \fBpassenger_count\fP"
+.br
+.RI "points to boolean array of floors and shows if the elevator will stop at a certain floor or not\&. "
+.ti -1c
+.RI "unsigned int \fBmax_passenger\fP"
+.br
+.RI "count of passenger occupying the elevator "
+.ti -1c
+.RI "unsigned int \fBcur_floor\fP"
+.br
+.RI "Maximum number of passengers the lift can accomodate\&. "
+.ti -1c
+.RI "unsigned int \fBtimer\fP"
+.br
+.ti -1c
+.RI "struct \fBpassenger\fP * \fBpassenger_arr\fP"
+.br
+.RI "Time clock untill the next floor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+structure for to store important information about a elevator\&. 
+
+Stores information about the elevator such as direction of travel, the floors to stop at\&. The maximum number of passengers the lift can accomodate and the current passengers in the lift and their information\&. and time it takes to go to the reach next floor\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator simulation from the source code\&.

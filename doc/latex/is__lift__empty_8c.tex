@@ -1,0 +1,34 @@
+\hypertarget{is__lift__empty_8c}{}\doxysection{src/is\+\_\+lift\+\_\+empty.c File Reference}
+\label{is__lift__empty_8c}\index{src/is\_lift\_empty.c@{src/is\_lift\_empty.c}}
+
+
+Checks if there is any space in the elevator to add more passengers.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/is\+\_\+lift\+\_\+empty.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{is__lift__empty_8c_a37e8ad2f4fa1a5ee9e229e632a3d88cc}\label{is__lift__empty_8c_a37e8ad2f4fa1a5ee9e229e632a3d88cc}} 
+int {\bfseries is\+\_\+lift\+\_\+empty} (struct \mbox{\hyperlink{structelevator}{elevator}} elevator\+\_\+arr\mbox{[}$\,$\mbox{]}, unsigned int index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Checks if there is any space in the elevator to add more passengers. 
+
+\begin{DoxyAuthor}{Author}
+Ritika Arora -\/ \href{mailto:ritikaarora@cmail.carleton.ca}{\texttt{ ritikaarora@cmail.\+carleton.\+ca}}
+\end{DoxyAuthor}
+@detail The function is to check if the elevator has any space to accommodate any other passenger or not. Firstly, it checks if the elevator number entered is less than the total number of elevators in the building. If it is greater than the total number of elevators in the building then it will give the error message and will return -\/1 Then, it checks if the number of the passengers in the elevator is more than or equal to the max number of passengers it can accommodate, then it prints that the lift is full and returns 0. Else, it returns 1.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em elevator\+\_\+arr\mbox{[}$\,$\mbox{]}} & of type elevator structure, index of unsigned integer type The parameter elevator\+\_\+arr\mbox{[}\mbox{]} will have all the details of the elevators and index is used to access any particular elevator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer Returns -\/1 if errors in input and 1 if it has any space for any passenger and 0 if not. 
+\end{DoxyReturn}

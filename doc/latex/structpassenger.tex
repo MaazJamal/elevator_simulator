@@ -1,0 +1,47 @@
+\hypertarget{structpassenger}{}\doxysection{passenger Struct Reference}
+\label{structpassenger}\index{passenger@{passenger}}
+
+
+structure for to store important information about a passenger.  
+
+
+
+
+{\ttfamily \#include $<$structures.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structpassenger_a8af124b4de91150e204a2374e98ee71f}\label{structpassenger_a8af124b4de91150e204a2374e98ee71f}} 
+bool \mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\+\_\+elevator}}
+\begin{DoxyCompactList}\small\item\em Stores whether passegner is in elevator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}\label{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}} 
+unsigned int \mbox{\hyperlink{structpassenger_a8dd292bfb4015a71df26b57eb23c8701}{arrival\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em stores arrival time of the passenger \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}\label{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}} 
+unsigned int \mbox{\hyperlink{structpassenger_a0a31a3de4943a83121587e2d11b3e2c0}{arrival\+\_\+floor}}
+\begin{DoxyCompactList}\small\item\em stores the arrival\+\_\+floor of the passenger \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}\label{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}} 
+unsigned int \mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\+\_\+floor}}
+\begin{DoxyCompactList}\small\item\em stores the destination floor of the passenger \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}\label{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}} 
+unsigned int \mbox{\hyperlink{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}{id}}
+\begin{DoxyCompactList}\small\item\em stores the passenger\+\_\+id of the passenger \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}\label{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}} 
+struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$ {\bfseries next}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+structure for to store important information about a passenger. 
+
+Stores the arrival time and floor and destination floor of the passenger. as well as the passenger id. There is a next passenger pointer to create queues 
+
+Definition at line 16 of file structures.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{structures_8h}{structures.\+h}}\item 
+test/\mbox{\hyperlink{test__create__floor__array_8c}{test\+\_\+create\+\_\+floor\+\_\+array.\+c}}\end{DoxyCompactItemize}

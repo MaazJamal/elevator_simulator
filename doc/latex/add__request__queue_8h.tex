@@ -1,0 +1,78 @@
+\hypertarget{add__request__queue_8h}{}\doxysection{include/add\+\_\+request\+\_\+queue.h File Reference}
+\label{add__request__queue_8h}\index{include/add\_request\_queue.h@{include/add\_request\_queue.h}}
+
+
+contains declarations for add\+\_\+request\+\_\+queue function. Used to add passenger to queue  
+
+
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$ \mbox{\hyperlink{add__request__queue_8h_a1aa0db2f2ecae31eaf0fc492d19414c6}{add\+\_\+request\+\_\+queue}} (struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$head, struct \mbox{\hyperlink{structpassenger}{passenger}} passenger\+\_\+queue)
+\begin{DoxyCompactList}\small\item\em Adds a passenger struct to the passenger queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains declarations for add\+\_\+request\+\_\+queue function. Used to add passenger to queue 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{add__request__queue_8h_a1aa0db2f2ecae31eaf0fc492d19414c6}\label{add__request__queue_8h_a1aa0db2f2ecae31eaf0fc492d19414c6}} 
+\index{add\_request\_queue.h@{add\_request\_queue.h}!add\_request\_queue@{add\_request\_queue}}
+\index{add\_request\_queue@{add\_request\_queue}!add\_request\_queue.h@{add\_request\_queue.h}}
+\doxysubsubsection{\texorpdfstring{add\_request\_queue()}{add\_request\_queue()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structpassenger}{passenger}}$\ast$ add\+\_\+request\+\_\+queue (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$}]{head,  }\item[{struct \mbox{\hyperlink{structpassenger}{passenger}}}]{passenger\+\_\+queue }\end{DoxyParamCaption})}
+
+
+
+Adds a passenger struct to the passenger queue. 
+
+Adds a passenger to passenger queue. This function can be used to make queues for the requests from passengers from the file or on a floor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em head} & is a pointer to the head of the queue \\
+\hline
+\mbox{\texttt{ in}}  & {\em passenger\+\_\+queue} & passenger struct containing data of the passenger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+passenger$\ast$ returns pointer to the updated head of queue if operation is fine. head ptr is unchanged if memory cannot be allocated. 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file add\+\_\+request\+\_\+queue.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *temp = (\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
+\DoxyCodeLine{24     *temp = passenger\_queue;}
+\DoxyCodeLine{25     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *cur = head;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordflow}{if} (temp == NULL)}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         fprintf(stderr, \textcolor{stringliteral}{"MEMORY ALLOCATION FAILED IN add\_request\_queue. \(\backslash\)n"});}
+\DoxyCodeLine{30         fprintf(stderr, \textcolor{stringliteral}{"SKIPPING ADDING PASSENGER TO QUEUE"});}
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} head;}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     \textcolor{keywordflow}{if} (head == NULL)}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         temp-\/>next = NULL;}
+\DoxyCodeLine{36         head = temp;}
+\DoxyCodeLine{37         \textcolor{keywordflow}{return} head;}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordflow}{while} (cur-\/>next != NULL)}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         cur = cur-\/>next;}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     cur-\/>next = temp;}
+\DoxyCodeLine{45     temp-\/>next = NULL;}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} head;}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,63 @@
+\hypertarget{create__floor__array_8h}{}\doxysection{include/create\+\_\+floor\+\_\+array.h File Reference}
+\label{create__floor__array_8h}\index{include/create\_floor\_array.h@{include/create\_floor\_array.h}}
+
+
+declaration for create\+\_\+floor\+\_\+array function -\/creates an array for floors with respective to input entered by user.  
+
+
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$$\ast$ \mbox{\hyperlink{create__floor__array_8h_aa7321679c44d6dcf3ff9241a44ab38c1}{create\+\_\+floor\+\_\+array}} (int no\+\_\+of\+\_\+floors)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+declaration for create\+\_\+floor\+\_\+array function -\/creates an array for floors with respective to input entered by user. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{create__floor__array_8h_aa7321679c44d6dcf3ff9241a44ab38c1}\label{create__floor__array_8h_aa7321679c44d6dcf3ff9241a44ab38c1}} 
+\index{create\_floor\_array.h@{create\_floor\_array.h}!create\_floor\_array@{create\_floor\_array}}
+\index{create\_floor\_array@{create\_floor\_array}!create\_floor\_array.h@{create\_floor\_array.h}}
+\doxysubsubsection{\texorpdfstring{create\_floor\_array()}{create\_floor\_array()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structpassenger}{passenger}}$\ast$$\ast$ create\+\_\+floor\+\_\+array (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+of\+\_\+floors }\end{DoxyParamCaption})}
+
+Creates array for every floor to store the passenger with requests.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Gets} & the number of floors as input and creates a list of array for every floor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+structure of arrays for the given number of floors. 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file create\+\_\+floor\+\_\+array.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25  \{}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if}(no\_of\_floors>\mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}})}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} **fla;}
+\DoxyCodeLine{31     fla=(\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} **) calloc (no\_of\_floors,\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}*));}
+\DoxyCodeLine{32     \textcolor{keywordflow}{if}(fla==NULL)}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} fla; \textcolor{comment}{//returns the pointer to a structure of array}}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}

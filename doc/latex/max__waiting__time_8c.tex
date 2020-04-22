@@ -1,0 +1,34 @@
+\hypertarget{max__waiting__time_8c}{}\doxysection{src/max\+\_\+waiting\+\_\+time.c File Reference}
+\label{max__waiting__time_8c}\index{src/max\_waiting\_time.c@{src/max\_waiting\_time.c}}
+
+
+Calculates the maximum waiting time for the passengers.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/max\+\_\+waiting\+\_\+time.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{max__waiting__time_8c_a5f48cbf044772ddea3ddaf7912388faf}\label{max__waiting__time_8c_a5f48cbf044772ddea3ddaf7912388faf}} 
+float {\bfseries max\+\_\+waiting\+\_\+time} (float time\+\_\+difference)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calculates the maximum waiting time for the passengers. 
+
+\begin{DoxyAuthor}{Author}
+Ritika Arora -\/ \href{mailto:ritikaarora@cmail.carleton.ca}{\texttt{ ritikaarora@cmail.\+carleton.\+ca}}
+\end{DoxyAuthor}
+@detail The function is to measure the maximum time the passengers took to wait to get into the elevator. The function compares the time given as an input with static variable max\+\_\+time. If the input time is greater than the max time , then that time value is stored as max time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time\+\_\+difference,the} & input parameter which is the difference between the time passenger arrived and the time passenger got into the elevator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Returns the maximum waiting time. 
+\end{DoxyReturn}
