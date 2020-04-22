@@ -5,17 +5,22 @@
 #include "../include/moving_lift_up.h"
 
 /**
+ * @file moving_lift_up.c
+ *
  * @brief To set the direction of the lift to Upward direction
  *
+ * @author Ritika Arora - ritikaarora@cmail.carleton.ca
+ *
  * @detail The function is to set the direction of the lift to UP. The function calls with two
- * parameters: an array of elevators of elevator type and an integer value which indicated the
+ * param[in] an array of elevators of elevator type and an integer value which indicated the
  * index as well as the number of the elevator in the building. The function firstly checks, if
  * the elevator number entered is less than the total number of elevators in the building. If
  * it is greater than the total number of elevators in the building then it will give the error
  *  message and will return -1
  * Otherwise, it will set the direction of that particular elevator to UP.
+ *
  * @returns integer value 1 if everything goes well.
- **/
+*/
 
 int moving_lift_up(struct elevator elevator_arr[], unsigned int index){
 

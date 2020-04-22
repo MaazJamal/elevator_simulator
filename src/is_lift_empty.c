@@ -3,22 +3,31 @@
 #include "../include/is_lift_empty.h"
 
 /**
-*@brief Checks if there is any space in the elevator to add more passengers
-*
-*@detail The function is to check if the elevator has any space to accommodate any
-* other passenger or not.
-* Firstly, it checks if the elevator number entered is less than the total
-* number of elevators in the building.
-* If it is greater than the total number of elevators in the building
-* then it will give the error message and will return -1
-* Then, it checks if the number of the passengers in the elevator is
-* more than or equal to the max number of passengers it can accommodate,
-* then it prints that the lift is full and returns 0.
-* Else, it returns 1.
-*
-* @return integer Returns -1 if errors in input and 1 if it has any space
-* for any passenger and 0 if not.
-**/
+ * @file is_lift_empty.c
+ *
+ * @brief Checks if there is any space in the elevator to add more passengers
+ *
+ * @author Ritika Arora - ritikaarora@cmail.carleton.ca
+ *
+ * @detail The function is to check if the elevator has any space to accommodate any
+ * other passenger or not.
+ * Firstly, it checks if the elevator number entered is less than the total
+ * number of elevators in the building.
+ * If it is greater than the total number of elevators in the building
+ * then it will give the error message and will return -1
+ * Then, it checks if the number of the passengers in the elevator is
+ * more than or equal to the max number of passengers it can accommodate,
+ * then it prints that the lift is full and returns 0.
+ * Else, it returns 1.
+ *
+ * @param[in] elevator_arr[] of type elevator structure, index of unsigned integer type
+ * The parameter elevator_arr[] will have all the details of the elevators and
+ * index is used to access any particular elevator
+ *
+ * @return integer Returns -1 if errors in input and 1 if it has any space
+ * for any passenger and 0 if not.
+*/
+
 unsigned int elevator_count; //definition of the global variable
 int is_lift_empty(struct elevator elevator_arr[], unsigned int index){
     int has_space;
