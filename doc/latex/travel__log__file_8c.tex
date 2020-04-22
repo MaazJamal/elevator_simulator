@@ -1,0 +1,60 @@
+\hypertarget{travel__log__file_8c}{}\doxysection{travel\+\_\+log\+\_\+file.\+c File Reference}
+\label{travel__log__file_8c}\index{travel\_log\_file.c@{travel\_log\_file.c}}
+
+
+Contains the deifintion of \mbox{\hyperlink{travel__log__file_8c_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\+\_\+log\+\_\+file()}} this function writes useful logs about the travel of the passengers.  
+
+
+{\ttfamily \#include \char`\"{}travel\+\_\+log\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}average\+\_\+waiting\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}max\+\_\+waiting\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for travel\+\_\+log\+\_\+file.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{travel__log__file_8c_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\+\_\+log\+\_\+file}} (struct passenger traveler, unsigned int event\+\_\+time, int elevator\+\_\+index, int mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the deifintion of \mbox{\hyperlink{travel__log__file_8c_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\+\_\+log\+\_\+file()}} this function writes useful logs about the travel of the passengers. 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{travel__log__file_8c_af8d5fde3cc01745bf27550d1fb69bf3f}\label{travel__log__file_8c_af8d5fde3cc01745bf27550d1fb69bf3f}} 
+\index{travel\_log\_file.c@{travel\_log\_file.c}!travel\_log\_file@{travel\_log\_file}}
+\index{travel\_log\_file@{travel\_log\_file}!travel\_log\_file.c@{travel\_log\_file.c}}
+\doxysubsubsection{\texorpdfstring{travel\_log\_file()}{travel\_log\_file()}}
+{\footnotesize\ttfamily void travel\+\_\+log\+\_\+file (\begin{DoxyParamCaption}\item[{struct passenger}]{traveler,  }\item[{unsigned int}]{event\+\_\+time,  }\item[{int}]{elevator\+\_\+index,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+This function generates and updates the outputput files for data processin
+
+This function generates the output file waiting\+\_\+times.\+txt and travel\+\_\+log.\+txt which contain the average and max waiting time, and the user\+\_\+id,elevator\+\_\+id, passenger arrival time passenger leaving time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em traveler} & struct containing details about the passenger \\
+\hline
+\mbox{\texttt{ in}}  & {\em event\+\_\+time} & the time the event to be recorded happened. \\
+\hline
+\mbox{\texttt{ in}}  & {\em elevator\+\_\+index} & the index of the elevator the passenger was in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode} & 1 for writing to travel\+\_\+log.\+txt, 2 for calculating average and max time,3 for writing waiting\+\_\+times.\+txt log file)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+does not return an value 
+\end{DoxyReturn}
+This keeps track if the output path file is being opened for first time ~\newline
+
+
+relative path to the travel\+\_\+log.\+txt file path

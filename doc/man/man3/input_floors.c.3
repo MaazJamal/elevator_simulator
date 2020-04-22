@@ -1,0 +1,47 @@
+.TH "input_floors.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+input_floors.c \- Obtains the floor count-Total number of floors in the building\&.Enables the user to enter the total number of floors in the building\&. based on availability\&. If none of those symptoms then patient is not admitted\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'input_floors\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBinput_floors\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Obtains the floor count-Total number of floors in the building\&.Enables the user to enter the total number of floors in the building\&. based on availability\&. If none of those symptoms then patient is not admitted\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - Dpadm049@uottawa.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int input_floors (void)"
+Constraints If the floor count is 0 ,the function displays a error message and returns -1\&. If the floor count is less than 1(negative values) ,the function displays a error message and returns -1\&. If the floor count is greater than 100,the function displays a error message and returns -1\&. Floating point values entered considered to near integers\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The function accepts only values between 1 and 100 and returns the value;otherwise returns -1 and displays error message\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

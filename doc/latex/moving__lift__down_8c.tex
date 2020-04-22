@@ -1,0 +1,48 @@
+\hypertarget{moving__lift__down_8c}{}\doxysection{moving\+\_\+lift\+\_\+down.\+c File Reference}
+\label{moving__lift__down_8c}\index{moving\_lift\_down.c@{moving\_lift\_down.c}}
+
+
+contains the definition of moving\+\_\+lift\+\_\+down  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}moving\+\_\+lift\+\_\+down.\+h\char`\"{}}\newline
+Include dependency graph for moving\+\_\+lift\+\_\+down.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{moving__lift__down_8c_a71965ccfee77f7e7469f4153836fb7ef}{moving\+\_\+lift\+\_\+down}} (struct elevator elevator\+\_\+arr\mbox{[}$\,$\mbox{]}, unsigned int index)
+\begin{DoxyCompactList}\small\item\em changes the direction of lift to down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains the definition of moving\+\_\+lift\+\_\+down 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{moving__lift__down_8c_a71965ccfee77f7e7469f4153836fb7ef}\label{moving__lift__down_8c_a71965ccfee77f7e7469f4153836fb7ef}} 
+\index{moving\_lift\_down.c@{moving\_lift\_down.c}!moving\_lift\_down@{moving\_lift\_down}}
+\index{moving\_lift\_down@{moving\_lift\_down}!moving\_lift\_down.c@{moving\_lift\_down.c}}
+\doxysubsubsection{\texorpdfstring{moving\_lift\_down()}{moving\_lift\_down()}}
+{\footnotesize\ttfamily int moving\+\_\+lift\+\_\+down (\begin{DoxyParamCaption}\item[{struct elevator}]{elevator\+\_\+arr\mbox{[}$\,$\mbox{]},  }\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+changes the direction of lift to down. 
+
+This function takes as input an elevator array and changes the direction of the elevator at the specified index position. sets elevator.\+direction\+\_\+up to false and elevator.\+direction\+\_\+down to true. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em elevator\+\_\+arr\mbox{[}$\,$\mbox{]}} & an array of type struct elevator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns -\/1 if errors in function call and 1 if function runs properly. 
+\end{DoxyReturn}

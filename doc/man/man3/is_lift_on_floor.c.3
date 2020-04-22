@@ -1,0 +1,53 @@
+.TH "is_lift_on_floor.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+is_lift_on_floor.c \- Reads the elevator structure's attribute between_floors\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'is_lift_on_floor\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBis_lift_on_floor\fP (struct elevator elev[], int index)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Reads the elevator structure's attribute between_floors\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - Dpadm049@uottawa.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int is_lift_on_floor (struct elevator elev[], int index)"
+@ details Constraints Checks if the input parameter index(i\&.e)elevator number;is within the range of number of elevators in building\&. If index is greater than the number of elevators actually present in building;error message will be displayed and returns -1\&. Checks the condition of the lift \&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP function takes the elevator structure and index\&. @ return The function 0 if lift is not on floor elso 0\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

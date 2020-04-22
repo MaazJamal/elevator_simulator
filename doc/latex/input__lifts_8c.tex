@@ -1,0 +1,43 @@
+\hypertarget{input__lifts_8c}{}\doxysection{input\+\_\+lifts.\+c File Reference}
+\label{input__lifts_8c}\index{input\_lifts.c@{input\_lifts.c}}
+
+
+contains the definition of input\+\_\+lifts  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}input\+\_\+lifts.\+h\char`\"{}}\newline
+Include dependency graph for input\+\_\+lifts.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{input__lifts_8c_aaf6e4f946cf083fed7f3b265e3421eb3}{input\+\_\+lifts}} (void)
+\begin{DoxyCompactList}\small\item\em Prompt the user to enter the number of lifts and takes the input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains the definition of input\+\_\+lifts 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{input__lifts_8c_aaf6e4f946cf083fed7f3b265e3421eb3}\label{input__lifts_8c_aaf6e4f946cf083fed7f3b265e3421eb3}} 
+\index{input\_lifts.c@{input\_lifts.c}!input\_lifts@{input\_lifts}}
+\index{input\_lifts@{input\_lifts}!input\_lifts.c@{input\_lifts.c}}
+\doxysubsubsection{\texorpdfstring{input\_lifts()}{input\_lifts()}}
+{\footnotesize\ttfamily int input\+\_\+lifts (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Prompt the user to enter the number of lifts and takes the input. 
+
+The function prompts the user to enter the number of lifts. If the lift count is less than one or greater than 100 the function displays an error message and returns -\/1. If the user enters anything other than a numeric entry. The function displays and error message, discards all inputs in stdin stream and returns -\/1. If the user enters numeric value. It accepts the only Whole number part of the entry and returns the entered whole number value.
+
+\begin{DoxyReturn}{Returns}
+int Returns -\/1 if errors in input and integer if input is fine. 
+\end{DoxyReturn}
+if the scanf does not read anything, clear from the stdin buffer and return -\/1

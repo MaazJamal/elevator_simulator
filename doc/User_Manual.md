@@ -28,10 +28,10 @@ In case of Dynamic version
 
 
 
-Please note that the binary is located within `bin` folder
+Please note that the binary is named as main
 
 ```
-./bin/elevator_simulation -e
+./main
 ```
 
 # Testing
@@ -39,16 +39,10 @@ Please note that the binary is located within `bin` folder
 Unit testing is done for each functions defined in the software. The test cases can be run using the command below:
 
 ```
-./bin/elevator_simulation -t
+./test
 ```
 
-# Help
 
-User can run the below command to know the details about input parameters.
-
-```
-./bin/elevator_simulation -h
-```
 
 # Output Generation
 Below output files will be generated and placed here (https://github.com/MaazJamal/elevator_simulator/tree/devel/data)

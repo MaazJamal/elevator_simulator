@@ -1,0 +1,33 @@
+\hypertarget{moving__lift__up_8c}{}\doxysection{moving\+\_\+lift\+\_\+up.\+c File Reference}
+\label{moving__lift__up_8c}\index{moving\_lift\_up.c@{moving\_lift\_up.c}}
+
+
+To set the direction of the lift to Upward direction.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/moving\+\_\+lift\+\_\+up.\+h\char`\"{}}\newline
+Include dependency graph for moving\+\_\+lift\+\_\+up.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{moving__lift__up_8c_a814fa197f450be90c940b6c4593ce1df}\label{moving__lift__up_8c_a814fa197f450be90c940b6c4593ce1df}} 
+int {\bfseries moving\+\_\+lift\+\_\+up} (struct elevator elevator\+\_\+arr\mbox{[}$\,$\mbox{]}, unsigned int index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+To set the direction of the lift to Upward direction. 
+
+\begin{DoxyAuthor}{Author}
+Ritika Arora -\/ \href{mailto:ritikaarora@cmail.carleton.ca}{\texttt{ ritikaarora@cmail.\+carleton.\+ca}}
+\end{DoxyAuthor}
+@detail The function is to set the direction of the lift to UP. The function calls with two param\mbox{[}in\mbox{]} an array of elevators of elevator type and an integer value which indicated the index as well as the number of the elevator in the building. The function firstly checks, if the elevator number entered is less than the total number of elevators in the building. If it is greater than the total number of elevators in the building then it will give the error message and will return -\/1 Otherwise, it will set the direction of that particular elevator to UP.
+
+\begin{DoxyReturn}{Returns}
+integer value 1 if everything goes well. 
+\end{DoxyReturn}

@@ -1,0 +1,47 @@
+\hypertarget{count__passenger_8c}{}\doxysection{count\+\_\+passenger.\+c File Reference}
+\label{count__passenger_8c}\index{count\_passenger.c@{count\_passenger.c}}
+
+
+Reads line by line and counts the number of passenger based on passenger ID. When passenger ID equal to \char`\"{}911\char`\"{} it is considered as Emergency stop and wont be counted towards the passenger\+\_\+count.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}count\+\_\+passenger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+Include dependency graph for count\+\_\+passenger.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{count__passenger_8c_ae332544a6584743f5c1444e2495becfe}{count\+\_\+passenger}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads line by line and counts the number of passenger based on passenger ID. When passenger ID equal to \char`\"{}911\char`\"{} it is considered as Emergency stop and wont be counted towards the passenger\+\_\+count. 
+
+\begin{DoxyAuthor}{Author}
+Hariprasad Munusamy -\/ \href{mailto:HariprasadMunusamy@cmail.carleton.ca}{\texttt{ Hariprasad\+Munusamy@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{count__passenger_8c_ae332544a6584743f5c1444e2495becfe}\label{count__passenger_8c_ae332544a6584743f5c1444e2495becfe}} 
+\index{count\_passenger.c@{count\_passenger.c}!count\_passenger@{count\_passenger}}
+\index{count\_passenger@{count\_passenger}!count\_passenger.c@{count\_passenger.c}}
+\doxysubsubsection{\texorpdfstring{count\_passenger()}{count\_passenger()}}
+{\footnotesize\ttfamily int count\+\_\+passenger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Counts the passenger requests
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em No} & input parameter. The function uses the input file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns count on successful execution and 0 if file doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}
+es to store the number of emergency stop situations

@@ -1,0 +1,61 @@
+.TH "moving_lift_down.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+moving_lift_down.c \- contains the definition of moving_lift_down  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'moving_lift_down\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmoving_lift_down\fP (struct elevator elevator_arr[], unsigned int index)"
+.br
+.RI "changes the direction of lift to down\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains the definition of moving_lift_down 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int moving_lift_down (struct elevator elevator_arr[], unsigned int index)"
+
+.PP
+changes the direction of lift to down\&. This function takes as input an elevator array and changes the direction of the elevator at the specified index position\&. sets elevator\&.direction_up to false and elevator\&.direction_down to true\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelevator_arr[]\fP an array of type struct elevator 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Returns -1 if errors in function call and 1 if function runs properly\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

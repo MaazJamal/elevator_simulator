@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['count_5fpassenger_2eh_37',['count_passenger.h',['../count__passenger_8h.html',1,'']]],
-  ['create_5felevator_5farray_2eh_38',['create_elevator_array.h',['../create__elevator__array_8h.html',1,'']]],
-  ['create_5ffloor_5farray_2eh_39',['create_floor_array.h',['../create__floor__array_8h.html',1,'']]]
+  ['count_5fpassenger_2ec_28',['count_passenger.c',['../count__passenger_8c.html',1,'']]],
+  ['create_5felevator_5farray_2ec_29',['create_elevator_array.c',['../create__elevator__array_8c.html',1,'']]],
+  ['create_5ffloor_5farray_2ec_30',['create_floor_array.c',['../create__floor__array_8c.html',1,'']]]
 ];

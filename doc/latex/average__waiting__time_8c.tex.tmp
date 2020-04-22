@@ -1,0 +1,38 @@
+\hypertarget{average__waiting__time_8c}{}\doxysection{average\+\_\+waiting\+\_\+time.\+c File Reference}
+\label{average__waiting__time_8c}\index{average\_waiting\_time.c@{average\_waiting\_time.c}}
+
+
+Calculates the average waiting time for the passengers.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/average\+\_\+waiting\+\_\+time.\+h\char`\"{}}\newline
+Include dependency graph for average\+\_\+waiting\+\_\+time.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{average__waiting__time_8c_abbde5e2aad5b56ac7da77b34c7d2ea20}\label{average__waiting__time_8c_abbde5e2aad5b56ac7da77b34c7d2ea20}} 
+float {\bfseries average\+\_\+waiting\+\_\+time} (float time\+\_\+difference)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calculates the average waiting time for the passengers. 
+
+\begin{DoxyAuthor}{Author}
+Ritika Arora -\/ \href{mailto:ritikaarora@cmail.carleton.ca}{\texttt{ ritikaarora@cmail.\+carleton.\+ca}}
+\end{DoxyAuthor}
+@detail The function is to measure the average time the passengers took to wait to get into the elevator.
+
+The function has two static variables\+: counter and average\+\_\+waiting\+\_\+time, which stores the value from the previous runs of the function. Firstly, it checks if the input parameter is positive or negative. If it is negative, it will just return the average waiting time which is already stored in it without doing any calculations. If the input is a positive value , then it increments the counter and does the calculation to get the average waiting time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time\+\_\+difference,the} & input parameter which is the difference between the time passenger arrived and the time passenger got into the elevator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Returns the average waiting time. 
+\end{DoxyReturn}

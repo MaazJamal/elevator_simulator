@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="remove__passenger__floor_8c" kind="file" language="C++">
+    <compoundname>remove_passenger_floor.c</compoundname>
+    <includes local="yes">remove_passenger_floor.h</includes>
+    <includes local="yes">structures.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="yes">globals.h</includes>
+    <includes local="yes">stdio.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>remove_passenger_floor.c</label>
+        <link refid="remove__passenger__floor_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+      </node>
+      <node id="6">
+        <label>globals.h</label>
+      </node>
+      <node id="2">
+        <label>remove_passenger_floor.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="remove__passenger__floor_8c_1a078767636839d02470574e1526e48f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int remove_passenger_floor</definition>
+        <argsstring>(struct passenger *floordetails[], int cur_floor)</argsstring>
+        <name>remove_passenger_floor</name>
+        <param>
+          <type>struct passenger *</type>
+          <declname>floordetails</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cur_floor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constraints The program terminates if the input parameter cur_floor(passenger details for this particular floor has to be deleted)is erraneous. (i.e)cur_floor must be within the range 1-100 and less than the floor_count(Total number of floors in the building ) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function takes passenger structure and current floor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 1 on successful deletion of passenger details from specified floor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="remove_passenger_floor.c" line="23" column="5" bodyfile="remove_passenger_floor.c" bodystart="23" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Removes the passenger details from floor specified. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Divyalakshmi Padmanaban - <ulink url="mailto:Dpadm049@uottawa.ca">Dpadm049@uottawa.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;remove_passenger_floor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include&quot;structures.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdio.h&quot;</highlight></codeline>
+<codeline lineno="23"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="remove__passenger__floor_8c_1a078767636839d02470574e1526e48f73" kindref="member">remove_passenger_floor</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>passenger*<sp/>floordetails[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cur_floor){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(cur_floor<sp/>&gt;0);</highlight><highlight class="comment">//checks<sp/>the<sp/>value<sp/>of<sp/>cur_floor<sp/>;if<sp/>it<sp/>returns<sp/>0-<sp/>terminates<sp/>the<sp/>program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(cur_floor&lt;=floor_count);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no_of_passengers_removed<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>floor_index<sp/>=<sp/>cur_floor<sp/>-1;<sp/></highlight><highlight class="comment">//needed<sp/>because<sp/>floor<sp/>array<sp/>strt<sp/>at<sp/>0<sp/>and<sp/>elevator<sp/>floor<sp/>at<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">passenger*<sp/>temp;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>floordetails[floor_index];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>floordetails[floor_index]<sp/>=<sp/>floordetails[floor_index]-&gt;next;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Passenger<sp/>%d<sp/>from<sp/>floor<sp/>%d<sp/>is<sp/>removed.<sp/>No<sp/>of<sp/>passengers<sp/>removed:<sp/>%d\n&quot;</highlight><highlight class="normal">,temp-&gt;id,cur_floor,++no_of_passengers_removed);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>free(temp);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="remove_passenger_floor.c"/>
+  </compounddef>
+</doxygen>

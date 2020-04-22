@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="globals_8c" kind="file" language="C++">
+    <compoundname>globals.c</compoundname>
+    <includes local="yes">globals.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>globals.c</label>
+        <link refid="globals_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>globals.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="globals_8c_1a11ee4b54505479cda7e127a7030a76a7" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int elevator_count</definition>
+        <argsstring></argsstring>
+        <name>elevator_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total number of elevators in the bulding </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.c" line="4" column="14" bodyfile="globals.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8c_1aafbf17dfb8c07dadb99b3e0faadef32d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int passenger_count</definition>
+        <argsstring></argsstring>
+        <name>passenger_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total number of passengers checked from the passengers file text </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.c" line="7" column="14" bodyfile="globals.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8c_1adcbcca2d0621f8f94d7ccc4d81ca6f37" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int floor_count</definition>
+        <argsstring></argsstring>
+        <name>floor_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The floor count of the building </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.c" line="10" column="14" bodyfile="globals.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elevator_count;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>passenger_count;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>floor_count;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="globals.c"/>
+  </compounddef>
+</doxygen>

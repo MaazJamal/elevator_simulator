@@ -1,0 +1,58 @@
+.TH "count_passenger.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+count_passenger.c \- Reads line by line and counts the number of passenger based on passenger ID\&. When passenger ID equal to '911' it is considered as Emergency stop and wont be counted towards the passenger_count\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'count_passenger\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcount_passenger\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Reads line by line and counts the number of passenger based on passenger ID\&. When passenger ID equal to '911' it is considered as Emergency stop and wont be counted towards the passenger_count\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Hariprasad Munusamy - HariprasadMunusamy@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int count_passenger ()"
+Counts the passenger requests
+.PP
+\fBParameters\fP
+.RS 4
+\fINo\fP input parameter\&. The function uses the input file
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns count on successful execution and 0 if file doesn't exist\&. 
+.RE
+.PP
+es to store the number of emergency stop situations
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

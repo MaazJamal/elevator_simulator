@@ -1,0 +1,60 @@
+.TH "remove_passenger_floor.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+remove_passenger_floor.c \- Removes the passenger details from floor specified\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'remove_passenger_floor\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'stdio\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBremove_passenger_floor\fP (struct passenger *floordetails[], int cur_floor)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Removes the passenger details from floor specified\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - Dpadm049@uottawa.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int remove_passenger_floor (struct passenger * floordetails[], int cur_floor)"
+Constraints The program terminates if the input parameter cur_floor(passenger details for this particular floor has to be deleted)is erraneous\&. (i\&.e)cur_floor must be within the range 1-100 and less than the floor_count(Total number of floors in the building ) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP function takes passenger structure and current floor\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns 1 on successful deletion of passenger details from specified floor\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

@@ -1,24 +1,19 @@
 var files_dup =
 [
-    [ "add_passenger_floor.h", "add__passenger__floor_8h.html", "add__passenger__floor_8h" ],
-    [ "add_request_queue.h", "add__request__queue_8h.html", "add__request__queue_8h" ],
-    [ "count_passenger.h", "count__passenger_8h.html", "count__passenger_8h" ],
-    [ "create_elevator_array.h", "create__elevator__array_8h.html", null ],
-    [ "create_floor_array.h", "create__floor__array_8h.html", "create__floor__array_8h" ],
-    [ "functions.h", "functions_8h.html", null ],
-    [ "globals.h", "globals_8h.html", "globals_8h" ],
-    [ "input_floor.h", "input__floor_8h.html", "input__floor_8h" ],
-    [ "input_floors.h", "input__floors_8h.html", "input__floors_8h" ],
-    [ "input_lifts.h", "input__lifts_8h.html", "input__lifts_8h" ],
-    [ "is_lift_on_floor.h", "is__lift__on__floor_8h.html", "is__lift__on__floor_8h" ],
-    [ "moving_lift_down.h", "moving__lift__down_8h.html", "moving__lift__down_8h" ],
-    [ "passengers_drop.h", "passengers__drop_8h.html", "passengers__drop_8h" ],
-    [ "passengers_take_in.h", "passengers__take__in_8h.html", "passengers__take__in_8h" ],
-    [ "read_passenger.h", "read__passenger_8h.html", "read__passenger_8h" ],
-    [ "remove_passenger_floor.h", "remove__passenger__floor_8h.html", "remove__passenger__floor_8h" ],
-    [ "remove_passenger_queue.h", "remove__passenger__queue_8h.html", "remove__passenger__queue_8h" ],
-    [ "structures.h", "structures_8h.html", [
-      [ "passenger", "structpassenger.html", "structpassenger" ],
-      [ "elevator", "structelevator.html", "structelevator" ]
-    ] ]
+    [ "average_waiting_time.c", "average__waiting__time_8c.html", "average__waiting__time_8c" ],
+    [ "count_passenger.c", "count__passenger_8c.html", "count__passenger_8c" ],
+    [ "create_elevator_array.c", "create__elevator__array_8c.html", "create__elevator__array_8c" ],
+    [ "create_floor_array.c", "create__floor__array_8c.html", "create__floor__array_8c" ],
+    [ "input_after_stop.c", "input__after__stop_8c.html", "input__after__stop_8c" ],
+    [ "input_floors.c", "input__floors_8c.html", "input__floors_8c" ],
+    [ "input_lifts.c", "input__lifts_8c.html", "input__lifts_8c" ],
+    [ "is_lift_empty.c", "is__lift__empty_8c.html", "is__lift__empty_8c" ],
+    [ "is_lift_on_floor.c", "is__lift__on__floor_8c.html", "is__lift__on__floor_8c" ],
+    [ "max_waiting_time.c", "max__waiting__time_8c.html", "max__waiting__time_8c" ],
+    [ "moving_lift_down.c", "moving__lift__down_8c.html", "moving__lift__down_8c" ],
+    [ "moving_lift_up.c", "moving__lift__up_8c.html", "moving__lift__up_8c" ],
+    [ "passengers_drop.c", "passengers__drop_8c.html", "passengers__drop_8c" ],
+    [ "read_passenger.c", "read__passenger_8c.html", "read__passenger_8c" ],
+    [ "remove_passenger_floor.c", "remove__passenger__floor_8c.html", "remove__passenger__floor_8c" ],
+    [ "travel_log_file.c", "travel__log__file_8c.html", "travel__log__file_8c" ]
 ];

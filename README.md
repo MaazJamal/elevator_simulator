@@ -12,12 +12,12 @@ Elevator_Simulator is a software that simulates Elevator in a commercial buildin
 
 # Installation
 
-Installation steps are mentioned in [INSTALL.md](https://github.com/MaazJamal/elevator_simulator/tree/master/INSTALL.md)
+Installation steps are mentioned in [INSTALL.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/INSTALL.md)
 
 # Usage
 
 To run, you must first install it. Then you can follow instructions mentioned in
-[User_Manual.md](https://github.com/MaazJamal/elevator_simulator/tree/master/doc/User_Manual.md).
+[User_Manual.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/doc/User_Manual.md).
 
 # File Structure
 
@@ -54,7 +54,7 @@ The correct file structure
 │   ├── remove_passenger_queue.h
 │   ├── emergency_stop _handling.h
 │   ├── average_maximum waiting_time.h
-│   ├── output_log_file.h
+│   ├── travel_.h
 │   └── cli_update.h
 ├── install.sh 	-> Installation script
 ├── obj 	-> Object files
@@ -82,20 +82,32 @@ The correct file structure
 │   ├── remove_passenger_queue.c
 │   ├── emergency_stop _handling.c
 │   ├── average_maximum waiting_time.c
-│   ├── output_log_file.c
+│   ├── max_waiting_time.c
+│   ├── travel_log_file.c
 │   └── cli_update.c
 └── test
     ├── test_cases.c	-> Main function for testing
     ├── test_add_request_queue.c
+    ├── test_average_waiting_time.c
+    ├── test_count_passenger.c 
+    ├── test_create_elevator_array.c
+    ├── test_create_floor_array.c
+    ├── test_input_after_stop.c
+    ├── test_input_floors.c
     ├── test_input_lifts.c
-    ├── test_count_passenger.c      
-    └── test_moving_lift_down.c
+    ├── test_is_lift_empty.c
+    ├── test_is_lift_on_floor.c
+    ├── test_max_waiting_time.c
+    ├── test_moving_lift_down.c 
+    ├── test_passenger_take_in.c
+    ├── test_read_passenger.c
+    |── test_remove_passenger_queue.c
   
 ```
 
 # For Developers
 
-The developer manual is available [here](https://github.com/MaazJamal/elevator_simulator/tree/master/doc/Developer_Manual.md).
+The developer manual is available [here](https://github.com/MaazJamal/elevator_simulator/blob/devel/doc/Developer_Manual.md).
 
 # License
 

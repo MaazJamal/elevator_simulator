@@ -1,0 +1,50 @@
+.TH "input_lifts.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+input_lifts.c \- contains the definition of input_lifts  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'input_lifts\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBinput_lifts\fP (void)"
+.br
+.RI "Prompt the user to enter the number of lifts and takes the input\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains the definition of input_lifts 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int input_lifts (void)"
+
+.PP
+Prompt the user to enter the number of lifts and takes the input\&. The function prompts the user to enter the number of lifts\&. If the lift count is less than one or greater than 100 the function displays an error message and returns -1\&. If the user enters anything other than a numeric entry\&. The function displays and error message, discards all inputs in stdin stream and returns -1\&. If the user enters numeric value\&. It accepts the only Whole number part of the entry and returns the entered whole number value\&.
+.PP
+\fBReturns\fP
+.RS 4
+int Returns -1 if errors in input and integer if input is fine\&. 
+.RE
+.PP
+if the scanf does not read anything, clear from the stdin buffer and return -1
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

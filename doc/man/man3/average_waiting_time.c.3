@@ -1,0 +1,52 @@
+.TH "average_waiting_time.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+average_waiting_time.c \- Calculates the average waiting time for the passengers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include '\&.\&./include/globals\&.h'\fP
+.br
+\fC#include '\&.\&./include/average_waiting_time\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "float \fBaverage_waiting_time\fP (float time_difference)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Calculates the average waiting time for the passengers\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Ritika Arora - ritikaarora@cmail.carleton.ca
+.RE
+.PP
+@detail The function is to measure the average time the passengers took to wait to get into the elevator\&.
+.PP
+The function has two static variables: counter and average_waiting_time, which stores the value from the previous runs of the function\&. Firstly, it checks if the input parameter is positive or negative\&. If it is negative, it will just return the average waiting time which is already stored in it without doing any calculations\&. If the input is a positive value , then it increments the counter and does the calculation to get the average waiting time\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fItime_difference,the\fP input parameter which is the difference between the time passenger arrived and the time passenger got into the elevator
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+float Returns the average waiting time\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

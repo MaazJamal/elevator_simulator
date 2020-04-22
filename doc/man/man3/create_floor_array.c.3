@@ -1,0 +1,58 @@
+.TH "create_floor_array.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+create_floor_array.c \- The function create arrays for every floor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'create_floor_array\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct passenger ** \fBcreate_floor_array\fP (int no_of_floors)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The function create arrays for every floor\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Hariprasad Munusamy - HariprasadMunusamy@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "struct passenger** create_floor_array (int no_of_floors)"
+Creates array for every floor to store the passenger with requests\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIGets\fP the number of floors as input and creates a list of array for every floor\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+structure of arrays for the given number of floors\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

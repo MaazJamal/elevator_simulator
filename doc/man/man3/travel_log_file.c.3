@@ -1,0 +1,73 @@
+.TH "travel_log_file.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+travel_log_file.c \- Contains the deifintion of \fBtravel_log_file()\fP this function writes useful logs about the travel of the passengers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'travel_log_file\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'average_waiting_time\&.h'\fP
+.br
+\fC#include 'max_waiting_time\&.h'\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtravel_log_file\fP (struct passenger traveler, unsigned int event_time, int elevator_index, int mode)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains the deifintion of \fBtravel_log_file()\fP this function writes useful logs about the travel of the passengers\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void travel_log_file (struct passenger traveler, unsigned int event_time, int elevator_index, int mode)"
+This function generates and updates the outputput files for data processin
+.PP
+This function generates the output file waiting_times\&.txt and travel_log\&.txt which contain the average and max waiting time, and the user_id,elevator_id, passenger arrival time passenger leaving time\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fItraveler\fP struct containing details about the passenger 
+.br
+\fIevent_time\fP the time the event to be recorded happened\&. 
+.br
+\fIelevator_index\fP the index of the elevator the passenger was in\&. 
+.br
+\fImode\fP 1 for writing to travel_log\&.txt, 2 for calculating average and max time,3 for writing waiting_times\&.txt log file)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+does not return an value 
+.RE
+.PP
+This keeps track if the output path file is being opened for first time 
+.br
+.PP
+relative path to the travel_log\&.txt file path
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

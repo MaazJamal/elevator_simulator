@@ -1,0 +1,58 @@
+.TH "create_elevator_array.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+create_elevator_array.c \- The function creates array for each elevator\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'create_elevator_array\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct elevator * \fBcreate_elevator_array\fP (int no_of_elevators)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The function creates array for each elevator\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - Dpadm049@uottawa.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "struct elevator* create_elevator_array (int no_of_elevators)"
+Constraints checks the input parameter-no of elevators \&. No of elevators should be in range(1-100)\&. Prints error message if the no of elevators is out of range and if memory allocation fails\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP function takes number of lifts as input\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns the array of elevators\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

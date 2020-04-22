@@ -1,0 +1,49 @@
+\hypertarget{passengers__drop_8c}{}\doxysection{passengers\+\_\+drop.\+c File Reference}
+\label{passengers__drop_8c}\index{passengers\_drop.c@{passengers\_drop.c}}
+
+
+The function takes in the elevator\+\_\+array.  
+
+
+{\ttfamily \#include \char`\"{}passengers\+\_\+drop.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}travel\+\_\+log\+\_\+file.\+h\char`\"{}}\newline
+Include dependency graph for passengers\+\_\+drop.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{passengers__drop_8c_a961490854f7de2df3e342a5ca6705a3a}{passengers\+\_\+drop}} (struct elevator elevator\+\_\+arr\mbox{[}$\,$\mbox{]}, int index, struct passenger $\ast$floor\+\_\+arr\mbox{[}$\,$\mbox{]}, int cur\+\_\+floor, unsigned int event\+\_\+time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The function takes in the elevator\+\_\+array. 
+
+\begin{DoxyAuthor}{Author}
+Hariprasad Munusamy -\/ \href{mailto:HariprasadMunusamy@cmail.carleton.ca}{\texttt{ Hariprasad\+Munusamy@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{passengers__drop_8c_a961490854f7de2df3e342a5ca6705a3a}\label{passengers__drop_8c_a961490854f7de2df3e342a5ca6705a3a}} 
+\index{passengers\_drop.c@{passengers\_drop.c}!passengers\_drop@{passengers\_drop}}
+\index{passengers\_drop@{passengers\_drop}!passengers\_drop.c@{passengers\_drop.c}}
+\doxysubsubsection{\texorpdfstring{passengers\_drop()}{passengers\_drop()}}
+{\footnotesize\ttfamily int passengers\+\_\+drop (\begin{DoxyParamCaption}\item[{struct elevator}]{elevator\+\_\+arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{struct passenger $\ast$}]{floor\+\_\+arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{cur\+\_\+floor,  }\item[{unsigned int}]{event\+\_\+time }\end{DoxyParamCaption})}
+
+Removes the passenger from the floor and the elevator array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & function takes in elevator structure,index,passenger floor array,current floor and time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function return elevator array 
+\end{DoxyReturn}

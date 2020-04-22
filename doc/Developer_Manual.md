@@ -39,16 +39,17 @@ The program flow for the application is as follows:
   - The function in moving_lift_down.c to move the lift down.
   - The function in moving_lift_up.cc to move the lift up.
   - The function in average_maximum_waiting_time.c to calculate the average and maximum waiting time.
+  - The function in max_waiting_time.c to calculate the average and maximum waiting time.
   - The function in is_lift_empty.c to check the space in elevator
   - The function in remove_passenger_floor.c to remove the passenger from the floor array.
+  - The function in travel_log_file.c to remove the passenger from the floor array.
 The dynamc_simulation function calls:
   - The function in input_static_dynamic.c to get version input from user.
   - The function in read_user_input_validate.c to validate the inputs from user console.
   - The function in emergency_stop _handling.c to to bring the lifts to 1st floor incase of emergency
-  - The function in output_log_file.c to write the output files
   - The function in cli_update.c to display elevator information on screen.
   - The function in input_after_stop.c to get input from user when emergency situation encountered. 
 
 # Documentation
 
-Complete documentation of the source code can be found [here](https://github.com/MaazJamal/elevator_simulator/blob/devel/doc/html/index.html).
+Complete documentation of the source code can be found [here](https://github.com/MaazJamal/elevator_simulator/tree/devel/doc/html/index.html).

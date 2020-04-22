@@ -1,0 +1,58 @@
+.TH "read_passenger.c" 3 "Wed Apr 22 2020" "Elevator_simulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+read_passenger.c \- Reads the input file for passenger id,arrival time,starting floor and destination floor\&. Enables to read the data from file and store in a structure of maximum capacity 100\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'read_passenger\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBread_passenger\fP (struct passenger p[])"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Reads the input file for passenger id,arrival time,starting floor and destination floor\&. Enables to read the data from file and store in a structure of maximum capacity 100\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - Dpadm049@uottawa.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void read_passenger (struct passenger p[])"
+Constraints If the file does not exists ,the function displays a error message\&. The input file is checked for valid values for passenegr id in range (1-99) and print error message if the values are out of range\&. The input file is checked for valid values for arrival time in range (1-150)and print error message if the values are out of range The input file is checked for valid values for arrival floor in range (1-100)and print error message if the values are out of range The input file is checked for valid values for destination floor in range (1-100)and print error message if the values are out of range 
+.PP
+\fBParameters\fP
+.RS 4
+\fINo\fP input parameter\&. The function uses the input file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the function returns void 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator_simulation from the source code\&.

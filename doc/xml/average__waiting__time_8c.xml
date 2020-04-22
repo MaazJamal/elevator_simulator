@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="average__waiting__time_8c" kind="file" language="C++">
+    <compoundname>average_waiting_time.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">../include/globals.h</includes>
+    <includes local="yes">../include/average_waiting_time.h</includes>
+    <includes local="yes">C:/Users/harip/Desktop/Software development in C/Development/elevator_simulator-devel/include/structures.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="yes">C:/Users/harip/Desktop/Software development in C/Development/elevator_simulator-devel/include/globals.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>../include/average_waiting_time.h</label>
+      </node>
+      <node id="7">
+        <label>C:/Users/harip/Desktop/Software development in C/Development/elevator_simulator-devel/include/globals.h</label>
+      </node>
+      <node id="1">
+        <label>average_waiting_time.c</label>
+        <link refid="average__waiting__time_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../include/globals.h</label>
+      </node>
+      <node id="5">
+        <label>C:/Users/harip/Desktop/Software development in C/Development/elevator_simulator-devel/include/structures.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="average__waiting__time_8c_1abbde5e2aad5b56ac7da77b34c7d2ea20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float average_waiting_time</definition>
+        <argsstring>(float time_difference)</argsstring>
+        <name>average_waiting_time</name>
+        <param>
+          <type>float</type>
+          <declname>time_difference</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="average_waiting_time.c" line="29" column="7" bodyfile="average_waiting_time.c" bodystart="29" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Calculates the average waiting time for the passengers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ritika Arora - <ulink url="mailto:ritikaarora@cmail.carleton.ca">ritikaarora@cmail.carleton.ca</ulink></para>
+</simplesect>
+@detail The function is to measure the average time the passengers took to wait to get into the elevator.</para>
+<para>The function has two static variables: counter and average_waiting_time, which stores the value from the previous runs of the function. Firstly, it checks if the input parameter is positive or negative. If it is negative, it will just return the average waiting time which is already stored in it without doing any calculations. If the input is a positive value , then it increments the counter and does the calculation to get the average waiting time.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">time_difference</parametername>
+<parametername direction="in">the</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input parameter which is the difference between the time passenger arrived and the time passenger got into the elevator</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Returns the average waiting time. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/average_waiting_time.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>average_waiting_time(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time_difference){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>counter;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>average_time;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>differential;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(time_difference<sp/>&lt;<sp/>0){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//printf(&quot;Average<sp/>Time:%f\n&quot;,average_time);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>average_time;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>counter++;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>differential<sp/>=<sp/>(time_difference<sp/>-<sp/>average_time)/counter;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>average_time<sp/>=<sp/>average_time<sp/>+<sp/>differential;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//printf(&quot;Average<sp/>Time:%f\n&quot;,average_time);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>average_time;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="average_waiting_time.c"/>
+  </compounddef>
+</doxygen>

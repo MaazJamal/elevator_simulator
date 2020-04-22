@@ -1,0 +1,45 @@
+\hypertarget{remove__passenger__floor_8c}{}\doxysection{remove\+\_\+passenger\+\_\+floor.\+c File Reference}
+\label{remove__passenger__floor_8c}\index{remove\_passenger\_floor.c@{remove\_passenger\_floor.c}}
+
+
+Removes the passenger details from floor specified.  
+
+
+{\ttfamily \#include \char`\"{}remove\+\_\+passenger\+\_\+floor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\newline
+Include dependency graph for remove\+\_\+passenger\+\_\+floor.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{remove__passenger__floor_8c_a078767636839d02470574e1526e48f73}{remove\+\_\+passenger\+\_\+floor}} (struct passenger $\ast$floordetails\mbox{[}$\,$\mbox{]}, int cur\+\_\+floor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Removes the passenger details from floor specified. 
+
+\begin{DoxyAuthor}{Author}
+Divyalakshmi Padmanaban -\/ \href{mailto:Dpadm049@uottawa.ca}{\texttt{ Dpadm049@uottawa.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{remove__passenger__floor_8c_a078767636839d02470574e1526e48f73}\label{remove__passenger__floor_8c_a078767636839d02470574e1526e48f73}} 
+\index{remove\_passenger\_floor.c@{remove\_passenger\_floor.c}!remove\_passenger\_floor@{remove\_passenger\_floor}}
+\index{remove\_passenger\_floor@{remove\_passenger\_floor}!remove\_passenger\_floor.c@{remove\_passenger\_floor.c}}
+\doxysubsubsection{\texorpdfstring{remove\_passenger\_floor()}{remove\_passenger\_floor()}}
+{\footnotesize\ttfamily int remove\+\_\+passenger\+\_\+floor (\begin{DoxyParamCaption}\item[{struct passenger $\ast$}]{floordetails\mbox{[}$\,$\mbox{]},  }\item[{int}]{cur\+\_\+floor }\end{DoxyParamCaption})}
+
+Constraints The program terminates if the input parameter cur\+\_\+floor(passenger details for this particular floor has to be deleted)is erraneous. (i.\+e)cur\+\_\+floor must be within the range 1-\/100 and less than the floor\+\_\+count(\+Total number of floors in the building ) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & function takes passenger structure and current floor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 on successful deletion of passenger details from specified floor. 
+\end{DoxyReturn}

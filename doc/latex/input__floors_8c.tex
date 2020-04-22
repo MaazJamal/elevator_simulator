@@ -1,0 +1,36 @@
+\hypertarget{input__floors_8c}{}\doxysection{input\+\_\+floors.\+c File Reference}
+\label{input__floors_8c}\index{input\_floors.c@{input\_floors.c}}
+
+
+Obtains the floor count-\/\+Total number of floors in the building.\+Enables the user to enter the total number of floors in the building. based on availability. If none of those symptoms then patient is not admitted.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}input\+\_\+floors.\+h\char`\"{}}\newline
+Include dependency graph for input\+\_\+floors.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{input__floors_8c_ac21b8029a111342aa5dde9daa28b65cb}{input\+\_\+floors}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Obtains the floor count-\/\+Total number of floors in the building.\+Enables the user to enter the total number of floors in the building. based on availability. If none of those symptoms then patient is not admitted. 
+
+\begin{DoxyAuthor}{Author}
+Divyalakshmi Padmanaban -\/ \href{mailto:Dpadm049@uottawa.ca}{\texttt{ Dpadm049@uottawa.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{input__floors_8c_ac21b8029a111342aa5dde9daa28b65cb}\label{input__floors_8c_ac21b8029a111342aa5dde9daa28b65cb}} 
+\index{input\_floors.c@{input\_floors.c}!input\_floors@{input\_floors}}
+\index{input\_floors@{input\_floors}!input\_floors.c@{input\_floors.c}}
+\doxysubsubsection{\texorpdfstring{input\_floors()}{input\_floors()}}
+{\footnotesize\ttfamily int input\+\_\+floors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Constraints If the floor count is 0 ,the function displays a error message and returns -\/1. If the floor count is less than 1(negative values) ,the function displays a error message and returns -\/1. If the floor count is greater than 100,the function displays a error message and returns -\/1. Floating point values entered considered to near integers. \begin{DoxyReturn}{Returns}
+The function accepts only values between 1 and 100 and returns the value;otherwise returns -\/1 and displays error message. 
+\end{DoxyReturn}

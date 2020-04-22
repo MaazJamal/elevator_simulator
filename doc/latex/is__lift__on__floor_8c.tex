@@ -1,0 +1,41 @@
+\hypertarget{is__lift__on__floor_8c}{}\doxysection{is\+\_\+lift\+\_\+on\+\_\+floor.\+c File Reference}
+\label{is__lift__on__floor_8c}\index{is\_lift\_on\_floor.c@{is\_lift\_on\_floor.c}}
+
+
+Reads the elevator structure\textquotesingle{}s attribute between\+\_\+floors.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}is\+\_\+lift\+\_\+on\+\_\+floor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for is\+\_\+lift\+\_\+on\+\_\+floor.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{is__lift__on__floor_8c_a8331ecca3b0a14f407e7e9e354d01998}{is\+\_\+lift\+\_\+on\+\_\+floor}} (struct elevator elev\mbox{[}$\,$\mbox{]}, int index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads the elevator structure\textquotesingle{}s attribute between\+\_\+floors. 
+
+\begin{DoxyAuthor}{Author}
+Divyalakshmi Padmanaban -\/ \href{mailto:Dpadm049@uottawa.ca}{\texttt{ Dpadm049@uottawa.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{is__lift__on__floor_8c_a8331ecca3b0a14f407e7e9e354d01998}\label{is__lift__on__floor_8c_a8331ecca3b0a14f407e7e9e354d01998}} 
+\index{is\_lift\_on\_floor.c@{is\_lift\_on\_floor.c}!is\_lift\_on\_floor@{is\_lift\_on\_floor}}
+\index{is\_lift\_on\_floor@{is\_lift\_on\_floor}!is\_lift\_on\_floor.c@{is\_lift\_on\_floor.c}}
+\doxysubsubsection{\texorpdfstring{is\_lift\_on\_floor()}{is\_lift\_on\_floor()}}
+{\footnotesize\ttfamily int is\+\_\+lift\+\_\+on\+\_\+floor (\begin{DoxyParamCaption}\item[{struct elevator}]{elev\mbox{[}$\,$\mbox{]},  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+@ details Constraints Checks if the input parameter index(i.\+e)elevator number;is within the range of number of elevators in building. If index is greater than the number of elevators actually present in building;error message will be displayed and returns -\/1. Checks the condition of the lift . 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & function takes the elevator structure and index. @ return The function 0 if lift is not on floor elso 0. \\
+\hline
+\end{DoxyParams}
