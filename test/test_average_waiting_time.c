@@ -24,7 +24,7 @@
 
 void test_average_waiting_time (){
 
-	FILE* test_results = fopen("R:\\Ritz\\elevator_simulator\\test\\results\\results_average_waiting_time.txt", "w+");
+	FILE* test_results = fopen("test/results/results_average_waiting_time.txt", "w+");
 
 		float time1 = 120;
 		float time2 = 249;
