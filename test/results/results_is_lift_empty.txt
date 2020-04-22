@@ -1,3 +1,4 @@
+PASS: Input: Elevator with passengers equal to the maximum passenger, Expected Output: 0, Output: 0 .
 PASS: Input: Elevator with passengers less than the maximum passenger, Expected Output: 1, Output: 1 .
 PASS: Input: Elevator with passengers more than the maximum passenger, Expected Output: 0, Output: 0 .
 PASS: Input: The index is greater than the elevators in the building, Expected Output: -1, Output: -1 .

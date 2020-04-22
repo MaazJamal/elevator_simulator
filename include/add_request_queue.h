@@ -9,6 +9,6 @@
 
 #include "structures.h"
 
-extern struct passenger* add_request_queue(struct passenger* head, struct passenger passenger_queue);
+extern struct passenger *add_request_queue(struct passenger *head, struct passenger passenger_queue);
 
 #endif

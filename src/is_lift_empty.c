@@ -28,18 +28,22 @@
  * for any passenger and 0 if not.
 */
 
-unsigned int elevator_count; //definition of the global variable
-int is_lift_empty(struct elevator elevator_arr[], unsigned int index){
+//unsigned int elevator_count; //definition of the global variable
+int is_lift_empty(struct elevator elevator_arr[], unsigned int index)
+{
     int has_space;
-    if(index >= elevator_count){
-        fprintf(stderr, "Index is greater than the elevator_arr size. %d >= %d \n",index, elevator_count);
+    if (index >= elevator_count)
+    {
+        fprintf(stderr, "Index is greater than the elevator_arr size. %d >= %d \n", index, elevator_count);
         return -1;
     }
-    if(elevator_arr[index].passenger_count >= elevator_arr[index].max_passenger){
+    if (elevator_arr[index].passenger_count >= elevator_arr[index].max_passenger)
+    {
         fprintf(stdout, "The lift is full!! Can't add more passengers.");
         has_space = 0;
     }
-    else{
+    else
+    {
         has_space = 1;
     }
     return has_space;

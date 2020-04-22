@@ -1,0 +1,13 @@
+PASS: Input: abcd, Expected Output: -1, Output: -1 .
+PASS: Input: abcd123, Expected Output: -1, Output: -1 .
+PASS: Input: 0, Expected Output: -1, Output: -1 .
+PASS: Input: -100, Expected Output: -1, Output: -1 .
+PASS: Input: 101, Expected Output: -1, Output: -1 .
+PASS: Input: 1, Expected Output: 1, Output: 1 .
+PASS: Input: 100, Expected Output: 100, Output: 100 .
+PASS: Input: 50, Expected Output: 50, Output: 50 .
+PASS: Input: 23.3, Expected Output: 23, Output: 23 .
+PASS: Input: 0.9, Expected Output: -1, Output: -1 .
+PASS: Input: 1.0, Expected Output: 1, Output: 1 .
+PASS: Input: 100.1, Expected Output: 100, Output: 100 .
+PASS: Input: 100.0, Expected Output: 100, Output: 100 .

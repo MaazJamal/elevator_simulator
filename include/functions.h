@@ -1,4 +1,4 @@
-/**@file functions.h  
+/** @file functions.h  
  *@brief Simply contains all the headers of the different function
 */
 #ifndef __FUNCTIONS_H__

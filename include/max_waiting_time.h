@@ -1,4 +1,4 @@
-/**@file max_waiting_time.h
+/** @file max_waiting_time.h
  *@brief Has the declaration for the max_waiting_time function
  *@detail The function has one input parameter: time_difference which is the difference between
  * the time passenger arrived and the time he got into the elevator

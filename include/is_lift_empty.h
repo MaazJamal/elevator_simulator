@@ -1,4 +1,4 @@
-/**@file is_lift_empty.h
+/** @file is_lift_empty.h
  *@brief Has the declaration for the is_lift_empty function
  *@detail The function has two input parameters: one is an array of elevators of elevator type
  *@detail and the other is the index of the array which can be used as the number of the elevator

@@ -36,12 +36,15 @@ void test_cases(void)
 	case 3:
 		test_count_passenger();
 		puts("Tests for count_passenger() Done. Results may be found in test/results.");
+		break;
 	case 4:
 		test_create_elevator_array();
 		puts("Tests for create_elevator_array() Done. Results may be found in test/results.");
+		break;
 	case 5:
 		test_create_floor_array();
 		puts("Tests for create_floor_array() Done. Results may be found in test/results.");
+		break;
 	case 6:
 		test_input_after_stop();
 		puts("Tests for input_after_stop() Done. Results may be found in test/results.");

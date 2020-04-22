@@ -1,23 +1,22 @@
 # Elevator_Simulator
 
-Elevator_Simulator is a software that simulates Elevator in a commercial building.
-
+Elevator_Simulator is a software that simulates Elevators in a commercial building.
 
 # Authors
 
-- Hariprasad Munusamy - HariprasadMunusamy@cmail.carleton.ca (101132017) - Carleton University
-- Maaz Jamal  - maazjamal@cmail.carleton.ca (101127351) - Carleton University
-- Ritika Arora - ritikaarora@cmail.carleton.ca (101141126) - Carleton University
-- Divyalakshmi Padmanaban  - Dpadm049@uottawa.ca (300110144) - Carleton University
+- Hariprasad Munusamy - Carleton University
+- Maaz Jamal - Carleton University
+- Ritika Arora - Carleton University
+- Divyalakshmi Padmanaban - Ottawa University
 
 # Installation
 
-Installation steps are mentioned in [INSTALL.md](https://github.com/MaazJamal/elevator_simulator/tree/master/INSTALL.md)
+Installation steps are mentioned in [INSTALL.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/INSTALL.md)
 
 # Usage
 
-To run, you must first install it. Then you can follow instructions mentioned in
-[User_Manual.md](https://github.com/MaazJamal/elevator_simulator/tree/master/doc/User_Manual.md).
+To run, you must first compile the repository. Follow the instructions in [INSTALL.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/INSTALL.md).Then you can follow instructions mentioned in
+[User_Manual.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/doc/User_Manual.md).
 
 # File Structure
 
@@ -54,11 +53,13 @@ The correct file structure
 │   ├── remove_passenger_queue.h
 │   ├── emergency_stop _handling.h
 │   ├── average_maximum waiting_time.h
-│   ├── output_log_file.h
-│   └── cli_update.h
-├── install.sh 	-> Installation script
+│   ├── travel_log_file.h
+│   ├── cli_update.h
+│   ├── static_simulation.h
+│   ├── dynamic_simulation.h
+│   ├── simulations.h
+│   └── structures.h
 ├── obj 	-> Object files
-├── elevator_simulator_config 	-> Doxygen Configuration files
 ├── src 	-> Source files for elevator_simulator
 │   ├── input_static_dynamic.c
 │   ├── input_floors.c
@@ -82,20 +83,40 @@ The correct file structure
 │   ├── remove_passenger_queue.c
 │   ├── emergency_stop _handling.c
 │   ├── average_maximum waiting_time.c
-│   ├── output_log_file.c
+│   ├── travel_log_file.c
+│   ├── static_simulation.c
+│   ├── dynamic_simulation.c
+│   ├── max_waiting_time.c
+│   ├── main.c
+│   ├── globals.c
 │   └── cli_update.c
 └── test
-    ├── test_cases.c	-> Main function for testing
+    ├── test_main.c	-> Main function for testing
+    ├── test_cases.c
+    ├── test_remove_passenger_queue.c
+    ├── test_read_passenger.c
+    ├── test_passenger_take_in.c
+    ├── test_max_waiting_time.c
+    ├── test_is_lift_on_floor.c
+    ├── test_lift_empty.c
+    ├── test_input_floors.c
+    ├── test_input_after_stop.c
+    ├── test_create_floor_array.c
+    ├── test_count_passenger.c
     ├── test_add_request_queue.c
+    ├── test_average_waiting_time.c
     ├── test_input_lifts.c
-    ├── test_count_passenger.c      
-    └── test_moving_lift_down.c
-  
+    ├── test_moving_lift_down.c
+    ├── include
+    │   └── test_functions.h
+    ├── data -> Contains text file inputs for user tests
+    └── results -> Contains the txt file logs of the results.
+
 ```
 
 # For Developers
 
-The developer manual is available [here](https://github.com/MaazJamal/elevator_simulator/tree/master/doc/Developer_Manual.md).
+The developer manual is available [here](https://github.com/MaazJamal/elevator_simulator/blob/devel/doc/Developer_Manual.md).
 
 # License
 

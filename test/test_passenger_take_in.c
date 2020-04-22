@@ -17,7 +17,7 @@ static void case5(void);
 
 struct elevator dummy = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 struct elevator dummy_2 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-struct passenger dummy_pass = {1, 0, 0, 0, 0, 0};
+struct passenger dummy_pass = {1, 0, 0, 4, 0, 0};
 
 FILE *f;
 
@@ -112,6 +112,10 @@ void case4(void)
 	ell_arr[0] = dummy;
 	ell_arr[1] = dummy_2;
 	struct passenger **floor_arr = malloc(sizeof(struct passenger *) * 10);
+	for (int i = 0; i < elevator_count; i++)
+	{
+		ell_arr[i].stop_at_floor = (bool *)calloc(10, sizeof(bool));
+	}
 	for (int i = 0; i < 10; i++)
 	{
 		floor_arr[i] = NULL;
@@ -125,7 +129,7 @@ void case4(void)
 	one->next = two;
 	two->next = three;
 	three->next = NULL;
-	floor_arr[5] = one;
+	floor_arr[4] = one;
 	one->in_elevator = false;
 	two->in_elevator = false;
 	three->in_elevator = false;
@@ -164,7 +168,7 @@ void case4(void)
 		fprintf(f, "FAIL: passenger not added properly addded:%d free space:%d\n", added, okay);
 		fprintf(f, "FAIL: passenger not added properly addded:%d free space:%d\n", added, okay);
 	}
-	if (floor_arr[5] == NULL)
+	if (floor_arr[4] == NULL)
 	{
 		printf("PASS 3 passengers removed from floor. \n");
 		fprintf(f, "PASS 3 passengers removed from floor. \n");
@@ -189,6 +193,10 @@ void case5(void)
 	ell_arr[0] = dummy;
 	ell_arr[1] = dummy_2;
 	struct passenger **floor_arr = malloc(sizeof(struct passenger *) * 10);
+	for (int i = 0; i < elevator_count; i++)
+	{
+		ell_arr[i].stop_at_floor = (bool *)calloc(10, sizeof(bool));
+	}
 	for (int i = 0; i < 10; i++)
 	{
 		floor_arr[i] = NULL;
@@ -215,7 +223,7 @@ void case5(void)
 	five->next = six;
 	six->next = seven;
 	seven->next = NULL;
-	floor_arr[5] = one;
+	floor_arr[4] = one;
 	one->in_elevator = false;
 	two->in_elevator = false;
 	three->in_elevator = false;
@@ -245,7 +253,7 @@ void case5(void)
 	{
 		if (ell_arr[1].passenger_arr[i].in_elevator == false)
 		{
-			okay++; //okay should equal to two as two spots will be free
+			okay++; //okay should equal to zero as two spots will be free
 		}
 	}
 	if (added == 5 && okay == 0)
@@ -258,7 +266,7 @@ void case5(void)
 		printf("FAIL: passenger not added properly addded:%d free space:%d\n", added, okay);
 		fprintf(f, "FAIL: passenger not added properly addded:%d free space:%d\n", added, okay);
 	}
-	if (floor_arr[5] == six)
+	if (floor_arr[4] == six)
 	{
 		printf("PASS 5 passenger removed and six passenger is first on the floor now \n");
 		fprintf(f, "PASS 5 passenger removed and six passenger is first on the floor now \n");

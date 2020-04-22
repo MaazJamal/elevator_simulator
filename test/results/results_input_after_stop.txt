@@ -1,1 +1,1 @@
-PASS: Input: valid and returned successfully, Expected Output: 1 or 0, Output:1 or 0 
+PASS: Valid Input and returned successfully, Expected Output: 1 or 0, Output:1 or 0 

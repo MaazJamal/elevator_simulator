@@ -7,6 +7,6 @@
 #include "structures.h"
 #include "globals.h"
 
-extern int is_lift_on_floor(struct elevator elev[] ,int index );
+extern int is_lift_on_floor(struct elevator elev[], int index);
 
-#endif  
+#endif

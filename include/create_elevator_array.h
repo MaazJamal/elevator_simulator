@@ -7,7 +7,6 @@
 #include "structures.h"
 #include "globals.h"
 
-extern struct elevator * create_elevator_array(int no_of_elevators);
-
+extern struct elevator *create_elevator_array(int no_of_elevators);
 
 #endif
