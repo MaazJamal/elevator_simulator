@@ -24,7 +24,7 @@ int static_simulation(void)
 	elevator_count = -1;
 	while (elevator_count == -1)
 	{
-		elevator_count = input_lifts();
+		elevator_count = input_lifts(0);
 	}
 	floor_count = -1;
 

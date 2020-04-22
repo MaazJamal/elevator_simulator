@@ -10,6 +10,6 @@
 #include "structures.h"
 #include "globals.h"
 
-extern int input_lifts(void);
+extern int input_lifts(int mode);
 
 #endif

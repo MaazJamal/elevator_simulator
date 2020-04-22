@@ -22,4 +22,7 @@ extern void test_moving_lift_down(void);
 extern void test_passenger_take_in(void);
 extern void test_read_passenger(void);
 extern void test_remove_passenger_queue(void);
+extern void test_cli_update(void);
+
+
 #endif
