@@ -4,9 +4,10 @@
  * @author Maaz Jamal
  * */
 #include "add_request_queue.h"
-#include "stdio.h"
+#include <stdio.h>
 #include "structures.h"
 #include <stdbool.h>
+#include "test_functions.h"
 
 static struct passenger create_dummy_passenger(int val);
 static bool compare(struct passenger a, struct passenger b);
