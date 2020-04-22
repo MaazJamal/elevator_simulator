@@ -5,7 +5,10 @@
 void test_cases(void)
 {
 	int test_choice; //stores user input for testing
-	printf("Enter ur choice\n");
+	puts("\nPlease note due to nature of the tests the program must be run again");
+	puts("to prevent the tests from interfering with each other.");
+	puts("Some tests are supposed to cause the program to exit.\n");
+	printf("\nEnter ur choice\n");
 	puts("1. To run test for add_request_queue().");
 	puts("2. To run tests for average_waiting_time().");
 	puts("3. To run tests for count_passenger().");
