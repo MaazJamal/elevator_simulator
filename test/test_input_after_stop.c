@@ -10,18 +10,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+static int input_after_stop();
+
 void test_input_after_stop(void)
 {
 	FILE *test_results = fopen("test/results/results_input_after_stop.txt", "w");
 	int t = input_after_stop();
 	if (t == 0 || t == 1)
 	{
-		char temp[100];
+		char temp[200];
 		sprintf(temp, "PASS: Valid Input and returned successfully, Expected Output: 1 or 0, Output:1 or 0 \n");
 		printf(temp);
 		fprintf(test_results, temp);
 	}
-	return 0;
 }
 
 static int input_after_stop()
