@@ -16,9 +16,11 @@ static void case_5(void);
 static void case_6(void);
 
 struct passenger temp = {0, 0, 0, 0, 0, 0};
+FILE *f;
 
-int test_remove_passenger_queue()
+void test_remove_passenger_queue(void)
 {
+	f = fopen("test/results/test_remove_passenger_queue_results.txt", "w");
 	int choice = 0;
 	printf("Choose between the tests: \n");
 	puts("1- Provide an empty list. The program should exit");
@@ -49,6 +51,8 @@ int test_remove_passenger_queue()
 		puts("incorrect input run program again");
 		break;
 	}
+	fflush(f);
+	fclose(f);
 	return 0;
 }
 
@@ -107,11 +111,14 @@ void case_4(void)
 	if (result == NULL)
 	{
 		printf("PASS: result points to NULL %p \n", result);
+		fprintf(f, "PASS: result points to NULL %p \n", result);
 	}
 	else
 	{
 		printf("FAIL: result points to %p \n", result);
+		fprintf(f, "FAIL: result points to %p \n", result);
 	}
+	fflush(f);
 }
 
 /** This function tests case three node queue is passed.
@@ -135,23 +142,29 @@ void case_5(void)
 	if (result == head)
 	{
 		printf("PASS: Removing middle element return points to head %p %p\n", result, head);
+		fprintf(f, "PASS: Removing middle element return points to head %p %p\n", result, head);
 	}
 	else
 	{
 		printf("FAIL: Removing middle element result does not points to  head %p %p\n", result, head);
+		fprintf(f, "FAIL: Removing middle element result does not points to  head %p %p\n", result, head);
 	}
 	if (head->next == middle)
 	{
 		printf("FAIL: Removing middle element MIDDLE ELEMENT NOT REMOVED PROPERLY. \n");
+		fprintf(f, "FAIL: Removing middle element MIDDLE ELEMENT NOT REMOVED PROPERLY. \n");
 	}
 	else if (head->next == third)
 	{
 		printf("PASS: Removing middle element MIDDLE ELEMENT REMOVED PROPERLY \n");
+		fprintf(f, "PASS: Removing middle element MIDDLE ELEMENT REMOVED PROPERLY \n");
 	}
 	else
 	{
 		printf("FAIL: Removing middle element  MIDDLE ELEMENT NOT REMOVED PROPERLY HEAD NOT POINT TO THIRD ELEMENT \n");
+		fprintf(f, "FAIL: Removing middle element  MIDDLE ELEMENT NOT REMOVED PROPERLY HEAD NOT POINT TO THIRD ELEMENT \n");
 	}
+	fflush(f);
 }
 
 /** This function tests case three node queue is passed.
@@ -174,25 +187,32 @@ void case_6(void)
 	if (result == head)
 	{
 		printf("PASS: Removing tail return points to head %p %p\n", result, head);
+		fprintf(f, "PASS: Removing tail return points to head %p %p\n", result, head);
 	}
 	else
 	{
 		printf("FAIL: Removing tail result does not points to  head %p %p\n", result, head);
+		fprintf(f, "FAIL: Removing tail result does not points to  head %p %p\n", result, head);
 	}
 	if (head->next == second)
 	{
 		printf("PASS: Removing tail Head points to second node. Structure maintained.\n");
+		fprintf(f, "PASS: Removing tail Head points to second node. Structure maintained.\n");
 	}
 	else
 	{
 		printf("FAIL: Removing tail Head does not point to second node. Sturucture not maintained.\n");
+		fprintf(f, "FAIL: Removing tail Head does not point to second node. Sturucture not maintained.\n");
 	}
 	if (head->next->next == NULL && second->next == NULL)
 	{
 		printf("PASS: Removing tail Last Element Removed Succesfully.\n");
+		fprintf(f, "PASS: Removing tail Last Element Removed Succesfully.\n");
 	}
 	else
 	{
 		printf("FAIL: Removing tail Last Element Not Removed Succesfully.\n");
+		fprintf(f, "FAIL: Removing tail Last Element Not Removed Succesfully.\n");
 	}
+	fflush(f);
 }

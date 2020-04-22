@@ -11,7 +11,7 @@
 static struct passenger create_dummy_passenger(int val);
 static bool compare(struct passenger a, struct passenger b);
 
-void test_add_request_queue()
+void test_add_request_queue(void)
 {
 	struct passenger dummy1 = create_dummy_passenger(1);
 	struct passenger dummy2 = create_dummy_passenger(2);
