@@ -26,40 +26,57 @@ void read_user_input_validate(struct passenger *passenger_info, unsigned int tim
 
     int arrival_floor, dest_floor, passenger_id; // local variables to get the values from user and store them in the structure
 
+    int correct_id = 0, correct_arrival_floor = 0, correct_dest_floor = 0; //variable to check if correct input is given by the user
 
-    printf("Enter the id");
+        printf("Enter the id");
 
-    while((scanf("%d",&passenger_id))==0){
-    	//To check that user enters an integer value only
-    		scanf("%*[^\n]");
-    		printf("Invalid entry, please enter a valid number: ");
-    }
-    if(passenger_id <=0){
-        	printf("Invalid passenger id entered");
-        	exit(1);
-    }
-    printf("Enter the arrival floor between 1 and %d:",floor_count);
+        while( correct_id == 0){
+                while((scanf("%d",&passenger_id))==0){
+                //To check that user enters an integer value only
+                scanf("%*[^\n]");
+                printf("Invalid entry, please enter a valid number: ");
+                }
 
-    while((scanf("%d",&arrival_floor))==0){
-    	//To check that user enters an integer value only
-        	scanf("%*[^\n]");
-        	printf("Invalid entry, please enter a valid number: ");
-    }
-    if(arrival_floor<=0 || arrival_floor > floor_count){
-    		printf("Invalid arrival floor entered!!");
-    		exit(1);
-    }
-    printf("Enter the destination floor between 1 and %d:",floor_count);
+                if(passenger_id <=0){
+                    printf("Invalid passenger id entered");
+                    correct_id == 0;
+                    continue;
+                }
+                correct_id = 1;
+        }
+        printf("Enter the arrival floor between 1 and %d:",floor_count);
 
-    while((scanf("%d",&dest_floor))==0){
-    	//To check that user enters an integer value only
-        	scanf("%*[^\n]");
-        	printf("Invalid entry, please enter a valid number: ");
-    }
-    if(dest_floor <=0 || dest_floor > floor_count){
-    		printf("Invalid destination floor entered!!");
-    		exit(1);
-    }
+        while( correct_arrival_floor == 0){
+                while((scanf("%d",&arrival_floor))==0){
+                //To check that user enters an integer value only
+                scanf("%*[^\n]");
+                printf("Invalid entry, please enter a valid number: ");
+                }
+
+                if(arrival_floor<=0 || arrival_floor > floor_count){
+                    printf("Invalid arrival floor entered!!");
+                    correct_arrival_floor == 0;
+                    continue;
+                }
+                correct_arrival_floor = 1;
+        }
+
+        printf("Enter the destination floor between 1 and %d:",floor_count);
+
+        while( correct_dest_floor == 0){
+                while((scanf("%d",&dest_floor))==0){
+                //To check that user enters an integer value only
+                scanf("%*[^\n]");
+                printf("Invalid entry, please enter a valid number: ");
+                }
+
+                if(dest_floor<=0 || dest_floor > floor_count){
+                    printf("Invalid arrival floor entered!!");
+                    correct_dest_floor == 0;
+                    continue;
+                }
+                correct_dest_floor = 1;
+        }
     passenger_info.id = passenger_id;
     passenger_info.arrival_floor = arrival_floor;
     passenger_info.dest_floor = dest_floor;
