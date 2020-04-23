@@ -62,8 +62,8 @@ void case3(void){
 	arr[0]= dummy1;
 	arr[1]= dummy2;
 	arr[2]= dummy3;
-	for(int i=0;i<1000;i++){
-		printf("THIS LINE SHOULD NOT BE VISIBLE AT END.\n");
+	for(int i=0;i<100;i++){
+		printf("THIS LINE SHOULD NOT BE VISIBLE AT END.Running 100 Calls.\n");
 		cli_update(arr,(unsigned int)i);
 		arr[0].cur_floor = i%50;
 		arr[0].timer = 10 - i%10;
