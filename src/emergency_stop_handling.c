@@ -11,8 +11,11 @@
  *
  * @author Divyalakshmi Padmanaban  - dpadm049@uottawa.ca	
  *
+ * @param[in] The function takes elevator strucrure and the currect time index of the simulation
+ * 
+ * @return The function returns nothing, takes all the lift to next floor and removes all passenger from elevator
  */
-void emergency_stop_handling(struct elevator ele[],int timer)
+void emergency_stop_handling(struct elevator ele[],int *timer)
 {
 	int i,j,k=0;
 	int count;
@@ -34,7 +37,7 @@ void emergency_stop_handling(struct elevator ele[],int timer)
 				            ele[i].passsenger_arr[j].dest_floor=ele[i].cur_floor+1;
 				            ele[i].moving=k;
 				            ele[i].between_floor=k;
-				            remove_passenger_floor(ele[i].passenger_arr[j]);
+				            passengers_drop(ele[i],i,ele[i].cur_floor,ele[i].timer);
 			            }
 			        }
 			        if(ele[i].direction_down==true)
@@ -44,7 +47,8 @@ void emergency_stop_handling(struct elevator ele[],int timer)
 				            ele[i].passsenger_arr[j].dest_floor=ele[i].cur_floor-1;
 				            ele[i].moving=k;
 				            ele[i].between_floor=k;
-				            remove_passenger_floor(ele[i].passenger_arr[j]);
+				            //remove_passenger_floor(ele[i].passenger_arr[j]);
+				            passengers_drop(ele[i],i,ele[i].cur_floor,ele[i].timer);
 			            }
 			        }
 			
@@ -60,7 +64,7 @@ void emergency_stop_handling(struct elevator ele[],int timer)
 			status=true;
 			break;
 		}
-		if(ele[i].passenger_count=0){
+		if(ele[i].passenger_count==0){
 			status=false;
 		}
 		
