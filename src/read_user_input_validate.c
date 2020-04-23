@@ -38,25 +38,25 @@ void read_user_input_validate(struct passenger *passenger_info, unsigned int tim
         	printf("Invalid passenger id entered");
         	exit(1);
     }
-    printf("Enter the arrival floor between 1 and %d:",elevator_count);
+    printf("Enter the arrival floor between 1 and %d:",floor_count);
 
     while((scanf("%d",&arrival_floor))==0){
     	//To check that user enters an integer value only
         	scanf("%*[^\n]");
         	printf("Invalid entry, please enter a valid number: ");
     }
-    if(arrival_floor<=0 || arrival_floor > elevator_count){
+    if(arrival_floor<=0 || arrival_floor > floor_count){
     		printf("Invalid arrival floor entered!!");
     		exit(1);
     }
-    printf("Enter the destination floor between 1 and %d:",elevator_count);
+    printf("Enter the destination floor between 1 and %d:",floor_count);
 
     while((scanf("%d",&dest_floor))==0){
     	//To check that user enters an integer value only
         	scanf("%*[^\n]");
         	printf("Invalid entry, please enter a valid number: ");
     }
-    if(dest_floor <=0 || dest_floor > elevator_count){
+    if(dest_floor <=0 || dest_floor > floor_count){
     		printf("Invalid destination floor entered!!");
     		exit(1);
     }
