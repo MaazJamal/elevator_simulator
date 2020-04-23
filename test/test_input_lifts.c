@@ -11,19 +11,19 @@ void test_input_lifts(void)
     FILE *test_results = fopen("test/results/results_inputs_lifts.txt", "w");
     freopen("test/data/maaz_test_inputs.txt", "r", stdin);
     int arr[13];
-    arr[0] = input_lifts();
-    arr[1] = input_lifts();
-    arr[2] = input_lifts();
-    arr[3] = input_lifts();
-    arr[4] = input_lifts();
-    arr[5] = input_lifts();
-    arr[6] = input_lifts();
-    arr[7] = input_lifts();
-    arr[8] = input_lifts();
-    arr[9] = input_lifts();
-    arr[10] = input_lifts();
-    arr[11] = input_lifts();
-    arr[12] = input_lifts();
+    arr[0] = input_lifts(0);
+    arr[1] = input_lifts(0);
+    arr[2] = input_lifts(0);
+    arr[3] = input_lifts(0);
+    arr[4] = input_lifts(0);
+    arr[5] = input_lifts(0);
+    arr[6] = input_lifts(0);
+    arr[7] = input_lifts(0);
+    arr[8] = input_lifts(0);
+    arr[9] = input_lifts(0);
+    arr[10] = input_lifts(0);
+    arr[11] = input_lifts(0);
+    arr[12] = input_lifts(0);
     int case_id = 0;
     //Test case 1 input abd
     if (arr[0] == -1)

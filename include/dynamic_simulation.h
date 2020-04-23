@@ -10,6 +10,6 @@
 #define __DYNAMIC_SIMULATION_H__
 #include "functions.h"
 
-extern int dynamc_simulation(void);
+extern int dynamic_simulation(void);
 
 #endif

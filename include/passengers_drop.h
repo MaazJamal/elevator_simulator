@@ -8,6 +8,6 @@
 #include "structures.h"
 #include "globals.h"
 
-extern int passengers_drop(struct elevator elevator_arr[], int index, struct passenger *floor_arr[], int cur_floor, unsigned int event_time);
+extern int passengers_drop(struct elevator elevator_arr[], int index, int cur_floor, unsigned int event_time);
 
 #endif

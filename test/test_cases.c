@@ -24,6 +24,7 @@ void test_cases(void)
 	puts("13. To run tests for passenger_take_in().");
 	puts("14. To run tests for read_passenger().");
 	puts("15. To run tests for remove_passenger_queue().");
+	puts("16. To run tests for test_cli_update().");
 	scanf("%d", &test_choice);
 	//switch to execute
 	switch (test_choice)
@@ -87,6 +88,10 @@ void test_cases(void)
 	case 15:
 		test_remove_passenger_queue();
 		puts("Tests for remove_passenger_queue() Done. Results may be found in test/results.");
+		break;
+	case 16:
+		test_cli_update();
+		puts("Tests for cli_update() Done.");
 		break;
 	default:
 		printf("Invalid option. Run program again.\n");

@@ -16,12 +16,15 @@
  */
 /** @details Removes the passenger from the floor and the elevator array.
  *
- * @param[in] The function takes in elevator structure,index,passenger floor array,current floor and time
- *
- * @return The function return elevator array
+ * @param[in, out] elevator_arr array of struct elevators
+ * @param[in] index index of the elevator to operate on
+ * @param[in] cur_floor the current floor of the elevator
+ * @param[in] event_time the time this event happened.
+ * 
+ * @return The function return the number of passengers dropped.
  *
  */
-int passengers_drop(struct elevator elevator_arr[], int index, struct passenger *floor_arr[], int cur_floor, unsigned int event_time)
+int passengers_drop(struct elevator elevator_arr[], int index, int cur_floor, unsigned int event_time)
 {
 
 	assert(index <= elevator_count);
