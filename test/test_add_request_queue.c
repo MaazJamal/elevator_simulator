@@ -21,7 +21,7 @@ void test_add_request_queue(void)
 	struct passenger *returned_ptr = NULL;
 	struct passenger *cur = NULL;
 
-	FILE *f = fopen("test/results/test_add_request.txt", "w");
+	FILE *f = fopen("test/results/results_test_add_request.txt", "w");
 
 	// Adding to a NULL address;
 	returned_ptr = add_request_queue(head, dummy1);
