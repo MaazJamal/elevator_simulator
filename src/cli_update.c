@@ -1,10 +1,16 @@
+/** 
+ * @file cli_update.c
+ * @brief contains declaration for cli_update function. Which displays elevator information.
+ * 
+ * @author Maaz Jamal
+ *  */
 #include "cli_update.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
 /**
- * Updates the command line interface with the elevator data.
+ * @brief Updates the command line interface with the elevator data.
  * 
  * Clears the screen and repopulates it with the updated elevator data.
  * @param [in] arr struct elevator that is an array of elevators.
@@ -37,17 +43,17 @@ void cli_update(struct elevator arr[],unsigned int loop_time)
 		direction_up = arr[i].direction_up;
 		next_floor_time = arr[i].timer;
 		moving = arr[i].moving;
-		if (direction_up)
+		if (direction_up && direction_down)
+		{
+			strcpy(direction, "ANY");
+		}
+		else if (direction_up)
 		{
 			strcpy(direction, "UP");
 		}
-		else if (direction_down)
-		{
-			strcpy(direction, "DOWN");
-		}
 		else
 		{
-			strcpy(direction, "ANY");
+			strcpy(direction, "DOWN");
 		}
 		if (moving)
 		{

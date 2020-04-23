@@ -1,7 +1,7 @@
 /** @file dynamic_simulations.c
  * 
- * @brief This file contains the definition of static_simulation
- * The function contains the algorithm for static release of the program
+ * @brief This file contains the definition of dynamic_simulation
+ * The function contains the algorithm for dynamic release of the program
  *  
  * @author Maaz Jamal
  * */
@@ -50,7 +50,7 @@ int dynamic_simulation(void)
 	time_t start_time;
 	time_t end_time;
 	int time_difference = 0; 
-	while (t < 86400) //86400 for whole day
+	while (t < 1000) //86400 for whole day
 	{
 		//set start time
 		start_time = time(NULL);
@@ -89,20 +89,25 @@ int dynamic_simulation(void)
 					{ //remove any passengers that need to get off
 						drop_delay = passengers_drop(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
 
-						if (drop_delay > 0) //dropped passengers here
+						if (drop_delay > 0 || elevator_arr[i].passenger_count >= elevator_arr[i].max_passenger) //dropped passengers here or lift full
 						{
 							elevator_arr[i].stop_at_floor[stop_change] = false; //dropped passengers here
 						}
 					}
 				}
-				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger && stop_at_floor_global[stop_change])
+				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger )
 				{
 
 					add_delay = passengers_take_in(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
+					elevator_arr[i].stop_at_floor[stop_change] = false;
 					if (floor_array[stop_change] == NULL)
 					{
 						stop_at_floor_global[stop_change] = false;
 					}
+					else{					//happens in case the lift gets full and their are still passengers on floor.
+						stop_at_floor_global[stop_change] = true;
+					}
+					elevator_arr[i].stop_at_floor[stop_change] = false; //lift has taken in or dropped passengers or is full and has completed it purpose on floor so we set to false.
 				}
 				int total_delay = 2 * drop_delay + 2 * add_delay;
 				elevator_arr[i].timer += total_delay;
@@ -126,7 +131,6 @@ int dynamic_simulation(void)
 						int arrival_floor_index = temp.arrival_floor - 1; //-1 because of mismatch between array and input file
 
 						add_passenger_floor(floor_array, arrival_floor_index, temp);
-						// elevator_arr[i].stop_at_floor[temp.dest_floor - 1] = true;
 						stop_at_floor_global[temp.arrival_floor - 1] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						index--; //list is smaller by one node.
@@ -149,8 +153,6 @@ int dynamic_simulation(void)
 
 						int arrival_floor_index = temp.arrival_floor - 1;
 						add_passenger_floor(floor_array, arrival_floor_index, temp);
-						// int dest_floor_index = temp.dest_floor - 1;
-						// elevator_arr[i].stop_at_floor[dest_floor_index] = true;
 						stop_at_floor_global[temp.arrival_floor - 1] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						index--; //list is smaller by one node.
@@ -166,8 +168,6 @@ int dynamic_simulation(void)
 
 						int arrival_floor_index = temp.arrival_floor - 1;
 						add_passenger_floor(floor_array, arrival_floor_index, temp);
-						// int dest_floor_index = temp.dest_floor - 1;
-						// elevator_arr[i].stop_at_floor[dest_floor_index] = true;
 						stop_at_floor_global[temp.arrival_floor - 1] = true;
 						passenger_queue = remove_passenger_queue(index, passenger_queue);
 						index--; //list is smaller by one node.
@@ -207,8 +207,6 @@ int dynamic_simulation(void)
 
 							int arrival_floor_index = temp.arrival_floor - 1;
 							add_passenger_floor(floor_array, arrival_floor_index, temp);
-							// int dest_floor_index = temp.dest_floor - 1;
-							// elevator_arr[i].stop_at_floor[dest_floor_index] = true;
 							stop_at_floor_global[temp.arrival_floor - 1] = true;
 							passenger_queue = remove_passenger_queue(index, passenger_queue);
 							index--; //list is smaller by one node.
@@ -262,6 +260,9 @@ int dynamic_simulation(void)
 				}
 			}
 
+			if(t > 100){
+				int remove_this = 0;
+			}
 			if (elevator_arr[i].timer > 0)
 			{
 				elevator_arr[i].timer--;
@@ -282,6 +283,8 @@ int dynamic_simulation(void)
 						if (condition_a || condition_b)
 						{
 							passengers_above = true;
+							elevator_arr[i].stop_at_floor[k] = true;
+							stop_at_floor_global[k] = false; //lift assigned to this floor
 							break;
 						}
 					}
@@ -297,6 +300,9 @@ int dynamic_simulation(void)
 						if (condition_a || condition_b)
 						{
 							passengers_below = true;
+							elevator_arr[i].stop_at_floor[k] = true;
+							stop_at_floor_global[k] = false; //lift assigned to this floor
+
 							break;
 						}
 					}
@@ -315,12 +321,18 @@ int dynamic_simulation(void)
 				{ //do we need to stop at this floor
 					elevator_arr[i].moving = false;
 					elevator_arr[i].between_floor = false;
+					elevator_arr[i].stop_at_floor[current_floor - 1] = true; //setting to true so that the lift stops at this floor
+					//stop_at_floor_global[current_floor - 1] = false;
 				}
-				else //we do not need to stop at this floor.
+				else if(passengers_above || passengers_below)//we do not need to stop at this floor.
 				{
 					elevator_arr[i].moving = true;
 					elevator_arr[i].between_floor = true;
 					elevator_arr[i].timer += 3; //add 3 sec till next floor
+				}
+				else{
+					elevator_arr[i].moving = false;
+					elevator_arr[i].between_floor = false;
 				}
 
 				if (elevator_arr[i].direction_up && !passengers_above)
@@ -343,10 +355,10 @@ int dynamic_simulation(void)
 
 		end_time = time(NULL);
 		time_difference = 0;
-		while(time_difference < 1){ //wait one second
-		end_time = time(NULL);
-		time_difference = end_time - start_time;
-		}
+		// while(time_difference < 1){ //wait one second
+		// end_time = time(NULL);
+		// time_difference = end_time - start_time;
+		// }
 		t++;
 	}
 	struct passenger dummy;			 //placeholder to pass to log. it should not be used.
