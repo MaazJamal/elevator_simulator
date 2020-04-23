@@ -2,17 +2,17 @@
 #include<stdbool.h>
 #include"structures.h"
 #include"globals.h"
-#include"emmergency_stop_handling.h"
+#include"emergency_stop_handling.h"
 /**
- * @file emmergency_stop_handling.c
+ * @file emergency_stop_handling.c
  *
- * @brief On account of emmergency stop condition,All the elevators re moved to nearest floor.
+ * @brief On account of emergency stop condition,All the elevators re moved to nearest floor.
  * Passengers are removed from the elevators.
  *
  * @author Divyalakshmi Padmanaban  - dpadm049@uottawa.ca	
  *
  */
-void emmergency_stop_handling(struct elevator ele[],int timer)
+void emergency_stop_handling(struct elevator ele[],int timer)
 {
 	int i,j,k=0;
 	int count;
