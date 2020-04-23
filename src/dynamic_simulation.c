@@ -1,4 +1,4 @@
-/** @file dynamic_simulations.c
+/** @file dynamic_simulation.c
  * 
  * @brief This file contains the definition of dynamic_simulation
  * The function contains the algorithm for dynamic release of the program
@@ -15,11 +15,11 @@
 
 /** @brief This function contains the working logic of the elevator array function for dynamic release.
  * 
- * Contains the logic for the dynamic version. It contains the main logic loop for travel of
+ * @detail Contains the logic for the dynamic version. It contains the main logic loop for travel of
  * elevators .The loop for placing passengers on floors and the complete flow of the program.
  * Plus additional functional calls for the dynamic release.
  * 
- * @return return 1 for succesfull completion.
+ * @return return 1 for successful completion.
  * */
 
 int dynamic_simulation(void)
@@ -49,13 +49,13 @@ int dynamic_simulation(void)
 
 	time_t start_time;
 	time_t end_time;
-	int time_difference = 0; 
+	int time_difference = 0;
 	while (t < 1000) //86400 for whole day
 	{
 		//set start time
 		start_time = time(NULL);
 		//update the cli
-		cli_update(elevator_arr,t);
+		cli_update(elevator_arr, t);
 
 		// Add passenger with current time step to queue
 		for (int i_pass = prev_time_index; i_pass < passenger_count; i_pass++) //debugged works perfectly
@@ -87,7 +87,7 @@ int dynamic_simulation(void)
 				{
 					if (elevator_arr[i].stop_at_floor[stop_change])
 					{ //remove any passengers that need to get off
-						drop_delay = passengers_drop(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
+						drop_delay = passengers_drop(elevator_arr, i, elevator_arr[i].cur_floor, t);
 
 						if (drop_delay > 0 || elevator_arr[i].passenger_count >= elevator_arr[i].max_passenger) //dropped passengers here or lift full
 						{
@@ -95,7 +95,7 @@ int dynamic_simulation(void)
 						}
 					}
 				}
-				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger )
+				if (elevator_arr[i].passenger_count < elevator_arr[i].max_passenger)
 				{
 
 					add_delay = passengers_take_in(elevator_arr, i, floor_array, elevator_arr[i].cur_floor, t);
@@ -104,7 +104,8 @@ int dynamic_simulation(void)
 					{
 						stop_at_floor_global[stop_change] = false;
 					}
-					else{					//happens in case the lift gets full and their are still passengers on floor.
+					else
+					{ //happens in case the lift gets full and their are still passengers on floor.
 						stop_at_floor_global[stop_change] = true;
 					}
 					elevator_arr[i].stop_at_floor[stop_change] = false; //lift has taken in or dropped passengers or is full and has completed it purpose on floor so we set to false.
@@ -260,7 +261,8 @@ int dynamic_simulation(void)
 				}
 			}
 
-			if(t > 100){
+			if (t > 100)
+			{
 				int remove_this = 0;
 			}
 			if (elevator_arr[i].timer > 0)
@@ -322,15 +324,16 @@ int dynamic_simulation(void)
 					elevator_arr[i].moving = false;
 					elevator_arr[i].between_floor = false;
 					elevator_arr[i].stop_at_floor[current_floor - 1] = true; //setting to true so that the lift stops at this floor
-					//stop_at_floor_global[current_floor - 1] = false;
+																			 //stop_at_floor_global[current_floor - 1] = false;
 				}
-				else if(passengers_above || passengers_below)//we do not need to stop at this floor.
+				else if (passengers_above || passengers_below) //we do not need to stop at this floor.
 				{
 					elevator_arr[i].moving = true;
 					elevator_arr[i].between_floor = true;
 					elevator_arr[i].timer += 3; //add 3 sec till next floor
 				}
-				else{
+				else
+				{
 					elevator_arr[i].moving = false;
 					elevator_arr[i].between_floor = false;
 				}
