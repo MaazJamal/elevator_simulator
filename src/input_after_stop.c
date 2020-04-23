@@ -12,11 +12,18 @@
 #include<stdlib.h>
  int input_after_stop()
  {
- 	int st; //Stores the user status
+ 	int st,chk; //Stores the user status
  	printf("Enter\n");
 	printf("1 - To continue simulation\n");
     printf("0 - To end simulation\n");
-    scanf("%d",&st);
+    //scanf("%d",&st);
+    while ((chk = scanf("%d", &st)) == 0)  
+    {
+        // clear what is left, the * means only match and discard:
+        scanf("%*[^\n]");
+        // input was not a number, ask again:
+        printf("Invalid entry, enter a number: ");
+    }
     if(st==0)
     {
     	return 0; // return 0 to end the simulation
@@ -31,3 +38,4 @@
 		input_after_stop();
 	}
  }
+ 
