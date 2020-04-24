@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="results__is__lift__on__floor_8txt" kind="file" language="C++">
+    <compoundname>results_is_lift_on_floor.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="results__is__lift__on__floor_8txt_1ac7bfc6e66cc4d55c75c1af203cd583fc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>FAIL</definition>
+        <argsstring></argsstring>
+        <name>FAIL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_on_floor.txt" line="1" column="1" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_on_floor.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="results__is__lift__on__floor_8txt_1a38b7778b3a9b3139480b45184728aabf" prot="public" static="no" mutable="no">
+        <type>Input</type>
+        <definition>Input Parameter</definition>
+        <argsstring></argsstring>
+        <name>Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_on_floor.txt" line="1" column="11" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_on_floor.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">FAIL;Input<sp/>Parameter:Valid;<ref refid="is__lift__on__floor_8h_1a8331ecca3b0a14f407e7e9e354d01998" kindref="member">is_lift_on_floor</ref><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>cannot<sp/>be<sp/>accesssed<sp/><sp/>.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_on_floor.txt"/>
+  </compounddef>
+</doxygen>

@@ -27,14 +27,16 @@ int main(void)
 {
 	int selection = -1;
 	int status = 0;
-	while( selection == -1){  //the function returns -1 on wrong input.
-	selection = input_static_dynamic();
+	while (selection == -1)
+	{ //the function returns -1 on wrong input.
+		selection = input_static_dynamic();
 	}
-	switch(selection){
-		case 0:
+	switch (selection)
+	{
+	case 0:
 		status = static_simulation();
 		break;
-		case 1:
+	case 1:
 		status = dynamic_simulation();
 		break;
 	}

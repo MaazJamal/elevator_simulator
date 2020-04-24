@@ -1,0 +1,92 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/count_passenger.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/count_passenger.c \- Reads line by line and counts the number of passenger based on passenger ID\&. When passenger ID equal to '911' it is considered as Emergency stop and wont be counted towards the passenger_count\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'count_passenger\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcount_passenger\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Reads line by line and counts the number of passenger based on passenger ID\&. When passenger ID equal to '911' it is considered as Emergency stop and wont be counted towards the passenger_count\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Hariprasad Munusamy - HariprasadMunusamy@cmail.carleton.ca 
+.RE
+.PP
+
+.PP
+Definition in file \fBcount_passenger\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int count_passenger ()"
+Counts the passenger requests
+.PP
+\fBParameters\fP
+.RS 4
+\fINo\fP input parameter\&. The function uses the input file
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns count on successful execution and 0 if file doesn't exist\&. 
+.RE
+.PP
+es to store the number of emergency stop situations
+.PP
+Definition at line 23 of file count_passenger\&.c\&.
+.PP
+.nf
+24 {
+26     int es=0;
+27     passenger_count=0; //global variable stores the passenger count
+28     FILE *f;
+29     char a[10];
+30     f=fopen("data/input\&.txt","r");
+31     if (f==NULL) 
+32     { 
+33         printf("no input file exists"); 
+34         return 0; 
+35     }
+36     while(fscanf(f,"%s",a)!=EOF)
+37     {
+38         if((passenger_count==0)||(passenger_count%4)==0)
+39         {
+40             if(atoi(a)==911)
+41             {
+42             es++;
+43             }
+44         }
+45         passenger_count++;
+46     }
+47     fclose(f);
+48     passenger_count=passenger_count/4;
+49     passenger_count=passenger_count-es;
+50     return passenger_count;  //returns the passenger count
+51 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

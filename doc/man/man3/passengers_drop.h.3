@@ -1,17 +1,22 @@
-.TH "passengers_drop.h" 3 "Mon Apr 20 2020" "Elevator simulation" \" -*- nroff -*-
+.TH "C:/Users/Work/git_repo/elevator_simulator/include/passengers_drop.h" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-passengers_drop.h \- drops the passeger in corresponding floor  
+C:/Users/Work/git_repo/elevator_simulator/include/passengers_drop.h \- drops the passeger in corresponding floor  
 
 .SH SYNOPSIS
 .br
 .PP
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "int \fBpassengers_drop\fP ()"
+.RI "int \fBpassengers_drop\fP (struct \fBelevator\fP elevator_arr[], int index, int cur_floor, unsigned int event_time)"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -19,6 +24,58 @@ passengers_drop.h \- drops the passeger in corresponding floor
 drops the passeger in corresponding floor 
 
 
+.PP
+Definition in file \fBpassengers_drop\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int passengers_drop (struct \fBelevator\fP elevator_arr[], int index, int cur_floor, unsigned int event_time)"
+Removes the passenger from the floor and the elevator array\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIelevator_arr\fP array of struct elevators 
+.br
+\fIindex\fP index of the elevator to operate on 
+.br
+\fIcur_floor\fP the current floor of the elevator 
+.br
+\fIevent_time\fP the time this event happened\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The function return the number of passengers dropped\&. 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file passengers_drop\&.c\&.
+.PP
+.nf
+28 {
+29 
+30     assert(index <= elevator_count);
+31     assert(cur_floor <= floor_count);
+32     assert(cur_floor == elevator_arr[index]\&.cur_floor);
+33 
+34     int passenger_dropped = 0;
+35     int max_passenger = elevator_arr[index]\&.max_passenger;
+36     //Loop to iterate the overall passengers in the elevator
+37     for (int i = 0; i < max_passenger; i++)
+38     {
+39         bool in_elevator = elevator_arr[index]\&.passenger_arr[i]\&.in_elevator;
+40         if (elevator_arr[index]\&.passenger_arr[i]\&.dest_floor == cur_floor && in_elevator)
+41         {
+42             elevator_arr[index]\&.passenger_arr[i]\&.in_elevator = false; //setting the status
+43             elevator_arr[index]\&.passenger_count--;
+44             passenger_dropped++;
+45             struct passenger temp = elevator_arr[index]\&.passenger_arr[i];
+46             travel_log_file(temp, event_time, index, 1); //choose mode to write to travel_log as we are removing passenger\&.
+47         }
+48     }
+49     return passenger_dropped;
+50 }
+.fi
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Elevator simulation from the source code\&.
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

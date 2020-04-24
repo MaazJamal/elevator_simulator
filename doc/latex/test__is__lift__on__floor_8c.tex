@@ -1,0 +1,59 @@
+\hypertarget{test__is__lift__on__floor_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/test/test\+\_\+is\+\_\+lift\+\_\+on\+\_\+floor.c File Reference}
+\label{test__is__lift__on__floor_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_is\_lift\_on\_floor.c@{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_is\_lift\_on\_floor.c}}
+
+
+contains test cases for the function \mbox{\hyperlink{is__lift__on__floor_8h_a8331ecca3b0a14f407e7e9e354d01998}{is\+\_\+lift\+\_\+on\+\_\+floor()}}  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}is\+\_\+lift\+\_\+on\+\_\+floor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}functions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__is__lift__on__floor_8c_a3e351f144b937554cd4e0dbd305b5c03}{test\+\_\+is\+\_\+lift\+\_\+on\+\_\+floor}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains test cases for the function \mbox{\hyperlink{is__lift__on__floor_8h_a8331ecca3b0a14f407e7e9e354d01998}{is\+\_\+lift\+\_\+on\+\_\+floor()}} 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__is__lift__on__floor_8c_a3e351f144b937554cd4e0dbd305b5c03}\label{test__is__lift__on__floor_8c_a3e351f144b937554cd4e0dbd305b5c03}} 
+\index{test\_is\_lift\_on\_floor.c@{test\_is\_lift\_on\_floor.c}!test\_is\_lift\_on\_floor@{test\_is\_lift\_on\_floor}}
+\index{test\_is\_lift\_on\_floor@{test\_is\_lift\_on\_floor}!test\_is\_lift\_on\_floor.c@{test\_is\_lift\_on\_floor.c}}
+\doxysubsubsection{\texorpdfstring{test\_is\_lift\_on\_floor()}{test\_is\_lift\_on\_floor()}}
+{\footnotesize\ttfamily void test\+\_\+is\+\_\+lift\+\_\+on\+\_\+floor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Calls the function lift\+\_\+on\+\_\+floor.\+c with valid parameters. Prints the P\+A\+SS /\+F\+A\+IL status ,by accessing the return from lift\+\_\+on\+\_\+floor function. results\+\_\+is\+\_\+lift\+\_\+on\+\_\+floor file contains the results. 
+
+Definition at line 18 of file test\+\_\+is\+\_\+lift\+\_\+on\+\_\+floor.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} ele[3];}
+\DoxyCodeLine{21     \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} = 3;}
+\DoxyCodeLine{22     FILE *fp;}
+\DoxyCodeLine{23     fp = fopen(\textcolor{stringliteral}{"test/results/results\_is\_lift\_on\_floor.txt"}, \textcolor{stringliteral}{"w+"});}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} arr = \mbox{\hyperlink{is__lift__on__floor_8h_a8331ecca3b0a14f407e7e9e354d01998}{is\_lift\_on\_floor}}(ele, 1);}
+\DoxyCodeLine{25     \textcolor{keywordflow}{if} (arr != 0)}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         fprintf(fp, \textcolor{stringliteral}{"PASS;Input Parameter:Valid;is\_lift\_on\_floor function is accesssed successfully .\(\backslash\)n"});}
+\DoxyCodeLine{28         printf(\textcolor{stringliteral}{"PASS;Input Parameter:Valid;is\_lift\_on\_floor function is accesssed successfully .\(\backslash\)n"});}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         fprintf(fp, \textcolor{stringliteral}{"FAIL;Input Parameter:Valid;is\_lift\_on\_floor function cannot be accesssed  .\(\backslash\)n"});}
+\DoxyCodeLine{33         printf(\textcolor{stringliteral}{"PASS;Input Parameter:Valid;is\_lift\_on\_floor function is accesssed successfully .\(\backslash\)n"});}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     fflush(fp);}
+\DoxyCodeLine{36     fclose(fp);}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}

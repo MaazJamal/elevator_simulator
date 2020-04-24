@@ -1,4 +1,4 @@
-/** @file test_add_passenger_flor.c
+/** @file test_add_passenger_floor.c
  * 
  * @brief provides blackbox unit testing for add_passenenger_floor function
  * 

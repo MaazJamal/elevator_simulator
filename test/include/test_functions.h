@@ -24,5 +24,6 @@ extern void test_read_passenger(void);
 extern void test_remove_passenger_queue(void);
 extern void test_cli_update(void);
 extern void test_add_passenger_floor(void);
+extern void test_remove_passenger_floor(void);
 
 #endif

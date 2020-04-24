@@ -1,0 +1,69 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c \- provides blackbox unit testing for add_passenenger_floor function  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'add_passenger_floor\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <structures\&.h>\fP
+.br
+\fC#include <globals\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_add_passenger_floor\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpassenger\fP ** \fBfloor_arr\fP = NULL"
+.br
+.RI "tests two conditions for add_passenger_floor function\&. "
+.ti -1c
+.RI "struct \fBpassenger\fP \fBadd_passenger_dummy1\fP = {0, 0, 0, 0, 10, 0}"
+.br
+.ti -1c
+.RI "struct \fBpassenger\fP \fBadd_passenger_dummy2\fP = {0, 0, 0, 0, 20, 0}"
+.br
+.ti -1c
+.RI "FILE * \fBf\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+provides blackbox unit testing for add_passenenger_floor function 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.PP
+Definition in file \fBtest_add_passenger_floor\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fBpassenger\fP** floor_arr = NULL"
+
+.PP
+tests two conditions for add_passenger_floor function\&. The two test cases are adding to an empty floor\&. Adding to a floor already with an added passenger\&. The new passenger is added to the end of the floor list\&. 
+.PP
+Definition at line 27 of file test_add_passenger_floor\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e" kind="page">
+    <compoundname>md_C:_Users_Work_git_repo_elevator_simulator_README</compoundname>
+    <title>Elevator_Simulator</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Elevator_Simulator is a software that simulates Elevators in a commercial building.</para>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_1autotoc_md16">
+<title>Authors</title>
+<para><itemizedlist>
+<listitem><para>Hariprasad Munusamy - Carleton University</para>
+</listitem><listitem><para>Maaz Jamal - Carleton University</para>
+</listitem><listitem><para>Ritika Arora - Carleton University</para>
+</listitem><listitem><para>Divyalakshmi Padmanaban - Ottawa University</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_1autotoc_md17">
+<title>Installation</title>
+<para>Installation steps are mentioned in <ref refid="md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l" kindref="compound">INSTALL.md</ref></para>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_1autotoc_md18">
+<title>Usage</title>
+<para>To run, you must first compile the repository. Follow the instructions in <ref refid="md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l" kindref="compound">INSTALL.md</ref>.Then you can follow instructions mentioned in <ref refid="md__user__manual" kindref="compound">User_Manual.md</ref>.</para>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_1autotoc_md19">
+<title>File Structure</title>
+<para>The correct file structure</para>
+<para><programlisting><codeline><highlight class="normal">├──<sp/>INSTALL.md<sp/><sp/>-&gt;<sp/>Installation<sp/>Guide</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>LICENSE<sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>License<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>Makefile<sp/><sp/><sp/><sp/>-&gt;<sp/>Makefile</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>README.md<sp/><sp/><sp/>-&gt;<sp/>Readme<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>doc</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>html<sp/><sp/><sp/><sp/>-&gt;<sp/>Doxygen<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>latex<sp/><sp/><sp/>-&gt;<sp/>Doxygen<sp/>documentation<sp/>in<sp/>latex</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>man<sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>Doxygen<sp/>documentation<sp/>in<sp/>man</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>rtf<sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>Doxygen<sp/>documentation<sp/>in<sp/>rtf<sp/></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>xml<sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>Doxygen<sp/>documentation<sp/>in<sp/>xml<sp/></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Developer_Manual.md<sp/>-&gt;<sp/>Developer<sp/>Manual</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Doxyfile<sp/>-&gt;<sp/>Doxygen<sp/>configuration<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>User_Manual.md<sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>User<sp/>Manual</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>include<sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>Header<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>input_static_dynamic.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>input_floors.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>input_lifts.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>count_passenger.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>read_passenger.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>moving_lift_up.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>moving_lift_down.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>input_after_stop.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>is_lift_empty.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>is_lift_on_floor.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>passengers_take_in.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>passengers_drop.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>read_user_input_validate.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>create_elevator_array.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>add_request_queue.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>add_passenger_floor.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>create_floor_array.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>add_passenger_floor.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>remove_passenger_floor.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>remove_passenger_queue.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>emergency_stop<sp/>_handling.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>average_maximum<sp/>waiting_time.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>travel_log_file.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>cli_update.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>static_simulation.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>dynamic_simulation.h</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>simulations.h</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>structures.h</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>obj<sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>Object<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>src<sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>Source<sp/>files<sp/>for<sp/>elevator_simulator</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>input_static_dynamic.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>input_floors.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>input_lifts.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>count_passenger.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>read_passenger.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>moving_lift_up.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>moving_lift_down.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>input_after_stop.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>is_lift_empty.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>is_lift_on_floor.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>passengers_take_in.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>passengers_drop.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>read_user_input_validate.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>create_elevator_array.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>add_request_queue.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>add_passenger_floor.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>create_floor_array.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>add_passenger_floor.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>remove_passenger_floor.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>remove_passenger_queue.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>emergency_stop<sp/>_handling.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>average_maximum<sp/>waiting_time.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>travel_log_file.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>static_simulation.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>dynamic_simulation.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>max_waiting_time.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>main.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>├──<sp/>globals.c</highlight></codeline>
+<codeline><highlight class="normal">│  <sp/>└──<sp/>cli_update.c</highlight></codeline>
+<codeline><highlight class="normal">└──<sp/>test</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_main.c<sp/>-&gt;<sp/>Main<sp/>function<sp/>for<sp/>testing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_cases.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_remove_passenger_queue.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_read_passenger.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_passenger_take_in.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_max_waiting_time.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_is_lift_on_floor.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_lift_empty.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_input_floors.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_input_after_stop.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_create_floor_array.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_count_passenger.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_add_request_queue.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_average_waiting_time.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_input_lifts.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>test_moving_lift_down.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>include<sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>Header<sp/>file<sp/>for<sp/>test<sp/>function</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>test_functions.h</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>data<sp/>-&gt;<sp/>Contains<sp/>text<sp/>file<sp/>inputs<sp/>for<sp/>user<sp/>tests</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>└──<sp/>results<sp/>-&gt;<sp/>Contains<sp/>the<sp/>txt<sp/>file<sp/>logs<sp/>of<sp/>the<sp/>results.</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_1autotoc_md20">
+<title>For Developers</title>
+<para>The developer manual is available <ref refid="md__developer__manual" kindref="compound">here</ref>.</para>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_1autotoc_md21">
+<title>License</title>
+<para>This project is licensed under the GPL 2.0 License - see the LICENSE.md file for details</para>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_1autotoc_md22">
+<title>Acknowledgements</title>
+<para>Thank to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software. </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

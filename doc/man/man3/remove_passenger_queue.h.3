@@ -1,13 +1,15 @@
-.TH "remove_passenger_queue.h" 3 "Mon Apr 20 2020" "Elevator simulation" \" -*- nroff -*-
+.TH "C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-remove_passenger_queue.h \- contains the declaration for remove_passenger_queue function that remoove passenger from a queue  
+C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h \- contains the declaration for remove_passenger_queue function that remoove passenger from a queue  
 
 .SH SYNOPSIS
 .br
 .PP
 \fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
 .br
 
 .SS "Functions"
@@ -22,6 +24,83 @@ remove_passenger_queue.h \- contains the declaration for remove_passenger_queue 
 contains the declaration for remove_passenger_queue function that remoove passenger from a queue 
 
 
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.PP
+Definition in file \fBremove_passenger_queue\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "struct \fBpassenger\fP* remove_passenger_queue (int index, struct \fBpassenger\fP * head)"
+This function removes a passenger from a queue at given index and frees the memory
+.PP
+The function remomves and frees memory location at given index\&. if the given index is at the head the head is removed and new head is returned\&. If index is greater then length of queue the function causes program to exit\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP int value that points to index of queue to return\&. indices start at 0\&. 
+.br
+\fIhead\fP pointer to head of the queue\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return the value of the head\&. head will point to new value head if index is 0\&. 
+.RE
+.PP
+< Precondition that head not be Null
+.PP
+< Precondition that index not be negative
+.PP
+< stores the current position of pointer to be used in while loop
+.PP
+Iterate through the queue until we are one node behind the node we want to delete\&. Or next node is null\&. Set next of previous node to next node and store the node to delete in temp\&. use free to delete current node\&.
+.PP
+This is precondition checks if index was greater than queue length and this cannot be done at start as we do not know total length of queue at begining\&. the check is cur->nect != NULL as we stop before element to be removed\&. if cur->next = NULL it means the index is greater than length as we are at end list and should have stopped at index-1\&.
+.PP
+Definition at line 25 of file remove_passenger_queue\&.c\&.
+.PP
+.nf
+26 {
+27 
+28     assert(head != NULL); 
+29     assert(index > -1);   
+30 
+31     static int removal_count = 0;
+32     struct passenger *temp = NULL;
+33     struct passenger *cur = head; 
+34     if (index == 0)
+35     {
+36         temp = head;
+37         head = head->next;
+38         printf("The passenger Removed from cue is:%d count is:%d \n\&.", temp->id, ++removal_count);
+39         free(temp);
+40         return head;
+41     }
+42     else
+43     {
+44         int i = 0;
+45 
+52         while (i < index - 1 && cur->next != NULL)
+53         {
+54             cur = cur->next;
+55             i++;
+56         }
+57 
+63         assert(cur->next != NULL);
+64 
+65         temp = cur->next;
+66         cur->next = temp->next;
+67         printf("The passenger Removed from cue is:%d count is:%d \n\&.", temp->id, ++removal_count);
+68         free(temp);
+69     }
+70     return head;
+71 }
+.fi
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Elevator simulation from the source code\&.
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

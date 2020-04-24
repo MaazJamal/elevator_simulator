@@ -2,7 +2,7 @@
 \label{structelevator}\index{elevator@{elevator}}
 
 
-structure for to store important information about a elevator.  
+structure to store important information about an elevator.  
 
 
 
@@ -13,39 +13,39 @@ structure for to store important information about a elevator.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{structelevator_a186590570ed9fee16200f9fffd3a0873}\label{structelevator_a186590570ed9fee16200f9fffd3a0873}} 
-bool {\bfseries moving}
-\item 
+bool \mbox{\hyperlink{structelevator_a186590570ed9fee16200f9fffd3a0873}{moving}}
+\begin{DoxyCompactList}\small\item\em Is the elevator moving? True 1 or False(stationary) 0. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_ab012a8d2102934af9ea97effdeea80cf}\label{structelevator_ab012a8d2102934af9ea97effdeea80cf}} 
 bool \mbox{\hyperlink{structelevator_ab012a8d2102934af9ea97effdeea80cf}{between\+\_\+floor}}
-\begin{DoxyCompactList}\small\item\em Is the elevator moving? True 1 or False(stationary) 0. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Is elevator between floors. True 1 between floors. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_a78d725b14370d8b2000a99bd11755ff8}\label{structelevator_a78d725b14370d8b2000a99bd11755ff8}} 
 bool \mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\+\_\+up}}
-\begin{DoxyCompactList}\small\item\em Is elevator between floors. True 1 between floors. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Is the elevator going up? True 1 for going up. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_aa773f94528363621939e5fcc99dcc6ad}\label{structelevator_aa773f94528363621939e5fcc99dcc6ad}} 
 bool \mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\+\_\+down}}
-\begin{DoxyCompactList}\small\item\em Is the elevator going up? True 1 for going up. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Is the elevator going down? True 1 for going down. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}\label{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}} 
 bool $\ast$ \mbox{\hyperlink{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}{stop\+\_\+at\+\_\+floor}}
-\begin{DoxyCompactList}\small\item\em Is the elevator going down? True 1 for going down. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em points to boolean array of floors and shows if the elevator will stop at a certain floor or not. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_a35976c62fece1a1887b39d2761e409e3}\label{structelevator_a35976c62fece1a1887b39d2761e409e3}} 
 unsigned int \mbox{\hyperlink{structelevator_a35976c62fece1a1887b39d2761e409e3}{passenger\+\_\+count}}
-\begin{DoxyCompactList}\small\item\em points to boolean array of floors and shows if the elevator will stop at a certain floor or not. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em count of passenger occupying the elevator \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}\label{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}} 
 unsigned int \mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\+\_\+passenger}}
-\begin{DoxyCompactList}\small\item\em count of passenger occupying the elevator \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Maximum number of passengers the lift can accomodate. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_a2c87ee6189da284a149438ce8b0acc8d}\label{structelevator_a2c87ee6189da284a149438ce8b0acc8d}} 
 unsigned int \mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\+\_\+floor}}
-\begin{DoxyCompactList}\small\item\em Maximum number of passengers the lift can accomodate. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The current floor of the elevator. Floors start at 1. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_a6272f86a10a9c4bf565e184a4537373d}\label{structelevator_a6272f86a10a9c4bf565e184a4537373d}} 
-unsigned int {\bfseries timer}
-\item 
+unsigned int \mbox{\hyperlink{structelevator_a6272f86a10a9c4bf565e184a4537373d}{timer}}
+\begin{DoxyCompactList}\small\item\em Time clock untill the next floor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structelevator_ab3f0430781fbb878267214945aaf9322}\label{structelevator_ab3f0430781fbb878267214945aaf9322}} 
 struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$ \mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\+\_\+arr}}
-\begin{DoxyCompactList}\small\item\em Time clock untill the next floor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em points to a array of struct pasenger of size max\+\_\+passenger. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-structure for to store important information about a elevator. 
+structure to store important information about an elevator. 
 
 Stores information about the elevator such as direction of travel, the floors to stop at. The maximum number of passengers the lift can accomodate and the current passengers in the lift and their information. and time it takes to go to the reach next floor. 
 
@@ -55,4 +55,4 @@ Definition at line 35 of file structures.\+h.
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{structures_8h}{structures.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/include/\mbox{\hyperlink{structures_8h}{structures.\+h}}\end{DoxyCompactItemize}

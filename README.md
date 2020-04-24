@@ -28,7 +28,14 @@ The correct file structure
 ├── Makefile 	-> Makefile
 ├── README.md 	-> Readme file
 ├── doc
-│   └── html 	-> Doxygen document
+│   ├── html 	-> Doxygen documentation
+│   ├── latex   -> Doxygen documentation in latex
+│   ├── man     -> Doxygen documentation in man
+│   ├── rtf     -> Doxygen documentation in rtf 
+│   ├── xml     -> Doxygen documentation in xml 
+│   ├── Developer_Manual.md -> Developer Manual
+│   ├── Doxyfile -> Doxygen configuration file
+│   └── User_Manual.md      -> User Manual
 ├── include 	-> Header files
 │   ├── input_static_dynamic.h
 │   ├── input_floors.h
@@ -106,7 +113,7 @@ The correct file structure
     ├── test_average_waiting_time.c
     ├── test_input_lifts.c
     ├── test_moving_lift_down.c
-    ├── include
+    ├── include     -> Header file for test function
     │   └── test_functions.h
     ├── data -> Contains text file inputs for user tests
     └── results -> Contains the txt file logs of the results.

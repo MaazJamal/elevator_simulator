@@ -1,0 +1,67 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_empty.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_empty.c \- Tests if the is_lift_empty function works fine or not\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/globals\&.h'\fP
+.br
+\fC#include '\&.\&./include/structures\&.h'\fP
+.br
+\fC#include '\&.\&./include/is_lift_empty\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_is_lift_empty\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Tests if the is_lift_empty function works fine or not\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Ritika Arora
+.RE
+.PP
+@detail The function tests with different values if the output comes correct or not\&. elevator_count which is a global variable has been set to a fix value The test cases are as below:
+.IP "\(bu" 2
+For array with passenger count equal to the maximum number of passengers of the lift, and index value as 0 or less than the elevator count the output is 0
+.IP "\(bu" 2
+For array with passenger count less than the maximum number of passengers of the lift, and index value as 1 or less than the elevator count the output is 1
+.IP "\(bu" 2
+For array with passenger count more than the maximum number of passengers of the lift, and index value as 2 or less than the elevator count the output is 0
+.IP "\(bu" 2
+For array with index value as 3 or greater than or equal to the elevator count the output is -1
+.IP "\(bu" 2
+For an empty array, the output is -1 and the program exits
+.PP
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP function takes no input
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void The function returns nothing\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBtest_is_lift_empty\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

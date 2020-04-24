@@ -13,7 +13,7 @@ SRC = src/globals.c src/add_passenger_floor.c src/add_request_queue.c src/count_
 
 TEST = test/test_cases.c test/test_add_request_queue.c test/test_average_waiting_time.c test/test_count_passenger.c test/test_create_elevator_array.c test/test_create_floor_array.c test/test_input_after_stop.c\
  test/test_input_floors.c test/test_input_lifts.c test/test_is_lift_empty.c test/test_is_lift_on_floor.c test/test_max_waiting_time.c test/test_moving_lift_down.c test/test_passenger_take_in.c\
- test/test_remove_passenger_queue.c test/test_read_passenger.c test/test_cli_update.c test/test_add_passenger_floor.c
+ test/test_remove_passenger_queue.c test/test_read_passenger.c test/test_cli_update.c test/test_add_passenger_floor.c test/test_remove_passenger_floor.c
 
 
 all: elevator tests

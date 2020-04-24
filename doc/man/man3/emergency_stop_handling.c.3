@@ -1,0 +1,61 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c \- On account of emergency stop condition,All the elevators re moved to nearest floor\&. Passengers are removed from the elevators\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'emergency_stop_handling\&.h'\fP
+.br
+\fC#include 'passengers_drop\&.h'\fP
+.br
+\fC#include 'cli_update\&.h'\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBemergency_stop_handling\fP (struct \fBelevator\fP ele[], unsigned int *timer)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+On account of emergency stop condition,All the elevators re moved to nearest floor\&. Passengers are removed from the elevators\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - dpadm049@uottawa.ca 
+.br
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP function takes elevator strucrure and the currect time index of the simulation
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The function returns nothing, takes all the lift to next floor and removes all passenger from elevator 
+.RE
+.PP
+
+.PP
+Definition in file \fBemergency_stop_handling\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

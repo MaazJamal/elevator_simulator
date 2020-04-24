@@ -1,3 +1,15 @@
+/** @file test_cli_update.c
+ * @brief contains test case for cli_update() function
+ * 
+ * Tests the cli_update() function for basic screen clear test, display test
+ * and repeated function calls test. 
+ * 
+ * @author Maaz Jamal
+ * 
+ * */
+
+
+
 #include "cli_update.h"
 #include "structures.h"
 #include "globals.h"

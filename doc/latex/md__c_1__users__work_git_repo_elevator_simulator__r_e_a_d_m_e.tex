@@ -1,0 +1,113 @@
+Elevator\+\_\+\+Simulator is a software that simulates Elevators in a commercial building.\hypertarget{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md16}{}\doxysection{Authors}\label{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md16}
+
+\begin{DoxyItemize}
+\item Hariprasad Munusamy -\/ Carleton University
+\item Maaz Jamal -\/ Carleton University
+\item Ritika Arora -\/ Carleton University
+\item Divyalakshmi Padmanaban -\/ Ottawa University
+\end{DoxyItemize}\hypertarget{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md17}{}\doxysection{Installation}\label{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md17}
+Installation steps are mentioned in \mbox{\hyperlink{md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l}{I\+N\+S\+T\+A\+LL.md}}\hypertarget{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md18}{}\doxysection{Usage}\label{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md18}
+To run, you must first compile the repository. Follow the instructions in \mbox{\hyperlink{md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l}{I\+N\+S\+T\+A\+LL.md}}.Then you can follow instructions mentioned in \mbox{\hyperlink{md__user__manual}{User\+\_\+\+Manual.md}}.\hypertarget{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md19}{}\doxysection{File Structure}\label{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md19}
+The correct file structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{├── INSTALL.md  -\/> Installation Guide}
+\DoxyCodeLine{├── LICENSE     -\/> License file}
+\DoxyCodeLine{├── Makefile    -\/> Makefile}
+\DoxyCodeLine{├── README.md   -\/> Readme file}
+\DoxyCodeLine{├── doc}
+\DoxyCodeLine{│   ├── html    -\/> Doxygen documentation}
+\DoxyCodeLine{│   ├── latex   -\/> Doxygen documentation in latex}
+\DoxyCodeLine{│   ├── man     -\/> Doxygen documentation in man}
+\DoxyCodeLine{│   ├── rtf     -\/> Doxygen documentation in rtf }
+\DoxyCodeLine{│   ├── xml     -\/> Doxygen documentation in xml }
+\DoxyCodeLine{│   ├── Developer\_Manual.md -\/> Developer Manual}
+\DoxyCodeLine{│   ├── Doxyfile -\/> Doxygen configuration file}
+\DoxyCodeLine{│   └── User\_Manual.md      -\/> User Manual}
+\DoxyCodeLine{├── include     -\/> Header files}
+\DoxyCodeLine{│   ├── input\_static\_dynamic.h}
+\DoxyCodeLine{│   ├── input\_floors.h}
+\DoxyCodeLine{│   ├── input\_lifts.h}
+\DoxyCodeLine{│   ├── count\_passenger.h}
+\DoxyCodeLine{│   ├── read\_passenger.h}
+\DoxyCodeLine{│   ├── moving\_lift\_up.h}
+\DoxyCodeLine{│   ├── moving\_lift\_down.h}
+\DoxyCodeLine{│   ├── input\_after\_stop.h}
+\DoxyCodeLine{│   ├── is\_lift\_empty.h}
+\DoxyCodeLine{│   ├── is\_lift\_on\_floor.h}
+\DoxyCodeLine{│   ├── passengers\_take\_in.h}
+\DoxyCodeLine{│   ├── passengers\_drop.h}
+\DoxyCodeLine{│   ├── read\_user\_input\_validate.h}
+\DoxyCodeLine{│   ├── create\_elevator\_array.h}
+\DoxyCodeLine{│   ├── add\_request\_queue.h}
+\DoxyCodeLine{│   ├── add\_passenger\_floor.h}
+\DoxyCodeLine{│   ├── create\_floor\_array.h}
+\DoxyCodeLine{│   ├── add\_passenger\_floor.h}
+\DoxyCodeLine{│   ├── remove\_passenger\_floor.h}
+\DoxyCodeLine{│   ├── remove\_passenger\_queue.h}
+\DoxyCodeLine{│   ├── emergency\_stop \_handling.h}
+\DoxyCodeLine{│   ├── average\_maximum waiting\_time.h}
+\DoxyCodeLine{│   ├── travel\_log\_file.h}
+\DoxyCodeLine{│   ├── cli\_update.h}
+\DoxyCodeLine{│   ├── static\_simulation.h}
+\DoxyCodeLine{│   ├── dynamic\_simulation.h}
+\DoxyCodeLine{│   ├── simulations.h}
+\DoxyCodeLine{│   └── structures.h}
+\DoxyCodeLine{├── obj     -\/> Object files}
+\DoxyCodeLine{├── src     -\/> Source files for elevator\_simulator}
+\DoxyCodeLine{│   ├── input\_static\_dynamic.c}
+\DoxyCodeLine{│   ├── input\_floors.c}
+\DoxyCodeLine{│   ├── input\_lifts.c}
+\DoxyCodeLine{│   ├── count\_passenger.c}
+\DoxyCodeLine{│   ├── read\_passenger.c}
+\DoxyCodeLine{│   ├── moving\_lift\_up.c}
+\DoxyCodeLine{│   ├── moving\_lift\_down.c}
+\DoxyCodeLine{│   ├── input\_after\_stop.c}
+\DoxyCodeLine{│   ├── is\_lift\_empty.c}
+\DoxyCodeLine{│   ├── is\_lift\_on\_floor.c}
+\DoxyCodeLine{│   ├── passengers\_take\_in.c}
+\DoxyCodeLine{│   ├── passengers\_drop.c}
+\DoxyCodeLine{│   ├── read\_user\_input\_validate.c}
+\DoxyCodeLine{│   ├── create\_elevator\_array.c}
+\DoxyCodeLine{│   ├── add\_request\_queue.c}
+\DoxyCodeLine{│   ├── add\_passenger\_floor.c}
+\DoxyCodeLine{│   ├── create\_floor\_array.c}
+\DoxyCodeLine{│   ├── add\_passenger\_floor.c}
+\DoxyCodeLine{│   ├── remove\_passenger\_floor.c}
+\DoxyCodeLine{│   ├── remove\_passenger\_queue.c}
+\DoxyCodeLine{│   ├── emergency\_stop \_handling.c}
+\DoxyCodeLine{│   ├── average\_maximum waiting\_time.c}
+\DoxyCodeLine{│   ├── travel\_log\_file.c}
+\DoxyCodeLine{│   ├── static\_simulation.c}
+\DoxyCodeLine{│   ├── dynamic\_simulation.c}
+\DoxyCodeLine{│   ├── max\_waiting\_time.c}
+\DoxyCodeLine{│   ├── main.c}
+\DoxyCodeLine{│   ├── globals.c}
+\DoxyCodeLine{│   └── cli\_update.c}
+\DoxyCodeLine{└── test}
+\DoxyCodeLine{    ├── test\_main.c -\/> Main function for testing}
+\DoxyCodeLine{    ├── test\_cases.c}
+\DoxyCodeLine{    ├── test\_remove\_passenger\_queue.c}
+\DoxyCodeLine{    ├── test\_read\_passenger.c}
+\DoxyCodeLine{    ├── test\_passenger\_take\_in.c}
+\DoxyCodeLine{    ├── test\_max\_waiting\_time.c}
+\DoxyCodeLine{    ├── test\_is\_lift\_on\_floor.c}
+\DoxyCodeLine{    ├── test\_lift\_empty.c}
+\DoxyCodeLine{    ├── test\_input\_floors.c}
+\DoxyCodeLine{    ├── test\_input\_after\_stop.c}
+\DoxyCodeLine{    ├── test\_create\_floor\_array.c}
+\DoxyCodeLine{    ├── test\_count\_passenger.c}
+\DoxyCodeLine{    ├── test\_add\_request\_queue.c}
+\DoxyCodeLine{    ├── test\_average\_waiting\_time.c}
+\DoxyCodeLine{    ├── test\_input\_lifts.c}
+\DoxyCodeLine{    ├── test\_moving\_lift\_down.c}
+\DoxyCodeLine{    ├── include     -\/> Header file for test function}
+\DoxyCodeLine{    │   └── test\_functions.h}
+\DoxyCodeLine{    ├── data -\/> Contains text file inputs for user tests}
+\DoxyCodeLine{    └── results -\/> Contains the txt file logs of the results.}
+\end{DoxyCode}
+\hypertarget{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md20}{}\doxysection{For Developers}\label{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md20}
+The developer manual is available \mbox{\hyperlink{md__developer__manual}{here}}.\hypertarget{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md21}{}\doxysection{License}\label{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md21}
+This project is licensed under the G\+PL 2.\+0 License -\/ see the L\+I\+C\+E\+N\+S\+E.\+md file for details\hypertarget{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md22}{}\doxysection{Acknowledgements}\label{md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e_autotoc_md22}
+Thank to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software. 

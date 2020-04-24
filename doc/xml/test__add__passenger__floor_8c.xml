@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__add__passenger__floor_8c" kind="file" language="C++">
+    <compoundname>test_add_passenger_floor.c</compoundname>
+    <includes refid="add__passenger__floor_8h" local="yes">add_passenger_floor.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="structures_8h" local="no">structures.h</includes>
+    <includes refid="globals_8h" local="no">globals.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>add_passenger_floor.h</label>
+        <link refid="add__passenger__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c</label>
+        <link refid="test__add__passenger__floor_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> **</type>
+        <definition>struct passenger** floor_arr</definition>
+        <argsstring></argsstring>
+        <name>floor_arr</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>tests two conditions for add_passenger_floor function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The two test cases are adding to an empty floor. Adding to a floor already with an added passenger. The new passenger is added to the end of the floor list. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" line="27" column="16" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__add__passenger__floor_8c_1a91dd7a06610701f5eacee3ae72324ae0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref></type>
+        <definition>struct passenger add_passenger_dummy1</definition>
+        <argsstring></argsstring>
+        <name>add_passenger_dummy1</name>
+        <initializer>= {0, 0, 0, 0, 10, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" line="27" column="16" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__add__passenger__floor_8c_1a8b620582259a0a4d11b996f583fb71d9" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref></type>
+        <definition>struct passenger add_passenger_dummy2</definition>
+        <argsstring></argsstring>
+        <name>add_passenger_dummy2</name>
+        <initializer>= {0, 0, 0, 0, 20, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" line="27" column="16" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__add__passenger__floor_8c_1a3efb0e1a16208deecbd84c15401f7cf8" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" line="30" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__add__passenger__floor_8c_1a46582765e9ed219811c2b2c05ce53133" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void case1</definition>
+        <argsstring>(void)</argsstring>
+        <name>case1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests the case of adding to a floor with no previous passengers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" line="46" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" bodystart="46" bodyend="72" declfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" declline="14" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__add__passenger__floor_8c_1a124b0b5989271f456b3cbd130b719dc9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void case2</definition>
+        <argsstring>(void)</argsstring>
+        <name>case2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test the case of adding to the passenger floor with another passenger already on the floor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" line="78" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" bodystart="78" bodyend="114" declfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" declline="15" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__add__passenger__floor_8c_1a9b49422a55dfff1e9f6776dd3d771588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_add_passenger_floor</definition>
+        <argsstring>()</argsstring>
+        <name>test_add_passenger_floor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" line="31" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" bodystart="31" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>provides blackbox unit testing for add_passenenger_floor function </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="add__passenger__floor_8h" kindref="compound">add_passenger_floor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="structures_8h" kindref="compound">structures.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="globals_8h" kindref="compound">globals.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case1(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case2(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" refkind="member"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>**<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>add_passenger_dummy1<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>10,<sp/>0};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>add_passenger_dummy2<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>20,<sp/>0};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">FILE<sp/>*f;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_add_passenger_floor()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>f<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;test/results/results_test_add_passenger_floor.txt&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref><sp/>=<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>**)calloc(3,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kindref="member">floor_count</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>case1();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>case2();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(f);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case1(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="add__passenger__floor_8h_1aba6a961fa1c1d9922c13b66c973fa62d" kindref="member">add_passenger_floor</ref>(<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>,<sp/>1,<sp/>add_passenger_dummy1);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[1]<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS<sp/>Floor<sp/>no<sp/>longer<sp/>points<sp/>to<sp/>null&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS<sp/>Floor<sp/>no<sp/>longer<sp/>points<sp/>to<sp/>null&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(add_passenger_dummy1.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref><sp/>==<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[1]-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS<sp/>1<sp/>PASSENGER<sp/>ADDED<sp/>SUCCESFULLY<sp/>TO<sp/>THE<sp/>FLOOR<sp/>LIST.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS<sp/>1<sp/>PASSENGER<sp/>ADDED<sp/>SUCCESFULLY<sp/>TO<sp/>THE<sp/>FLOOR<sp/>LIST.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>expected<sp/>passenger<sp/>id<sp/>%d<sp/>on<sp/>floor<sp/>instead<sp/>got<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>add_passenger_dummy1.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>,<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[1]-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>expected<sp/>passenger<sp/>id<sp/>%d<sp/>on<sp/>floor<sp/>instead<sp/>got<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>add_passenger_dummy1.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>,<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[1]-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,</highlight><highlight class="stringliteral">&quot;Fail<sp/>Expected<sp/>floor[1]<sp/>to<sp/>point<sp/>to<sp/>a<sp/>passenger.<sp/>Got<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[1]);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Fail<sp/>Expected<sp/>floor[1]<sp/>to<sp/>point<sp/>to<sp/>a<sp/>passenger.<sp/>Got<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[1]);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>fflush(f);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case2(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="add__passenger__floor_8h_1aba6a961fa1c1d9922c13b66c973fa62d" kindref="member">add_passenger_floor</ref>(<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>,<sp/>0,<sp/>add_passenger_dummy1);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="add__passenger__floor_8h_1aba6a961fa1c1d9922c13b66c973fa62d" kindref="member">add_passenger_floor</ref>(<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>,<sp/>0,<sp/>add_passenger_dummy2);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[0]<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS<sp/>Floor<sp/>no<sp/>longer<sp/>points<sp/>to<sp/>null&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS<sp/>Floor<sp/>no<sp/>longer<sp/>points<sp/>to<sp/>null&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(add_passenger_dummy1.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref><sp/>==<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[0]-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS<sp/>1<sp/>PASSENGER<sp/>ADDED<sp/>SUCCESFULLY<sp/>TO<sp/>THE<sp/>FLOOR<sp/>LIST.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS<sp/>1<sp/>PASSENGER<sp/>ADDED<sp/>SUCCESFULLY<sp/>TO<sp/>THE<sp/>FLOOR<sp/>LIST.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>expected<sp/>passenger<sp/>id<sp/>%d<sp/>on<sp/>floor<sp/>instead<sp/>got<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>add_passenger_dummy1.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>,<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[0]-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>expected<sp/>passenger<sp/>id<sp/>%d<sp/>on<sp/>floor<sp/>instead<sp/>got<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>add_passenger_dummy1.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>,<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[0]-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(add_passenger_dummy2.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref><sp/>==<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[0]-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref>-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Second<sp/>passenger<sp/>added<sp/>to<sp/>the<sp/>list.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Second<sp/>passenger<sp/>added<sp/>to<sp/>the<sp/>list.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>expected<sp/>second<sp/>passenger<sp/>id<sp/>%d<sp/>on<sp/>floor<sp/>instead<sp/>got<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>add_passenger_dummy2.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>,<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[0]-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref>-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>expected<sp/>second<sp/>passenger<sp/>id<sp/>%d<sp/>on<sp/>floor<sp/>instead<sp/>got<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>add_passenger_dummy2.<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>,<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[0]-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref>-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;Fail<sp/>Expected<sp/>floor[1]<sp/>to<sp/>point<sp/>to<sp/>a<sp/>passenger.<sp/>Got<sp/>%p&quot;</highlight><highlight class="normal">,<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[1]);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Fail<sp/>Expected<sp/>floor[1]<sp/>to<sp/>point<sp/>to<sp/>a<sp/>passenger.<sp/>Got<sp/>%p&quot;</highlight><highlight class="normal">,<sp/><ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[1]);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>fflush(f);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c"/>
+  </compounddef>
+</doxygen>

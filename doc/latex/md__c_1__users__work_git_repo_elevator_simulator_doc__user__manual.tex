@@ -1,0 +1,64 @@
+Elevator\+\_\+\+Simulation is a software that operates any number of elevator in a commercial building with given number of floors.\hypertarget{md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual_autotoc_md6}{}\doxysection{Installation}\label{md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual_autotoc_md6}
+Please refer to \href{https://github.com/MaazJamal/elevator_simulator/blob/devel/INSTALL.md}{\texttt{ I\+N\+S\+T\+A\+L\+L.\+md}} file for installation instructions.\hypertarget{md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual_autotoc_md7}{}\doxysection{Usage}\label{md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual_autotoc_md7}
+The user needs to provide the software with a text file containing the passenger request detail for the elevator. The text file is named input.\+txt and must be placed in the \char`\"{}data\char`\"{} folder. The relative path is data/input.\+txt. The maximum number of floors in this file should correspond to what the user enters later in the program.
+
+To start the program in windows either click on elevator.\+exe or type elevator.\+exe in command line. For cygwin/unix type ./elevator to start execution.
+
+The program will ask for the following parameters at the execution of Elevator\+\_\+\+Simulation\+:
+
+
+\begin{DoxyItemize}
+\item Static or Dynamic version \+: Press 0 to select Static Version or 1 to select Dynaic version. (Only for realease 2 version of program.)
+\item Number of lifts \+: Specifies the number lifts in the building should be in the range of 1 to 100.
+\item Number of elevators\+: Specifies the number elevators in the building should be in thr range of 1 to 100.
+\item Input file should be placed in the right path.\+Change the input file if needed. In the data/ folder
+\end{DoxyItemize}
+
+In case of Dynamic version the program only simulates until 1999 iterations. This is due to limitations of console windows,causing the program to slow down due to printing of cli\+\_\+update. There are additional inputs the user can give to the program after every 30th or 200th iteration.
+
+
+\begin{DoxyItemize}
+\item Add Passenger request \+: If needed the user can enter details of a passenger to the program. That will be added to the queue.
+\item Provide emergency stop in which the elevator will stop at next floor and remove all passengers. The user can then quit or continue the simulation.
+\item Enable realtime mode. In which each iteration is 1 second long and the program asks for input after every 30th iterations.
+\item Do not ask for input again and disable the realtime mode. So that the program can run without interuptions until completion.
+\item Exit the simulation.
+\end{DoxyItemize}
+
+Please note that the binary is located in project {\ttfamily root} folder
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.elevator}
+\end{DoxyCode}
+
+
+for windows
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{elevator.exe}
+\end{DoxyCode}
+\hypertarget{md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual_autotoc_md8}{}\doxysection{Testing}\label{md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual_autotoc_md8}
+Unit testing is done for each functions defined in the software. The test cases can be run using the command below\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./tests}
+\end{DoxyCode}
+
+
+for windows
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{tests.exe}
+\end{DoxyCode}
+
+
+Note\+: You must have compiled the tests.\+exe program as well.\hypertarget{md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual_autotoc_md9}{}\doxysection{Output Generation}\label{md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual_autotoc_md9}
+Below output files will be generated and placed \href{https://github.com/MaazJamal/elevator_simulator/blob/devel/data/}{\texttt{ here}}
+
+Output file 1 -\/ File that gives Passenger$\ast$\+ID,Elevator\+\_\+\+ID,Passenger\+\_\+\+In time,Passenger$\ast$ Entry floor,Passenger$\ast$\+Out time,Passenger$\ast$ Exit floor
+
+Output file 2 -\/ File that gives Average waiting time of Passengers and Maximum waiting time of a Passenger. 

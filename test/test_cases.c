@@ -1,3 +1,10 @@
+/** @file test_cases.c
+ * 
+ *  @brief Contains all the tests and menue logic to choose each test. 
+ * 
+ *  */
+
+
 #include "functions.h"
 #include "test_functions.h"
 #include <stdio.h>
@@ -37,6 +44,8 @@ void test_cases(void)
 		puts("15. To run tests for remove_passenger_queue().");
 		puts("16. To run tests for cli_update().");
 		puts("17. To run tests for add_passenger_floor().");
+		puts("18. To run tests for remove_passenger_floor().");
+				
 		int read = 0;
 		while (read == 0)
 		{
@@ -127,6 +136,10 @@ void test_cases(void)
 			case 17:
 				test_add_passenger_floor();
 				puts("Tests for add_passenger_floor() Done.");
+				break;
+			case 18:
+				test_remove_passenger_floor();
+				puts("Tests for remove_passenger_floor() Done.");
 				break;
 			default:
 				printf("Invalid option.\n");

@@ -1,24 +1,42 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.18">
   <compound refid="structelevator" kind="struct"><name>elevator</name>
-    <member refid="structelevator_1afdd7df977b812f9a8192fab08773efca" kind="variable"><name>moving</name></member>
-    <member refid="structelevator_1ab9db9c40c0582877c0eb1e40208bce7f" kind="variable"><name>between_floor</name></member>
-    <member refid="structelevator_1a4a24a1828511061b35d68613f6205c71" kind="variable"><name>direction_up</name></member>
-    <member refid="structelevator_1ae1d85507e558e66edd33a940fd85cb83" kind="variable"><name>direction_down</name></member>
-    <member refid="structelevator_1abcf67c62096d397bf09fad7c61c43e3a" kind="variable"><name>stop_at_floor</name></member>
-    <member refid="structelevator_1aafbf17dfb8c07dadb99b3e0faadef32d" kind="variable"><name>passenger_count</name></member>
-    <member refid="structelevator_1ab997145d0c77ff2c31df5e80d84387db" kind="variable"><name>max_passenger</name></member>
-    <member refid="structelevator_1aff6a26008372ae6df6b9e89db676516c" kind="variable"><name>cur_floor</name></member>
-    <member refid="structelevator_1abb33556650e8660ef9f37c08525ea2b0" kind="variable"><name>timer</name></member>
-    <member refid="structelevator_1aa49275fd21211fa8103ebc37c5dcd730" kind="variable"><name>passenger_arr</name></member>
+    <member refid="structelevator_1a186590570ed9fee16200f9fffd3a0873" kind="variable"><name>moving</name></member>
+    <member refid="structelevator_1ab012a8d2102934af9ea97effdeea80cf" kind="variable"><name>between_floor</name></member>
+    <member refid="structelevator_1a78d725b14370d8b2000a99bd11755ff8" kind="variable"><name>direction_up</name></member>
+    <member refid="structelevator_1aa773f94528363621939e5fcc99dcc6ad" kind="variable"><name>direction_down</name></member>
+    <member refid="structelevator_1a47d71912bc6a97bcf1a7c8c257ed4df1" kind="variable"><name>stop_at_floor</name></member>
+    <member refid="structelevator_1a35976c62fece1a1887b39d2761e409e3" kind="variable"><name>passenger_count</name></member>
+    <member refid="structelevator_1ae18c23ac67fc1e94d1dd831119d90f6f" kind="variable"><name>max_passenger</name></member>
+    <member refid="structelevator_1a2c87ee6189da284a149438ce8b0acc8d" kind="variable"><name>cur_floor</name></member>
+    <member refid="structelevator_1a6272f86a10a9c4bf565e184a4537373d" kind="variable"><name>timer</name></member>
+    <member refid="structelevator_1ab3f0430781fbb878267214945aaf9322" kind="variable"><name>passenger_arr</name></member>
   </compound>
   <compound refid="structpassenger" kind="struct"><name>passenger</name>
-    <member refid="structpassenger_1acaaf5adf80fe8fd8e9b1b5401c2a39e2" kind="variable"><name>in_elevator</name></member>
-    <member refid="structpassenger_1ac5750ae7307cd77866c3fc94ad058b8c" kind="variable"><name>arrival_time</name></member>
-    <member refid="structpassenger_1a4d2f3bc200903acf57f6a277c309ad96" kind="variable"><name>arrival_floor</name></member>
-    <member refid="structpassenger_1a1166dc7971a5d5e3b766c719b885a8d1" kind="variable"><name>dest_floor</name></member>
-    <member refid="structpassenger_1ab7ce6f462afaf105224b0ca772a33c43" kind="variable"><name>id</name></member>
-    <member refid="structpassenger_1a431ecdbaf4424eaa36a2eb954ce7e944" kind="variable"><name>next</name></member>
+    <member refid="structpassenger_1a8af124b4de91150e204a2374e98ee71f" kind="variable"><name>in_elevator</name></member>
+    <member refid="structpassenger_1a8dd292bfb4015a71df26b57eb23c8701" kind="variable"><name>arrival_time</name></member>
+    <member refid="structpassenger_1a0a31a3de4943a83121587e2d11b3e2c0" kind="variable"><name>arrival_floor</name></member>
+    <member refid="structpassenger_1a1cd2d080a6795d30505e8722d329c7e2" kind="variable"><name>dest_floor</name></member>
+    <member refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kind="variable"><name>id</name></member>
+    <member refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="input_8txt" kind="file"><name>input.txt</name>
+  </compound>
+  <compound refid="travel__log_8txt" kind="file"><name>travel_log.txt</name>
+    <member refid="travel__log_8txt_1a13142be4174e7e78acda88137cfdb5d1" kind="variable"><name>Passenger_ID</name></member>
+    <member refid="travel__log_8txt_1a92528789c1376ffa35f205b215fac99e" kind="variable"><name>Elevator_ID</name></member>
+    <member refid="travel__log_8txt_1a3312ffcd70403d7a0bf59b7829a5063b" kind="variable"><name>Passenger_In_time</name></member>
+    <member refid="travel__log_8txt_1a924d1803c69999330228fc5ccc5d19f9" kind="variable"><name>Passenger_Entry_floor</name></member>
+    <member refid="travel__log_8txt_1af5f8757522bc2c1fbbecd6f8a6784db2" kind="variable"><name>Passenger_Out_time</name></member>
+    <member refid="travel__log_8txt_1a22f33f78ac824ec321a240fbf01cca2a" kind="variable"><name>Passenger_Exit_floor</name></member>
+  </compound>
+  <compound refid="waiting__times_8txt" kind="file"><name>waiting_times.txt</name>
+  </compound>
+  <compound refid="_developer___manual_8md" kind="file"><name>Developer_Manual.md</name>
+  </compound>
+  <compound refid="_user___manual_8md" kind="file"><name>User_Manual.md</name>
+  </compound>
+  <compound refid="elevator__journey_8txt" kind="file"><name>elevator_journey.txt</name>
   </compound>
   <compound refid="add__passenger__floor_8h" kind="file"><name>add_passenger_floor.h</name>
     <member refid="add__passenger__floor_8h_1aba6a961fa1c1d9922c13b66c973fa62d" kind="function"><name>add_passenger_floor</name></member>
@@ -26,13 +44,28 @@
   <compound refid="add__request__queue_8h" kind="file"><name>add_request_queue.h</name>
     <member refid="add__request__queue_8h_1a1aa0db2f2ecae31eaf0fc492d19414c6" kind="function"><name>add_request_queue</name></member>
   </compound>
+  <compound refid="average__waiting__time_8h" kind="file"><name>average_waiting_time.h</name>
+    <member refid="average__waiting__time_8h_1abbde5e2aad5b56ac7da77b34c7d2ea20" kind="function"><name>average_waiting_time</name></member>
+  </compound>
+  <compound refid="cli__update_8h" kind="file"><name>cli_update.h</name>
+    <member refid="cli__update_8h_1a61dffc3815d70e783c61e48ec93bb2c9" kind="function"><name>cli_update</name></member>
+  </compound>
   <compound refid="count__passenger_8h" kind="file"><name>count_passenger.h</name>
-    <member refid="count__passenger_8h_1a949d5f5716500869b64977f0e9df9d92" kind="function"><name>count_passenger</name></member>
+    <member refid="count__passenger_8h_1ae332544a6584743f5c1444e2495becfe" kind="function"><name>count_passenger</name></member>
   </compound>
   <compound refid="create__elevator__array_8h" kind="file"><name>create_elevator_array.h</name>
+    <member refid="create__elevator__array_8h_1a76f1fbfc724e769255d728ae2f2f1ae1" kind="function"><name>create_elevator_array</name></member>
   </compound>
   <compound refid="create__floor__array_8h" kind="file"><name>create_floor_array.h</name>
-    <member refid="create__floor__array_8h_1a64498cd5b805fe8c1f80bccda9e2bc8b" kind="function"><name>create_floor_array</name></member>
+    <member refid="create__floor__array_8h_1aa7321679c44d6dcf3ff9241a44ab38c1" kind="function"><name>create_floor_array</name></member>
+  </compound>
+  <compound refid="dynamic__functions_8h" kind="file"><name>dynamic_functions.h</name>
+  </compound>
+  <compound refid="dynamic__simulation_8h" kind="file"><name>dynamic_simulation.h</name>
+    <member refid="dynamic__simulation_8h_1afcfe2d3f6e5bbe7b911bb79801fc397e" kind="function"><name>dynamic_simulation</name></member>
+  </compound>
+  <compound refid="emergency__stop__handling_8h" kind="file"><name>emergency_stop_handling.h</name>
+    <member refid="emergency__stop__handling_8h_1ad5606533884f027a214fb679799e44c0" kind="function"><name>emergency_stop_handling</name></member>
   </compound>
   <compound refid="functions_8h" kind="file"><name>functions.h</name>
   </compound>
@@ -41,36 +74,379 @@
     <member refid="globals_8h_1aafbf17dfb8c07dadb99b3e0faadef32d" kind="variable"><name>passenger_count</name></member>
     <member refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kind="variable"><name>floor_count</name></member>
   </compound>
-  <compound refid="input__floor_8h" kind="file"><name>input_floor.h</name>
-    <member refid="input__floor_8h_1ac21b8029a111342aa5dde9daa28b65cb" kind="function"><name>input_floors</name></member>
+  <compound refid="input__after__stop_8h" kind="file"><name>input_after_stop.h</name>
+    <member refid="input__after__stop_8h_1a1ef458ac25d998350983b4e337242744" kind="function"><name>input_after_stop</name></member>
   </compound>
   <compound refid="input__floors_8h" kind="file"><name>input_floors.h</name>
     <member refid="input__floors_8h_1ac21b8029a111342aa5dde9daa28b65cb" kind="function"><name>input_floors</name></member>
   </compound>
   <compound refid="input__lifts_8h" kind="file"><name>input_lifts.h</name>
-    <member refid="input__lifts_8h_1aaf6e4f946cf083fed7f3b265e3421eb3" kind="function"><name>input_lifts</name></member>
+    <member refid="input__lifts_8h_1a91439303ceb8c122f314f7b5203352df" kind="function"><name>input_lifts</name></member>
+  </compound>
+  <compound refid="input__static__dynamic_8h" kind="file"><name>input_static_dynamic.h</name>
+    <member refid="input__static__dynamic_8h_1a67da0c3768f671c95fda28d1d1f3fd43" kind="function"><name>input_static_dynamic</name></member>
+  </compound>
+  <compound refid="is__lift__empty_8h" kind="file"><name>is_lift_empty.h</name>
+    <member refid="is__lift__empty_8h_1a37e8ad2f4fa1a5ee9e229e632a3d88cc" kind="function"><name>is_lift_empty</name></member>
   </compound>
   <compound refid="is__lift__on__floor_8h" kind="file"><name>is_lift_on_floor.h</name>
     <member refid="is__lift__on__floor_8h_1a8331ecca3b0a14f407e7e9e354d01998" kind="function"><name>is_lift_on_floor</name></member>
   </compound>
+  <compound refid="max__waiting__time_8h" kind="file"><name>max_waiting_time.h</name>
+    <member refid="max__waiting__time_8h_1a5f48cbf044772ddea3ddaf7912388faf" kind="function"><name>max_waiting_time</name></member>
+  </compound>
   <compound refid="moving__lift__down_8h" kind="file"><name>moving_lift_down.h</name>
     <member refid="moving__lift__down_8h_1a71965ccfee77f7e7469f4153836fb7ef" kind="function"><name>moving_lift_down</name></member>
   </compound>
+  <compound refid="moving__lift__up_8h" kind="file"><name>moving_lift_up.h</name>
+    <member refid="moving__lift__up_8h_1a814fa197f450be90c940b6c4593ce1df" kind="function"><name>moving_lift_up</name></member>
+  </compound>
   <compound refid="passengers__drop_8h" kind="file"><name>passengers_drop.h</name>
-    <member refid="passengers__drop_8h_1abf324a554d92e8182b223f0de8303d11" kind="function"><name>passengers_drop</name></member>
+    <member refid="passengers__drop_8h_1a11a7b91c4b20588fd46ab8e9c9df46e1" kind="function"><name>passengers_drop</name></member>
   </compound>
   <compound refid="passengers__take__in_8h" kind="file"><name>passengers_take_in.h</name>
-    <member refid="passengers__take__in_8h_1a287226a04968c197b9ffc9bfdaf4b85a" kind="function"><name>passengers_take_in</name></member>
+    <member refid="passengers__take__in_8h_1ad76f630c9b48489803eeb11079f324a5" kind="function"><name>passengers_take_in</name></member>
   </compound>
   <compound refid="read__passenger_8h" kind="file"><name>read_passenger.h</name>
-    <member refid="read__passenger_8h_1a3635fae50736b720ab198905e12810fd" kind="function"><name>read_passenger</name></member>
+    <member refid="read__passenger_8h_1a94a0c7e9ac4bd0466cf6983649d29f42" kind="function"><name>read_passenger</name></member>
+  </compound>
+  <compound refid="read__user__input__validate_8h" kind="file"><name>read_user_input_validate.h</name>
+    <member refid="read__user__input__validate_8h_1afc5003118aae8c6ca880cdff253e7adf" kind="function"><name>read_user_input_validate</name></member>
   </compound>
   <compound refid="remove__passenger__floor_8h" kind="file"><name>remove_passenger_floor.h</name>
-    <member refid="remove__passenger__floor_8h_1a52fe046684880653f0e895c4d6631489" kind="function"><name>remove_passenger_floor</name></member>
+    <member refid="remove__passenger__floor_8h_1a25f8c0d7e3c685b2c1830182e3705df0" kind="function"><name>remove_passenger_floor</name></member>
   </compound>
   <compound refid="remove__passenger__queue_8h" kind="file"><name>remove_passenger_queue.h</name>
     <member refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kind="function"><name>remove_passenger_queue</name></member>
   </compound>
+  <compound refid="simulations_8h" kind="file"><name>simulations.h</name>
+  </compound>
+  <compound refid="static__simulation_8h" kind="file"><name>static_simulation.h</name>
+    <member refid="static__simulation_8h_1ad022020e38b9aa37a3e98b761c507a10" kind="function"><name>static_simulation</name></member>
+  </compound>
   <compound refid="structures_8h" kind="file"><name>structures.h</name>
+  </compound>
+  <compound refid="travel__log__file_8h" kind="file"><name>travel_log_file.h</name>
+    <member refid="travel__log__file_8h_1af8d5fde3cc01745bf27550d1fb69bf3f" kind="function"><name>travel_log_file</name></member>
+  </compound>
+  <compound refid="_i_n_s_t_a_l_l_8md" kind="file"><name>INSTALL.md</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="add__passenger__floor_8c" kind="file"><name>add_passenger_floor.c</name>
+    <member refid="add__passenger__floor_8c_1aba6a961fa1c1d9922c13b66c973fa62d" kind="function"><name>add_passenger_floor</name></member>
+  </compound>
+  <compound refid="add__request__queue_8c" kind="file"><name>add_request_queue.c</name>
+    <member refid="add__request__queue_8c_1a1aa0db2f2ecae31eaf0fc492d19414c6" kind="function"><name>add_request_queue</name></member>
+  </compound>
+  <compound refid="average__waiting__time_8c" kind="file"><name>average_waiting_time.c</name>
+    <member refid="average__waiting__time_8c_1abbde5e2aad5b56ac7da77b34c7d2ea20" kind="function"><name>average_waiting_time</name></member>
+  </compound>
+  <compound refid="cli__update_8c" kind="file"><name>cli_update.c</name>
+    <member refid="cli__update_8c_1a61dffc3815d70e783c61e48ec93bb2c9" kind="function"><name>cli_update</name></member>
+  </compound>
+  <compound refid="count__passenger_8c" kind="file"><name>count_passenger.c</name>
+    <member refid="count__passenger_8c_1ae332544a6584743f5c1444e2495becfe" kind="function"><name>count_passenger</name></member>
+  </compound>
+  <compound refid="create__elevator__array_8c" kind="file"><name>create_elevator_array.c</name>
+    <member refid="create__elevator__array_8c_1a76f1fbfc724e769255d728ae2f2f1ae1" kind="function"><name>create_elevator_array</name></member>
+  </compound>
+  <compound refid="create__floor__array_8c" kind="file"><name>create_floor_array.c</name>
+    <member refid="create__floor__array_8c_1aa7321679c44d6dcf3ff9241a44ab38c1" kind="function"><name>create_floor_array</name></member>
+  </compound>
+  <compound refid="dynamic__simulation_8c" kind="file"><name>dynamic_simulation.c</name>
+    <member refid="dynamic__simulation_8c_1afcfe2d3f6e5bbe7b911bb79801fc397e" kind="function"><name>dynamic_simulation</name></member>
+  </compound>
+  <compound refid="emergency__stop__handling_8c" kind="file"><name>emergency_stop_handling.c</name>
+    <member refid="emergency__stop__handling_8c_1ad5606533884f027a214fb679799e44c0" kind="function"><name>emergency_stop_handling</name></member>
+  </compound>
+  <compound refid="globals_8c" kind="file"><name>globals.c</name>
+    <member refid="globals_8c_1a11ee4b54505479cda7e127a7030a76a7" kind="variable"><name>elevator_count</name></member>
+    <member refid="globals_8c_1aafbf17dfb8c07dadb99b3e0faadef32d" kind="variable"><name>passenger_count</name></member>
+    <member refid="globals_8c_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kind="variable"><name>floor_count</name></member>
+  </compound>
+  <compound refid="input__after__stop_8c" kind="file"><name>input_after_stop.c</name>
+    <member refid="input__after__stop_8c_1a6fd146925d0dffaaf3eb6b8e8befccbb" kind="function"><name>input_after_stop</name></member>
+  </compound>
+  <compound refid="input__floors_8c" kind="file"><name>input_floors.c</name>
+    <member refid="input__floors_8c_1ac21b8029a111342aa5dde9daa28b65cb" kind="function"><name>input_floors</name></member>
+  </compound>
+  <compound refid="input__lifts_8c" kind="file"><name>input_lifts.c</name>
+    <member refid="input__lifts_8c_1a91439303ceb8c122f314f7b5203352df" kind="function"><name>input_lifts</name></member>
+  </compound>
+  <compound refid="input__static__dynamic_8c" kind="file"><name>input_static_dynamic.c</name>
+    <member refid="input__static__dynamic_8c_1a67da0c3768f671c95fda28d1d1f3fd43" kind="function"><name>input_static_dynamic</name></member>
+  </compound>
+  <compound refid="is__lift__empty_8c" kind="file"><name>is_lift_empty.c</name>
+    <member refid="is__lift__empty_8c_1a37e8ad2f4fa1a5ee9e229e632a3d88cc" kind="function"><name>is_lift_empty</name></member>
+  </compound>
+  <compound refid="is__lift__on__floor_8c" kind="file"><name>is_lift_on_floor.c</name>
+    <member refid="is__lift__on__floor_8c_1a8331ecca3b0a14f407e7e9e354d01998" kind="function"><name>is_lift_on_floor</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="max__waiting__time_8c" kind="file"><name>max_waiting_time.c</name>
+    <member refid="max__waiting__time_8c_1a5f48cbf044772ddea3ddaf7912388faf" kind="function"><name>max_waiting_time</name></member>
+  </compound>
+  <compound refid="moving__lift__down_8c" kind="file"><name>moving_lift_down.c</name>
+    <member refid="moving__lift__down_8c_1a71965ccfee77f7e7469f4153836fb7ef" kind="function"><name>moving_lift_down</name></member>
+  </compound>
+  <compound refid="moving__lift__up_8c" kind="file"><name>moving_lift_up.c</name>
+    <member refid="moving__lift__up_8c_1a814fa197f450be90c940b6c4593ce1df" kind="function"><name>moving_lift_up</name></member>
+  </compound>
+  <compound refid="passengers__drop_8c" kind="file"><name>passengers_drop.c</name>
+    <member refid="passengers__drop_8c_1a11a7b91c4b20588fd46ab8e9c9df46e1" kind="function"><name>passengers_drop</name></member>
+  </compound>
+  <compound refid="passengers__take__in_8c" kind="file"><name>passengers_take_in.c</name>
+    <member refid="passengers__take__in_8c_1ad76f630c9b48489803eeb11079f324a5" kind="function"><name>passengers_take_in</name></member>
+  </compound>
+  <compound refid="read__passenger_8c" kind="file"><name>read_passenger.c</name>
+    <member refid="read__passenger_8c_1a37c372d14154c7f6d6d1af823cadf07d" kind="function"><name>read_passenger</name></member>
+  </compound>
+  <compound refid="read__user__input__validate_8c" kind="file"><name>read_user_input_validate.c</name>
+    <member refid="read__user__input__validate_8c_1afc5003118aae8c6ca880cdff253e7adf" kind="function"><name>read_user_input_validate</name></member>
+  </compound>
+  <compound refid="remove__passenger__floor_8c" kind="file"><name>remove_passenger_floor.c</name>
+    <member refid="remove__passenger__floor_8c_1a078767636839d02470574e1526e48f73" kind="function"><name>remove_passenger_floor</name></member>
+  </compound>
+  <compound refid="remove__passenger__queue_8c" kind="file"><name>remove_passenger_queue.c</name>
+    <member refid="remove__passenger__queue_8c_1aaf649634b0615e3c784050409bd55e58" kind="function"><name>remove_passenger_queue</name></member>
+  </compound>
+  <compound refid="static__simulation_8c" kind="file"><name>static_simulation.c</name>
+    <member refid="static__simulation_8c_1ad022020e38b9aa37a3e98b761c507a10" kind="function"><name>static_simulation</name></member>
+  </compound>
+  <compound refid="travel__log__file_8c" kind="file"><name>travel_log_file.c</name>
+    <member refid="travel__log__file_8c_1af8d5fde3cc01745bf27550d1fb69bf3f" kind="function"><name>travel_log_file</name></member>
+  </compound>
+  <compound refid="countpassenger__testcase10_8txt" kind="file"><name>countpassenger_testcase10.txt</name>
+  </compound>
+  <compound refid="countpassenger__testcase2_8txt" kind="file"><name>countpassenger_testcase2.txt</name>
+  </compound>
+  <compound refid="countpassenger__testcase3_8txt" kind="file"><name>countpassenger_testcase3.txt</name>
+  </compound>
+  <compound refid="countpassenger__testcase4_8txt" kind="file"><name>countpassenger_testcase4.txt</name>
+  </compound>
+  <compound refid="countpassenger__testcase5_8txt" kind="file"><name>countpassenger_testcase5.txt</name>
+  </compound>
+  <compound refid="countpassenger__testcase6_8txt" kind="file"><name>countpassenger_testcase6.txt</name>
+  </compound>
+  <compound refid="countpassenger__testcase7_8txt" kind="file"><name>countpassenger_testcase7.txt</name>
+  </compound>
+  <compound refid="countpassenger__testcase8_8txt" kind="file"><name>countpassenger_testcase8.txt</name>
+  </compound>
+  <compound refid="countpassenger__testcase9_8txt" kind="file"><name>countpassenger_testcase9.txt</name>
+  </compound>
+  <compound refid="input__input__floors_8txt" kind="file"><name>input_input_floors.txt</name>
+  </compound>
+  <compound refid="maaz__test__inputs_8txt" kind="file"><name>maaz_test_inputs.txt</name>
+  </compound>
+  <compound refid="read__passenger__test__case2_8txt" kind="file"><name>read_passenger_test_case2.txt</name>
+  </compound>
+  <compound refid="read__passenger__test__case3_8txt" kind="file"><name>read_passenger_test_case3.txt</name>
+  </compound>
+  <compound refid="read__passenger__test__case4_8txt" kind="file"><name>read_passenger_test_case4.txt</name>
+  </compound>
+  <compound refid="read__passenger__test__case5_8txt" kind="file"><name>read_passenger_test_case5.txt</name>
+  </compound>
+  <compound refid="read__passenger__test__case6_8txt" kind="file"><name>read_passenger_test_case6.txt</name>
+  </compound>
+  <compound refid="read__passenger__test__case7_8txt" kind="file"><name>read_passenger_test_case7.txt</name>
+  </compound>
+  <compound refid="data_2results__inputs__lifts_8txt" kind="file"><name>results_inputs_lifts.txt</name>
+    <member refid="data_2results__inputs__lifts_8txt_1abe1beddb7b8c1ab841d28d180caa0037" kind="variable"><name>__pad0__</name></member>
+    <member refid="data_2results__inputs__lifts_8txt_1a558eb9ee2abe10d2608bfc3dd38b8f76" kind="variable"><name>Output</name></member>
+  </compound>
+  <compound refid="results_2results__inputs__lifts_8txt" kind="file"><name>results_inputs_lifts.txt</name>
+    <member refid="results_2results__inputs__lifts_8txt_1adc4d80463bc95cefb29bafbedfa086b8" kind="variable"><name>__pad3__</name></member>
+    <member refid="results_2results__inputs__lifts_8txt_1a1134fd552c7fde90fbcd25f77042e025" kind="variable"><name>Output</name></member>
+  </compound>
+  <compound refid="test__input__after__stop_8txt" kind="file"><name>test_input_after_stop.txt</name>
+  </compound>
+  <compound refid="test__functions_8h" kind="file"><name>test_functions.h</name>
+    <member refid="test__functions_8h_1ad74350fa86dde458b967dfdc0376e695" kind="function"><name>test_add_request_queue</name></member>
+    <member refid="test__functions_8h_1a61a09e5b92af3a8cb9cda4fb57a4e263" kind="function"><name>test_average_waiting_time</name></member>
+    <member refid="test__functions_8h_1a88492fd685c7762b1a24dec14d2a15fa" kind="function"><name>test_count_passenger</name></member>
+    <member refid="test__functions_8h_1ade06ed0d844fd993c27589114d35f742" kind="function"><name>test_create_elevator_array</name></member>
+    <member refid="test__functions_8h_1a2b9df227bce7b4a13be8b33a58295da1" kind="function"><name>test_create_floor_array</name></member>
+    <member refid="test__functions_8h_1a2bcf734ca4e0469f6d13579f71c25653" kind="function"><name>test_input_after_stop</name></member>
+    <member refid="test__functions_8h_1aad7f794f2c2f149969be480e3a07c63a" kind="function"><name>test_input_floors</name></member>
+    <member refid="test__functions_8h_1ab6ade1c5fd86ec52d551be35a9ae588a" kind="function"><name>test_input_lifts</name></member>
+    <member refid="test__functions_8h_1a926014f0f80a9a1b2e20849965d88833" kind="function"><name>test_is_lift_empty</name></member>
+    <member refid="test__functions_8h_1a3e351f144b937554cd4e0dbd305b5c03" kind="function"><name>test_is_lift_on_floor</name></member>
+    <member refid="test__functions_8h_1a227294b48a939fdc568affbe6dc363be" kind="function"><name>test_max_waiting_time</name></member>
+    <member refid="test__functions_8h_1a0f6a08318c4b7fe437805450023e9ae0" kind="function"><name>test_moving_lift_down</name></member>
+    <member refid="test__functions_8h_1a66ac24529cf3761ded8cb64941a99b91" kind="function"><name>test_passenger_take_in</name></member>
+    <member refid="test__functions_8h_1a9eb76830492cd4f4aaa12a45a6bb81b7" kind="function"><name>test_read_passenger</name></member>
+    <member refid="test__functions_8h_1a0e1286ef4fbc1b7fa890bc2f1f0e2174" kind="function"><name>test_remove_passenger_queue</name></member>
+    <member refid="test__functions_8h_1a38108d7e56fd0e399b32c70e40e4debf" kind="function"><name>test_cli_update</name></member>
+    <member refid="test__functions_8h_1a98d532dd62b0f989f6e39cabf5d72fa2" kind="function"><name>test_add_passenger_floor</name></member>
+    <member refid="test__functions_8h_1af7e3f763d3fa1ed9e34002b6ab66694b" kind="function"><name>test_remove_passenger_floor</name></member>
+  </compound>
+  <compound refid="results__average__waiting__time_8txt" kind="file"><name>results_average_waiting_time.txt</name>
+  </compound>
+  <compound refid="results__count__passenger_8txt" kind="file"><name>results_count_passenger.txt</name>
+    <member refid="results__count__passenger_8txt_1a3fa0fdc5aa6fa893b3fd8b1fa89f864d" kind="variable"><name>__pad1__</name></member>
+    <member refid="results__count__passenger_8txt_1a5db63ed672cdab34c8fe192e5e632c69" kind="variable"><name>Output</name></member>
+  </compound>
+  <compound refid="results__create__elevator__array_8txt" kind="file"><name>results_create_elevator_array.txt</name>
+    <member refid="results__create__elevator__array_8txt_1a9ba9ee80fce837dda0a8c4fe2dbae096" kind="variable"><name>PASS</name></member>
+    <member refid="results__create__elevator__array_8txt_1a38b7778b3a9b3139480b45184728aabf" kind="variable"><name>Parameter</name></member>
+  </compound>
+  <compound refid="results__create__floor__array_8txt" kind="file"><name>results_create_floor_array.txt</name>
+  </compound>
+  <compound refid="results__input__after__stop_8txt" kind="file"><name>results_input_after_stop.txt</name>
+  </compound>
+  <compound refid="results__input__floors_8txt" kind="file"><name>results_input_floors.txt</name>
+    <member refid="results__input__floors_8txt_1af96eb54459d5944ad0ad17d75c42d573" kind="variable"><name>__pad2__</name></member>
+    <member refid="results__input__floors_8txt_1a1134fd552c7fde90fbcd25f77042e025" kind="variable"><name>Output</name></member>
+  </compound>
+  <compound refid="results__is__lift__empty_8txt" kind="file"><name>results_is_lift_empty.txt</name>
+    <member refid="results__is__lift__empty_8txt_1ac256f97b6d10788874eaed85e2817a04" kind="variable"><name>__pad4__</name></member>
+    <member refid="results__is__lift__empty_8txt_1a558eb9ee2abe10d2608bfc3dd38b8f76" kind="variable"><name>Output</name></member>
+  </compound>
+  <compound refid="results__is__lift__on__floor_8txt" kind="file"><name>results_is_lift_on_floor.txt</name>
+    <member refid="results__is__lift__on__floor_8txt_1ac7bfc6e66cc4d55c75c1af203cd583fc" kind="variable"><name>FAIL</name></member>
+    <member refid="results__is__lift__on__floor_8txt_1a38b7778b3a9b3139480b45184728aabf" kind="variable"><name>Parameter</name></member>
+  </compound>
+  <compound refid="results__max__waiting__time_8txt" kind="file"><name>results_max_waiting_time.txt</name>
+    <member refid="results__max__waiting__time_8txt_1a22ef4a21fcfb8a56cde9d97312c27eaf" kind="variable"><name>__pad5__</name></member>
+    <member refid="results__max__waiting__time_8txt_1a8155ddbc59396381afce1e49ed605cbb" kind="variable"><name>Output</name></member>
+  </compound>
+  <compound refid="results__read__passenger_8txt" kind="file"><name>results_read_passenger.txt</name>
+  </compound>
+  <compound refid="results__remove__passenger__floor_8txt" kind="file"><name>results_remove_passenger_floor.txt</name>
+  </compound>
+  <compound refid="test__add__request_8txt" kind="file"><name>test_add_request.txt</name>
+    <member refid="test__add__request_8txt_1a79de2d10dc7d12dd619d41d762a9b1d7" kind="variable"><name>__pad7__</name></member>
+    <member refid="test__add__request_8txt_1af456b00b1733a4a4d5fec3f081924b36" kind="variable"><name>is</name></member>
+    <member refid="test__add__request_8txt_1a9ba9ee80fce837dda0a8c4fe2dbae096" kind="variable"><name>PASS</name></member>
+  </compound>
+  <compound refid="test__moving__lift__down_8txt" kind="file"><name>test_moving_lift_down.txt</name>
+    <member refid="test__moving__lift__down_8txt_1a0880fa443bc0adfa6111cdc48ad2397c" kind="variable"><name>changed</name></member>
+    <member refid="test__moving__lift__down_8txt_1a21a34217a5e784ee105e64b74a27df58" kind="variable"><name>Return</name></member>
+  </compound>
+  <compound refid="test__passenger__take__in__result_8txt" kind="file"><name>test_passenger_take_in_result.txt</name>
+  </compound>
+  <compound refid="test__remove__passenger__queue__results_8txt" kind="file"><name>test_remove_passenger_queue_results.txt</name>
+  </compound>
+  <compound refid="test__add__passenger__floor_8c" kind="file"><name>test_add_passenger_floor.c</name>
+    <member refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kind="variable"><name>floor_arr</name></member>
+    <member refid="test__add__passenger__floor_8c_1a91dd7a06610701f5eacee3ae72324ae0" kind="variable"><name>add_passenger_dummy1</name></member>
+    <member refid="test__add__passenger__floor_8c_1a8b620582259a0a4d11b996f583fb71d9" kind="variable"><name>add_passenger_dummy2</name></member>
+    <member refid="test__add__passenger__floor_8c_1a3efb0e1a16208deecbd84c15401f7cf8" kind="variable"><name>f</name></member>
+    <member refid="test__add__passenger__floor_8c_1a46582765e9ed219811c2b2c05ce53133" kind="function"><name>case1</name></member>
+    <member refid="test__add__passenger__floor_8c_1a124b0b5989271f456b3cbd130b719dc9" kind="function"><name>case2</name></member>
+    <member refid="test__add__passenger__floor_8c_1a9b49422a55dfff1e9f6776dd3d771588" kind="function"><name>test_add_passenger_floor</name></member>
+  </compound>
+  <compound refid="test__add__request__queue_8c" kind="file"><name>test_add_request_queue.c</name>
+    <member refid="test__add__request__queue_8c_1a65bbec89e771e9120c8ddfb32cf901f0" kind="function"><name>create_dummy_passenger</name></member>
+    <member refid="test__add__request__queue_8c_1a1240ae73e74884b07c231e42ca4a7e0f" kind="function"><name>compare</name></member>
+    <member refid="test__add__request__queue_8c_1ad74350fa86dde458b967dfdc0376e695" kind="function"><name>test_add_request_queue</name></member>
+  </compound>
+  <compound refid="test__average__waiting__time_8c" kind="file"><name>test_average_waiting_time.c</name>
+    <member refid="test__average__waiting__time_8c_1a61a09e5b92af3a8cb9cda4fb57a4e263" kind="function"><name>test_average_waiting_time</name></member>
+  </compound>
+  <compound refid="test__cases_8c" kind="file"><name>test_cases.c</name>
+    <member refid="test__cases_8c_1a1729a811f8c9c49a305dc07d588224a6" kind="function"><name>test_cases</name></member>
+  </compound>
+  <compound refid="test__cli__update_8c" kind="file"><name>test_cli_update.c</name>
+    <member refid="test__cli__update_8c_1a6513a0179a5da3e7fbc4cdb9c874ece2" kind="variable"><name>dummy1</name></member>
+    <member refid="test__cli__update_8c_1a0d7c0c926b894801023f5d1ca572e8ba" kind="variable"><name>dummy2</name></member>
+    <member refid="test__cli__update_8c_1a61a11131e97ff5bc0039404838323fb2" kind="variable"><name>dummy3</name></member>
+    <member refid="test__cli__update_8c_1a46582765e9ed219811c2b2c05ce53133" kind="function"><name>case1</name></member>
+    <member refid="test__cli__update_8c_1a124b0b5989271f456b3cbd130b719dc9" kind="function"><name>case2</name></member>
+    <member refid="test__cli__update_8c_1aa86a7a69e05e4345682717345ffc2e06" kind="function"><name>case3</name></member>
+    <member refid="test__cli__update_8c_1a38108d7e56fd0e399b32c70e40e4debf" kind="function"><name>test_cli_update</name></member>
+  </compound>
+  <compound refid="test__count__passenger_8c" kind="file"><name>test_count_passenger.c</name>
+    <member refid="test__count__passenger_8c_1af6d90743d74e2bd7c24fec8682c86d1c" kind="function"><name>count_passenger</name></member>
+    <member refid="test__count__passenger_8c_1a88492fd685c7762b1a24dec14d2a15fa" kind="function"><name>test_count_passenger</name></member>
+  </compound>
+  <compound refid="test__create__elevator__array_8c" kind="file"><name>test_create_elevator_array.c</name>
+    <member refid="test__create__elevator__array_8c_1ade06ed0d844fd993c27589114d35f742" kind="function"><name>test_create_elevator_array</name></member>
+  </compound>
+  <compound refid="test__create__floor__array_8c" kind="file"><name>test_create_floor_array.c</name>
+    <member refid="test__create__floor__array_8c_1a73d909d0bba984aa1e28e80a350e881c" kind="variable"><name>dummy</name></member>
+    <member refid="test__create__floor__array_8c_1a22451afb873e2e7e4850d18cb43948d1" kind="function"><name>create_floor_array</name></member>
+    <member refid="test__create__floor__array_8c_1a2b9df227bce7b4a13be8b33a58295da1" kind="function"><name>test_create_floor_array</name></member>
+  </compound>
+  <compound refid="test__input__after__stop_8c" kind="file"><name>test_input_after_stop.c</name>
+    <member refid="test__input__after__stop_8c_1a1ef458ac25d998350983b4e337242744" kind="function"><name>input_after_stop</name></member>
+    <member refid="test__input__after__stop_8c_1a2bcf734ca4e0469f6d13579f71c25653" kind="function"><name>test_input_after_stop</name></member>
+  </compound>
+  <compound refid="test__input__floors_8c" kind="file"><name>test_input_floors.c</name>
+    <member refid="test__input__floors_8c_1aad7f794f2c2f149969be480e3a07c63a" kind="function"><name>test_input_floors</name></member>
+  </compound>
+  <compound refid="test__input__lifts_8c" kind="file"><name>test_input_lifts.c</name>
+    <member refid="test__input__lifts_8c_1ab6ade1c5fd86ec52d551be35a9ae588a" kind="function"><name>test_input_lifts</name></member>
+  </compound>
+  <compound refid="test__is__lift__empty_8c" kind="file"><name>test_is_lift_empty.c</name>
+    <member refid="test__is__lift__empty_8c_1a926014f0f80a9a1b2e20849965d88833" kind="function"><name>test_is_lift_empty</name></member>
+  </compound>
+  <compound refid="test__is__lift__on__floor_8c" kind="file"><name>test_is_lift_on_floor.c</name>
+    <member refid="test__is__lift__on__floor_8c_1a3e351f144b937554cd4e0dbd305b5c03" kind="function"><name>test_is_lift_on_floor</name></member>
+  </compound>
+  <compound refid="test__main_8c" kind="file"><name>test_main.c</name>
+    <member refid="test__main_8c_1a379547bec4b90937e91e4228bd868bf2" kind="function"><name>test_cases</name></member>
+    <member refid="test__main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__max__waiting__time_8c" kind="file"><name>test_max_waiting_time.c</name>
+    <member refid="test__max__waiting__time_8c_1a227294b48a939fdc568affbe6dc363be" kind="function"><name>test_max_waiting_time</name></member>
+  </compound>
+  <compound refid="test__moving__lift__down_8c" kind="file"><name>test_moving_lift_down.c</name>
+    <member refid="test__moving__lift__down_8c_1a0f6a08318c4b7fe437805450023e9ae0" kind="function"><name>test_moving_lift_down</name></member>
+  </compound>
+  <compound refid="test__passenger__take__in_8c" kind="file"><name>test_passenger_take_in.c</name>
+    <member refid="test__passenger__take__in_8c_1a5c050fbd479db75ccf00081f930e1e2b" kind="variable"><name>dummy</name></member>
+    <member refid="test__passenger__take__in_8c_1ad873abb8f2eecadb6b933c4a6ca18d17" kind="variable"><name>dummy_2</name></member>
+    <member refid="test__passenger__take__in_8c_1ae5b3b8d7e068ba5ec95faa2f872dec8b" kind="variable"><name>dummy_pass</name></member>
+    <member refid="test__passenger__take__in_8c_1a3efb0e1a16208deecbd84c15401f7cf8" kind="variable"><name>f</name></member>
+    <member refid="test__passenger__take__in_8c_1a46582765e9ed219811c2b2c05ce53133" kind="function"><name>case1</name></member>
+    <member refid="test__passenger__take__in_8c_1a124b0b5989271f456b3cbd130b719dc9" kind="function"><name>case2</name></member>
+    <member refid="test__passenger__take__in_8c_1aa86a7a69e05e4345682717345ffc2e06" kind="function"><name>case3</name></member>
+    <member refid="test__passenger__take__in_8c_1ab42a5fa68316f6e0836354651ef5761e" kind="function"><name>case4</name></member>
+    <member refid="test__passenger__take__in_8c_1adc765168a3758df639afdfed31c88866" kind="function"><name>case5</name></member>
+    <member refid="test__passenger__take__in_8c_1a4b39c02a3d51dd4573b88cbe440da864" kind="function"><name>test_passenger_take_in</name></member>
+  </compound>
+  <compound refid="test__read__passenger_8c" kind="file"><name>test_read_passenger.c</name>
+    <member refid="test__read__passenger_8c_1a1e4a144d033feff3d061892e1eb1f563" kind="function"><name>read_passenger</name></member>
+    <member refid="test__read__passenger_8c_1a9eb76830492cd4f4aaa12a45a6bb81b7" kind="function"><name>test_read_passenger</name></member>
+  </compound>
+  <compound refid="test__remove__passenger__floor_8c" kind="file"><name>test_remove_passenger_floor.c</name>
+    <member refid="test__remove__passenger__floor_8c_1af7e3f763d3fa1ed9e34002b6ab66694b" kind="function"><name>test_remove_passenger_floor</name></member>
+  </compound>
+  <compound refid="test__remove__passenger__queue_8c" kind="file"><name>test_remove_passenger_queue.c</name>
+    <member refid="test__remove__passenger__queue_8c_1a662b7669bfb962286682058828691a19" kind="variable"><name>temp</name></member>
+    <member refid="test__remove__passenger__queue_8c_1a3efb0e1a16208deecbd84c15401f7cf8" kind="variable"><name>f</name></member>
+    <member refid="test__remove__passenger__queue_8c_1a617b005383213bfd374f747c63d1acc8" kind="function"><name>case_1</name></member>
+    <member refid="test__remove__passenger__queue_8c_1adff4968e340aecbd5b4c445208fca9f4" kind="function"><name>case_2</name></member>
+    <member refid="test__remove__passenger__queue_8c_1a61fdcc5cc9a999a7fac4bdeb5788e257" kind="function"><name>case_3</name></member>
+    <member refid="test__remove__passenger__queue_8c_1a3c456cbb8c1b0588aa93f3f737571662" kind="function"><name>case_4</name></member>
+    <member refid="test__remove__passenger__queue_8c_1a1c5bc670f5cc4f0952f8df398ae079ce" kind="function"><name>case_5</name></member>
+    <member refid="test__remove__passenger__queue_8c_1a19ddddd2d940aff616e7153485e63c32" kind="function"><name>case_6</name></member>
+    <member refid="test__remove__passenger__queue_8c_1a0e1286ef4fbc1b7fa890bc2f1f0e2174" kind="function"><name>test_remove_passenger_queue</name></member>
+  </compound>
+  <compound refid="md__developer__manual" kind="page"><name>md_Developer_Manual</name>
+  </compound>
+  <compound refid="md__user__manual" kind="page"><name>md_User_Manual</name>
+  </compound>
+  <compound refid="md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l" kind="page"><name>md_C:_Users_Work_git_repo_elevator_simulator_INSTALL</name>
+  </compound>
+  <compound refid="md__c_1__users__work_git_repo_elevator_simulator__r_e_a_d_m_e" kind="page"><name>md_C:_Users_Work_git_repo_elevator_simulator_README</name>
+  </compound>
+  <compound refid="dir_472fafaf0f039b9e6b043966c1ef7dbf" kind="dir"><name>C:/Users/Work/git_repo/elevator_simulator/data</name>
+  </compound>
+  <compound refid="dir_79674a933289b4de086b67d9586e47c8" kind="dir"><name>C:/Users/Work/git_repo/elevator_simulator/test/data</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>C:/Users/Work/git_repo/elevator_simulator/include</name>
+  </compound>
+  <compound refid="dir_68def62d34bdcd9a1f109a12da3cfb88" kind="dir"><name>C:/Users/Work/git_repo/elevator_simulator/test/include</name>
+  </compound>
+  <compound refid="dir_1a47db7a17f096df444be21df609812a" kind="dir"><name>C:/Users/Work/git_repo/elevator_simulator/test/results</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>C:/Users/Work/git_repo/elevator_simulator/src</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>C:/Users/Work/git_repo/elevator_simulator/test</name>
   </compound>
 </doxygenindex>

@@ -4,7 +4,7 @@ Elevator_Simulation is a software that operates any number of elevator in a comm
 
 # Installation
 
-Please refer to [INSTALL.md](https://github.com/MaazJamal/elevator_simulator/blob/devel/INSTALL.md) file for installation instructions.
+Please refer to [INSTALL.md](/devel/INSTALL.md) file for installation instructions.
 
 # Usage
 
@@ -22,16 +22,22 @@ The program will ask for the following parameters at the execution of Elevator_S
 
 - Input file should be placed in the right path.Change the input file if needed. In the data/ folder
 
-In case of Dynamic version
+In case of Dynamic version the program only simulates until 1999 iterations. This is due to limitations of console windows,causing the program to slow down due to printing of cli_update. There are additional inputs the user can give to the program after every 30th or 200th iteration.
 
-- Add Passenger request : If needed pass passenger request manually in the same format as Input file.
+- Add Passenger request : If needed the user can enter details of a passenger to the program. That will be added to the queue.
 
-- Decide on the simulation when encountered a emergency stop condition. Press 1 to continue simulation or 0 to terminate the simulation.
+- Provide emergency stop in which the elevator will stop at next floor and remove all passengers. The user can then quit or continue the simulation.
 
-Please note that the binary is located in project `root` folder
+- Enable realtime mode. In which each iteration is 1 second long and the program asks for input after every 30th iterations.
+
+- Do not ask for input again and disable the realtime mode. So that the program can run without interuptions until completion.
+
+- Exit the simulation.
+
+Please note that the binary is located in project `root` folder. To start open terminal and type in root directory:
 
 ```
-.elevator
+./elevator
 ```
 
 for windows
@@ -58,8 +64,8 @@ Note: You must have compiled the tests.exe program as well.
 
 # Output Generation
 
-Below output files will be generated and placed [here](https://github.com/MaazJamal/elevator_simulator/blob/devel/data/)
+Output files travel_log.txt and waiting_times.txt  will be generated and placed in [/data](/devel/data/) folder.
 
-Output file 1 - File that gives Passenger*ID,Elevator_ID,Passenger_In time,Passenger* Entry floor,Passenger*Out time,Passenger* Exit floor
+travel_log.txt - File that gives Passenger*ID,Elevator_ID,Passenger_In time,Passenger* Entry floor,Passenger*Out time,Passenger* Exit floor
 
-Output file 2 - File that gives Average waiting time of Passengers and Maximum waiting time of a Passenger.
+waiting_times.txt - File that gives Average waiting time of Passengers and Maximum waiting time of a Passenger.

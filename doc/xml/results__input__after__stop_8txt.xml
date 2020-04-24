@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="results__input__after__stop_8txt" kind="file" language="C++">
+    <compoundname>results_input_after_stop.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;&lt;&lt;&lt;&lt;&lt;&lt;<sp/>Updated<sp/>upstream</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">=======</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/>Stashed<sp/>changes</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_input_after_stop.txt"/>
+  </compounddef>
+</doxygen>

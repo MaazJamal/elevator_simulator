@@ -1,0 +1,58 @@
+Elevator simulation is a software to simulate the operations of multiple elevators in a commercial building, by creating an algorithm.\hypertarget{md__c_1__users__work_git_repo_elevator_simulator_doc__developer__manual_autotoc_md1}{}\doxysection{Requirement}\label{md__c_1__users__work_git_repo_elevator_simulator_doc__developer__manual_autotoc_md1}
+Software simulates Elevator scheduling in a building for an day by reading the input file with Paaseger ID,timestamp,start and destination floor. The text file must be stored in data/input.\+txt.\hypertarget{md__c_1__users__work_git_repo_elevator_simulator_doc__developer__manual_autotoc_md2}{}\doxysection{Assumption}\label{md__c_1__users__work_git_repo_elevator_simulator_doc__developer__manual_autotoc_md2}
+
+\begin{DoxyItemize}
+\item User gives the number of floors and elevators in the building, the value should be less than or equal to 100. In dynamic case this is reduced to 10 to make all elevators fit the screen.
+\item The elevators are assumed to be at the same location in the building.
+\item At the start of the simulation all the elevators are assumed to be on the 1st floor.
+\item The weight of each passenger is assumed to be constant. This allows the simulator to establish weight limits as the number of passengers in the elevator. In this program it is set to 10.
+\item A fixed time has been assumed for lifts to move from x floor to x+1 and x-\/1 floors.\+Each elevator takes 3 seconds to go from one floor to another floor.
+\item The time that the elevator stops on a floor depends on that number of passengers getting in or out. It is assumed that it takes 2 sec for a passenger to get in or out. So the stop time of an elevator at a floor will be 2n, where n is the number of passengers getting in or out of the lift.
+\item The elevators are assumed to have a single entry point for both exit and entry.
+\end{DoxyItemize}\hypertarget{md__c_1__users__work_git_repo_elevator_simulator_doc__developer__manual_autotoc_md3}{}\doxysection{Program Flow}\label{md__c_1__users__work_git_repo_elevator_simulator_doc__developer__manual_autotoc_md3}
+The program flow for the application is as follows\+:
+
+
+\begin{DoxyItemize}
+\item The \mbox{\hyperlink{main_8c}{main.\+c}} file calls the functions for static\+\_\+simulation and in release 2 dynamc\+\_\+simulation based on user input to run the alogorithm.
+\item The static\+\_\+simulation/dynamc\+\_\+simulation function calls\+:
+\begin{DoxyItemize}
+\item The function in \mbox{\hyperlink{input__lifts_8c}{input\+\_\+lifts.\+c}} to get number of lifts from the user.
+\item The function in \mbox{\hyperlink{input__floors_8c}{input\+\_\+floors.\+c}} to get number of floors from the user.
+\item The function in \mbox{\hyperlink{create__elevator__array_8c}{create\+\_\+elevator\+\_\+array.\+c}} to create array for every elevator.
+\item The function in \mbox{\hyperlink{create__floor__array_8c}{create\+\_\+floor\+\_\+array.\+c}} to create array for every floor to hold waiting passeger.
+\item The function in \mbox{\hyperlink{count__passenger_8c}{count\+\_\+passenger.\+c}} to count the number of passenger in the input file.
+\item The function in \mbox{\hyperlink{read__passenger_8c}{read\+\_\+passenger.\+c}} to store the passenger details to passenger structure.
+\item The function in \mbox{\hyperlink{add__request__queue_8c_source}{add\+\_\+request\+\_\+queue.\+c}} to add passenger requests to a queue.
+\item The function in \mbox{\hyperlink{is__lift__on__floor_8c}{is\+\_\+lift\+\_\+on\+\_\+floor.\+c}} to check the lift status. If it is moving or not.
+\item The function in \mbox{\hyperlink{passengers__drop_8c}{passengers\+\_\+drop.\+c}} to drop the passenger at the floor returning number of passengers dropped.
+\item The function in passenger\+\_\+takein.\+c to take the passenger on floor based on maiximum count and space in elevator.
+\item The function in \mbox{\hyperlink{add__passenger__floor_8c_source}{add\+\_\+passenger\+\_\+floor.\+c}} to add passenger to the floor array.
+\item The function in \mbox{\hyperlink{remove__passenger__queue_8c}{remove\+\_\+passenger\+\_\+queue.\+c}} to remove the passenger from request queue.
+\item The function in \mbox{\hyperlink{moving__lift__down_8c}{moving\+\_\+lift\+\_\+down.\+c}} to change lift direction to down.
+\item The function in moving\+\_\+lift\+\_\+up.\+cc to change the lift direction to up.
+\item The function in \mbox{\hyperlink{average__waiting__time_8c}{average\+\_\+waiting\+\_\+time.\+c}} to calculate the average and waiting time.
+\item The function in maximum\+\_\+waiting\+\_\+time.\+c to calculate maximum waiting time.
+\item The function in \mbox{\hyperlink{is__lift__empty_8c}{is\+\_\+lift\+\_\+empty.\+c}} to check the space in elevator
+\item The function in \mbox{\hyperlink{remove__passenger__floor_8c}{remove\+\_\+passenger\+\_\+floor.\+c}} to remove the passenger from the floor array. The dynamc\+\_\+simulation also calls these functions\+:
+\item The function in \mbox{\hyperlink{input__static__dynamic_8c}{input\+\_\+static\+\_\+dynamic.\+c}} to get whether user want static or dynamic simulation.
+\item The function in \mbox{\hyperlink{read__user__input__validate_8c}{read\+\_\+user\+\_\+input\+\_\+validate.\+c}} to read and validate the inputs from user console for a passenger.
+\item The function in \mbox{\hyperlink{emergency__stop__handling_8c}{emergency\+\_\+stop\+\_\+handling.\+c}} to to bring the lifts to nearest floor incase of emergency.
+\item The function in \mbox{\hyperlink{cli__update_8c}{cli\+\_\+update.\+c}} to display elevator information on screen.
+\item The function in \mbox{\hyperlink{input__after__stop_8c}{input\+\_\+after\+\_\+stop.\+c}} to get input from user when emergency situation encountered.
+\item The function in \mbox{\hyperlink{travel__log__file_8c}{travel\+\_\+log\+\_\+file.\+c}} is used to write the two output files to the data folder travel\+\_\+log.\+txt and waiting\+\_\+times.\+txt.
+\end{DoxyItemize}
+\item The program implements the S\+C\+AN algorithm. The elevators move in one direction until all requests along it path are completed or it reaches the end (top or ground floor). At which point it changes direction and waits for new requests before moving again in required direction.
+\begin{DoxyItemize}
+\item Down in case of at top floor.
+\item Up in case of ground floor.
+\item Any direction in all other cases.
+\end{DoxyItemize}
+\item All the elevators start at ground floor with direction of travel set to up.
+\item The passenger array stores the data from input file. This data is then added to passenger\+\_\+queue when the time of arrival of the passenger = the time of the simulation. This is done at very start of the main while loop in static\+\_\+simulation and dynamic simulation function.
+\item This is followed by checking if passenger need to get on of off the elevator at the floor the elevator is currently at.
+\item The passenger\+\_\+queue is then traversed to check if any passengers in the queue can have their requests processed. Those passed are removed from queue and added to the proper entry in floor\+\_\+array. Which is an array of passenger pointers.
+\item The elevator timer is then checked and decremened if it greater than 0. If it is equal to 0. We check if passengers need to get off or do we need to change the floor of the elevator. In case of changing floor +3 seconds are added to the elevator timer.
+\item The program continues until the iterator reaches predifined values. After which the average and max time are written to the files and the program exits. 
+\end{DoxyItemize}\hypertarget{md__c_1__users__work_git_repo_elevator_simulator_doc__developer__manual_autotoc_md4}{}\doxysection{Documentation}\label{md__c_1__users__work_git_repo_elevator_simulator_doc__developer__manual_autotoc_md4}
+Complete documentation of the source code can be found \href{doc/html/index.html}{\texttt{ here}}. 

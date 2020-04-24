@@ -54,7 +54,7 @@ int dynamic_simulation(void)
 	time_t end_time;
 	int time_difference = 0;
 	int divisor = 200;
-	while (t < 4000) //86400 for whole day. Setting to 2000 since cli_update slows the program down.
+	while (t < 2000) //86400 for whole day. Setting to 2000 since cli_update slows the program down.
 	{
 
 		if (t % divisor == 0 && enable_user_input)
@@ -71,14 +71,15 @@ int dynamic_simulation(void)
 				puts("2- Create an Emergency stop.");
 				puts("3- Enable/Disable realtime timer. ");
 				puts("4- Do not ask for input again & Disable realtime timer.");
-				puts("5- Exit the simulation.");
+				puts("5- Do Nothing and continue.");
+				puts("6- Exit the simulation.");
 				int user_choice = 0;
 				while (scanf("%d", &user_choice) == 0)
 				{
 					puts("Incorrect Choice Please Try Again.");
 					scanf("%*[\n]"); //discard all inputs until newline character
 				}
-				if (user_choice > 0 && user_choice < 6)
+				if (user_choice > 0 && user_choice < 7)
 				{
 					incorrect_choice = false; //made correct choice no exit selection loop.
 					switch (user_choice)
@@ -102,10 +103,12 @@ int dynamic_simulation(void)
 						break;
 					case 3:
 						enable_realtime = !enable_realtime; //toggle
-						if(enable_realtime){
+						if (enable_realtime)
+						{
 							divisor = 30;
 						}
-						else{
+						else
+						{
 							divisor = 200;
 						}
 						printf("Set Real-time to : %d\n", enable_realtime);
@@ -116,6 +119,8 @@ int dynamic_simulation(void)
 						exit_main_loop = false;
 						break;
 					case 5:
+						break;
+					case 6:
 						exit_main_loop = true;
 						break;
 					}
@@ -136,7 +141,7 @@ int dynamic_simulation(void)
 		{
 			if (passenger_array[i_pass].arrival_time < t) //due to emergency stop we can skip some entries
 			{
-				while(passenger_array[prev_time_index].arrival_time < t && prev_time_index < passenger_count)
+				while (passenger_array[prev_time_index].arrival_time < t && prev_time_index < passenger_count)
 				{
 					prev_time_index++; //increment until we reach passenger with current or greater arrival_time then  t or reach end array.
 				}

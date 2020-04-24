@@ -1,15 +1,15 @@
-.TH "passenger" 3 "Mon Apr 20 2020" "Elevator simulation" \" -*- nroff -*-
+.TH "passenger" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-passenger \- structure for to store important information about a passenger\&.  
+passenger \- structure to store important information about a passenger\&.  
 
 .SH SYNOPSIS
 .br
 .PP
 .PP
 \fC#include <structures\&.h>\fP
-.SS "Data Fields"
+.SS "Public Attributes"
 
 .in +1c
 .ti -1c
@@ -35,13 +35,16 @@ passenger \- structure for to store important information about a passenger\&.
 .ti -1c
 .RI "struct \fBpassenger\fP * \fBnext\fP"
 .br
+.RI "stores address of the next node in case of creation of queues "
 .in -1c
 .SH "Detailed Description"
 .PP 
-structure for to store important information about a passenger\&. 
+structure to store important information about a passenger\&. 
 
 Stores the arrival time and floor and destination floor of the passenger\&. as well as the passenger id\&. There is a next passenger pointer to create queues 
+.PP
+Definition at line 16 of file structures\&.h\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Elevator simulation from the source code\&.
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

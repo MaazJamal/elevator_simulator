@@ -1,3 +1,8 @@
+/** @file test_moving_lift_down.c
+ * 
+ * @brief contains test cases for moving_lift_down.c
+ * */
+
 #include "moving_lift_down.h"
 #include <stdio.h>
 #include "structures.h"

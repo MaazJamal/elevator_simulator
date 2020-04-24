@@ -1,0 +1,155 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/read_passenger.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/read_passenger.c \- Reads the input file for passenger id,arrival time,starting floor and destination floor\&. Enables to read the data from file and store in a structure of maximum capacity 100\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'read_passenger\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBread_passenger\fP (struct \fBpassenger\fP p[])"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Reads the input file for passenger id,arrival time,starting floor and destination floor\&. Enables to read the data from file and store in a structure of maximum capacity 100\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - Dpadm049@uottawa.ca 
+.RE
+.PP
+
+.PP
+Definition in file \fBread_passenger\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void read_passenger (struct \fBpassenger\fP p[])"
+Constraints If the file does not exists ,the function displays a error message\&. The input file is checked for valid values for passenegr id in range (1-99) and print error message if the values are out of range\&. The input file is checked for valid values for arrival time in range (1-150)and print error message if the values are out of range The input file is checked for valid values for arrival floor in range (1-100)and print error message if the values are out of range The input file is checked for valid values for destination floor in range (1-100)and print error message if the values are out of range 
+.PP
+\fBParameters\fP
+.RS 4
+\fINo\fP input parameter\&. The function uses the input file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the function returns void 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file read_passenger\&.c\&.
+.PP
+.nf
+25 {
+26 
+27     FILE *f;
+28     int i = 0;
+29     int count = 0;
+30     f = fopen("data/input\&.txt", "r");
+31     int fd = fileno(f); //fileno function returns the mode of file\&.
+32     if (fd == -1)
+33     {
+34         printf("Error - input file\n");
+35         exit(1); //program ends incase of absence of file in specified path\&.
+36     }
+37     if (f == NULL)
+38     {
+39         printf("Error -opening the file\n");
+40         exit(1); //program ends incase of error in opening the  input file\&.
+41     }
+42 
+43     if (NULL != f)
+44     {
+45         int size;
+46         fseek(f, 0, SEEK_END);
+47         size = ftell(f);
+48 
+49         if (0 == size)
+50         {
+51             printf("Input file is empty\n");
+52             exit(1);
+53         }
+54     }
+55     rewind(f);
+56 
+57     char c[100];
+58     while (fscanf(f, "%s", c) != EOF)
+59     {
+60 
+61         //  printf("%s",c,);
+62 
+63         if (count == 0)
+64         {
+65 
+66             p[i]\&.id = atoi(c);
+67             count++;
+68             if ((p[i]\&.id == 0) || (p[i]\&.id < 1))
+69             {
+70                 printf("p[%d] -Passenger ID column contains invalid data in  file (i\&.e)%d\n", i, p[i]\&.id);
+71                 exit(1); //program ends incase of erraneous data\&.
+72             }
+73         }
+74 
+75         else if (count == 1)
+76         {
+77 
+78             p[i]\&.arrival_time = atoi(c);
+79             count++;
+80             if ((p[i]\&.arrival_time == 0) || (p[i]\&.arrival_time > 86400) || (p[i]\&.arrival_time < 1))
+81             {
+82                 printf("p[%d]\&.-arrival_time column contains invalid data in file (i\&.e)%d\n", i, p[i]\&.arrival_time);
+83                 exit(1); //program ends incase of erraneous data\&.
+84             }
+85         }
+86         else if (count == 2)
+87         {
+88 
+89             p[i]\&.arrival_floor = atoi(c);
+90             count++;
+91             if ((p[i]\&.arrival_floor == 0) || (p[i]\&.arrival_floor > 100) || (p[i]\&.arrival_floor < 1))
+92             {
+93                 printf("p[%d]\&.arrival_floor column contains invalid data  in file (i\&.e)%d\n", i, p[i]\&.arrival_floor);
+94                 exit(1); //program ends incase of erraneous data\&.
+95             }
+96         }
+97         else if (count == 3)
+98         {
+99             //printf("\n%s\n",c);
+100             p[i]\&.dest_floor = atoi(c);
+101             count = 0;
+102             if ((p[i]\&.dest_floor == 0) || (p[i]\&.dest_floor > 100) || (p[i]\&.dest_floor < 1))
+103             {
+104                 printf("p[%d]\&.dest_floor column contains invalid data in  file (i\&.e)%d\n", i, p[i]\&.dest_floor);
+105                 exit(1); //program ends incase of erraneous data\&.
+106             }
+107             i++;
+108         }
+109     }
+110 
+111     printf("read_passenger is executed-Size of array of structure passenger is %d \n", i);
+112     fclose(f);
+113     printf("Input file is closed-read_passenger function\n");
+114 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

@@ -1,0 +1,35 @@
+\hypertarget{input__static__dynamic_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/src/input\+\_\+static\+\_\+dynamic.c File Reference}
+\label{input__static__dynamic_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/src/input\_static\_dynamic.c@{C:/Users/Work/git\_repo/elevator\_simulator/src/input\_static\_dynamic.c}}
+
+
+Prompts user for type of simulation they want to run.  
+
+
+{\ttfamily \#include \char`\"{}../include/input\+\_\+static\+\_\+dynamic.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{input__static__dynamic_8c_a67da0c3768f671c95fda28d1d1f3fd43}\label{input__static__dynamic_8c_a67da0c3768f671c95fda28d1d1f3fd43}} 
+int {\bfseries input\+\_\+static\+\_\+dynamic} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Prompts user for type of simulation they want to run. 
+
+@\+Author Ritika Arora
+
+@detail Asks user the type of simulation he wants to run. For, static, he has to press 1 and for dynamic, he has to press 2. If 1 is entered by the user, then it will assign 0 to the local variable simulation\+\_\+type. If 2 is entered, then it assigns 1 to the variable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em void} & The function takes no inputs\\
+\hline
+\mbox{\texttt{ out}}  & {\em simulation\+\_\+type} & contains the value to be returned to decide which type of simulation runs.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 for static simulation, 1 for dynamic simulation and -\/1 for invalid input. 
+\end{DoxyReturn}

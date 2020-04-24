@@ -3,83 +3,576 @@
   <compounddef id="structures_8h" kind="file" language="C++">
     <compoundname>structures.h</compoundname>
     <includes local="no">stdbool.h</includes>
-    <includedby refid="add__passenger__floor_8h" local="yes">add_passenger_floor.h</includedby>
-    <includedby refid="add__request__queue_8h" local="yes">add_request_queue.h</includedby>
-    <includedby refid="functions_8h" local="yes">functions.h</includedby>
-    <includedby refid="moving__lift__down_8h" local="yes">moving_lift_down.h</includedby>
-    <includedby refid="remove__passenger__queue_8h" local="yes">remove_passenger_queue.h</includedby>
-    <includedby refid="passengers__take__in_8h" local="yes">passengers_take_in.h</includedby>
-    <includedby refid="read__passenger_8h" local="yes">read_passenger.h</includedby>
-    <includedby refid="remove__passenger__floor_8h" local="yes">remove_passenger_floor.h</includedby>
+    <includedby refid="add__passenger__floor_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/add_passenger_floor.h</includedby>
+    <includedby refid="add__request__queue_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/add_request_queue.h</includedby>
+    <includedby refid="average__waiting__time_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/average_waiting_time.h</includedby>
+    <includedby refid="cli__update_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h</includedby>
+    <includedby refid="count__passenger_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/count_passenger.h</includedby>
+    <includedby refid="create__elevator__array_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/create_elevator_array.h</includedby>
+    <includedby refid="create__floor__array_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/create_floor_array.h</includedby>
+    <includedby refid="emergency__stop__handling_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/emergency_stop_handling.h</includedby>
+    <includedby refid="read__user__input__validate_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/read_user_input_validate.h</includedby>
+    <includedby refid="functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/functions.h</includedby>
+    <includedby refid="input__floors_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/input_floors.h</includedby>
+    <includedby refid="input__lifts_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h</includedby>
+    <includedby refid="is__lift__on__floor_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/is_lift_on_floor.h</includedby>
+    <includedby refid="moving__lift__down_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_down.h</includedby>
+    <includedby refid="moving__lift__up_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_up.h</includedby>
+    <includedby refid="passengers__drop_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/passengers_drop.h</includedby>
+    <includedby refid="passengers__take__in_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/passengers_take_in.h</includedby>
+    <includedby refid="read__passenger_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/read_passenger.h</includedby>
+    <includedby refid="remove__passenger__floor_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_floor.h</includedby>
+    <includedby refid="remove__passenger__queue_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h</includedby>
+    <includedby refid="travel__log__file_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/travel_log_file.h</includedby>
+    <includedby refid="is__lift__empty_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/is_lift_empty.h</includedby>
+    <includedby refid="max__waiting__time_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/max_waiting_time.h</includedby>
+    <includedby refid="add__passenger__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/add_passenger_floor.c</includedby>
+    <includedby refid="count__passenger_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/count_passenger.c</includedby>
+    <includedby refid="create__elevator__array_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/create_elevator_array.c</includedby>
+    <includedby refid="create__floor__array_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/create_floor_array.c</includedby>
+    <includedby refid="emergency__stop__handling_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c</includedby>
+    <includedby refid="is__lift__on__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/is_lift_on_floor.c</includedby>
+    <includedby refid="moving__lift__down_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_down.c</includedby>
+    <includedby refid="moving__lift__up_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c</includedby>
+    <includedby refid="passengers__drop_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/passengers_drop.c</includedby>
+    <includedby refid="read__passenger_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/read_passenger.c</includedby>
+    <includedby refid="read__user__input__validate_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/read_user_input_validate.c</includedby>
+    <includedby refid="remove__passenger__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/remove_passenger_floor.c</includedby>
+    <includedby refid="travel__log__file_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/travel_log_file.c</includedby>
+    <includedby refid="test__add__passenger__floor_8c" local="no">C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c</includedby>
+    <includedby refid="test__add__request__queue_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_add_request_queue.c</includedby>
+    <includedby refid="test__cli__update_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_cli_update.c</includedby>
+    <includedby refid="test__create__elevator__array_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</includedby>
+    <includedby refid="test__is__lift__empty_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_empty.c</includedby>
+    <includedby refid="test__is__lift__on__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</includedby>
+    <includedby refid="test__moving__lift__down_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_moving_lift_down.c</includedby>
+    <includedby refid="test__passenger__take__in_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_passenger_take_in.c</includedby>
+    <includedby refid="test__read__passenger_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_read_passenger.c</includedby>
+    <includedby refid="test__remove__passenger__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c</includedby>
+    <includedby refid="test__remove__passenger__queue_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c</includedby>
     <incdepgraph>
       <node id="2">
         <label>stdbool.h</label>
       </node>
       <node id="1">
-        <label>structures.h</label>
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/structures.h</label>
         <link refid="structures_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4">
-        <label>functions.h</label>
-        <link refid="functions_8h"/>
+      <node id="27">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/count_passenger.c</label>
+        <link refid="count__passenger_8c"/>
       </node>
-      <node id="6">
-        <label>remove_passenger_queue.h</label>
-        <link refid="remove__passenger__queue_8h"/>
-        <childnode refid="4" relation="include">
+      <node id="43">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_down.h</label>
+        <link refid="moving__lift__down_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c</label>
+        <link refid="emergency__stop__handling_8c"/>
+      </node>
+      <node id="55">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_floor.h</label>
+        <link refid="remove__passenger__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</label>
+        <link refid="test__create__elevator__array_8c"/>
+      </node>
+      <node id="48">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/passengers_drop.h</label>
+        <link refid="passengers__drop_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>structures.h</label>
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/structures.h</label>
         <link refid="structures_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/read_passenger.c</label>
+        <link refid="read__passenger_8c"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/add_passenger_floor.h</label>
+        <link refid="add__passenger__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/input_lifts.c</label>
+        <link refid="input__lifts_8c"/>
+      </node>
+      <node id="61">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/travel_log_file.h</label>
+        <link refid="travel__log__file_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/input_floors.c</label>
+        <link refid="input__floors_8c"/>
+      </node>
+      <node id="68">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_read_passenger.c</label>
+        <link refid="test__read__passenger_8c"/>
+      </node>
+      <node id="45">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_moving_lift_down.c</label>
+        <link refid="test__moving__lift__down_8c"/>
+      </node>
+      <node id="58">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>add_request_queue.h</label>
-        <link refid="add__request__queue_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>remove_passenger_floor.h</label>
-        <link refid="remove__passenger__floor_8h"/>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/is_lift_on_floor.h</label>
+        <link refid="is__lift__on__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c</label>
+        <link refid="test__add__passenger__floor_8c"/>
+      </node>
+      <node id="35">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/input_floors.h</label>
+        <link refid="input__floors_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/add_request_queue.h</label>
+        <link refid="add__request__queue_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_up.h</label>
+        <link refid="moving__lift__up_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
       </node>
       <node id="8">
-        <label>read_passenger.h</label>
-        <link refid="read__passenger_8h"/>
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</label>
+        <link refid="static__simulation_8c"/>
       </node>
-      <node id="5">
-        <label>moving_lift_down.h</label>
-        <link refid="moving__lift__down_8h"/>
-        <childnode refid="4" relation="include">
+      <node id="42">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/is_lift_on_floor.c</label>
+        <link refid="is__lift__on__floor_8c"/>
+      </node>
+      <node id="37">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_input_floors.c</label>
+        <link refid="test__input__floors_8c"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/add_passenger_floor.c</label>
+        <link refid="add__passenger__floor_8c"/>
+      </node>
+      <node id="40">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_input_lifts.c</label>
+        <link refid="test__input__lifts_8c"/>
+      </node>
+      <node id="63">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/is_lift_empty.c</label>
+        <link refid="is__lift__empty_8c"/>
+      </node>
+      <node id="11">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</label>
+        <link refid="test__is__lift__on__floor_8c"/>
+      </node>
+      <node id="26">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/count_passenger.h</label>
+        <link refid="count__passenger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>passengers_take_in.h</label>
-        <link refid="passengers__take__in_8h"/>
+      <node id="62">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/is_lift_empty.h</label>
+        <link refid="is__lift__empty_8h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
       </node>
-      <node id="2">
-        <label>add_passenger_floor.h</label>
-        <link refid="add__passenger__floor_8h"/>
+      <node id="59">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/remove_passenger_queue.c</label>
+        <link refid="remove__passenger__queue_8c"/>
+      </node>
+      <node id="17">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/average_waiting_time.h</label>
+        <link refid="average__waiting__time_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/remove_passenger_floor.c</label>
+        <link refid="remove__passenger__floor_8c"/>
+      </node>
+      <node id="25">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cli_update.c</label>
+        <link refid="test__cli__update_8c"/>
+      </node>
+      <node id="67">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_max_waiting_time.c</label>
+        <link refid="test__max__waiting__time_8c"/>
+      </node>
+      <node id="23">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/cli_update.c</label>
+        <link refid="cli__update_8c"/>
+      </node>
+      <node id="9">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="47">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c</label>
+        <link refid="moving__lift__up_8c"/>
+      </node>
+      <node id="29">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/create_elevator_array.c</label>
+        <link refid="create__elevator__array_8c"/>
+      </node>
+      <node id="64">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_empty.c</label>
+        <link refid="test__is__lift__empty_8c"/>
+      </node>
+      <node id="15">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/add_request_queue.c</label>
+        <link refid="add__request__queue_8c"/>
+      </node>
+      <node id="28">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/create_elevator_array.h</label>
+        <link refid="create__elevator__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/max_waiting_time.h</label>
+        <link refid="max__waiting__time_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h</label>
+        <link refid="input__lifts_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/passengers_drop.c</label>
+        <link refid="passengers__drop_8c"/>
+      </node>
+      <node id="34">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/read_user_input_validate.c</label>
+        <link refid="read__user__input__validate_8c"/>
+      </node>
+      <node id="20">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_average_waiting_time.c</label>
+        <link refid="test__average__waiting__time_8c"/>
+      </node>
+      <node id="16">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_add_request_queue.c</label>
+        <link refid="test__add__request__queue_8c"/>
+      </node>
+      <node id="66">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/max_waiting_time.c</label>
+        <link refid="max__waiting__time_8c"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="21">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h</label>
+        <link refid="cli__update_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/read_passenger.h</label>
+        <link refid="read__passenger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_passenger_take_in.c</label>
+        <link refid="test__passenger__take__in_8c"/>
+      </node>
+      <node id="51">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/passengers_take_in.c</label>
+        <link refid="passengers__take__in_8c"/>
+      </node>
+      <node id="60">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c</label>
+        <link refid="test__remove__passenger__queue_8c"/>
+      </node>
+      <node id="22">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</label>
+        <link refid="dynamic__functions_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/create_floor_array.h</label>
+        <link refid="create__floor__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/passengers_take_in.h</label>
+        <link refid="passengers__take__in_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/create_floor_array.c</label>
+        <link refid="create__floor__array_8c"/>
+      </node>
+      <node id="57">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c</label>
+        <link refid="test__remove__passenger__floor_8c"/>
+      </node>
+      <node id="18">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/average_waiting_time.c</label>
+        <link refid="average__waiting__time_8c"/>
+      </node>
+      <node id="7">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+      <node id="32">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/emergency_stop_handling.h</label>
+        <link refid="emergency__stop__handling_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/travel_log_file.c</label>
+        <link refid="travel__log__file_8c"/>
+      </node>
+      <node id="33">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/read_user_input_validate.h</label>
+        <link refid="read__user__input__validate_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_down.c</label>
+        <link refid="moving__lift__down_8c"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structpassenger" prot="public">passenger</innerclass>
@@ -95,31 +588,32 @@
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__STRUCTURES_H__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="structpassenger" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>{</highlight></codeline>
-<codeline lineno="17" refid="structpassenger_1acaaf5adf80fe8fd8e9b1b5401c2a39e2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1acaaf5adf80fe8fd8e9b1b5401c2a39e2" kindref="member">in_elevator</ref>;<sp/></highlight></codeline>
-<codeline lineno="18" refid="structpassenger_1ac5750ae7307cd77866c3fc94ad058b8c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1ac5750ae7307cd77866c3fc94ad058b8c" kindref="member">arrival_time</ref>;<sp/></highlight></codeline>
-<codeline lineno="19" refid="structpassenger_1a4d2f3bc200903acf57f6a277c309ad96" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1a4d2f3bc200903acf57f6a277c309ad96" kindref="member">arrival_floor</ref>;<sp/></highlight></codeline>
-<codeline lineno="20" refid="structpassenger_1a1166dc7971a5d5e3b766c719b885a8d1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1a1166dc7971a5d5e3b766c719b885a8d1" kindref="member">dest_floor</ref>;<sp/></highlight></codeline>
-<codeline lineno="21" refid="structpassenger_1ab7ce6f462afaf105224b0ca772a33c43" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpassenger_1ab7ce6f462afaf105224b0ca772a33c43" kindref="member">id</ref>;<sp/></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>*next;<sp/></highlight></codeline>
-<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="structelevator" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelevator" kindref="compound">elevator</ref>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>moving;<sp/></highlight></codeline>
-<codeline lineno="36" refid="structelevator_1ab9db9c40c0582877c0eb1e40208bce7f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1ab9db9c40c0582877c0eb1e40208bce7f" kindref="member">between_floor</ref>;<sp/></highlight></codeline>
-<codeline lineno="37" refid="structelevator_1a4a24a1828511061b35d68613f6205c71" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1a4a24a1828511061b35d68613f6205c71" kindref="member">direction_up</ref>;<sp/></highlight></codeline>
-<codeline lineno="38" refid="structelevator_1ae1d85507e558e66edd33a940fd85cb83" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1ae1d85507e558e66edd33a940fd85cb83" kindref="member">direction_down</ref>;<sp/></highlight></codeline>
-<codeline lineno="39" refid="structelevator_1abcf67c62096d397bf09fad7c61c43e3a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>*<ref refid="structelevator_1abcf67c62096d397bf09fad7c61c43e3a" kindref="member">stop_at_floor</ref>;<sp/></highlight></codeline>
-<codeline lineno="40" refid="structelevator_1aafbf17dfb8c07dadb99b3e0faadef32d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1aafbf17dfb8c07dadb99b3e0faadef32d" kindref="member">passenger_count</ref>;<sp/></highlight></codeline>
-<codeline lineno="41" refid="structelevator_1ab997145d0c77ff2c31df5e80d84387db" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1ab997145d0c77ff2c31df5e80d84387db" kindref="member">max_passenger</ref>;<sp/></highlight></codeline>
-<codeline lineno="42" refid="structelevator_1aff6a26008372ae6df6b9e89db676516c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structelevator_1aff6a26008372ae6df6b9e89db676516c" kindref="member">cur_floor</ref>;<sp/></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>timer;<sp/></highlight></codeline>
-<codeline lineno="44" refid="structelevator_1aa49275fd21211fa8103ebc37c5dcd730" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*<ref refid="structelevator_1aa49275fd21211fa8103ebc37c5dcd730" kindref="member">passenger_arr</ref>;<sp/></highlight></codeline>
-<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+<codeline lineno="16" refid="structpassenger" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18" refid="structpassenger_1a8af124b4de91150e204a2374e98ee71f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpassenger_1a8af124b4de91150e204a2374e98ee71f" kindref="member">in_elevator</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="structpassenger_1a8dd292bfb4015a71df26b57eb23c8701" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpassenger_1a8dd292bfb4015a71df26b57eb23c8701" kindref="member">arrival_time</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="structpassenger_1a0a31a3de4943a83121587e2d11b3e2c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpassenger_1a0a31a3de4943a83121587e2d11b3e2c0" kindref="member">arrival_floor</ref>;<sp/></highlight></codeline>
+<codeline lineno="21" refid="structpassenger_1a1cd2d080a6795d30505e8722d329c7e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpassenger_1a1cd2d080a6795d30505e8722d329c7e2" kindref="member">dest_floor</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structelevator" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelevator" kindref="compound">elevator</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37" refid="structelevator_1a186590570ed9fee16200f9fffd3a0873" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structelevator_1a186590570ed9fee16200f9fffd3a0873" kindref="member">moving</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="structelevator_1ab012a8d2102934af9ea97effdeea80cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structelevator_1ab012a8d2102934af9ea97effdeea80cf" kindref="member">between_floor</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="structelevator_1a78d725b14370d8b2000a99bd11755ff8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structelevator_1a78d725b14370d8b2000a99bd11755ff8" kindref="member">direction_up</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structelevator_1aa773f94528363621939e5fcc99dcc6ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structelevator_1aa773f94528363621939e5fcc99dcc6ad" kindref="member">direction_down</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structelevator_1a47d71912bc6a97bcf1a7c8c257ed4df1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*<ref refid="structelevator_1a47d71912bc6a97bcf1a7c8c257ed4df1" kindref="member">stop_at_floor</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structelevator_1a35976c62fece1a1887b39d2761e409e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structelevator_1a35976c62fece1a1887b39d2761e409e3" kindref="member">passenger_count</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="structelevator_1ae18c23ac67fc1e94d1dd831119d90f6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structelevator_1ae18c23ac67fc1e94d1dd831119d90f6f" kindref="member">max_passenger</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="structelevator_1a2c87ee6189da284a149438ce8b0acc8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structelevator_1a2c87ee6189da284a149438ce8b0acc8d" kindref="member">cur_floor</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="structelevator_1a6272f86a10a9c4bf565e184a4537373d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structelevator_1a6272f86a10a9c4bf565e184a4537373d" kindref="member">timer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="structelevator_1ab3f0430781fbb878267214945aaf9322" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*<ref refid="structelevator_1ab3f0430781fbb878267214945aaf9322" kindref="member">passenger_arr</ref>;<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="structures.h"/>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/structures.h"/>
   </compounddef>
 </doxygen>

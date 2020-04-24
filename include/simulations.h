@@ -1,6 +1,5 @@
 /** @file simulations.h
- * @brief this file simply includes the header files 
- * of the two simulations.
+ * @brief this file simply includes the header files of the two simulations.
  * 
  * @author Maaz Jamal
  * */

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l" kind="page">
+    <compoundname>md_C:_Users_Work_git_repo_elevator_simulator_INSTALL</compoundname>
+    <title>Installation</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l_1autotoc_md11">
+<title>Supported Platforms:</title>
+<para>Unix, Cygwin and MacOS.</para>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l_1autotoc_md12">
+<title>Prerequisite</title>
+<para>GCC Compiler, GNU make. mingw for windows.</para>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l_1autotoc_md13">
+<title>No Dependent External Libraries</title>
+</sect1>
+<sect1 id="md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l_1autotoc_md14">
+<title>Build Project:</title>
+<para>Running make will compile elevator and tests programs. The test program will provide options to test the program functions. In case of error please find solution at end of document.</para>
+<para><programlisting><codeline><highlight class="normal">make</highlight></codeline>
+</programlisting></para>
+<para>If you just want the elevator program. run:</para>
+<para><programlisting><codeline><highlight class="normal">make<sp/>elevator</highlight></codeline>
+</programlisting></para>
+<para>If you just want the tests program. run:</para>
+<para><programlisting><codeline><highlight class="normal">make<sp/>tests</highlight></codeline>
+</programlisting></para>
+<para>Excutable binaries &quot;elevator.exe&quot; and &quot;tests.exe&quot;(in windows) files will be placed in root folder of the project. For cygwin/unix type. <programlisting><codeline><highlight class="normal">./elevator</highlight></codeline>
+</programlisting></para>
+<para>or <programlisting><codeline><highlight class="normal">./tests</highlight></codeline>
+</programlisting></para>
+<para>In some cases the compilation may fail with the error: <programlisting><codeline><highlight class="normal">Undefined<sp/>Reference<sp/>to<sp/>WinMain</highlight></codeline>
+</programlisting></para>
+<para>or similar, in such cases, run <computeroutput>make</computeroutput> command again or compile just the binary you want <computeroutput>make elevator</computeroutput> or <computeroutput>make tests</computeroutput> This program will compile in second attempt. </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

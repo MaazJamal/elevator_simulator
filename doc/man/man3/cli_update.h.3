@@ -1,0 +1,105 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h \- contains declarations for cli_update function\&. Used to update the command line interface of the function\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcli_update\fP (struct \fBelevator\fP arr[], unsigned int loop_time)"
+.br
+.RI "Updates the command line interface with the elevator data\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains declarations for cli_update function\&. Used to update the command line interface of the function\&. 
+
+
+.PP
+Definition in file \fBcli_update\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void cli_update (struct \fBelevator\fP arr[], unsigned int loop_time)"
+
+.PP
+Updates the command line interface with the elevator data\&. Clears the screen and repopulates it with the updated elevator data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarr\fP struct elevator that is an array of elevators\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+
+.br
+ 
+.RE
+.PP
+Checks if we are in unix/cygwin environment or windows environment
+.PP
+Definition at line 19 of file cli_update\&.c\&.
+.PP
+.nf
+20 {
+21 
+24 #if __unix__ || __CYGWIN__
+25     system("clear");
+26 #elif _WIN32
+27     system("cls");
+28 #endif
+29     puts("Elevator\tTime\tFloor\tPassengers\tDirection\tMoving\t");
+30     int current_floor = 0;
+31     int passenger = 0;
+32     bool direction_down = false;
+33     bool direction_up = false;
+34     int next_floor_time = 0;
+35     bool moving = false;
+36     char direction[5] = {'\0','\0','\0','\0','\0'};
+37     char move_or_no[4] = {'\0','\0','\0','\0',};
+38     for (int i = 0; i < elevator_count; i++)
+39     {
+40         current_floor = arr[i]\&.cur_floor;
+41         passenger = arr[i]\&.passenger_count;
+42         direction_down = arr[i]\&.direction_down;
+43         direction_up = arr[i]\&.direction_up;
+44         next_floor_time = arr[i]\&.timer;
+45         moving = arr[i]\&.moving;
+46         if (direction_up && direction_down)
+47         {
+48             strcpy(direction, "ANY");
+49         }
+50         else if (direction_up)
+51         {
+52             strcpy(direction, "UP");
+53         }
+54         else
+55         {
+56             strcpy(direction, "DOWN");
+57         }
+58         if (moving)
+59         {
+60             strcpy(move_or_no, "YES");
+61         }
+62         else
+63         {
+64             strcpy(move_or_no, "NO");
+65         }
+66         printf("%d\t\t%d\t%d\t%d\t\t%s\t\t%s\n", i, next_floor_time, current_floor, passenger, direction, move_or_no);
+67     }
+68     printf("SIMULATION TIME: %d\n",loop_time);
+69 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

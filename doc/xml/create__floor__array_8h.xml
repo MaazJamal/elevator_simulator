@@ -2,10 +2,98 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="create__floor__array_8h" kind="file" language="C++">
     <compoundname>create_floor_array.h</compoundname>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includedby refid="functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/functions.h</includedby>
+    <includedby refid="create__floor__array_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/create_floor_array.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/create_floor_array.h</label>
+        <link refid="create__floor__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</label>
+        <link refid="test__create__elevator__array_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</label>
+        <link refid="static__simulation_8c"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</label>
+        <link refid="test__is__lift__on__floor_8c"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/create_floor_array.h</label>
+        <link refid="create__floor__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/create_floor_array.c</label>
+        <link refid="create__floor__array_8c"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+    </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="create__floor__array_8h_1a64498cd5b805fe8c1f80bccda9e2bc8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> *</type>
-        <definition>struct passenger* create_floor_array</definition>
+      <memberdef kind="function" id="create__floor__array_8h_1aa7321679c44d6dcf3ff9241a44ab38c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> **</type>
+        <definition>struct passenger** create_floor_array</definition>
         <argsstring>(int no_of_floors)</argsstring>
         <name>create_floor_array</name>
         <param>
@@ -15,26 +103,40 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Creates array for every floor to store the passenger with requests.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Gets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of floors as input and creates a list of array for every floor.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>structure of arrays for the given number of floors. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="create_floor_array.h" line="8" column="24" declfile="create_floor_array.h" declline="8" declcolumn="24"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/create_floor_array.h" line="8" column="23" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/create_floor_array.c" bodystart="24" bodyend="42" declfile="C:/Users/Work/git_repo/elevator_simulator/include/create_floor_array.h" declline="8" declcolumn="23"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>declaration for create_floor_array function -creates an array for floors with respective to input entered by user. Returns the array of floors. </para>
+<para>declaration for create_floor_array function -creates an array for floors with respective to input entered by user. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="5"><highlight class="preprocessor">#ifndef<sp/>__CREATE_FLOOR_ARRAY__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CREATE_FLOOR_ARRAY__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor">#ifndef<sp/>__CREATE_FLOOR_ARRAY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CREATE_FLOOR_ARRAY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*<sp/>create_floor_array(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no_of_floors);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>**<ref refid="create__floor__array_8h_1aa7321679c44d6dcf3ff9241a44ab38c1" kindref="member">create_floor_array</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no_of_floors);</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="create_floor_array.h"/>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/create_floor_array.h"/>
   </compounddef>
 </doxygen>

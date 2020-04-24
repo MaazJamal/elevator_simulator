@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="waiting__times_8txt" kind="file" language="C++">
+    <compoundname>waiting_times.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Average<sp/>Waiting<sp/>time<sp/>of<sp/>Passenger:<sp/>0.875000</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">Maximum<sp/>Waiting<sp/>time<sp/>of<sp/>Passenger:<sp/>5.000000</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/data/waiting_times.txt"/>
+  </compounddef>
+</doxygen>

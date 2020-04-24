@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Elevator Simulator: test/test_cases.c Source File</title>
+<title>Elevator Simulator: C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Elevator Simulator
-   &#160;<span id="projectnumber">0.9</span>
+   &#160;<span id="projectnumber">2.0</span>
    </div>
    <div id="projectbrief">The project simulates elevators in a building</div>
   </td>
@@ -87,110 +87,165 @@ $(document).ready(function(){initNavTree('test__cases_8c_source.html',''); initR
 <div class="title">test_cases.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="functions_8h.html">functions.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="test__functions_8h.html">test_functions.h</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordtype">void</span> test_cases(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">int</span> test_choice; <span class="comment">//stores user input for testing</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    printf(<span class="stringliteral">&quot;Enter ur choice\n&quot;</span>);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    puts(<span class="stringliteral">&quot;1. To run test for add_request_queue().&quot;</span>);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    puts(<span class="stringliteral">&quot;2. To run tests for average_waiting_time().&quot;</span>);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    puts(<span class="stringliteral">&quot;3. To run tests for count_passenger().&quot;</span>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    puts(<span class="stringliteral">&quot;4. To run tests for create_elevator_array().&quot;</span>);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    puts(<span class="stringliteral">&quot;5. To run tests for create_floor_array().&quot;</span>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    puts(<span class="stringliteral">&quot;6. To run tests for input_after_stop().&quot;</span>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    puts(<span class="stringliteral">&quot;7. To run tests for input_floors().&quot;</span>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    puts(<span class="stringliteral">&quot;8. To run tests for input_lifts().&quot;</span>);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    puts(<span class="stringliteral">&quot;9. To run tests for is_lift_empty().&quot;</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    puts(<span class="stringliteral">&quot;10. To run tests for is_lift_on_floor().&quot;</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    puts(<span class="stringliteral">&quot;11. To run tests for max_waiting_time().&quot;</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    puts(<span class="stringliteral">&quot;12. To run tests for moving_lift_down().&quot;</span>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    puts(<span class="stringliteral">&quot;13. To run tests for passenger_take_in().&quot;</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    puts(<span class="stringliteral">&quot;14. To run tests for read_passenger().&quot;</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    puts(<span class="stringliteral">&quot;15. To run tests for remove_passenger_queue().&quot;</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;test_choice);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//switch to execute</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">switch</span> (test_choice)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        test_add_request_queue();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        puts(<span class="stringliteral">&quot;Tests for add_request_queue() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        test_average_waiting_time();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        puts(<span class="stringliteral">&quot;Tests for average_waiting_time() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        test_count_passenger();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        puts(<span class="stringliteral">&quot;Tests for count_passenger() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">case</span> 4:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="test__functions_8h.html#ade06ed0d844fd993c27589114d35f742">test_create_elevator_array</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        puts(<span class="stringliteral">&quot;Tests for create_elevator_array() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">case</span> 5:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        test_create_floor_array();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        puts(<span class="stringliteral">&quot;Tests for create_floor_array() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">case</span> 6:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        test_input_after_stop();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        puts(<span class="stringliteral">&quot;Tests for input_after_stop() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">case</span> 7:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="test__functions_8h.html#aad7f794f2c2f149969be480e3a07c63a">test_input_floors</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        puts(<span class="stringliteral">&quot;Tests for test_input_floors() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">case</span> 8:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        test_input_lifts();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        puts(<span class="stringliteral">&quot;Tests for input_lifts() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">case</span> 9:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        test_is_lift_empty();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        puts(<span class="stringliteral">&quot;Tests for is_lift_empty() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">case</span> 10:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="test__functions_8h.html#a3e351f144b937554cd4e0dbd305b5c03">test_is_lift_on_floor</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        puts(<span class="stringliteral">&quot;Tests for is_lift_on_floor Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">case</span> 11:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        test_max_waiting_time();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        puts(<span class="stringliteral">&quot;Tests for max_waiting_time Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">case</span> 12:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="test__functions_8h.html#a0f6a08318c4b7fe437805450023e9ae0">test_moving_lift_down</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        puts(<span class="stringliteral">&quot;Tests for moving_lift_down() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">case</span> 13:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        test_passenger_take_in();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        puts(<span class="stringliteral">&quot;Tests for passenger_take_in() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">case</span> 14:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        test_read_passenger();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        puts(<span class="stringliteral">&quot;Tests for test_read_passenger() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">case</span> 15:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        test_remove_passenger_queue();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        puts(<span class="stringliteral">&quot;Tests for remove_passenger_queue() Done. Results may be found in test/results.&quot;</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        printf(<span class="stringliteral">&quot;Invalid option. Run program again.\n&quot;</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<a href="test__cases_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="functions_8h.html">functions.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="test__functions_8h.html">test_functions.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#if __unix__ || __CYGWIN__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#elif _WIN32</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;io.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> test_cases(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> exit_choice = 0; <span class="comment">//stores user input for testing</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">while</span> (exit_choice == 0)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">int</span> test_choice = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> stdin_descriptor = dup(0);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">int</span> stdout_descriptor = dup(1);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        puts(<span class="stringliteral">&quot;Please note due to nature of some of the tests the program may need to  be run again.&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        puts(<span class="stringliteral">&quot;Some tests are supposed to cause the program to exit.\n&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        puts(<span class="stringliteral">&quot;Enter a negative number to exit.&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        printf(<span class="stringliteral">&quot;Enter ur choice\n&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        puts(<span class="stringliteral">&quot;1. To run test for add_request_queue().&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        puts(<span class="stringliteral">&quot;2. To run tests for average_waiting_time().&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        puts(<span class="stringliteral">&quot;3. To run tests for count_passenger().&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        puts(<span class="stringliteral">&quot;4. To run tests for create_elevator_array().&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        puts(<span class="stringliteral">&quot;5. To run tests for create_floor_array().&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        puts(<span class="stringliteral">&quot;6. To run tests for input_after_stop().&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        puts(<span class="stringliteral">&quot;7. To run tests for input_floors().&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        puts(<span class="stringliteral">&quot;8. To run tests for input_lifts().&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        puts(<span class="stringliteral">&quot;9. To run tests for is_lift_empty().&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        puts(<span class="stringliteral">&quot;10. To run tests for is_lift_on_floor().&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        puts(<span class="stringliteral">&quot;11. To run tests for max_waiting_time().&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        puts(<span class="stringliteral">&quot;12. To run tests for moving_lift_down().&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        puts(<span class="stringliteral">&quot;13. To run tests for passenger_take_in().&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        puts(<span class="stringliteral">&quot;14. To run tests for read_passenger().&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        puts(<span class="stringliteral">&quot;15. To run tests for remove_passenger_queue().&quot;</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        puts(<span class="stringliteral">&quot;16. To run tests for cli_update().&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        puts(<span class="stringliteral">&quot;17. To run tests for add_passenger_floor().&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        puts(<span class="stringliteral">&quot;18. To run tests for remove_passenger_floor().&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">int</span> read = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">while</span> (read == 0)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            read = scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;test_choice);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (read == 0)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                puts(<span class="stringliteral">&quot;Incorrect input&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                scanf(<span class="stringliteral">&quot;%*[^\n]&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                puts(<span class="stringliteral">&quot;Enter your choice&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (test_choice &lt; 0)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                puts(<span class="stringliteral">&quot;Exiting&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                exit_choice = 1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//switch to execute</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (test_choice &gt;= 0)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">switch</span> (test_choice)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                test_add_request_queue();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                puts(<span class="stringliteral">&quot;Tests for add_request_queue() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                test_average_waiting_time();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                puts(<span class="stringliteral">&quot;Tests for average_waiting_time() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                test_count_passenger();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                puts(<span class="stringliteral">&quot;Tests for count_passenger() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <a class="code" href="test__functions_8h.html#ade06ed0d844fd993c27589114d35f742">test_create_elevator_array</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                puts(<span class="stringliteral">&quot;Tests for create_elevator_array() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                test_create_floor_array();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                puts(<span class="stringliteral">&quot;Tests for create_floor_array() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                test_input_after_stop();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                puts(<span class="stringliteral">&quot;Tests for input_after_stop() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">case</span> 7:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <a class="code" href="test__functions_8h.html#aad7f794f2c2f149969be480e3a07c63a">test_input_floors</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                puts(<span class="stringliteral">&quot;Tests for test_input_floors() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                test_input_lifts();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                puts(<span class="stringliteral">&quot;Tests for input_lifts() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">case</span> 9:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                test_is_lift_empty();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                puts(<span class="stringliteral">&quot;Tests for is_lift_empty() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">case</span> 10:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <a class="code" href="test__functions_8h.html#a3e351f144b937554cd4e0dbd305b5c03">test_is_lift_on_floor</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                puts(<span class="stringliteral">&quot;Tests for is_lift_on_floor Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">case</span> 11:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                test_max_waiting_time();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                puts(<span class="stringliteral">&quot;Tests for max_waiting_time Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">case</span> 12:</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <a class="code" href="test__functions_8h.html#a0f6a08318c4b7fe437805450023e9ae0">test_moving_lift_down</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                puts(<span class="stringliteral">&quot;Tests for moving_lift_down() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">case</span> 13:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                test_passenger_take_in();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                puts(<span class="stringliteral">&quot;Tests for passenger_take_in() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">case</span> 14:</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                test_read_passenger();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                puts(<span class="stringliteral">&quot;Tests for test_read_passenger() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">case</span> 15:</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                test_remove_passenger_queue();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                puts(<span class="stringliteral">&quot;Tests for remove_passenger_queue() Done. Results may be found in test/results.&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">case</span> 16:</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                test_cli_update();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                puts(<span class="stringliteral">&quot;Tests for cli_update() Done.&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">case</span> 17:</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                test_add_passenger_floor();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                puts(<span class="stringliteral">&quot;Tests for add_passenger_floor() Done.&quot;</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">case</span> 18:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <a class="code" href="test__functions_8h.html#af7e3f763d3fa1ed9e34002b6ab66694b">test_remove_passenger_floor</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                puts(<span class="stringliteral">&quot;Tests for remove_passenger_floor() Done.&quot;</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                printf(<span class="stringliteral">&quot;Invalid option.\n&quot;</span>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        dup2(stdin_descriptor, 0);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        dup2(stdout_descriptor, 1);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="atest__functions_8h_html_a0f6a08318c4b7fe437805450023e9ae0"><div class="ttname"><a href="test__functions_8h.html#a0f6a08318c4b7fe437805450023e9ae0">test_moving_lift_down</a></div><div class="ttdeci">void test_moving_lift_down(void)</div><div class="ttdoc">This function test the function moving_lift_down.</div><div class="ttdef"><b>Definition:</b> <a href="test__moving__lift__down_8c_source.html#l00013">test_moving_lift_down.c:13</a></div></div>
+<div class="ttc" id="atest__functions_8h_html_a0f6a08318c4b7fe437805450023e9ae0"><div class="ttname"><a href="test__functions_8h.html#a0f6a08318c4b7fe437805450023e9ae0">test_moving_lift_down</a></div><div class="ttdeci">void test_moving_lift_down(void)</div><div class="ttdoc">This function test the function moving_lift_down.</div><div class="ttdef"><b>Definition:</b> <a href="test__moving__lift__down_8c_source.html#l00018">test_moving_lift_down.c:18</a></div></div>
 <div class="ttc" id="atest__functions_8h_html"><div class="ttname"><a href="test__functions_8h.html">test_functions.h</a></div><div class="ttdoc">contains the function declarations for all the test_functions</div></div>
 <div class="ttc" id="afunctions_8h_html"><div class="ttname"><a href="functions_8h.html">functions.h</a></div><div class="ttdoc">Simply contains all the headers of the different function.</div></div>
-<div class="ttc" id="atest__functions_8h_html_aad7f794f2c2f149969be480e3a07c63a"><div class="ttname"><a href="test__functions_8h.html#aad7f794f2c2f149969be480e3a07c63a">test_input_floors</a></div><div class="ttdeci">void test_input_floors(void)</div><div class="ttdef"><b>Definition:</b> <a href="test__input__floors_8c_source.html#l00013">test_input_floors.c:13</a></div></div>
-<div class="ttc" id="atest__functions_8h_html_a3e351f144b937554cd4e0dbd305b5c03"><div class="ttname"><a href="test__functions_8h.html#a3e351f144b937554cd4e0dbd305b5c03">test_is_lift_on_floor</a></div><div class="ttdeci">void test_is_lift_on_floor(void)</div><div class="ttdef"><b>Definition:</b> <a href="test__is__lift__on__floor_8c_source.html#l00013">test_is_lift_on_floor.c:13</a></div></div>
-<div class="ttc" id="atest__functions_8h_html_ade06ed0d844fd993c27589114d35f742"><div class="ttname"><a href="test__functions_8h.html#ade06ed0d844fd993c27589114d35f742">test_create_elevator_array</a></div><div class="ttdeci">void test_create_elevator_array(void)</div><div class="ttdef"><b>Definition:</b> <a href="test__create__elevator__array_8c_source.html#l00011">test_create_elevator_array.c:11</a></div></div>
+<div class="ttc" id="atest__functions_8h_html_af7e3f763d3fa1ed9e34002b6ab66694b"><div class="ttname"><a href="test__functions_8h.html#af7e3f763d3fa1ed9e34002b6ab66694b">test_remove_passenger_floor</a></div><div class="ttdeci">void test_remove_passenger_floor(void)</div><div class="ttdoc">tests the remove_passenger function.</div><div class="ttdef"><b>Definition:</b> <a href="test__remove__passenger__floor_8c_source.html#l00023">test_remove_passenger_floor.c:23</a></div></div>
+<div class="ttc" id="atest__functions_8h_html_aad7f794f2c2f149969be480e3a07c63a"><div class="ttname"><a href="test__functions_8h.html#aad7f794f2c2f149969be480e3a07c63a">test_input_floors</a></div><div class="ttdeci">void test_input_floors(void)</div><div class="ttdef"><b>Definition:</b> <a href="test__input__floors_8c_source.html#l00020">test_input_floors.c:20</a></div></div>
+<div class="ttc" id="atest__functions_8h_html_a3e351f144b937554cd4e0dbd305b5c03"><div class="ttname"><a href="test__functions_8h.html#a3e351f144b937554cd4e0dbd305b5c03">test_is_lift_on_floor</a></div><div class="ttdeci">void test_is_lift_on_floor(void)</div><div class="ttdef"><b>Definition:</b> <a href="test__is__lift__on__floor_8c_source.html#l00018">test_is_lift_on_floor.c:18</a></div></div>
+<div class="ttc" id="atest__functions_8h_html_ade06ed0d844fd993c27589114d35f742"><div class="ttname"><a href="test__functions_8h.html#ade06ed0d844fd993c27589114d35f742">test_create_elevator_array</a></div><div class="ttdeci">void test_create_elevator_array(void)</div><div class="ttdef"><b>Definition:</b> <a href="test__create__elevator__array_8c_source.html#l00020">test_create_elevator_array.c:20</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><b>test_cases.c</b></li>
+    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="test__cases_8c.html">test_cases.c</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

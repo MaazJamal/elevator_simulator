@@ -1,0 +1,52 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/max_waiting_time.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/max_waiting_time.c \- Calculates the maximum waiting time for the passengers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include '\&.\&./include/globals\&.h'\fP
+.br
+\fC#include '\&.\&./include/max_waiting_time\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "float \fBmax_waiting_time\fP (float time_difference)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Calculates the maximum waiting time for the passengers\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Ritika Arora - ritikaarora@cmail.carleton.ca
+.RE
+.PP
+@detail The function is to measure the maximum time the passengers took to wait to get into the elevator\&. The function compares the time given as an input with static variable max_time\&. If the input time is greater than the max time , then that time value is stored as max time\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fItime_difference,the\fP input parameter which is the difference between the time passenger arrived and the time passenger got into the elevator
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+float Returns the maximum waiting time\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBmax_waiting_time\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

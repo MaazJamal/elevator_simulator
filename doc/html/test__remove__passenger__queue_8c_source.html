@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Elevator Simulator: test/test_remove_passenger_queue.c Source File</title>
+<title>Elevator Simulator: C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Elevator Simulator
-   &#160;<span id="projectnumber">0.9</span>
+   &#160;<span id="projectnumber">2.0</span>
    </div>
    <div id="projectbrief">The project simulates elevators in a building</div>
   </td>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="title">test_remove_passenger_queue.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="test__remove__passenger__queue_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="remove__passenger__queue_8h.html">remove_passenger_queue.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="structures_8h.html">structures.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> test_remove_passenger_queue(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    f = fopen(<span class="stringliteral">&quot;test/results/test_remove_passenger_queue_results.txt&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    f = fopen(<span class="stringliteral">&quot;test/results/results_test_remove_passenger_queue.txt&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> choice = 0;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    printf(<span class="stringliteral">&quot;Choose between the tests: \n&quot;</span>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    puts(<span class="stringliteral">&quot;1- Provide an empty list. The program should exit&quot;</span>);</div>
@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *head = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    *head = temp;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    head-&gt;next = NULL;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = NULL;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a>(-2, head);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
@@ -160,8 +160,8 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    *head = temp;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *second = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    *second = temp;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    head-&gt;next = second;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    second-&gt;next = NULL;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = second;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    second-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = NULL;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a>(2, head);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *head = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    *head = temp;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    head-&gt;next = NULL;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = NULL;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *result = NULL;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    result = <a class="code" href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a>(0, head);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (result == NULL)</div>
@@ -192,9 +192,9 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *second = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    *second = temp;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *third = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    head-&gt;next = second;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    second-&gt;next = third;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    third-&gt;next = NULL;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = second;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    second-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = third;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    third-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = NULL;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *result = NULL;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *middle = second;</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    result = <a class="code" href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a>(1, head);</div>
@@ -208,12 +208,12 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        printf(<span class="stringliteral">&quot;FAIL: Removing middle element result does not points to  head %p %p\n&quot;</span>, result, head);</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: Removing middle element result does not points to  head %p %p\n&quot;</span>, result, head);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span> (head-&gt;next == middle)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span> (head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> == middle)</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    {</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        printf(<span class="stringliteral">&quot;FAIL: Removing middle element MIDDLE ELEMENT NOT REMOVED PROPERLY. \n&quot;</span>);</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: Removing middle element MIDDLE ELEMENT NOT REMOVED PROPERLY. \n&quot;</span>);</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (head-&gt;next == third)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> == third)</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        printf(<span class="stringliteral">&quot;PASS: Removing middle element MIDDLE ELEMENT REMOVED PROPERLY \n&quot;</span>);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        fprintf(f, <span class="stringliteral">&quot;PASS: Removing middle element MIDDLE ELEMENT REMOVED PROPERLY \n&quot;</span>);</div>
@@ -233,9 +233,9 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *second = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    *second = temp;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *third = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    head-&gt;next = second;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    second-&gt;next = third;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    third-&gt;next = NULL;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = second;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    second-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = third;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    third-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = NULL;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *result = NULL;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    result = <a class="code" href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a>(2, head);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (result == head)</div>
@@ -248,7 +248,7 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        printf(<span class="stringliteral">&quot;FAIL: Removing tail result does not points to  head %p %p\n&quot;</span>, result, head);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: Removing tail result does not points to  head %p %p\n&quot;</span>, result, head);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (head-&gt;next == second)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> == second)</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        printf(<span class="stringliteral">&quot;PASS: Removing tail Head points to second node. Structure maintained.\n&quot;</span>);</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        fprintf(f, <span class="stringliteral">&quot;PASS: Removing tail Head points to second node. Structure maintained.\n&quot;</span>);</div>
@@ -258,7 +258,7 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        printf(<span class="stringliteral">&quot;FAIL: Removing tail Head does not point to second node. Sturucture not maintained.\n&quot;</span>);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: Removing tail Head does not point to second node. Sturucture not maintained.\n&quot;</span>);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">if</span> (head-&gt;next-&gt;next == NULL &amp;&amp; second-&gt;next == NULL)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">if</span> (head-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a>-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> == NULL &amp;&amp; second-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> == NULL)</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    {</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        printf(<span class="stringliteral">&quot;PASS: Removing tail Last Element Removed Succesfully.\n&quot;</span>);</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        fprintf(f, <span class="stringliteral">&quot;PASS: Removing tail Last Element Removed Succesfully.\n&quot;</span>);</div>
@@ -272,14 +272,15 @@ $(document).ready(function(){initNavTree('test__remove__passenger__queue_8c_sour
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure for to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00016">structures.h:17</a></div></div>
+<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00016">structures.h:17</a></div></div>
 <div class="ttc" id="astructures_8h_html"><div class="ttname"><a href="structures_8h.html">structures.h</a></div><div class="ttdoc">contains declarations for structure passenger, elevator to be used in the program.</div></div>
-<div class="ttc" id="aremove__passenger__queue_8h_html_aaf649634b0615e3c784050409bd55e58"><div class="ttname"><a href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a></div><div class="ttdeci">struct passenger * remove_passenger_queue(int index, struct passenger *head)</div><div class="ttdef"><b>Definition:</b> <a href="remove__passenger__queue_8c_source.html#l00017">remove_passenger_queue.c:17</a></div></div>
+<div class="ttc" id="aremove__passenger__queue_8h_html_aaf649634b0615e3c784050409bd55e58"><div class="ttname"><a href="remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58">remove_passenger_queue</a></div><div class="ttdeci">struct passenger * remove_passenger_queue(int index, struct passenger *head)</div><div class="ttdef"><b>Definition:</b> <a href="remove__passenger__queue_8c_source.html#l00025">remove_passenger_queue.c:25</a></div></div>
 <div class="ttc" id="aremove__passenger__queue_8h_html"><div class="ttname"><a href="remove__passenger__queue_8h.html">remove_passenger_queue.h</a></div><div class="ttdoc">contains the declaration for remove_passenger_queue function that remoove passenger from a queue</div></div>
+<div class="ttc" id="astructpassenger_html_a74a0c954cb7d0e4590b0a2715a768348"><div class="ttname"><a href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">passenger::next</a></div><div class="ttdeci">struct passenger * next</div><div class="ttdoc">stores address of the next node in case of creation of queues</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00023">structures.h:23</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><b>test_remove_passenger_queue.c</b></li>
+    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="test__remove__passenger__queue_8c.html">test_remove_passenger_queue.c</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

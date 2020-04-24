@@ -1,0 +1,168 @@
+\hypertarget{test__moving__lift__down_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/test/test\+\_\+moving\+\_\+lift\+\_\+down.c File Reference}
+\label{test__moving__lift__down_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_moving\_lift\_down.c@{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_moving\_lift\_down.c}}
+
+
+contains test cases for \mbox{\hyperlink{moving__lift__down_8c}{moving\+\_\+lift\+\_\+down.\+c}}  
+
+
+{\ttfamily \#include \char`\"{}moving\+\_\+lift\+\_\+down.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__moving__lift__down_8c_a0f6a08318c4b7fe437805450023e9ae0}{test\+\_\+moving\+\_\+lift\+\_\+down}} (void)
+\begin{DoxyCompactList}\small\item\em This function test the function moving\+\_\+lift\+\_\+down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains test cases for \mbox{\hyperlink{moving__lift__down_8c}{moving\+\_\+lift\+\_\+down.\+c}} 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__moving__lift__down_8c_a0f6a08318c4b7fe437805450023e9ae0}\label{test__moving__lift__down_8c_a0f6a08318c4b7fe437805450023e9ae0}} 
+\index{test\_moving\_lift\_down.c@{test\_moving\_lift\_down.c}!test\_moving\_lift\_down@{test\_moving\_lift\_down}}
+\index{test\_moving\_lift\_down@{test\_moving\_lift\_down}!test\_moving\_lift\_down.c@{test\_moving\_lift\_down.c}}
+\doxysubsubsection{\texorpdfstring{test\_moving\_lift\_down()}{test\_moving\_lift\_down()}}
+{\footnotesize\ttfamily void test\+\_\+moving\+\_\+lift\+\_\+down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function test the function moving\+\_\+lift\+\_\+down. 
+
+Function tests array out of bounds check. Change elevator direction test. 
+
+Definition at line 18 of file test\+\_\+moving\+\_\+lift\+\_\+down.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} arr[3];}
+\DoxyCodeLine{21     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} temp = \{0, 0, 0, 0, 0, 0, 0, 0, 0, 0\};}
+\DoxyCodeLine{22     FILE *test\_results = fopen(\textcolor{stringliteral}{"test/results/results\_test\_moving\_lift\_down.txt"}, \textcolor{stringliteral}{"w"});}
+\DoxyCodeLine{23     arr[1] = temp;}
+\DoxyCodeLine{24     arr[2] = temp;}
+\DoxyCodeLine{25     arr[0] = temp;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} = 3;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{char} *pass = \textcolor{stringliteral}{"PASS:"};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{char} *fail = \textcolor{stringliteral}{"FAIL:"};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(arr, 3);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordflow}{if} (result == -\/1)}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{36         sprintf(temp, \textcolor{stringliteral}{"\%s: Function returned \%d Expected -\/1 . Array out of bound check working.\(\backslash\)n"},}
+\DoxyCodeLine{37                 pass, result);}
+\DoxyCodeLine{38         printf(temp);}
+\DoxyCodeLine{39         fprintf(test\_results, temp);}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{44         sprintf(temp, \textcolor{stringliteral}{"\%s: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
+\DoxyCodeLine{45 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
+\DoxyCodeLine{46                 fail, arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
+\DoxyCodeLine{47         printf(temp);}
+\DoxyCodeLine{48         fprintf(test\_results, temp);}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(arr, 2);}
+\DoxyCodeLine{52     \textcolor{keywordflow}{if} (result != -\/1)}
+\DoxyCodeLine{53     \{}
+\DoxyCodeLine{54         result = arr[2].direction\_up == 0 \&\& arr[2].direction\_down == 1;}
+\DoxyCodeLine{55     \}}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if} (result == -\/1)}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{59         sprintf(temp, \textcolor{stringliteral}{"\%s: Function returned \%d Expected 1.\(\backslash\)n"},}
+\DoxyCodeLine{60                 fail, result);}
+\DoxyCodeLine{61         printf(temp);}
+\DoxyCodeLine{62         fprintf(test\_results, temp);}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{67         sprintf(temp, \textcolor{stringliteral}{"\%s: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
+\DoxyCodeLine{68 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
+\DoxyCodeLine{69                 pass, arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
+\DoxyCodeLine{70         printf(temp);}
+\DoxyCodeLine{71         fprintf(test\_results, temp);}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     result = arr[1].direction\_up == 0 \&\& arr[1].direction\_down == 0;}
+\DoxyCodeLine{75     \textcolor{keywordflow}{if} (result == 1)}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{78         sprintf(temp, \textcolor{stringliteral}{"\%s: Rest of Array Unchanged direction\_up = \%d ."}}
+\DoxyCodeLine{79                       \textcolor{stringliteral}{"direction\_down = \%d\(\backslash\)n"},}
+\DoxyCodeLine{80                 pass, arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}});}
+\DoxyCodeLine{81         printf(temp);}
+\DoxyCodeLine{82         fprintf(test\_results, temp);}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{comment}{//Reapeat the tests but with ptr to a dynamicall allovated array}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} *ptr\_arr = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structelevator}{elevator}}) * 3);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(ptr\_arr, 3);}
+\DoxyCodeLine{90     \textcolor{keywordflow}{if} (result == -\/1)}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{93         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Function returned \%d Expected -\/1 . Array out of bound check working.\(\backslash\)n"},}
+\DoxyCodeLine{94                 pass, result);}
+\DoxyCodeLine{95         printf(temp);}
+\DoxyCodeLine{96         fprintf(test\_results, temp);}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{101         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
+\DoxyCodeLine{102 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
+\DoxyCodeLine{103                 fail, ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
+\DoxyCodeLine{104         printf(temp);}
+\DoxyCodeLine{105         fprintf(test\_results, temp);}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(ptr\_arr, 2);}
+\DoxyCodeLine{109     \textcolor{keywordflow}{if} (result != -\/1)}
+\DoxyCodeLine{110     \{}
+\DoxyCodeLine{111         result = ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}} == 0 \&\& ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}} == 1;}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113     \textcolor{keywordflow}{if} (result == -\/1)}
+\DoxyCodeLine{114     \{}
+\DoxyCodeLine{115         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{116         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Function returned \%d Expected 1.\(\backslash\)n"},}
+\DoxyCodeLine{117                 fail, result);}
+\DoxyCodeLine{118         printf(temp);}
+\DoxyCodeLine{119         fprintf(test\_results, temp);}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{122     \{}
+\DoxyCodeLine{123         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{124         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
+\DoxyCodeLine{125 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
+\DoxyCodeLine{126                 pass, ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
+\DoxyCodeLine{127         printf(temp);}
+\DoxyCodeLine{128         fprintf(test\_results, temp);}
+\DoxyCodeLine{129     \}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     result = ptr\_arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}} == 0 \&\& ptr\_arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}} == 0;}
+\DoxyCodeLine{132     \textcolor{keywordflow}{if} (result == 1)}
+\DoxyCodeLine{133     \{}
+\DoxyCodeLine{134         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{135         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Rest of Array Unchanged direction\_up = \%d ."}}
+\DoxyCodeLine{136                       \textcolor{stringliteral}{"direction\_down = \%d\(\backslash\)n"},}
+\DoxyCodeLine{137                 pass, ptr\_arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}});}
+\DoxyCodeLine{138         printf(temp);}
+\DoxyCodeLine{139         fprintf(test\_results, temp);}
+\DoxyCodeLine{140     \}}
+\DoxyCodeLine{141     fflush(test\_results);}
+\DoxyCodeLine{142     fclose(test\_results);}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}

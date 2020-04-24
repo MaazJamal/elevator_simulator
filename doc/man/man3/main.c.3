@@ -1,0 +1,91 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/main.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/main.c \- This function executes the Static and Dynamic version of elevator\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'functions\&.h'\fP
+.br
+\fC#include 'dynamic_functions\&.h'\fP
+.br
+\fC#include 'simulations\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.RI "This function serves as an entry point into the program\&. Allows choice between the two versions\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This function executes the Static and Dynamic version of elevator\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.br
+ 
+.PP
+Hariprasad Munusamy 
+.PP
+Divyalakshmi Padmanaban 
+.PP
+Ritika Arora 
+.RE
+.PP
+
+.PP
+Definition in file \fBmain\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main (void)"
+
+.PP
+This function serves as an entry point into the program\&. Allows choice between the two versions\&. This finction asks the user for selection between static and dynamic simulation of elevator\&.
+.PP
+\fBReturns\fP
+.RS 4
+This function returns an integer 0 (Zero) upon successful execution\&. 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file main\&.c\&.
+.PP
+.nf
+27 {
+28     int selection = -1;
+29     int status = 0;
+30     while (selection == -1)
+31     { //the function returns -1 on wrong input\&.
+32         selection = input_static_dynamic();
+33     }
+34     switch (selection)
+35     {
+36     case 0:
+37         status = static_simulation();
+38         break;
+39     case 1:
+40         status = dynamic_simulation();
+41         break;
+42     }
+43     if (status == 1)
+44     {
+45         printf("Simulation Run Succesfully\&.\n");
+46     }
+47     return status;
+48 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

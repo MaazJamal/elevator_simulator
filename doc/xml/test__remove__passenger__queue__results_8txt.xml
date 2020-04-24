@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__remove__passenger__queue__results_8txt" kind="file" language="C++">
+    <compoundname>test_remove_passenger_queue_results.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">PASS:<sp/>result<sp/>points<sp/>to<sp/>NULL<sp/>0000000000000000<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">PASS:<sp/>Removing<sp/>middle<sp/>element<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>points<sp/>to<sp/>head<sp/>0000000000466920<sp/>0000000000466920</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">PASS:<sp/>Removing<sp/>middle<sp/>element<sp/>MIDDLE<sp/>ELEMENT<sp/>REMOVED<sp/>PROPERLY<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">PASS:<sp/>Removing<sp/>tail<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>points<sp/>to<sp/>head<sp/>0000000000466950<sp/>0000000000466950</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">PASS:<sp/>Removing<sp/>tail<sp/>Head<sp/>points<sp/>to<sp/>second<sp/>node.<sp/>Structure<sp/>maintained.</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">PASS:<sp/>Removing<sp/>tail<sp/>Last<sp/>Element<sp/>Removed<sp/>Succesfully.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_remove_passenger_queue_results.txt"/>
+  </compounddef>
+</doxygen>

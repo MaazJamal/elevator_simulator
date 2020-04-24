@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Elevator Simulator: test/test_passenger_take_in.c Source File</title>
+<title>Elevator Simulator: C:/Users/Work/git_repo/elevator_simulator/test/test_passenger_take_in.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Elevator Simulator
-   &#160;<span id="projectnumber">0.9</span>
+   &#160;<span id="projectnumber">2.0</span>
    </div>
    <div id="projectbrief">The project simulates elevators in a building</div>
   </td>
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> test_passenger_take_in(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    f = fopen(<span class="stringliteral">&quot;test/results/test_passenger_take_in_result.txt&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    f = fopen(<span class="stringliteral">&quot;test/results/test_test_passenger_take_in.txt&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    printf(<span class="stringliteral">&quot;chose between the test cases:\n&quot;</span>);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    puts(<span class="stringliteral">&quot;1- incorrect elevator array index the program should exit.&quot;</span>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    puts(<span class="stringliteral">&quot;2- incorrect floor array index the program should exit.&quot;</span>);</div>
@@ -146,8 +146,8 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">struct </span><a class="code" href="structelevator.html">elevator</a> *ell_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structelevator.html">elevator</a>) * 2);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ell_arr[0] = dummy;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ell_arr[1] = dummy_2;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **floor_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, floor_arr, 1, 0);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **<a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>, 1, 0);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> case2(<span class="keywordtype">void</span>)</div>
@@ -157,8 +157,8 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">struct </span><a class="code" href="structelevator.html">elevator</a> *ell_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structelevator.html">elevator</a>) * 2);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    ell_arr[0] = dummy;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    ell_arr[1] = dummy_2;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **floor_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, floor_arr, 10, 0);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **<a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>, 10, 0);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> case3(<span class="keywordtype">void</span>)</div>
@@ -168,9 +168,9 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">struct </span><a class="code" href="structelevator.html">elevator</a> *ell_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structelevator.html">elevator</a>) * 2);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ell_arr[0] = dummy;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ell_arr[1] = dummy_2;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **floor_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **<a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    ell_arr[1].<a class="code" href="structelevator.html#a2c87ee6189da284a149438ce8b0acc8d">cur_floor</a> = 2;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, floor_arr, 5, 0);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>, 5, 0);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> case4(<span class="keywordtype">void</span>)</div>
@@ -180,14 +180,14 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">struct </span><a class="code" href="structelevator.html">elevator</a> *ell_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structelevator.html">elevator</a>) * 2);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    ell_arr[0] = dummy;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    ell_arr[1] = dummy_2;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **floor_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **<a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="globals_8h.html#a11ee4b54505479cda7e127a7030a76a7">elevator_count</a>; i++)</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        ell_arr[i].<a class="code" href="structelevator.html#a47d71912bc6a97bcf1a7c8c257ed4df1">stop_at_floor</a> = (<span class="keywordtype">bool</span> *)calloc(10, <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        floor_arr[i] = NULL;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>[i] = NULL;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *one = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    *one = dummy_pass;</div>
@@ -195,10 +195,10 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    *two = dummy_pass;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *three = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    *three = dummy_pass;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    one-&gt;next = two;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    two-&gt;next = three;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    three-&gt;next = NULL;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    floor_arr[4] = one;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    one-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = two;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    two-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = three;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    three-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = NULL;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>[4] = one;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    one-&gt;<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    two-&gt;<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    three-&gt;<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = <span class="keyword">false</span>;</div>
@@ -218,7 +218,7 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    ell_arr[1].<a class="code" href="structelevator.html#a2c87ee6189da284a149438ce8b0acc8d">cur_floor</a> = 5;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">int</span> added = <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, floor_arr, 5, 0);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">int</span> added = <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>, 5, 0);</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">int</span> okay = 0;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
@@ -237,7 +237,7 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: passenger not added properly addded:%d free space:%d\n&quot;</span>, added, okay);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: passenger not added properly addded:%d free space:%d\n&quot;</span>, added, okay);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">if</span> (floor_arr[4] == NULL)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>[4] == NULL)</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        printf(<span class="stringliteral">&quot;PASS 3 passengers removed from floor. \n&quot;</span>);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        fprintf(f, <span class="stringliteral">&quot;PASS 3 passengers removed from floor. \n&quot;</span>);</div>
@@ -257,14 +257,14 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">struct </span><a class="code" href="structelevator.html">elevator</a> *ell_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structelevator.html">elevator</a>) * 2);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    ell_arr[0] = dummy;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    ell_arr[1] = dummy_2;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **floor_arr = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **<a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a> = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a> *) * 10);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="globals_8h.html#a11ee4b54505479cda7e127a7030a76a7">elevator_count</a>; i++)</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        ell_arr[i].<a class="code" href="structelevator.html#a47d71912bc6a97bcf1a7c8c257ed4df1">stop_at_floor</a> = (<span class="keywordtype">bool</span> *)calloc(10, <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        floor_arr[i] = NULL;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>[i] = NULL;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *one = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    *one = dummy_pass;</div>
@@ -281,14 +281,14 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> *seven = malloc(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structpassenger.html">passenger</a>));</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    *seven = dummy_pass;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    one-&gt;next = two;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    two-&gt;next = three;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    three-&gt;next = four;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    four-&gt;next = five;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    five-&gt;next = six;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    six-&gt;next = seven;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    seven-&gt;next = NULL;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    floor_arr[4] = one;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    one-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = two;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    two-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = three;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    three-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = four;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    four-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = five;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    five-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = six;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    six-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = seven;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    seven-&gt;<a class="code" href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">next</a> = NULL;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>[4] = one;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    one-&gt;<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    two-&gt;<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    three-&gt;<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = <span class="keyword">false</span>;</div>
@@ -312,7 +312,7 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    ell_arr[1].<a class="code" href="structelevator.html#a2c87ee6189da284a149438ce8b0acc8d">cur_floor</a> = 5;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">int</span> added = <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, floor_arr, 5, 0);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">int</span> added = <a class="code" href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a>(ell_arr, 1, <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>, 5, 0);</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">int</span> okay = 0;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    {</div>
@@ -331,34 +331,36 @@ $(document).ready(function(){initNavTree('test__passenger__take__in_8c_source.ht
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        printf(<span class="stringliteral">&quot;FAIL: passenger not added properly addded:%d free space:%d\n&quot;</span>, added, okay);</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: passenger not added properly addded:%d free space:%d\n&quot;</span>, added, okay);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">if</span> (floor_arr[4] == six)</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>[4] == six)</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        printf(<span class="stringliteral">&quot;PASS 5 passenger removed and six passenger is first on the floor now \n&quot;</span>);</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        fprintf(f, <span class="stringliteral">&quot;PASS 5 passenger removed and six passenger is first on the floor now \n&quot;</span>);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        printf(<span class="stringliteral">&quot;FAIL: passenger not removed properly from floor should point to:%p points to %p\n&quot;</span>, six, floor_arr[5]);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: passenger not removed properly from floor should point to:%p points to %p\n&quot;</span>, six, floor_arr[5]);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        printf(<span class="stringliteral">&quot;FAIL: passenger not removed properly from floor should point to:%p points to %p\n&quot;</span>, six, <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>[5]);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        fprintf(f, <span class="stringliteral">&quot;FAIL: passenger not removed properly from floor should point to:%p points to %p\n&quot;</span>, six, <a class="code" href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a>[5]);</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    }</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    fflush(f);</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="apassengers__take__in_8h_html_ad76f630c9b48489803eeb11079f324a5"><div class="ttname"><a href="passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5">passengers_take_in</a></div><div class="ttdeci">int passengers_take_in(struct elevator elevator_arr[], int index, struct passenger *floor_arr[], int cur_floor, unsigned int event_time)</div><div class="ttdef"><b>Definition:</b> <a href="passengers__take__in_8c_source.html#l00028">passengers_take_in.c:28</a></div></div>
-<div class="ttc" id="aglobals_8h_html_adcbcca2d0621f8f94d7ccc4d81ca6f37"><div class="ttname"><a href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a></div><div class="ttdeci">unsigned int floor_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00010">globals.c:10</a></div></div>
-<div class="ttc" id="astructelevator_html_a47d71912bc6a97bcf1a7c8c257ed4df1"><div class="ttname"><a href="structelevator.html#a47d71912bc6a97bcf1a7c8c257ed4df1">elevator::stop_at_floor</a></div><div class="ttdeci">bool * stop_at_floor</div><div class="ttdoc">Is the elevator going down? True 1 for going down.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00041">structures.h:41</a></div></div>
-<div class="ttc" id="astructelevator_html_a2c87ee6189da284a149438ce8b0acc8d"><div class="ttname"><a href="structelevator.html#a2c87ee6189da284a149438ce8b0acc8d">elevator::cur_floor</a></div><div class="ttdeci">unsigned int cur_floor</div><div class="ttdoc">Maximum number of passengers the lift can accomodate.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00044">structures.h:44</a></div></div>
-<div class="ttc" id="astructelevator_html_ae18c23ac67fc1e94d1dd831119d90f6f"><div class="ttname"><a href="structelevator.html#ae18c23ac67fc1e94d1dd831119d90f6f">elevator::max_passenger</a></div><div class="ttdeci">unsigned int max_passenger</div><div class="ttdoc">count of passenger occupying the elevator</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00043">structures.h:43</a></div></div>
-<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure for to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00016">structures.h:17</a></div></div>
-<div class="ttc" id="astructelevator_html_a35976c62fece1a1887b39d2761e409e3"><div class="ttname"><a href="structelevator.html#a35976c62fece1a1887b39d2761e409e3">elevator::passenger_count</a></div><div class="ttdeci">unsigned int passenger_count</div><div class="ttdoc">points to boolean array of floors and shows if the elevator will stop at a certain floor or not.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00042">structures.h:42</a></div></div>
+<div class="ttc" id="aglobals_8h_html_adcbcca2d0621f8f94d7ccc4d81ca6f37"><div class="ttname"><a href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a></div><div class="ttdeci">unsigned int floor_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00016">globals.c:16</a></div></div>
+<div class="ttc" id="astructelevator_html_a47d71912bc6a97bcf1a7c8c257ed4df1"><div class="ttname"><a href="structelevator.html#a47d71912bc6a97bcf1a7c8c257ed4df1">elevator::stop_at_floor</a></div><div class="ttdeci">bool * stop_at_floor</div><div class="ttdoc">points to boolean array of floors and shows if the elevator will stop at a certain floor or not.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00041">structures.h:41</a></div></div>
+<div class="ttc" id="astructelevator_html_a2c87ee6189da284a149438ce8b0acc8d"><div class="ttname"><a href="structelevator.html#a2c87ee6189da284a149438ce8b0acc8d">elevator::cur_floor</a></div><div class="ttdeci">unsigned int cur_floor</div><div class="ttdoc">The current floor of the elevator. Floors start at 1.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00044">structures.h:44</a></div></div>
+<div class="ttc" id="astructelevator_html_ae18c23ac67fc1e94d1dd831119d90f6f"><div class="ttname"><a href="structelevator.html#ae18c23ac67fc1e94d1dd831119d90f6f">elevator::max_passenger</a></div><div class="ttdeci">unsigned int max_passenger</div><div class="ttdoc">Maximum number of passengers the lift can accomodate.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00043">structures.h:43</a></div></div>
+<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00016">structures.h:17</a></div></div>
+<div class="ttc" id="astructelevator_html_a35976c62fece1a1887b39d2761e409e3"><div class="ttname"><a href="structelevator.html#a35976c62fece1a1887b39d2761e409e3">elevator::passenger_count</a></div><div class="ttdeci">unsigned int passenger_count</div><div class="ttdoc">count of passenger occupying the elevator</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00042">structures.h:42</a></div></div>
 <div class="ttc" id="astructpassenger_html_a8af124b4de91150e204a2374e98ee71f"><div class="ttname"><a href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">passenger::in_elevator</a></div><div class="ttdeci">bool in_elevator</div><div class="ttdoc">Stores whether passegner is in elevator.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00018">structures.h:18</a></div></div>
-<div class="ttc" id="astructelevator_html_ab3f0430781fbb878267214945aaf9322"><div class="ttname"><a href="structelevator.html#ab3f0430781fbb878267214945aaf9322">elevator::passenger_arr</a></div><div class="ttdeci">struct passenger * passenger_arr</div><div class="ttdoc">Time clock untill the next floor.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00046">structures.h:46</a></div></div>
+<div class="ttc" id="astructelevator_html_ab3f0430781fbb878267214945aaf9322"><div class="ttname"><a href="structelevator.html#ab3f0430781fbb878267214945aaf9322">elevator::passenger_arr</a></div><div class="ttdeci">struct passenger * passenger_arr</div><div class="ttdoc">points to a array of struct pasenger of size max_passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00046">structures.h:46</a></div></div>
 <div class="ttc" id="astructures_8h_html"><div class="ttname"><a href="structures_8h.html">structures.h</a></div><div class="ttdoc">contains declarations for structure passenger, elevator to be used in the program.</div></div>
 <div class="ttc" id="aglobals_8h_html"><div class="ttname"><a href="globals_8h.html">globals.h</a></div><div class="ttdoc">contains declarations for globals elevator_count, passenger_count and floor_count.</div></div>
-<div class="ttc" id="astructelevator_html"><div class="ttname"><a href="structelevator.html">elevator</a></div><div class="ttdoc">structure for to store important information about a elevator.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00035">structures.h:36</a></div></div>
+<div class="ttc" id="astructelevator_html"><div class="ttname"><a href="structelevator.html">elevator</a></div><div class="ttdoc">structure to store important information about an elevator.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00035">structures.h:36</a></div></div>
 <div class="ttc" id="apassengers__take__in_8h_html"><div class="ttname"><a href="passengers__take__in_8h.html">passengers_take_in.h</a></div><div class="ttdoc">contains declarations for passenger_take_in function. Used to add passenger to the provided elevator ...</div></div>
-<div class="ttc" id="aglobals_8h_html_a11ee4b54505479cda7e127a7030a76a7"><div class="ttname"><a href="globals_8h.html#a11ee4b54505479cda7e127a7030a76a7">elevator_count</a></div><div class="ttdeci">unsigned int elevator_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00004">globals.c:4</a></div></div>
+<div class="ttc" id="atest__add__passenger__floor_8c_html_a337434ee4f0bca2908b76acbfb59bb06"><div class="ttname"><a href="test__add__passenger__floor_8c.html#a337434ee4f0bca2908b76acbfb59bb06">floor_arr</a></div><div class="ttdeci">struct passenger ** floor_arr</div><div class="ttdoc">tests two conditions for add_passenger_floor function.</div><div class="ttdef"><b>Definition:</b> <a href="test__add__passenger__floor_8c_source.html#l00027">test_add_passenger_floor.c:27</a></div></div>
+<div class="ttc" id="astructpassenger_html_a74a0c954cb7d0e4590b0a2715a768348"><div class="ttname"><a href="structpassenger.html#a74a0c954cb7d0e4590b0a2715a768348">passenger::next</a></div><div class="ttdeci">struct passenger * next</div><div class="ttdoc">stores address of the next node in case of creation of queues</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00023">structures.h:23</a></div></div>
+<div class="ttc" id="aglobals_8h_html_a11ee4b54505479cda7e127a7030a76a7"><div class="ttname"><a href="globals_8h.html#a11ee4b54505479cda7e127a7030a76a7">elevator_count</a></div><div class="ttdeci">unsigned int elevator_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00010">globals.c:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

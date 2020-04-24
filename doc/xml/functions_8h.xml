@@ -4,16 +4,83 @@
     <compoundname>functions.h</compoundname>
     <includes refid="structures_8h" local="yes">structures.h</includes>
     <includes refid="globals_8h" local="yes">globals.h</includes>
-    <includes refid="moving__lift__down_8h" local="yes">moving_lift_down.h</includes>
-    <includes refid="input__lifts_8h" local="yes">input_lifts.h</includes>
+    <includes refid="add__passenger__floor_8h" local="yes">add_passenger_floor.h</includes>
     <includes refid="add__request__queue_8h" local="yes">add_request_queue.h</includes>
+    <includes refid="count__passenger_8h" local="yes">count_passenger.h</includes>
+    <includes refid="create__elevator__array_8h" local="yes">create_elevator_array.h</includes>
+    <includes refid="create__floor__array_8h" local="yes">create_floor_array.h</includes>
+    <includes refid="input__floors_8h" local="yes">input_floors.h</includes>
+    <includes refid="input__lifts_8h" local="yes">input_lifts.h</includes>
+    <includes refid="is__lift__on__floor_8h" local="yes">is_lift_on_floor.h</includes>
+    <includes refid="moving__lift__down_8h" local="yes">moving_lift_down.h</includes>
+    <includes refid="moving__lift__up_8h" local="yes">moving_lift_up.h</includes>
+    <includes refid="passengers__drop_8h" local="yes">passengers_drop.h</includes>
+    <includes refid="passengers__take__in_8h" local="yes">passengers_take_in.h</includes>
+    <includes refid="read__passenger_8h" local="yes">read_passenger.h</includes>
+    <includes refid="remove__passenger__floor_8h" local="yes">remove_passenger_floor.h</includes>
     <includes refid="remove__passenger__queue_8h" local="yes">remove_passenger_queue.h</includes>
+    <includes refid="travel__log__file_8h" local="yes">travel_log_file.h</includes>
+    <includedby refid="dynamic__simulation_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</includedby>
+    <includedby refid="dynamic__simulation_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</includedby>
+    <includedby refid="main_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/main.c</includedby>
+    <includedby refid="static__simulation_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</includedby>
+    <includedby refid="test__cases_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</includedby>
+    <includedby refid="test__create__elevator__array_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</includedby>
+    <includedby refid="test__is__lift__on__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</includedby>
     <incdepgraph>
+      <node id="13">
+        <label>moving_lift_down.h</label>
+        <link refid="moving__lift__down_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="3">
         <label>stdbool.h</label>
       </node>
+      <node id="18">
+        <label>remove_passenger_floor.h</label>
+        <link refid="remove__passenger__floor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>passengers_drop.h</label>
+        <link refid="passengers__drop_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>add_passenger_floor.h</label>
+        <link refid="add__passenger__floor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>travel_log_file.h</label>
+        <link refid="travel__log__file_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
       <node id="1">
-        <label>functions.h</label>
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
         <link refid="functions_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -27,40 +94,162 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>is_lift_on_floor.h</label>
+        <link refid="is__lift__on__floor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>input_floors.h</label>
+        <link refid="input__floors_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>add_request_queue.h</label>
+        <link refid="add__request__queue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>moving_lift_up.h</label>
+        <link refid="moving__lift__up_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>count_passenger.h</label>
+        <link refid="count__passenger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>globals.h</label>
         <link refid="globals_8h"/>
       </node>
       <node id="8">
-        <label>remove_passenger_queue.h</label>
-        <link refid="remove__passenger__queue_8h"/>
+        <label>create_elevator_array.h</label>
+        <link refid="create__elevator__array_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>input_lifts.h</label>
+        <link refid="input__lifts_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>read_passenger.h</label>
+        <link refid="read__passenger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>create_floor_array.h</label>
+        <link refid="create__floor__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>passengers_take_in.h</label>
+        <link refid="passengers__take__in_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</label>
+        <link refid="test__create__elevator__array_8c"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>structures.h</label>
-        <link refid="structures_8h"/>
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</label>
+        <link refid="static__simulation_8c"/>
+      </node>
+      <node id="9">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</label>
+        <link refid="test__is__lift__on__floor_8c"/>
+      </node>
       <node id="7">
-        <label>add_request_queue.h</label>
-        <link refid="add__request__queue_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
       </node>
       <node id="5">
-        <label>moving_lift_down.h</label>
-        <link refid="moving__lift__down_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
       </node>
-      <node id="6">
-        <label>input_lifts.h</label>
-        <link refid="input__lifts_8h"/>
-      </node>
-    </incdepgraph>
+    </invincdepgraph>
     <briefdescription>
 <para>Simply contains all the headers of the different function. </para>
     </briefdescription>
@@ -75,12 +264,26 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="moving__lift__down_8h" kindref="compound">moving_lift_down.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input__lifts_8h" kindref="compound">input_lifts.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="add__request__queue_8h" kindref="compound">add_request_queue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="remove__passenger__queue_8h" kindref="compound">remove_passenger_queue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="add__passenger__floor_8h" kindref="compound">add_passenger_floor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="add__request__queue_8h" kindref="compound">add_request_queue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="count__passenger_8h" kindref="compound">count_passenger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="create__elevator__array_8h" kindref="compound">create_elevator_array.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="create__floor__array_8h" kindref="compound">create_floor_array.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input__floors_8h" kindref="compound">input_floors.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input__lifts_8h" kindref="compound">input_lifts.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="is__lift__on__floor_8h" kindref="compound">is_lift_on_floor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="moving__lift__down_8h" kindref="compound">moving_lift_down.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="moving__lift__up_8h" kindref="compound">moving_lift_up.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="passengers__drop_8h" kindref="compound">passengers_drop.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="passengers__take__in_8h" kindref="compound">passengers_take_in.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="read__passenger_8h" kindref="compound">read_passenger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="remove__passenger__floor_8h" kindref="compound">remove_passenger_floor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="remove__passenger__queue_8h" kindref="compound">remove_passenger_queue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="is__lift__on__floor_8h" kindref="compound">is_lift_on_floor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="moving__lift__up_8h" kindref="compound">moving_lift_up.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="travel__log__file_8h" kindref="compound">travel_log_file.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="functions.h"/>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/functions.h"/>
   </compounddef>
 </doxygen>

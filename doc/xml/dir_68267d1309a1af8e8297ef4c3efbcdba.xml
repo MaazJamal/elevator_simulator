@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>C:/Users/Work/git_repo/elevator_simulator/src</compoundname>
+    <innerfile refid="add__passenger__floor_8c">add_passenger_floor.c</innerfile>
+    <innerfile refid="add__request__queue_8c">add_request_queue.c</innerfile>
+    <innerfile refid="average__waiting__time_8c">average_waiting_time.c</innerfile>
+    <innerfile refid="cli__update_8c">cli_update.c</innerfile>
+    <innerfile refid="count__passenger_8c">count_passenger.c</innerfile>
+    <innerfile refid="create__elevator__array_8c">create_elevator_array.c</innerfile>
+    <innerfile refid="create__floor__array_8c">create_floor_array.c</innerfile>
+    <innerfile refid="dynamic__simulation_8c">dynamic_simulation.c</innerfile>
+    <innerfile refid="emergency__stop__handling_8c">emergency_stop_handling.c</innerfile>
+    <innerfile refid="globals_8c">globals.c</innerfile>
+    <innerfile refid="input__after__stop_8c">input_after_stop.c</innerfile>
+    <innerfile refid="input__floors_8c">input_floors.c</innerfile>
+    <innerfile refid="input__lifts_8c">input_lifts.c</innerfile>
+    <innerfile refid="input__static__dynamic_8c">input_static_dynamic.c</innerfile>
+    <innerfile refid="is__lift__empty_8c">is_lift_empty.c</innerfile>
+    <innerfile refid="is__lift__on__floor_8c">is_lift_on_floor.c</innerfile>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <innerfile refid="max__waiting__time_8c">max_waiting_time.c</innerfile>
+    <innerfile refid="moving__lift__down_8c">moving_lift_down.c</innerfile>
+    <innerfile refid="moving__lift__up_8c">moving_lift_up.c</innerfile>
+    <innerfile refid="passengers__drop_8c">passengers_drop.c</innerfile>
+    <innerfile refid="passengers__take__in_8c">passengers_take_in.c</innerfile>
+    <innerfile refid="read__passenger_8c">read_passenger.c</innerfile>
+    <innerfile refid="read__user__input__validate_8c">read_user_input_validate.c</innerfile>
+    <innerfile refid="remove__passenger__floor_8c">remove_passenger_floor.c</innerfile>
+    <innerfile refid="remove__passenger__queue_8c">remove_passenger_queue.c</innerfile>
+    <innerfile refid="static__simulation_8c">static_simulation.c</innerfile>
+    <innerfile refid="travel__log__file_8c">travel_log_file.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/src/"/>
+  </compounddef>
+</doxygen>
