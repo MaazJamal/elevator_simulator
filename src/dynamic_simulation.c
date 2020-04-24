@@ -47,16 +47,17 @@ int dynamic_simulation(void)
 
 	int prev_time_index = 0;
 
-	bool enable_realtime = true;   // Realtime or full-speed;
+	bool enable_realtime = false;  // Realtime or full-speed;
 	bool enable_user_input = true; // ask user for input or not;
 	bool exit_main_loop = false;   // should we exit main loop if user orders simulation stop
 	time_t start_time;
 	time_t end_time;
 	int time_difference = 0;
-	while (t < 1000) //86400 for whole day
+	int divisor = 200;
+	while (t < 4000) //86400 for whole day. Setting to 2000 since cli_update slows the program down.
 	{
 
-		if (t % 50 == 0 && enable_user_input)
+		if (t % divisor == 0 && enable_user_input)
 		{														  //choices
 			struct passenger temp_passenger = {0, 0, 0, 0, 0, 0}; //To store the user entered passenger
 			int stop_input = 0;
@@ -64,9 +65,11 @@ int dynamic_simulation(void)
 			while (incorrect_choice)
 			{
 				puts("CHOSE AMONG THE FOLLOWING CHOICES:");
+				puts("Note this is repeated after every approximately 30 seconds in realtime mode");
+				puts("and 200 iterations in non-realtime mode. Simulation starts in non-realtime mode.");
 				puts("1- Enter A Passenger Details.");
 				puts("2- Create an Emergency stop.");
-				puts("3- Enable/Disable realtime timer.");
+				puts("3- Enable/Disable realtime timer. ");
 				puts("4- Do not ask for input again & Disable realtime timer.");
 				puts("5- Exit the simulation.");
 				int user_choice = 0;
@@ -83,13 +86,13 @@ int dynamic_simulation(void)
 
 					//1- Enter A Passenger Details.
 					case 1:
-						read_user_input_validate(&temp_passenger, &t);
+						read_user_input_validate(&temp_passenger, t);
 						passenger_queue = add_request_queue(passenger_queue, temp_passenger);
 						break;
 					//2- Create an Emergency stop.
 					case 2:
-						emergency_stop_handling(elevator_arr, t);
-						while ((stop_input = input_after_stop() != -1))
+						emergency_stop_handling(elevator_arr, &t);
+						while ((stop_input = input_after_stop()) == -1)
 						{ //loop until we get right input
 						};
 						if (stop_input == 0)
@@ -99,11 +102,18 @@ int dynamic_simulation(void)
 						break;
 					case 3:
 						enable_realtime = !enable_realtime; //toggle
+						if(enable_realtime){
+							divisor = 30;
+						}
+						else{
+							divisor = 200;
+						}
 						printf("Set Real-time to : %d\n", enable_realtime);
 						break;
 					case 4:
 						enable_realtime = false;
 						enable_user_input = false;
+						exit_main_loop = false;
 						break;
 					case 5:
 						exit_main_loop = true;
@@ -111,7 +121,8 @@ int dynamic_simulation(void)
 					}
 				}
 			}
-			if(exit_main_loop){ //exit main loop;
+			if (exit_main_loop)
+			{ //exit main loop;
 				break;
 			}
 		}
@@ -123,6 +134,13 @@ int dynamic_simulation(void)
 		// Add passenger with current time step to queue
 		for (int i_pass = prev_time_index; i_pass < passenger_count; i_pass++) //debugged works perfectly
 		{
+			if (passenger_array[i_pass].arrival_time < t) //due to emergency stop we can skip some entries
+			{
+				while(passenger_array[prev_time_index].arrival_time < t && prev_time_index < passenger_count)
+				{
+					prev_time_index++; //increment until we reach passenger with current or greater arrival_time then  t or reach end array.
+				}
+			}
 
 			//Assume the passenger_array is sorted by arrival time.
 			//prev_time_index prevents us from starting at previous index
