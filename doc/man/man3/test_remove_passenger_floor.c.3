@@ -1,0 +1,96 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c \- contains tests for remove_passenger_floor  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'remove_passenger_floor\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_remove_passenger_floor\fP (void)"
+.br
+.RI "tests the remove_passenger function\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains tests for remove_passenger_floor 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.PP
+Definition in file \fBtest_remove_passenger_floor\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void test_remove_passenger_floor (void)"
+
+.PP
+tests the remove_passenger function\&. Tests the removal of two passengers from a floor\&. The first removal causes the floor to contain the second passenger at start\&. the second removal replaces the passenger with NULL pointer\&. 
+.PP
+\fBReturns\fP
+.RS 4
+void does not return anything 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file test_remove_passenger_floor\&.c\&.
+.PP
+.nf
+23                                       {
+24 floor_count = 3;
+25 struct passenger** floors =(struct passenger**) calloc(3,sizeof(struct passenger*));
+26 struct passenger dummy1 = {0, 0, 0, 0, 10, 0};
+27 struct passenger dummy2 = {0, 0, 0, 0, 20, 0};
+28 FILE *f = fopen("test/results/results_remove_passenger_floor\&.txt", "w+");
+29 floors[1] =(struct passenger*) malloc(sizeof(struct passenger));
+30 *(floors[1]) = dummy1;
+31 floors[1]->next = (struct passenger*) malloc(sizeof(struct passenger));
+32 *(floors[1]->next) = dummy2;
+33 remove_passenger_floor(floors,2);
+34 if(floors[1]->id == dummy2\&.id){
+35     fprintf(f,"PASS: Removed 1st Passenger\&. Id on floor is %d\n", dummy2\&.id);
+36     printf("PASS: Removed 1st Passenger\&. Id on floor is %d\n", dummy2\&.id);
+37 }
+38 else{
+39     fprintf(f,"FAIL: Expected Passenger\&.Id %d Got : %d\n", dummy2\&.id,floors[1]->id);
+40     printf("FAIL: Expected Passenger\&.Id %d Got : %d\n", dummy2\&.id,floors[1]->id);
+41 
+42 }
+43 remove_passenger_floor(floors,2);
+44 if(floors[1] == NULL){
+45     fprintf(f,"PASS: Removed 2nd Passenger\&. Pointing to NULL %p\n", floors[1]);
+46     printf("PASS: Removed 2nd Passenger\&. Pointing to NULL %p\n", floors[1]);
+47 }
+48 else{
+49     fprintf(f,"FAIL: Expected floor point to NULL\&.Instead Got : %p\n", floors[1]);
+50     printf("FAIL: Expected floor point to NULL\&.Instead Got : %p\n", floors[1]);  
+51 }
+52 fflush(f);
+53 fclose(f);
+54 
+55 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

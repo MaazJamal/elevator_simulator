@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md__user__manual" kind="page">
+    <compoundname>md_User_Manual</compoundname>
+    <title>Introduction</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Elevator_Simulation is a software that operates any number of elevator in a commercial building with given number of floors.</para>
+<sect1 id="md__user__manual_1autotoc_md6">
+<title>Installation</title>
+<para>Please refer to INSTALL.md file for installation instructions.</para>
+</sect1>
+<sect1 id="md__user__manual_1autotoc_md7">
+<title>Usage</title>
+<para>The user needs to provide the software with a text file containing the passenger request detail for the elevator. The text file is named input.txt and must be placed in the &quot;data&quot; folder. The relative path is data/input.txt. The maximum number of floors in this file should correspond to what the user enters later in the program.</para>
+<para>To start the program in windows either click on elevator.exe or type elevator.exe in command line. For cygwin/unix type ./elevator to start execution.</para>
+<para>The program will ask for the following parameters at the execution of Elevator_Simulation:</para>
+<para><itemizedlist>
+<listitem><para>Static or Dynamic version : Press 0 to select Static Version or 1 to select Dynaic version. (Only for realease 2 version of program.)</para>
+</listitem><listitem><para>Number of lifts : Specifies the number lifts in the building should be in the range of 1 to 100.</para>
+</listitem><listitem><para>Number of elevators: Specifies the number elevators in the building should be in thr range of 1 to 100.(10 for dynamic simulation.)</para>
+</listitem><listitem><para>Input file should be placed in the right path.Change the input file if needed. In the data/ folder</para>
+</listitem></itemizedlist>
+</para>
+<para>In case of Dynamic version the program only simulates until 1999 iterations. This is due to limitations of console windows,causing the program to slow down due to printing of cli_update. There are additional inputs the user can give to the program after every 30th or 200th iteration.</para>
+<para><itemizedlist>
+<listitem><para>Add Passenger request : If needed the user can enter details of a passenger to the program. That will be added to the queue.</para>
+</listitem><listitem><para>Provide emergency stop in which the elevator will stop at next floor and remove all passengers. The user can then quit or continue the simulation.</para>
+</listitem><listitem><para>Enable realtime mode. In which each iteration is 1 second long and the program asks for input after every 30th iterations.</para>
+</listitem><listitem><para>Do not ask for input again and disable the realtime mode. So that the program can run without interuptions until completion.</para>
+</listitem><listitem><para>Exit the simulation.</para>
+</listitem></itemizedlist>
+</para>
+<para>Please note that the binary is located in project <computeroutput>root</computeroutput> folder. To start open terminal and type in root directory:</para>
+<para><programlisting><codeline><highlight class="normal">./elevator</highlight></codeline>
+</programlisting></para>
+<para>for windows</para>
+<para><programlisting><codeline><highlight class="normal">elevator.exe</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__user__manual_1autotoc_md8">
+<title>Testing</title>
+<para>Unit testing is done for each functions defined in the software. The test cases can be run using the command below:</para>
+<para><programlisting><codeline><highlight class="normal">./tests</highlight></codeline>
+</programlisting></para>
+<para>for windows</para>
+<para><programlisting><codeline><highlight class="normal">tests.exe</highlight></codeline>
+</programlisting></para>
+<para>Note: You must have compiled the tests.exe program as well.</para>
+</sect1>
+<sect1 id="md__user__manual_1autotoc_md9">
+<title>Output Generation</title>
+<para>Output files travel_log.txt and waiting_times.txt will be generated and placed in <ulink url="/devel/data/">/data</ulink> folder.</para>
+<para>travel_log.txt - File that gives Passenger*ID,Elevator_ID,Passenger_In time,Passenger* Entry floor,Passenger*Out time,Passenger* Exit floor</para>
+<para>waiting_times.txt - File that gives Average waiting time of Passengers and Maximum waiting time of a Passenger. </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

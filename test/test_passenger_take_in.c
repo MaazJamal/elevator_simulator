@@ -23,7 +23,7 @@ FILE *f;
 
 int test_passenger_take_in(void)
 {
-	f = fopen("test/results/test_passenger_take_in_result.txt", "w");
+	f = fopen("test/results/test_test_passenger_take_in.txt", "w");
 	printf("chose between the test cases:\n");
 	puts("1- incorrect elevator array index the program should exit.");
 	puts("2- incorrect floor array index the program should exit.");

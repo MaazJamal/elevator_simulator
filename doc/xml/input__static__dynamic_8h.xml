@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="input__static__dynamic_8h" kind="file" language="C++">
+    <compoundname>input_static_dynamic.h</compoundname>
+    <includedby refid="dynamic__functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</includedby>
+    <includedby refid="input__static__dynamic_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/input_static_dynamic.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/input_static_dynamic.h</label>
+        <link refid="input__static__dynamic_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/input_static_dynamic.c</label>
+        <link refid="input__static__dynamic_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</label>
+        <link refid="dynamic__functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="input__static__dynamic_8h_1a67da0c3768f671c95fda28d1d1f3fd43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int input_static_dynamic</definition>
+        <argsstring>(void)</argsstring>
+        <name>input_static_dynamic</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/input_static_dynamic.h" line="18" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/input_static_dynamic.c" bodystart="24" bodyend="40" declfile="C:/Users/Work/git_repo/elevator_simulator/include/input_static_dynamic.h" declline="18" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Has the declaration for input_static_dynamic function. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ritika Arora</para>
+</simplesect>
+@detail The function to decide which type of simulation user wants to run.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function takes no inputs</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int returns an integer value </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="15"><highlight class="preprocessor">#ifndef<sp/>__INPUT_STATIC_DYNAMIC_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INPUT_STATIC_DYNAMIC_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_static_dynamic(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/input_static_dynamic.h"/>
+  </compounddef>
+</doxygen>

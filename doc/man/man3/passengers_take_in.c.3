@@ -1,0 +1,116 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/passengers_take_in.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/passengers_take_in.c \- contains the definition of passengers_take_in  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'passengers_take_in\&.h'\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'remove_passenger_floor\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'travel_log_file\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBpassengers_take_in\fP (struct \fBelevator\fP elevator_arr[], int index, struct \fBpassenger\fP *\fBfloor_arr\fP[], int cur_floor, unsigned int event_time)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains the definition of passengers_take_in 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.PP
+Definition in file \fBpassengers_take_in\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int passengers_take_in (struct \fBelevator\fP elevator_arr[], int index, struct \fBpassenger\fP * floor_arr[], int cur_floor, unsigned int event_time)"
+This function removes adds a passenger from a queue to the elevator_array
+.PP
+This function take in an elevator, index of the elevator, array of floor and current_floor\&. and removes the passenger from the floor and adds it to elevator passenger array\&. 
+.br
+ 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP int value that specifies the index of the elevator\&. index start at 0\&. 
+.br
+\fIelevator_arr\fP pointer to elevator array\&. 
+.br
+\fIfloor_arr\fP array of pointers to passengers on floor\&. 
+.br
+\fIcur_florr\fP int value that specifies the current floor\&. As described in elevator so start at 1 and equal to max_floor_count\&. 
+.br
+\fIevent_time\fP unsigned int the time the event has happened\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return the number of passengers added to the elevator\&. 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file passengers_take_in\&.c\&.
+.PP
+.nf
+29 {
+30 
+31     assert(index < elevator_count && index >= 0);
+32     assert(cur_floor <= floor_count && cur_floor > 0);
+33     assert(cur_floor == elevator_arr[index]\&.cur_floor); //? test the case that both elevator and passenger are at same floor\&.
+34 
+35     int floor_index = cur_floor - 1; //input file floor start from 1 while floor array is indexed from 0 so this is needed
+36     int passenger_capacity = elevator_arr[index]\&.max_passenger;
+37     int passenger_added = 0;
+38 
+39     for (int i = 0; i < passenger_capacity; i++)
+40     {
+41 
+42         if (!(elevator_arr[index]\&.passenger_arr[i]\&.in_elevator))
+43         {
+44 
+45             if (floor_arr[floor_index] != NULL && elevator_arr[index]\&.passenger_count < passenger_capacity)
+46             {
+47                 struct passenger temp = *(floor_arr[floor_index]);
+48                 elevator_arr[index]\&.passenger_arr[i] = temp;
+49                 elevator_arr[index]\&.passenger_arr[i]\&.in_elevator = true;
+50                 elevator_arr[index]\&.passenger_count++;
+51                 elevator_arr[index]\&.stop_at_floor[temp\&.dest_floor - 1] = true; //stop at this floor from drop off
+52                 passenger_added++;
+53                 travel_log_file(*(floor_arr[floor_index]), event_time, index, 2); //choose mode to calculate avg,max times\&.
+54                 remove_passenger_floor(floor_arr, cur_floor);
+55             }
+56             else
+57             {
+58                 break;
+59             }
+60         }
+61     }
+62     return passenger_added;
+63 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

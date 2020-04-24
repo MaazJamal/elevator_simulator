@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['read_5fpassenger_66',['read_passenger',['../read__passenger_8c.html#a37c372d14154c7f6d6d1af823cadf07d',1,'read_passenger.c']]],
-  ['read_5fpassenger_2ec_67',['read_passenger.c',['../read__passenger_8c.html',1,'']]],
-  ['read_5fpassenger_2eh_68',['read_passenger.h',['../read__passenger_8h.html',1,'']]],
-  ['remove_5fpassenger_5ffloor_69',['remove_passenger_floor',['../remove__passenger__floor_8h.html#a25f8c0d7e3c685b2c1830182e3705df0',1,'remove_passenger_floor(struct passenger *floor[], int cur_floor):&#160;remove_passenger_floor.c'],['../remove__passenger__floor_8c.html#a078767636839d02470574e1526e48f73',1,'remove_passenger_floor(struct passenger *floordetails[], int cur_floor):&#160;remove_passenger_floor.c']]],
-  ['remove_5fpassenger_5ffloor_2ec_70',['remove_passenger_floor.c',['../remove__passenger__floor_8c.html',1,'']]],
-  ['remove_5fpassenger_5ffloor_2eh_71',['remove_passenger_floor.h',['../remove__passenger__floor_8h.html',1,'']]],
-  ['remove_5fpassenger_5fqueue_72',['remove_passenger_queue',['../remove__passenger__queue_8h.html#aaf649634b0615e3c784050409bd55e58',1,'remove_passenger_queue(int index, struct passenger *head):&#160;remove_passenger_queue.c'],['../remove__passenger__queue_8c.html#aaf649634b0615e3c784050409bd55e58',1,'remove_passenger_queue(int index, struct passenger *head):&#160;remove_passenger_queue.c']]],
-  ['remove_5fpassenger_5fqueue_2ec_73',['remove_passenger_queue.c',['../remove__passenger__queue_8c.html',1,'']]],
-  ['remove_5fpassenger_5fqueue_2eh_74',['remove_passenger_queue.h',['../remove__passenger__queue_8h.html',1,'']]]
+  ['passenger_73',['passenger',['../structpassenger.html',1,'']]],
+  ['passenger_5farr_74',['passenger_arr',['../structelevator.html#ab3f0430781fbb878267214945aaf9322',1,'elevator']]],
+  ['passenger_5fcount_75',['passenger_count',['../structelevator.html#a35976c62fece1a1887b39d2761e409e3',1,'elevator::passenger_count()'],['../globals_8h.html#aafbf17dfb8c07dadb99b3e0faadef32d',1,'passenger_count():&#160;globals.c'],['../globals_8c.html#aafbf17dfb8c07dadb99b3e0faadef32d',1,'passenger_count():&#160;globals.c']]],
+  ['passengers_5fdrop_76',['passengers_drop',['../passengers__drop_8h.html#a11a7b91c4b20588fd46ab8e9c9df46e1',1,'passengers_drop(struct elevator elevator_arr[], int index, int cur_floor, unsigned int event_time):&#160;passengers_drop.c'],['../passengers__drop_8c.html#a11a7b91c4b20588fd46ab8e9c9df46e1',1,'passengers_drop(struct elevator elevator_arr[], int index, int cur_floor, unsigned int event_time):&#160;passengers_drop.c']]],
+  ['passengers_5fdrop_2ec_77',['passengers_drop.c',['../passengers__drop_8c.html',1,'']]],
+  ['passengers_5fdrop_2eh_78',['passengers_drop.h',['../passengers__drop_8h.html',1,'']]],
+  ['passengers_5ftake_5fin_79',['passengers_take_in',['../passengers__take__in_8h.html#ad76f630c9b48489803eeb11079f324a5',1,'passengers_take_in(struct elevator elevator_arr[], int index, struct passenger *floor_arr[], int cur_floor, unsigned int event_time):&#160;passengers_take_in.c'],['../passengers__take__in_8c.html#ad76f630c9b48489803eeb11079f324a5',1,'passengers_take_in(struct elevator elevator_arr[], int index, struct passenger *floor_arr[], int cur_floor, unsigned int event_time):&#160;passengers_take_in.c']]],
+  ['passengers_5ftake_5fin_2ec_80',['passengers_take_in.c',['../passengers__take__in_8c.html',1,'']]],
+  ['passengers_5ftake_5fin_2eh_81',['passengers_take_in.h',['../passengers__take__in_8h.html',1,'']]]
 ];

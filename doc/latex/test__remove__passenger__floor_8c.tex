@@ -1,0 +1,82 @@
+\hypertarget{test__remove__passenger__floor_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/test/test\+\_\+remove\+\_\+passenger\+\_\+floor.c File Reference}
+\label{test__remove__passenger__floor_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_remove\_passenger\_floor.c@{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_remove\_passenger\_floor.c}}
+
+
+contains tests for remove\+\_\+passenger\+\_\+floor  
+
+
+{\ttfamily \#include \char`\"{}remove\+\_\+passenger\+\_\+floor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__remove__passenger__floor_8c_af7e3f763d3fa1ed9e34002b6ab66694b}{test\+\_\+remove\+\_\+passenger\+\_\+floor}} (void)
+\begin{DoxyCompactList}\small\item\em tests the remove\+\_\+passenger function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains tests for remove\+\_\+passenger\+\_\+floor 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__remove__passenger__floor_8c_af7e3f763d3fa1ed9e34002b6ab66694b}\label{test__remove__passenger__floor_8c_af7e3f763d3fa1ed9e34002b6ab66694b}} 
+\index{test\_remove\_passenger\_floor.c@{test\_remove\_passenger\_floor.c}!test\_remove\_passenger\_floor@{test\_remove\_passenger\_floor}}
+\index{test\_remove\_passenger\_floor@{test\_remove\_passenger\_floor}!test\_remove\_passenger\_floor.c@{test\_remove\_passenger\_floor.c}}
+\doxysubsubsection{\texorpdfstring{test\_remove\_passenger\_floor()}{test\_remove\_passenger\_floor()}}
+{\footnotesize\ttfamily void test\+\_\+remove\+\_\+passenger\+\_\+floor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+tests the remove\+\_\+passenger function. 
+
+Tests the removal of two passengers from a floor. The first removal causes the floor to contain the second passenger at start. the second removal replaces the passenger with N\+U\+LL pointer. \begin{DoxyReturn}{Returns}
+void does not return anything 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file test\+\_\+remove\+\_\+passenger\+\_\+floor.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                       \{}
+\DoxyCodeLine{24 \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}} = 3;}
+\DoxyCodeLine{25 \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}}** floors =(\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}}**) calloc(3,\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}*));}
+\DoxyCodeLine{26 \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} dummy1 = \{0, 0, 0, 0, 10, 0\};}
+\DoxyCodeLine{27 \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} dummy2 = \{0, 0, 0, 0, 20, 0\};}
+\DoxyCodeLine{28 FILE *f = fopen(\textcolor{stringliteral}{"test/results/results\_remove\_passenger\_floor.txt"}, \textcolor{stringliteral}{"w+"});}
+\DoxyCodeLine{29 floors[1] =(\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}}*) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
+\DoxyCodeLine{30 *(floors[1]) = dummy1;}
+\DoxyCodeLine{31 floors[1]-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} = (\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}}*) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
+\DoxyCodeLine{32 *(floors[1]-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}}) = dummy2;}
+\DoxyCodeLine{33 \mbox{\hyperlink{remove__passenger__floor_8h_a25f8c0d7e3c685b2c1830182e3705df0}{remove\_passenger\_floor}}(floors,2);}
+\DoxyCodeLine{34 \textcolor{keywordflow}{if}(floors[1]-\/>\textcolor{keywordtype}{id} == dummy2.id)\{}
+\DoxyCodeLine{35     fprintf(f,\textcolor{stringliteral}{"PASS: Removed 1st Passenger. Id on floor is \%d\(\backslash\)n"}, dummy2.id);}
+\DoxyCodeLine{36     printf(\textcolor{stringliteral}{"PASS: Removed 1st Passenger. Id on floor is \%d\(\backslash\)n"}, dummy2.id);}
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{38 \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{39     fprintf(f,\textcolor{stringliteral}{"FAIL: Expected Passenger.Id \%d Got : \%d\(\backslash\)n"}, dummy2.id,floors[1]-\/>id);}
+\DoxyCodeLine{40     printf(\textcolor{stringliteral}{"FAIL: Expected Passenger.Id \%d Got : \%d\(\backslash\)n"}, dummy2.id,floors[1]-\/>id);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \}}
+\DoxyCodeLine{43 \mbox{\hyperlink{remove__passenger__floor_8h_a25f8c0d7e3c685b2c1830182e3705df0}{remove\_passenger\_floor}}(floors,2);}
+\DoxyCodeLine{44 \textcolor{keywordflow}{if}(floors[1] == NULL)\{}
+\DoxyCodeLine{45     fprintf(f,\textcolor{stringliteral}{"PASS: Removed 2nd Passenger. Pointing to NULL \%p\(\backslash\)n"}, floors[1]);}
+\DoxyCodeLine{46     printf(\textcolor{stringliteral}{"PASS: Removed 2nd Passenger. Pointing to NULL \%p\(\backslash\)n"}, floors[1]);}
+\DoxyCodeLine{47 \}}
+\DoxyCodeLine{48 \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{49     fprintf(f,\textcolor{stringliteral}{"FAIL: Expected floor point to NULL.Instead Got : \%p\(\backslash\)n"}, floors[1]);}
+\DoxyCodeLine{50     printf(\textcolor{stringliteral}{"FAIL: Expected floor point to NULL.Instead Got : \%p\(\backslash\)n"}, floors[1]); }
+\DoxyCodeLine{51 \}}
+\DoxyCodeLine{52 fflush(f);}
+\DoxyCodeLine{53 fclose(f);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}

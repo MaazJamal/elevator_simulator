@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="static__simulation_8h" kind="file" language="C++">
+    <compoundname>static_simulation.h</compoundname>
+    <includedby refid="simulations_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/static_simulation.h</label>
+        <link refid="static__simulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="static__simulation_8h_1ad022020e38b9aa37a3e98b761c507a10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int static_simulation</definition>
+        <argsstring>(void)</argsstring>
+        <name>static_simulation</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function contains the working logic of the elevator array function for static release. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@detail Contains the logic for the static release. It contains the main logic loop for travel of elevators. The loop for placing passengers on floors and the complete flow of the program.</para>
+<para><simplesect kind="return"><para>return 1 for succesfull completion. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>A boolean array that shows if elevator needs to stop at a floor. to pick a passenger.</para>
+<para>Array conatining Elevators</para>
+<para>Array to pointer of type passenger. Stores passengers on floors.</para>
+<para>stores the passengers from input file.</para>
+<para>main time counter</para>
+<para>A queue of request made by passengers</para>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/static_simulation.h" line="11" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c" bodystart="21" bodyend="348" declfile="C:/Users/Work/git_repo/elevator_simulator/include/static_simulation.h" declline="11" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains the declaration of the function static_simulation The function carries out the static simulation of the project. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>__STATIC_SIMULATION_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__STATIC_SIMULATION_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="static__simulation_8h_1ad022020e38b9aa37a3e98b761c507a10" kindref="member">static_simulation</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/static_simulation.h"/>
+  </compounddef>
+</doxygen>

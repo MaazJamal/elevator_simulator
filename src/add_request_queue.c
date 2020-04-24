@@ -1,6 +1,6 @@
 /**
- * @file input_lifts.c
- * @brief contains the definition of input_lifts
+ * @file add_request_queue.c
+ * @brief contains the definition of add_request_queue
  * 
  * @author Maaz Jamal
  * 

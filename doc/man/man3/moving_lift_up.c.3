@@ -1,0 +1,51 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c \- To set the direction of the lift to Upward direction\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include '\&.\&./include/globals\&.h'\fP
+.br
+\fC#include '\&.\&./include/structures\&.h'\fP
+.br
+\fC#include '\&.\&./include/moving_lift_up\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmoving_lift_up\fP (struct \fBelevator\fP elevator_arr[], unsigned int index)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+To set the direction of the lift to Upward direction\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Ritika Arora - ritikaarora@cmail.carleton.ca
+.RE
+.PP
+@detail The function is to set the direction of the lift to UP\&. The function calls with two param[in] an array of elevators of elevator type and an integer value which indicated the index as well as the number of the elevator in the building\&. The function firstly checks, if the elevator number entered is less than the total number of elevators in the building\&. If it is greater than the total number of elevators in the building then it will give the error message and will return -1 Otherwise, it will set the direction of that particular elevator to UP\&.
+.PP
+\fBReturns\fP
+.RS 4
+integer value 1 if everything goes well\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBmoving_lift_up\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

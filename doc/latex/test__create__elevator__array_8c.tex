@@ -1,0 +1,56 @@
+\hypertarget{test__create__elevator__array_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/test/test\+\_\+create\+\_\+elevator\+\_\+array.c File Reference}
+\label{test__create__elevator__array_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_create\_elevator\_array.c@{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_create\_elevator\_array.c}}
+
+
+Contains test cases for \mbox{\hyperlink{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}{create\+\_\+elevator\+\_\+array()}} function.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}create\+\_\+elevator\+\_\+array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}functions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__create__elevator__array_8c_ade06ed0d844fd993c27589114d35f742}{test\+\_\+create\+\_\+elevator\+\_\+array}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains test cases for \mbox{\hyperlink{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}{create\+\_\+elevator\+\_\+array()}} function. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__create__elevator__array_8c_ade06ed0d844fd993c27589114d35f742}\label{test__create__elevator__array_8c_ade06ed0d844fd993c27589114d35f742}} 
+\index{test\_create\_elevator\_array.c@{test\_create\_elevator\_array.c}!test\_create\_elevator\_array@{test\_create\_elevator\_array}}
+\index{test\_create\_elevator\_array@{test\_create\_elevator\_array}!test\_create\_elevator\_array.c@{test\_create\_elevator\_array.c}}
+\doxysubsubsection{\texorpdfstring{test\_create\_elevator\_array()}{test\_create\_elevator\_array()}}
+{\footnotesize\ttfamily void test\+\_\+create\+\_\+elevator\+\_\+array (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Calls the function \mbox{\hyperlink{create__elevator__array_8c}{create\+\_\+elevator\+\_\+array.\+c}} with valid parameters. Prints the P\+A\+SS /\+F\+A\+IL status ,by accessing the return from create\+\_\+elevator\+\_\+array function. results\+\_\+create\+\_\+elevator\+\_\+array file contains the results. 
+
+Definition at line 20 of file test\+\_\+create\+\_\+elevator\+\_\+array.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} *elev;}
+\DoxyCodeLine{23     printf(\textcolor{stringliteral}{"results\_create\_elevator\_array file contains output \(\backslash\)n\(\backslash\)n "});}
+\DoxyCodeLine{24     FILE *fp;}
+\DoxyCodeLine{25     fp = freopen(\textcolor{stringliteral}{"test/results/results\_create\_elevator\_array.txt"}, \textcolor{stringliteral}{"w+"}, stdout);}
+\DoxyCodeLine{26     elev = \mbox{\hyperlink{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}{create\_elevator\_array}}(4);}
+\DoxyCodeLine{27     \textcolor{keywordflow}{if} (elev != NULL)}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         printf(\textcolor{stringliteral}{"PASS;Input Parameter:Valid;array of structure elevator could be accessed .\(\backslash\)n"});}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         printf(\textcolor{stringliteral}{"FAIL;Input Parameter:Valid;array of structure elevator could not be accessed .\(\backslash\)n"});}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     fflush(fp);}
+\DoxyCodeLine{36     fclose(fp);}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}

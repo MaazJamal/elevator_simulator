@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="is__lift__empty_8c" kind="file" language="C++">
+    <compoundname>is_lift_empty.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="globals_8h" local="yes">../include/globals.h</includes>
+    <includes refid="is__lift__empty_8h" local="yes">../include/is_lift_empty.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/is_lift_empty.c</label>
+        <link refid="is__lift__empty_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../include/is_lift_empty.h</label>
+        <link refid="is__lift__empty_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../include/globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="is__lift__empty_8c_1a37e8ad2f4fa1a5ee9e229e632a3d88cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int is_lift_empty</definition>
+        <argsstring>(struct elevator elevator_arr[], unsigned int index)</argsstring>
+        <name>is_lift_empty</name>
+        <param>
+          <type>struct <ref refid="structelevator" kindref="compound">elevator</ref></type>
+          <declname>elevator_arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/src/is_lift_empty.c" line="32" column="5" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/is_lift_empty.c" bodystart="32" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Checks if there is any space in the elevator to add more passengers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ritika Arora - <ulink url="mailto:ritikaarora@cmail.carleton.ca">ritikaarora@cmail.carleton.ca</ulink></para>
+</simplesect>
+@detail The function is to check if the elevator has any space to accommodate any other passenger or not. Firstly, it checks if the elevator number entered is less than the total number of elevators in the building. If it is greater than the total number of elevators in the building then it will give the error message and will return -1 Then, it checks if the number of the passengers in the elevator is more than or equal to the max number of passengers it can accommodate, then it prints that the lift is full and returns 0. Else, it returns 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">elevator_arr[]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of type elevator structure, index of unsigned integer type The parameter elevator_arr[] will have all the details of the elevators and index is used to access any particular elevator</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>integer Returns -1 if errors in input and 1 if it has any space for any passenger and 0 if not. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/is_lift_empty.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">//unsigned<sp/>int<sp/>elevator_count;<sp/>//definition<sp/>of<sp/>the<sp/>global<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_lift_empty(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elevator_arr[],<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>has_space;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/><ref refid="globals_8h_1a11ee4b54505479cda7e127a7030a76a7" kindref="member">elevator_count</ref>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Index<sp/>is<sp/>greater<sp/>than<sp/>the<sp/>elevator_arr<sp/>size.<sp/>%d<sp/>&gt;=<sp/>%d<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>index,<sp/><ref refid="globals_8h_1a11ee4b54505479cda7e127a7030a76a7" kindref="member">elevator_count</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(elevator_arr[index].<ref refid="globals_8h_1aafbf17dfb8c07dadb99b3e0faadef32d" kindref="member">passenger_count</ref><sp/>&gt;=<sp/>elevator_arr[index].max_passenger)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stdout,<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>lift<sp/>is<sp/>full!!<sp/>Can&apos;t<sp/>add<sp/>more<sp/>passengers.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>has_space<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>has_space<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>has_space;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/src/is_lift_empty.c"/>
+  </compounddef>
+</doxygen>

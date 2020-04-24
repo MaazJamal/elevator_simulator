@@ -1,4 +1,7 @@
-
+/** @file test_read_passenger.c
+ * @brief contains tests for read_passenger() function.
+ * 
+ * */
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -215,8 +218,6 @@ void test_read_passenger(void)
 
 	default:
 	{
-		FILE *fp;
-		fp = freopen("test/results/results_read_passenger.txt", "w+", stdout);
 		printf("Enter a valid test case number.");
 		break;
 	}

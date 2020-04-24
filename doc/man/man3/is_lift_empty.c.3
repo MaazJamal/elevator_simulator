@@ -1,0 +1,52 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/is_lift_empty.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/is_lift_empty.c \- Checks if there is any space in the elevator to add more passengers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include '\&.\&./include/globals\&.h'\fP
+.br
+\fC#include '\&.\&./include/is_lift_empty\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBis_lift_empty\fP (struct \fBelevator\fP elevator_arr[], unsigned int index)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Checks if there is any space in the elevator to add more passengers\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Ritika Arora - ritikaarora@cmail.carleton.ca
+.RE
+.PP
+@detail The function is to check if the elevator has any space to accommodate any other passenger or not\&. Firstly, it checks if the elevator number entered is less than the total number of elevators in the building\&. If it is greater than the total number of elevators in the building then it will give the error message and will return -1 Then, it checks if the number of the passengers in the elevator is more than or equal to the max number of passengers it can accommodate, then it prints that the lift is full and returns 0\&. Else, it returns 1\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIelevator_arr[]\fP of type elevator structure, index of unsigned integer type The parameter elevator_arr[] will have all the details of the elevators and index is used to access any particular elevator
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+integer Returns -1 if errors in input and 1 if it has any space for any passenger and 0 if not\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBis_lift_empty\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

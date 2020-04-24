@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="results__count__passenger_8txt" kind="file" language="C++">
+    <compoundname>results_count_passenger.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="results__count__passenger_8txt_1a3fa0fdc5aa6fa893b3fd8b1fa89f864d" prot="public" static="no" mutable="no">
+        <type>PASS</type>
+        <definition>PASS __pad1__</definition>
+        <argsstring></argsstring>
+        <name>__pad1__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_count_passenger.txt" line="1" column="1" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/results_count_passenger.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="results__count__passenger_8txt_1a5db63ed672cdab34c8fe192e5e632c69" prot="public" static="no" mutable="no">
+        <type>PASS Expected</type>
+        <definition>PASS Expected Expected Expected Expected Expected Expected Expected Expected Expected Expected Output</definition>
+        <argsstring></argsstring>
+        <name>Output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_count_passenger.txt" line="1" column="15" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/results_count_passenger.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">1)PASS:<sp/>Input:<sp/>Invlaid<sp/>file,<sp/>Expected<sp/>Output:<sp/>-1,<sp/>Output:<sp/>-1<sp/>.</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">2)PASS:<sp/>Input:<sp/>Empty<sp/>file,<sp/>Expected<sp/>Output:<sp/>0,<sp/>Output:<sp/>0<sp/>.</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">3)PASS:<sp/>Input:<sp/>valid<sp/>file,<sp/>Expected<sp/>Output:<sp/>37,<sp/>Output:<sp/>37<sp/>.</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">4)PASS:<sp/>Input:<sp/>Varying<sp/>Passenger<sp/>ID<sp/>in<sp/>file,<sp/>Expected<sp/>Output:<sp/>44,<sp/>Output:<sp/>44<sp/>.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">5)PASS:<sp/>Input:<sp/>Repeating<sp/>the<sp/>Passenger<sp/>ID,<sp/>Expected<sp/>Output:<sp/>41,<sp/>Output:<sp/>41<sp/>.</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">6)PASS:<sp/>Input:<sp/>Giving<sp/>Character<sp/>strings<sp/>to<sp/>Passenger<sp/>ID<sp/>,<sp/>Expected<sp/>Output:<sp/>34,<sp/>Output:<sp/>34<sp/>.</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">7)PASS:<sp/>Input:<sp/>Giving<sp/>Emergency<sp/>stop<sp/>situtation<sp/>911<sp/>to<sp/>Passenger<sp/>ID<sp/>-<sp/>Count<sp/>ignores<sp/>911<sp/>,<sp/>Expected<sp/>Output:<sp/>35,<sp/>Output:<sp/>35<sp/>.</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">8)PASS:<sp/>Input:<sp/>Giving<sp/>Emergency<sp/>stop<sp/>situtation<sp/>911<sp/>to<sp/>Timestamp<sp/>-<sp/>Count<sp/>should<sp/>include<sp/>the<sp/>record,<sp/>Expected<sp/>Output:<sp/>36,<sp/>Output:<sp/>36<sp/>.</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">9)PASS:<sp/>Input:<sp/>Giving<sp/>Emergency<sp/>stop<sp/>situtation<sp/>911<sp/>to<sp/>Start<sp/>floor<sp/>-<sp/>Count<sp/>should<sp/>include<sp/>the<sp/>record,<sp/>Expected<sp/>Output:<sp/>37,<sp/>Output:<sp/>37<sp/>.</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">10)PASS:<sp/>Input:<sp/>Giving<sp/>Emergency<sp/>stop<sp/>situtation<sp/>911<sp/>to<sp/>Destination<sp/>floor<sp/>-<sp/>Count<sp/>should<sp/>include<sp/>the<sp/>record,<sp/>Expected<sp/>Output:<sp/>37,<sp/>Output:<sp/>37<sp/>.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_count_passenger.txt"/>
+  </compounddef>
+</doxygen>

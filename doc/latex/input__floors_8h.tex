@@ -1,5 +1,5 @@
-\hypertarget{input__floors_8h}{}\doxysection{include/input\+\_\+floors.h File Reference}
-\label{input__floors_8h}\index{include/input\_floors.h@{include/input\_floors.h}}
+\hypertarget{input__floors_8h}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/include/input\+\_\+floors.h File Reference}
+\label{input__floors_8h}\index{C:/Users/Work/git\_repo/elevator\_simulator/include/input\_floors.h@{C:/Users/Work/git\_repo/elevator\_simulator/include/input\_floors.h}}
 
 
 Obtains the floor count-\/\+Total number of floors in the building.  
@@ -39,26 +39,27 @@ Definition at line 20 of file input\+\_\+floors.\+c.
 \DoxyCodeLine{22     \textcolor{keywordtype}{int} local\_floor\_count;}
 \DoxyCodeLine{23 }
 \DoxyCodeLine{24     printf(\textcolor{stringliteral}{"Enter the number of floors in the building-\/VALID INPUTS ARE FROM 1 TO 100\(\backslash\)n"});}
-\DoxyCodeLine{25     scanf(\textcolor{stringliteral}{"\%d"}, \&local\_floor\_count);}
-\DoxyCodeLine{26     \textcolor{comment}{//Following checks are performed to see if the entered value is erraneous.}}
-\DoxyCodeLine{27     \textcolor{keywordflow}{if} (local\_floor\_count == 0)}
-\DoxyCodeLine{28     \{}
-\DoxyCodeLine{29         printf(\textcolor{stringliteral}{"Entered number of floor invalid \(\backslash\)n"});}
-\DoxyCodeLine{30         local\_floor\_count = -\/1;}
-\DoxyCodeLine{31     \}}
-\DoxyCodeLine{32     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (local\_floor\_count < 1)}
-\DoxyCodeLine{33     \{}
-\DoxyCodeLine{34         printf(\textcolor{stringliteral}{"Entered number of floor is negative value and hence invalid \(\backslash\)n"});}
-\DoxyCodeLine{35         local\_floor\_count = -\/1;}
-\DoxyCodeLine{36     \}}
-\DoxyCodeLine{37     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (local\_floor\_count > 100)}
-\DoxyCodeLine{38     \{}
-\DoxyCodeLine{39         printf(\textcolor{stringliteral}{"Entered number of floor is greater than 100 and hence invalid \(\backslash\)n"});}
-\DoxyCodeLine{40         local\_floor\_count = -\/1;}
-\DoxyCodeLine{41     \}}
-\DoxyCodeLine{42     \textcolor{comment}{//discards the values stored in stdin buffer.}}
-\DoxyCodeLine{43     scanf(\textcolor{stringliteral}{"\%*[\string^\(\backslash\)n]"});}
-\DoxyCodeLine{44     \textcolor{keywordflow}{return} local\_floor\_count;}
-\DoxyCodeLine{45 \}}
+\DoxyCodeLine{25     puts(\textcolor{stringliteral}{"This Value should be greater than or equal to maximum floor number in input.txt file."});}
+\DoxyCodeLine{26     scanf(\textcolor{stringliteral}{"\%d"}, \&local\_floor\_count);}
+\DoxyCodeLine{27     \textcolor{comment}{//Following checks are performed to see if the entered value is erraneous.}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{if} (local\_floor\_count == 0)}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         printf(\textcolor{stringliteral}{"Entered number of floor invalid \(\backslash\)n"});}
+\DoxyCodeLine{31         local\_floor\_count = -\/1;}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (local\_floor\_count < 1)}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         printf(\textcolor{stringliteral}{"Entered number of floor is negative value and hence invalid \(\backslash\)n"});}
+\DoxyCodeLine{36         local\_floor\_count = -\/1;}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (local\_floor\_count > 100)}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         printf(\textcolor{stringliteral}{"Entered number of floor is greater than 100 and hence invalid \(\backslash\)n"});}
+\DoxyCodeLine{41         local\_floor\_count = -\/1;}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{comment}{//discards the values stored in stdin buffer.}}
+\DoxyCodeLine{44     scanf(\textcolor{stringliteral}{"\%*[\string^\(\backslash\)n]"});}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} local\_floor\_count;}
+\DoxyCodeLine{46 \}}
 
 \end{DoxyCode}

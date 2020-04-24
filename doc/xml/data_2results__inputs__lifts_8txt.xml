@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="data_2results__inputs__lifts_8txt" kind="file" language="C++">
+    <compoundname>results_inputs_lifts.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="data_2results__inputs__lifts_8txt_1abe1beddb7b8c1ab841d28d180caa0037" prot="public" static="no" mutable="no">
+        <type>FAIL</type>
+        <definition>FAIL __pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/data/results_inputs_lifts.txt" line="1" column="1" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/data/results_inputs_lifts.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_2results__inputs__lifts_8txt_1a558eb9ee2abe10d2608bfc3dd38b8f76" prot="public" static="no" mutable="no">
+        <type>FAIL Expected</type>
+        <definition>PASS Expected Expected Expected Expected Expected Output</definition>
+        <argsstring></argsstring>
+        <name>Output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/data/results_inputs_lifts.txt" line="1" column="15" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/data/results_inputs_lifts.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">FAIL:<sp/>Input:<sp/>abd,<sp/>Expected<sp/>Output:<sp/>-1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">FAIL:<sp/>Input:<sp/>wbb120,<sp/>Expected<sp/>Output:<sp/>-1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">FAIL:<sp/>Input:<sp/>0,<sp/>Expected<sp/>Output:<sp/>-1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">FAIL:<sp/>Input:<sp/>-100,<sp/>Expected<sp/>Output:<sp/>-1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">FAIL:<sp/>Input:<sp/>101,<sp/>Expected<sp/>Output:<sp/>-1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">PASS:<sp/>Input:<sp/>1,<sp/>Expected<sp/>Output:<sp/>1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">FAIL:<sp/>Input:<sp/>100,<sp/>Expected<sp/>Output:<sp/>100,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">FAIL:<sp/>Input:<sp/>50,<sp/>Expected<sp/>Output:<sp/>50,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">FAIL:<sp/>Input:<sp/>23.3,<sp/>Expected<sp/>Output:<sp/>23,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">FAIL:<sp/>Input:<sp/>0.9,<sp/>Expected<sp/>Output:<sp/>-1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">PASS:<sp/>Input:<sp/>1.0,<sp/>Expected<sp/>Output:<sp/>1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">FAIL:<sp/>Input:<sp/>100.1,<sp/>Expected<sp/>Output:<sp/>100,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">FAIL:<sp/>Input:<sp/>100.0,<sp/>Expected<sp/>Output:<sp/>100,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/data/results_inputs_lifts.txt"/>
+  </compounddef>
+</doxygen>

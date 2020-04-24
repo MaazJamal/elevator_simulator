@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__passenger__take__in__result_8txt" kind="file" language="C++">
+    <compoundname>test_passenger_take_in_result.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">PASS<sp/>3<sp/>passengers<sp/>added.<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">PASS<sp/>3<sp/>passengers<sp/>removed<sp/>from<sp/>floor.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">PASS<sp/>5<sp/>passengers<sp/>added.<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">PASS<sp/>5<sp/><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>removed<sp/>and<sp/>six<sp/><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>is<sp/>first<sp/>on<sp/>the<sp/>floor<sp/>now<sp/></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_passenger_take_in_result.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,587 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h \- contains the function declarations for all the test_functions  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_add_request_queue\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_average_waiting_time\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_count_passenger\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_create_elevator_array\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_create_floor_array\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_input_after_stop\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_input_floors\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_input_lifts\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_is_lift_empty\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_is_lift_on_floor\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_max_waiting_time\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_moving_lift_down\fP (void)"
+.br
+.RI "This function test the function moving_lift_down\&. "
+.ti -1c
+.RI "void \fBtest_passenger_take_in\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_read_passenger\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_remove_passenger_queue\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_cli_update\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_add_passenger_floor\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtest_remove_passenger_floor\fP (void)"
+.br
+.RI "tests the remove_passenger function\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains the function declarations for all the test_functions 
+
+
+.PP
+Definition in file \fBtest_functions\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void test_create_elevator_array (void)"
+Calls the function \fBcreate_elevator_array\&.c\fP with valid parameters\&. Prints the PASS /FAIL status ,by accessing the return from create_elevator_array function\&. results_create_elevator_array file contains the results\&. 
+.PP
+Definition at line 20 of file test_create_elevator_array\&.c\&.
+.PP
+.nf
+21 {
+22     struct elevator *elev;
+23     printf("results_create_elevator_array file contains output \n\n ");
+24     FILE *fp;
+25     fp = freopen("test/results/results_create_elevator_array\&.txt", "w+", stdout);
+26     elev = create_elevator_array(4);
+27     if (elev != NULL)
+28     {
+29         printf("PASS;Input Parameter:Valid;array of structure elevator could be accessed \&.\n");
+30     }
+31     else
+32     {
+33         printf("FAIL;Input Parameter:Valid;array of structure elevator could not be accessed \&.\n");
+34     }
+35     fflush(fp);
+36     fclose(fp);
+37 }
+.fi
+.SS "void test_input_floors (void)"
+Calls the function \fBinput_floors\&.c\fP with input from input_input_floors\&.txt\&. Prints the PASS /FAIL status ,by accessing the return from input_floors function\&. results_input_floors file contains the results\&. 
+.PP
+Definition at line 20 of file test_input_floors\&.c\&.
+.PP
+.nf
+21 {
+22     FILE *test_results;
+23     test_results = fopen("test/results/results_input_floors\&.txt", "w");
+24     freopen("test/data/input_input_floors\&.txt", "r", stdin);
+25     int arr[13];
+26     arr[0] = input_floors();
+27     arr[1] = input_floors();
+28     arr[2] = input_floors();
+29     arr[3] = input_floors();
+30     arr[4] = input_floors();
+31     arr[5] = input_floors();
+32     arr[6] = input_floors();
+33     arr[7] = input_floors();
+34     arr[8] = input_floors();
+35     arr[9] = input_floors();
+36     arr[10] = input_floors();
+37     arr[11] = input_floors();
+38     arr[12] = input_floors();
+39     arr[13] = input_floors();
+40 
+41     int case_id = 0;
+42     //Test case 1 -input abcd
+43 
+44     if (arr[0] == -1)
+45     {
+46         char temp[100];
+47         sprintf(temp, "PASS: Input: abcd, Expected Output: -1, Output: %d \&.\n",
+48                 arr[0]);
+49         printf(temp);
+50         fprintf(test_results, temp);
+51     }
+52 
+53     else
+54     {
+55         char temp[100];
+56         sprintf(temp, "FAIL: Input: abcd, Expected Output: -1, Output: %d \&.\n",
+57                 arr[0]);
+58         printf(temp);
+59         fprintf(test_results, temp);
+60     }
+61     //Test case 2- input abcd123
+62     if (arr[1] == -1)
+63     {
+64         char temp[100];
+65         sprintf(temp, "PASS: Input: abcd123, Expected Output: -1, Output: %d \&.\n",
+66                 arr[0]);
+67         printf(temp);
+68         fprintf(test_results, temp);
+69     }
+70 
+71     else
+72     {
+73         char temp[100];
+74         sprintf(temp, "FAIL: Input: abcd123, Expected Output: -1, Output: %d \&.\n",
+75                 arr[0]);
+76         printf(temp);
+77         fprintf(test_results, temp);
+78     }
+79     //Test case 3- input 0
+80     if (arr[2] == -1)
+81     {
+82         char temp[100];
+83         sprintf(temp, "PASS: Input: 0, Expected Output: -1, Output: %d \&.\n",
+84                 arr[0]);
+85         printf(temp);
+86         fprintf(test_results, temp);
+87     }
+88 
+89     else
+90     {
+91         char temp[100];
+92         sprintf(temp, "FAIL: Input: 0, Expected Output: -1, Output: %d \&.\n",
+93                 arr[0]);
+94         printf(temp);
+95         fprintf(test_results, temp);
+96     }
+97     //Test case 4- input -100
+98     if (arr[2] == -1)
+99     {
+100         char temp[100];
+101         sprintf(temp, "PASS: Input: -100, Expected Output: -1, Output: %d \&.\n",
+102                 arr[0]);
+103         printf(temp);
+104         fprintf(test_results, temp);
+105     }
+106 
+107     else
+108     {
+109         char temp[100];
+110         sprintf(temp, "FAIL: Input: -100, Expected Output: -1, Output: %d \&.\n",
+111                 arr[0]);
+112         printf(temp);
+113         fprintf(test_results, temp);
+114     }
+115 
+116     //Test case 5 -input 101
+117     if (arr[4] == -1)
+118     {
+119         char temp[100];
+120         sprintf(temp, "PASS: Input: 101, Expected Output: -1, Output: %d \&.\n",
+121                 arr[4]);
+122         printf(temp);
+123         fprintf(test_results, temp);
+124     }
+125     else
+126     {
+127         char temp[100];
+128         sprintf(temp, "FAIL: Input: 101, Expected Output: -1, Output: %d \&.\n",
+129                 arr[4]);
+130         printf(temp);
+131         fprintf(test_results, temp);
+132     }
+133 
+134     //Test case 6 -input 1
+135     if (arr[5] == 1)
+136     {
+137         char temp[100];
+138         sprintf(temp, "PASS: Input: 1, Expected Output: 1, Output: %d \&.\n",
+139                 arr[5]);
+140         printf(temp);
+141         fprintf(test_results, temp);
+142     }
+143     else
+144     {
+145         char temp[100];
+146         sprintf(temp, "FAIL: Input: 1, Expected Output: 1, Output: %d \&.\n",
+147                 arr[5]);
+148         printf(temp);
+149         fprintf(test_results, temp);
+150     }
+151 
+152     //Test case 7 -input 100
+153     case_id = 6;
+154     if (arr[case_id] == 100)
+155     {
+156         char temp[100];
+157         sprintf(temp, "PASS: Input: 100, Expected Output: 100, Output: %d \&.\n",
+158                 arr[case_id]);
+159         printf(temp);
+160         fprintf(test_results, temp);
+161     }
+162     else
+163     {
+164         char temp[100];
+165         sprintf(temp, "FAIL: Input: 100, Expected Output: 100, Output: %d \&.\n",
+166                 arr[case_id]);
+167         printf(temp);
+168         fprintf(test_results, temp);
+169     }
+170 
+171     //Test case 8 input 50
+172     case_id = 7;
+173     if (arr[case_id] == 50)
+174     {
+175         char temp[100];
+176         sprintf(temp, "PASS: Input: 50, Expected Output: 50, Output: %d \&.\n",
+177                 arr[case_id]);
+178         printf(temp);
+179         fprintf(test_results, temp);
+180     }
+181     else
+182     {
+183         char temp[100];
+184         sprintf(temp, "FAIL: Input: 50, Expected Output: 50, Output: %d \&.\n",
+185                 arr[case_id]);
+186         printf(temp);
+187         fprintf(test_results, temp);
+188     }
+189 
+190     //Test case 9 input 23\&.3
+191     case_id = 8;
+192     if (arr[case_id] == 23)
+193     {
+194         char temp[100];
+195         sprintf(temp, "PASS: Input: 23\&.3, Expected Output: 23, Output: %d \&.\n",
+196                 arr[case_id]);
+197         printf(temp);
+198         fprintf(test_results, temp);
+199     }
+200     else
+201     {
+202         char temp[100];
+203         sprintf(temp, "FAIL: Input: 23\&.3, Expected Output: 23, Output: %d \&.\n",
+204                 arr[case_id]);
+205         printf(temp);
+206         fprintf(test_results, temp);
+207     }
+208 
+209     //Test case 10 input 0\&.9
+210     case_id = 9;
+211     if (arr[case_id] == -1)
+212     {
+213         char temp[100];
+214         sprintf(temp, "PASS: Input: 0\&.9, Expected Output: -1, Output: %d \&.\n",
+215                 arr[case_id]);
+216         printf(temp);
+217         fprintf(test_results, temp);
+218     }
+219     else
+220     {
+221         char temp[100];
+222         sprintf(temp, "FAIL: Input: 0\&.9, Expected Output: -1, Output: %d \&.\n",
+223                 arr[case_id]);
+224         printf(temp);
+225         fprintf(test_results, temp);
+226     }
+227 
+228     //Test case 11 input 1\&.0
+229     case_id = 10;
+230     if (arr[case_id] == 1)
+231     {
+232         char temp[100];
+233         sprintf(temp, "PASS: Input: 1\&.0, Expected Output: 1, Output: %d \&.\n",
+234                 arr[case_id]);
+235         printf(temp);
+236         fprintf(test_results, temp);
+237     }
+238     else
+239     {
+240         char temp[100];
+241         sprintf(temp, "FAIL: Input: 1\&.0, Expected Output: 1, Output: %d \&.\n",
+242                 arr[case_id]);
+243         printf(temp);
+244         fprintf(test_results, temp);
+245     }
+246 
+247     //Test case 12 input 100\&.1
+248     case_id = 11;
+249     if (arr[case_id] == 100)
+250     {
+251         char temp[100];
+252         sprintf(temp, "PASS: Input: 100\&.1, Expected Output: 100, Output: %d \&.\n",
+253                 arr[case_id]);
+254         printf(temp);
+255         fprintf(test_results, temp);
+256     }
+257     else
+258     {
+259         char temp[100];
+260         sprintf(temp, "FAIL: Input: 100\&.1, Expected Output: 100, Output: %d \&.\n",
+261                 arr[case_id]);
+262         printf(temp);
+263         fprintf(test_results, temp);
+264     }
+265 
+266     //Test case 13 input 100\&.0
+267     case_id = 12;
+268     if (arr[case_id] == 100)
+269     {
+270         char temp[100];
+271         sprintf(temp, "PASS: Input: 100\&.0, Expected Output: 100, Output: %d \&.\n",
+272                 arr[case_id]);
+273         printf(temp);
+274         fprintf(test_results, temp);
+275     }
+276     else
+277     {
+278         char temp[100];
+279         sprintf(temp, "FAIL: Input: 100\&.0, Expected Output: 100, Output: %d \&.\n",
+280                 arr[case_id]);
+281         printf(temp);
+282         fprintf(test_results, temp);
+283     }
+284     fflush(test_results);
+285     fclose(test_results);
+286 }
+.fi
+.SS "void test_is_lift_on_floor (void)"
+Calls the function lift_on_floor\&.c with valid parameters\&. Prints the PASS /FAIL status ,by accessing the return from lift_on_floor function\&. results_is_lift_on_floor file contains the results\&. 
+.PP
+Definition at line 18 of file test_is_lift_on_floor\&.c\&.
+.PP
+.nf
+19 {
+20     struct elevator ele[3];
+21     elevator_count = 3;
+22     FILE *fp;
+23     fp = fopen("test/results/results_is_lift_on_floor\&.txt", "w+");
+24     int arr = is_lift_on_floor(ele, 1);
+25     if (arr != 0)
+26     {
+27         fprintf(fp, "PASS;Input Parameter:Valid;is_lift_on_floor function is accesssed successfully \&.\n");
+28         printf("PASS;Input Parameter:Valid;is_lift_on_floor function is accesssed successfully \&.\n");
+29     }
+30     else
+31     {
+32         fprintf(fp, "FAIL;Input Parameter:Valid;is_lift_on_floor function cannot be accesssed  \&.\n");
+33         printf("PASS;Input Parameter:Valid;is_lift_on_floor function is accesssed successfully \&.\n");
+34     }
+35     fflush(fp);
+36     fclose(fp);
+37 }
+.fi
+.SS "void test_moving_lift_down (void)"
+
+.PP
+This function test the function moving_lift_down\&. Function tests array out of bounds check\&. Change elevator direction test\&. 
+.PP
+Definition at line 18 of file test_moving_lift_down\&.c\&.
+.PP
+.nf
+19 {
+20     struct elevator arr[3];
+21     struct elevator temp = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+22     FILE *test_results = fopen("test/results/results_test_moving_lift_down\&.txt", "w");
+23     arr[1] = temp;
+24     arr[2] = temp;
+25     arr[0] = temp;
+26 
+27     elevator_count = 3;
+28     char *pass = "PASS:";
+29     char *fail = "FAIL:";
+30 
+31     int result = moving_lift_down(arr, 3);
+32 
+33     if (result == -1)
+34     {
+35         char temp[100];
+36         sprintf(temp, "%s: Function returned %d Expected -1 \&. Array out of bound check working\&.\n",
+37                 pass, result);
+38         printf(temp);
+39         fprintf(test_results, temp);
+40     }
+41     else
+42     {
+43         char temp[100];
+44         sprintf(temp, "%s: Array values properly changed: direction_up = %d \&.\
+45                         direction_down = %d, Return = %d\n",
+46                 fail, arr[2]\&.direction_up, arr[2]\&.direction_down, result);
+47         printf(temp);
+48         fprintf(test_results, temp);
+49     }
+50 
+51     result = moving_lift_down(arr, 2);
+52     if (result != -1)
+53     {
+54         result = arr[2]\&.direction_up == 0 && arr[2]\&.direction_down == 1;
+55     }
+56     if (result == -1)
+57     {
+58         char temp[100];
+59         sprintf(temp, "%s: Function returned %d Expected 1\&.\n",
+60                 fail, result);
+61         printf(temp);
+62         fprintf(test_results, temp);
+63     }
+64     else
+65     {
+66         char temp[100];
+67         sprintf(temp, "%s: Array values properly changed: direction_up = %d \&.\
+68                         direction_down = %d, Return = %d\n",
+69                 pass, arr[2]\&.direction_up, arr[2]\&.direction_down, result);
+70         printf(temp);
+71         fprintf(test_results, temp);
+72     }
+73 
+74     result = arr[1]\&.direction_up == 0 && arr[1]\&.direction_down == 0;
+75     if (result == 1)
+76     {
+77         char temp[100];
+78         sprintf(temp, "%s: Rest of Array Unchanged direction_up = %d \&."
+79                       "direction_down = %d\n",
+80                 pass, arr[1]\&.direction_up, arr[1]\&.direction_down);
+81         printf(temp);
+82         fprintf(test_results, temp);
+83     }
+84 
+85     //Reapeat the tests but with ptr to a dynamicall allovated array
+86 
+87     struct elevator *ptr_arr = malloc(sizeof(struct elevator) * 3);
+88 
+89     result = moving_lift_down(ptr_arr, 3);
+90     if (result == -1)
+91     {
+92         char temp[100];
+93         sprintf(temp, "%s: Pointer: Function returned %d Expected -1 \&. Array out of bound check working\&.\n",
+94                 pass, result);
+95         printf(temp);
+96         fprintf(test_results, temp);
+97     }
+98     else
+99     {
+100         char temp[100];
+101         sprintf(temp, "%s: Pointer: Array values properly changed: direction_up = %d \&.\
+102                         direction_down = %d, Return = %d\n",
+103                 fail, ptr_arr[2]\&.direction_up, ptr_arr[2]\&.direction_down, result);
+104         printf(temp);
+105         fprintf(test_results, temp);
+106     }
+107 
+108     result = moving_lift_down(ptr_arr, 2);
+109     if (result != -1)
+110     {
+111         result = ptr_arr[2]\&.direction_up == 0 && ptr_arr[2]\&.direction_down == 1;
+112     }
+113     if (result == -1)
+114     {
+115         char temp[100];
+116         sprintf(temp, "%s: Pointer: Function returned %d Expected 1\&.\n",
+117                 fail, result);
+118         printf(temp);
+119         fprintf(test_results, temp);
+120     }
+121     else
+122     {
+123         char temp[100];
+124         sprintf(temp, "%s: Pointer: Array values properly changed: direction_up = %d \&.\
+125                         direction_down = %d, Return = %d\n",
+126                 pass, ptr_arr[2]\&.direction_up, ptr_arr[2]\&.direction_down, result);
+127         printf(temp);
+128         fprintf(test_results, temp);
+129     }
+130 
+131     result = ptr_arr[1]\&.direction_up == 0 && ptr_arr[1]\&.direction_down == 0;
+132     if (result == 1)
+133     {
+134         char temp[100];
+135         sprintf(temp, "%s: Pointer: Rest of Array Unchanged direction_up = %d \&."
+136                       "direction_down = %d\n",
+137                 pass, ptr_arr[1]\&.direction_up, ptr_arr[1]\&.direction_down);
+138         printf(temp);
+139         fprintf(test_results, temp);
+140     }
+141     fflush(test_results);
+142     fclose(test_results);
+143 }
+.fi
+.SS "void test_remove_passenger_floor (void)"
+
+.PP
+tests the remove_passenger function\&. Tests the removal of two passengers from a floor\&. The first removal causes the floor to contain the second passenger at start\&. the second removal replaces the passenger with NULL pointer\&. 
+.PP
+\fBReturns\fP
+.RS 4
+void does not return anything 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file test_remove_passenger_floor\&.c\&.
+.PP
+.nf
+23                                       {
+24 floor_count = 3;
+25 struct passenger** floors =(struct passenger**) calloc(3,sizeof(struct passenger*));
+26 struct passenger dummy1 = {0, 0, 0, 0, 10, 0};
+27 struct passenger dummy2 = {0, 0, 0, 0, 20, 0};
+28 FILE *f = fopen("test/results/results_remove_passenger_floor\&.txt", "w+");
+29 floors[1] =(struct passenger*) malloc(sizeof(struct passenger));
+30 *(floors[1]) = dummy1;
+31 floors[1]->next = (struct passenger*) malloc(sizeof(struct passenger));
+32 *(floors[1]->next) = dummy2;
+33 remove_passenger_floor(floors,2);
+34 if(floors[1]->id == dummy2\&.id){
+35     fprintf(f,"PASS: Removed 1st Passenger\&. Id on floor is %d\n", dummy2\&.id);
+36     printf("PASS: Removed 1st Passenger\&. Id on floor is %d\n", dummy2\&.id);
+37 }
+38 else{
+39     fprintf(f,"FAIL: Expected Passenger\&.Id %d Got : %d\n", dummy2\&.id,floors[1]->id);
+40     printf("FAIL: Expected Passenger\&.Id %d Got : %d\n", dummy2\&.id,floors[1]->id);
+41 
+42 }
+43 remove_passenger_floor(floors,2);
+44 if(floors[1] == NULL){
+45     fprintf(f,"PASS: Removed 2nd Passenger\&. Pointing to NULL %p\n", floors[1]);
+46     printf("PASS: Removed 2nd Passenger\&. Pointing to NULL %p\n", floors[1]);
+47 }
+48 else{
+49     fprintf(f,"FAIL: Expected floor point to NULL\&.Instead Got : %p\n", floors[1]);
+50     printf("FAIL: Expected floor point to NULL\&.Instead Got : %p\n", floors[1]);  
+51 }
+52 fflush(f);
+53 fclose(f);
+54 
+55 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

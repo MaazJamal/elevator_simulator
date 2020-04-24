@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Elevator Simulator
-   &#160;<span id="projectnumber">0.9</span>
+   &#160;<span id="projectnumber">2.0</span>
    </div>
    <div id="projectbrief">The project simulates elevators in a building</div>
   </td>
@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('structelevator.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 
-<p>structure for to store important information about a elevator.  
+<p>structure to store important information about an elevator.  
  <a href="structelevator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="structures_8h_source.html">structures.h</a>&gt;</code></p>
@@ -99,51 +99,53 @@ $(document).ready(function(){initNavTree('structelevator.html',''); initResizabl
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a186590570ed9fee16200f9fffd3a0873"><td class="memItemLeft" align="right" valign="top"><a id="a186590570ed9fee16200f9fffd3a0873"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>moving</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#a186590570ed9fee16200f9fffd3a0873">moving</a></td></tr>
+<tr class="memdesc:a186590570ed9fee16200f9fffd3a0873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the elevator moving? True 1 or False(stationary) 0. <br /></td></tr>
 <tr class="separator:a186590570ed9fee16200f9fffd3a0873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab012a8d2102934af9ea97effdeea80cf"><td class="memItemLeft" align="right" valign="top"><a id="ab012a8d2102934af9ea97effdeea80cf"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#ab012a8d2102934af9ea97effdeea80cf">between_floor</a></td></tr>
-<tr class="memdesc:ab012a8d2102934af9ea97effdeea80cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the elevator moving? True 1 or False(stationary) 0. <br /></td></tr>
+<tr class="memdesc:ab012a8d2102934af9ea97effdeea80cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is elevator between floors. True 1 between floors. <br /></td></tr>
 <tr class="separator:ab012a8d2102934af9ea97effdeea80cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78d725b14370d8b2000a99bd11755ff8"><td class="memItemLeft" align="right" valign="top"><a id="a78d725b14370d8b2000a99bd11755ff8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#a78d725b14370d8b2000a99bd11755ff8">direction_up</a></td></tr>
-<tr class="memdesc:a78d725b14370d8b2000a99bd11755ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is elevator between floors. True 1 between floors. <br /></td></tr>
+<tr class="memdesc:a78d725b14370d8b2000a99bd11755ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the elevator going up? True 1 for going up. <br /></td></tr>
 <tr class="separator:a78d725b14370d8b2000a99bd11755ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa773f94528363621939e5fcc99dcc6ad"><td class="memItemLeft" align="right" valign="top"><a id="aa773f94528363621939e5fcc99dcc6ad"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#aa773f94528363621939e5fcc99dcc6ad">direction_down</a></td></tr>
-<tr class="memdesc:aa773f94528363621939e5fcc99dcc6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the elevator going up? True 1 for going up. <br /></td></tr>
+<tr class="memdesc:aa773f94528363621939e5fcc99dcc6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the elevator going down? True 1 for going down. <br /></td></tr>
 <tr class="separator:aa773f94528363621939e5fcc99dcc6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47d71912bc6a97bcf1a7c8c257ed4df1"><td class="memItemLeft" align="right" valign="top"><a id="a47d71912bc6a97bcf1a7c8c257ed4df1"></a>
 bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#a47d71912bc6a97bcf1a7c8c257ed4df1">stop_at_floor</a></td></tr>
-<tr class="memdesc:a47d71912bc6a97bcf1a7c8c257ed4df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the elevator going down? True 1 for going down. <br /></td></tr>
+<tr class="memdesc:a47d71912bc6a97bcf1a7c8c257ed4df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">points to boolean array of floors and shows if the elevator will stop at a certain floor or not. <br /></td></tr>
 <tr class="separator:a47d71912bc6a97bcf1a7c8c257ed4df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35976c62fece1a1887b39d2761e409e3"><td class="memItemLeft" align="right" valign="top"><a id="a35976c62fece1a1887b39d2761e409e3"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#a35976c62fece1a1887b39d2761e409e3">passenger_count</a></td></tr>
-<tr class="memdesc:a35976c62fece1a1887b39d2761e409e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">points to boolean array of floors and shows if the elevator will stop at a certain floor or not. <br /></td></tr>
+<tr class="memdesc:a35976c62fece1a1887b39d2761e409e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">count of passenger occupying the elevator <br /></td></tr>
 <tr class="separator:a35976c62fece1a1887b39d2761e409e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae18c23ac67fc1e94d1dd831119d90f6f"><td class="memItemLeft" align="right" valign="top"><a id="ae18c23ac67fc1e94d1dd831119d90f6f"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#ae18c23ac67fc1e94d1dd831119d90f6f">max_passenger</a></td></tr>
-<tr class="memdesc:ae18c23ac67fc1e94d1dd831119d90f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">count of passenger occupying the elevator <br /></td></tr>
+<tr class="memdesc:ae18c23ac67fc1e94d1dd831119d90f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of passengers the lift can accomodate. <br /></td></tr>
 <tr class="separator:ae18c23ac67fc1e94d1dd831119d90f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c87ee6189da284a149438ce8b0acc8d"><td class="memItemLeft" align="right" valign="top"><a id="a2c87ee6189da284a149438ce8b0acc8d"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#a2c87ee6189da284a149438ce8b0acc8d">cur_floor</a></td></tr>
-<tr class="memdesc:a2c87ee6189da284a149438ce8b0acc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of passengers the lift can accomodate. <br /></td></tr>
+<tr class="memdesc:a2c87ee6189da284a149438ce8b0acc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current floor of the elevator. Floors start at 1. <br /></td></tr>
 <tr class="separator:a2c87ee6189da284a149438ce8b0acc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6272f86a10a9c4bf565e184a4537373d"><td class="memItemLeft" align="right" valign="top"><a id="a6272f86a10a9c4bf565e184a4537373d"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#a6272f86a10a9c4bf565e184a4537373d">timer</a></td></tr>
+<tr class="memdesc:a6272f86a10a9c4bf565e184a4537373d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time clock untill the next floor. <br /></td></tr>
 <tr class="separator:a6272f86a10a9c4bf565e184a4537373d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3f0430781fbb878267214945aaf9322"><td class="memItemLeft" align="right" valign="top"><a id="ab3f0430781fbb878267214945aaf9322"></a>
 struct <a class="el" href="structpassenger.html">passenger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structelevator.html#ab3f0430781fbb878267214945aaf9322">passenger_arr</a></td></tr>
-<tr class="memdesc:ab3f0430781fbb878267214945aaf9322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time clock untill the next floor. <br /></td></tr>
+<tr class="memdesc:ab3f0430781fbb878267214945aaf9322"><td class="mdescLeft">&#160;</td><td class="mdescRight">points to a array of struct pasenger of size max_passenger. <br /></td></tr>
 <tr class="separator:ab3f0430781fbb878267214945aaf9322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>structure for to store important information about a elevator. </p>
+<div class="textblock"><p>structure to store important information about an elevator. </p>
 <p>Stores information about the elevator such as direction of travel, the floors to stop at. The maximum number of passengers the lift can accomodate and the current passengers in the lift and their information. and time it takes to go to the reach next floor. </p>
 
 <p class="definition">Definition at line <a class="el" href="structures_8h_source.html#l00035">35</a> of file <a class="el" href="structures_8h_source.html">structures.h</a>.</p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/<a class="el" href="structures_8h_source.html">structures.h</a></li>
+<li>C:/Users/Work/git_repo/elevator_simulator/include/<a class="el" href="structures_8h_source.html">structures.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="results__is__lift__empty_8txt" kind="file" language="C++">
+    <compoundname>results_is_lift_empty.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="results__is__lift__empty_8txt_1a22ef4a21fcfb8a56cde9d97312c27eaf" prot="public" static="no" mutable="no">
+        <type>PASS</type>
+        <definition>PASS __pad5__</definition>
+        <argsstring></argsstring>
+        <name>__pad5__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_empty.txt" line="1" column="1" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_empty.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="results__is__lift__empty_8txt_1a558eb9ee2abe10d2608bfc3dd38b8f76" prot="public" static="no" mutable="no">
+        <type>PASS Expected</type>
+        <definition>PASS Expected Expected Expected Expected Expected Output</definition>
+        <argsstring></argsstring>
+        <name>Output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_empty.txt" line="1" column="15" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_empty.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">PASS:<sp/>Input:<sp/>Elevator<sp/>with<sp/>passengers<sp/>equal<sp/>to<sp/>the<sp/>maximum<sp/><ref refid="structpassenger" kindref="compound">passenger</ref>,<sp/>Expected<sp/>Output:<sp/>0,<sp/>Output:<sp/>0<sp/>.</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">PASS:<sp/>Input:<sp/>Elevator<sp/>with<sp/>passengers<sp/>less<sp/>than<sp/>the<sp/>maximum<sp/><ref refid="structpassenger" kindref="compound">passenger</ref>,<sp/>Expected<sp/>Output:<sp/>1,<sp/>Output:<sp/>1<sp/>.</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">PASS:<sp/>Input:<sp/>Elevator<sp/>with<sp/>passengers<sp/>more<sp/>than<sp/>the<sp/>maximum<sp/><ref refid="structpassenger" kindref="compound">passenger</ref>,<sp/>Expected<sp/>Output:<sp/>0,<sp/>Output:<sp/>0<sp/>.</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">PASS:<sp/>Input:<sp/>The<sp/>index<sp/>is<sp/>greater<sp/>than<sp/>the<sp/>elevators<sp/>in<sp/>the<sp/>building,<sp/>Expected<sp/>Output:<sp/>-1,<sp/>Output:<sp/>-1<sp/>.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">PASS:<sp/>Input:<sp/>Empty<sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>array,<sp/>Expected<sp/>Output:<sp/>Exit<sp/>program<sp/>after<sp/>printing:<sp/>There<sp/>is<sp/>no<sp/><ref refid="structelevator" kindref="compound">elevator</ref>!,<sp/>Output:<sp/>There<sp/>is<sp/>no<sp/><ref refid="structelevator" kindref="compound">elevator</ref>!<sp/>.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_is_lift_empty.txt"/>
+  </compounddef>
+</doxygen>

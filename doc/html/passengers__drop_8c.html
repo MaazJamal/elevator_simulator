@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Elevator Simulator: src/passengers_drop.c File Reference</title>
+<title>Elevator Simulator: C:/Users/Work/git_repo/elevator_simulator/src/passengers_drop.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Elevator Simulator
-   &#160;<span id="projectnumber">0.9</span>
+   &#160;<span id="projectnumber">2.0</span>
    </div>
    <div id="projectbrief">The project simulates elevators in a building</div>
   </td>
@@ -105,8 +105,8 @@ $(document).ready(function(){initNavTree('passengers__drop_8c.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a961490854f7de2df3e342a5ca6705a3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="passengers__drop_8c.html#a961490854f7de2df3e342a5ca6705a3a">passengers_drop</a> (struct <a class="el" href="structelevator.html">elevator</a> elevator_arr[], int index, struct <a class="el" href="structpassenger.html">passenger</a> *floor_arr[], int cur_floor, unsigned int event_time)</td></tr>
-<tr class="separator:a961490854f7de2df3e342a5ca6705a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a7b91c4b20588fd46ab8e9c9df46e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="passengers__drop_8c.html#a11a7b91c4b20588fd46ab8e9c9df46e1">passengers_drop</a> (struct <a class="el" href="structelevator.html">elevator</a> elevator_arr[], int index, int cur_floor, unsigned int event_time)</td></tr>
+<tr class="separator:a11a7b91c4b20588fd46ab8e9c9df46e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The function takes in the elevator_array. </p>
@@ -114,8 +114,8 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="passengers__drop_8c_source.html">passengers_drop.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a961490854f7de2df3e342a5ca6705a3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a961490854f7de2df3e342a5ca6705a3a">&#9670;&nbsp;</a></span>passengers_drop()</h2>
+<a id="a11a7b91c4b20588fd46ab8e9c9df46e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a7b91c4b20588fd46ab8e9c9df46e1">&#9670;&nbsp;</a></span>passengers_drop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,12 +131,6 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structpassenger.html">passenger</a> *&#160;</td>
-          <td class="paramname"><em>floor_arr</em>[], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -160,50 +154,53 @@ Functions</h2></td></tr>
 <p>Removes the passenger from the floor and the elevator array.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">The</td><td>function takes in elevator structure,index,passenger floor array,current floor and time</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">elevator_arr</td><td>array of struct elevators </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>index of the elevator to operate on </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cur_floor</td><td>the current floor of the elevator </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event_time</td><td>the time this event happened.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The function return elevator array </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The function return the number of passengers dropped. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="passengers__drop_8c_source.html#l00024">24</a> of file <a class="el" href="passengers__drop_8c_source.html">passengers_drop.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    assert(index &lt;= <a class="code" href="globals_8h.html#a11ee4b54505479cda7e127a7030a76a7">elevator_count</a>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    assert(cur_floor &lt;= <a class="code" href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    assert(cur_floor == elevator_arr[index].cur_floor);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> passenger_dropped = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> max_passenger = elevator_arr[index].<a class="code" href="structelevator.html#ae18c23ac67fc1e94d1dd831119d90f6f">max_passenger</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//Loop to iterate the overall passengers in the elevator</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; max_passenger; i++)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = elevator_arr[index].<a class="code" href="structelevator.html#ab3f0430781fbb878267214945aaf9322">passenger_arr</a>[i].<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">if</span> (elevator_arr[index].passenger_arr[i].<a class="code" href="structpassenger.html#a1cd2d080a6795d30505e8722d329c7e2">dest_floor</a> == cur_floor &amp;&amp; <a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a>)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            elevator_arr[index].<a class="code" href="structelevator.html#ab3f0430781fbb878267214945aaf9322">passenger_arr</a>[i].<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = <span class="keyword">false</span>; <span class="comment">//setting the status</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            elevator_arr[index].<a class="code" href="structelevator.html#a35976c62fece1a1887b39d2761e409e3">passenger_count</a>--;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            passenger_dropped++;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> temp = elevator_arr[index].<a class="code" href="structelevator.html#ab3f0430781fbb878267214945aaf9322">passenger_arr</a>[i];</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="travel__log__file_8h.html#af8d5fde3cc01745bf27550d1fb69bf3f">travel_log_file</a>(temp, event_time, index, 1); <span class="comment">//choose mode to write to travel_log as we are removing passenger.</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> passenger_dropped;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="passengers__drop_8c_source.html#l00027">27</a> of file <a class="el" href="passengers__drop_8c_source.html">passengers_drop.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    assert(index &lt;= <a class="code" href="globals_8h.html#a11ee4b54505479cda7e127a7030a76a7">elevator_count</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    assert(cur_floor &lt;= <a class="code" href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    assert(cur_floor == elevator_arr[index].cur_floor);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> passenger_dropped = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> max_passenger = elevator_arr[index].<a class="code" href="structelevator.html#ae18c23ac67fc1e94d1dd831119d90f6f">max_passenger</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//Loop to iterate the overall passengers in the elevator</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; max_passenger; i++)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = elevator_arr[index].<a class="code" href="structelevator.html#ab3f0430781fbb878267214945aaf9322">passenger_arr</a>[i].<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (elevator_arr[index].passenger_arr[i].<a class="code" href="structpassenger.html#a1cd2d080a6795d30505e8722d329c7e2">dest_floor</a> == cur_floor &amp;&amp; <a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            elevator_arr[index].<a class="code" href="structelevator.html#ab3f0430781fbb878267214945aaf9322">passenger_arr</a>[i].<a class="code" href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">in_elevator</a> = <span class="keyword">false</span>; <span class="comment">//setting the status</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            elevator_arr[index].<a class="code" href="structelevator.html#a35976c62fece1a1887b39d2761e409e3">passenger_count</a>--;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            passenger_dropped++;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> temp = elevator_arr[index].<a class="code" href="structelevator.html#ab3f0430781fbb878267214945aaf9322">passenger_arr</a>[i];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="travel__log__file_8h.html#af8d5fde3cc01745bf27550d1fb69bf3f">travel_log_file</a>(temp, event_time, index, 1); <span class="comment">//choose mode to write to travel_log as we are removing passenger.</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> passenger_dropped;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aglobals_8h_html_adcbcca2d0621f8f94d7ccc4d81ca6f37"><div class="ttname"><a href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a></div><div class="ttdeci">unsigned int floor_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00010">globals.c:10</a></div></div>
-<div class="ttc" id="astructelevator_html_ae18c23ac67fc1e94d1dd831119d90f6f"><div class="ttname"><a href="structelevator.html#ae18c23ac67fc1e94d1dd831119d90f6f">elevator::max_passenger</a></div><div class="ttdeci">unsigned int max_passenger</div><div class="ttdoc">count of passenger occupying the elevator</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00043">structures.h:43</a></div></div>
-<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure for to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00016">structures.h:17</a></div></div>
-<div class="ttc" id="astructelevator_html_a35976c62fece1a1887b39d2761e409e3"><div class="ttname"><a href="structelevator.html#a35976c62fece1a1887b39d2761e409e3">elevator::passenger_count</a></div><div class="ttdeci">unsigned int passenger_count</div><div class="ttdoc">points to boolean array of floors and shows if the elevator will stop at a certain floor or not.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00042">structures.h:42</a></div></div>
+<div class="ttc" id="aglobals_8h_html_adcbcca2d0621f8f94d7ccc4d81ca6f37"><div class="ttname"><a href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a></div><div class="ttdeci">unsigned int floor_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00016">globals.c:16</a></div></div>
+<div class="ttc" id="astructelevator_html_ae18c23ac67fc1e94d1dd831119d90f6f"><div class="ttname"><a href="structelevator.html#ae18c23ac67fc1e94d1dd831119d90f6f">elevator::max_passenger</a></div><div class="ttdeci">unsigned int max_passenger</div><div class="ttdoc">Maximum number of passengers the lift can accomodate.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00043">structures.h:43</a></div></div>
+<div class="ttc" id="astructpassenger_html"><div class="ttname"><a href="structpassenger.html">passenger</a></div><div class="ttdoc">structure to store important information about a passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00016">structures.h:17</a></div></div>
+<div class="ttc" id="astructelevator_html_a35976c62fece1a1887b39d2761e409e3"><div class="ttname"><a href="structelevator.html#a35976c62fece1a1887b39d2761e409e3">elevator::passenger_count</a></div><div class="ttdeci">unsigned int passenger_count</div><div class="ttdoc">count of passenger occupying the elevator</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00042">structures.h:42</a></div></div>
 <div class="ttc" id="astructpassenger_html_a8af124b4de91150e204a2374e98ee71f"><div class="ttname"><a href="structpassenger.html#a8af124b4de91150e204a2374e98ee71f">passenger::in_elevator</a></div><div class="ttdeci">bool in_elevator</div><div class="ttdoc">Stores whether passegner is in elevator.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00018">structures.h:18</a></div></div>
-<div class="ttc" id="astructelevator_html_ab3f0430781fbb878267214945aaf9322"><div class="ttname"><a href="structelevator.html#ab3f0430781fbb878267214945aaf9322">elevator::passenger_arr</a></div><div class="ttdeci">struct passenger * passenger_arr</div><div class="ttdoc">Time clock untill the next floor.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00046">structures.h:46</a></div></div>
+<div class="ttc" id="astructelevator_html_ab3f0430781fbb878267214945aaf9322"><div class="ttname"><a href="structelevator.html#ab3f0430781fbb878267214945aaf9322">elevator::passenger_arr</a></div><div class="ttdeci">struct passenger * passenger_arr</div><div class="ttdoc">points to a array of struct pasenger of size max_passenger.</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00046">structures.h:46</a></div></div>
 <div class="ttc" id="astructpassenger_html_a1cd2d080a6795d30505e8722d329c7e2"><div class="ttname"><a href="structpassenger.html#a1cd2d080a6795d30505e8722d329c7e2">passenger::dest_floor</a></div><div class="ttdeci">unsigned int dest_floor</div><div class="ttdoc">stores the destination floor of the passenger</div><div class="ttdef"><b>Definition:</b> <a href="structures_8h_source.html#l00021">structures.h:21</a></div></div>
 <div class="ttc" id="atravel__log__file_8h_html_af8d5fde3cc01745bf27550d1fb69bf3f"><div class="ttname"><a href="travel__log__file_8h.html#af8d5fde3cc01745bf27550d1fb69bf3f">travel_log_file</a></div><div class="ttdeci">void travel_log_file(struct passenger traveler, unsigned int event_time, int elevator_index, int mode)</div><div class="ttdef"><b>Definition:</b> <a href="travel__log__file_8c_source.html#l00030">travel_log_file.c:30</a></div></div>
-<div class="ttc" id="aglobals_8h_html_a11ee4b54505479cda7e127a7030a76a7"><div class="ttname"><a href="globals_8h.html#a11ee4b54505479cda7e127a7030a76a7">elevator_count</a></div><div class="ttdeci">unsigned int elevator_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00004">globals.c:4</a></div></div>
+<div class="ttc" id="aglobals_8h_html_a11ee4b54505479cda7e127a7030a76a7"><div class="ttname"><a href="globals_8h.html#a11ee4b54505479cda7e127a7030a76a7">elevator_count</a></div><div class="ttdeci">unsigned int elevator_count</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00010">globals.c:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

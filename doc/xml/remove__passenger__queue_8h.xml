@@ -3,16 +3,13 @@
   <compounddef id="remove__passenger__queue_8h" kind="file" language="C++">
     <compoundname>remove_passenger_queue.h</compoundname>
     <includes refid="structures_8h" local="yes">structures.h</includes>
-    <includedby refid="functions_8h" local="yes">functions.h</includedby>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <includedby refid="functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/functions.h</includedby>
+    <includedby refid="remove__passenger__queue_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/remove_passenger_queue.c</includedby>
+    <includedby refid="test__remove__passenger__queue_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c</includedby>
     <incdepgraph>
       <node id="3">
         <label>stdbool.h</label>
-      </node>
-      <node id="1">
-        <label>remove_passenger_queue.h</label>
-        <link refid="remove__passenger__queue_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
       </node>
       <node id="2">
         <label>structures.h</label>
@@ -20,17 +17,91 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="2">
-        <label>functions.h</label>
-        <link refid="functions_8h"/>
-      </node>
       <node id="1">
-        <label>remove_passenger_queue.h</label>
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h</label>
         <link refid="remove__passenger__queue_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</label>
+        <link refid="test__create__elevator__array_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</label>
+        <link refid="static__simulation_8c"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</label>
+        <link refid="test__is__lift__on__floor_8c"/>
+      </node>
+      <node id="11">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/remove_passenger_queue.c</label>
+        <link refid="remove__passenger__queue_8c"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c</label>
+        <link refid="test__remove__passenger__queue_8c"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -50,28 +121,59 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>This function removes a passenger from a queue at given index and frees the memory</para>
+<para>The function remomves and frees memory location at given index. if the given index is at the head the head is removed and new head is returned. If index is greater then length of queue the function causes program to exit.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int value that points to index of queue to return. indices start at 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to head of the queue.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the value of the head. head will point to new value head if index is 0. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; Precondition that head not be Null</para>
+<para>&lt; Precondition that index not be negative</para>
+<para>&lt; stores the current position of pointer to be used in while loop</para>
+<para>Iterate through the queue until we are one node behind the node we want to delete. Or next node is null. Set next of previous node to next node and store the node to delete in temp. use free to delete current node.</para>
+<para>This is precondition checks if index was greater than queue length and this cannot be done at start as we do not know total length of queue at begining. the check is cur-&gt;nect != NULL as we stop before element to be removed. if cur-&gt;next = NULL it means the index is greater than length as we are at end list and should have stopped at index-1.</para>
         </inbodydescription>
-        <location file="remove_passenger_queue.h" line="9" column="24" declfile="remove_passenger_queue.h" declline="9" declcolumn="24"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h" line="12" column="23" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/remove_passenger_queue.c" bodystart="25" bodyend="71" declfile="C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h" declline="12" declcolumn="23"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>contains the declaration for remove_passenger_queue function that remoove passenger from a queue </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="4"><highlight class="preprocessor">#ifndef<sp/>__REMOVE_PASSENGER_QUEUE_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__REMOVE_PASSENGER_QUEUE_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>__REMOVE_PASSENGER_QUEUE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__REMOVE_PASSENGER_QUEUE_H__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>*<sp/>remove_passenger_queue(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>*<sp/>head);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*<ref refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kindref="member">remove_passenger_queue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*head);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="remove_passenger_queue.h"/>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_queue.h"/>
   </compounddef>
 </doxygen>

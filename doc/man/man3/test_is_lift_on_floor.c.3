@@ -1,0 +1,67 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c \- contains test cases for the function \fBis_lift_on_floor()\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'is_lift_on_floor\&.h'\fP
+.br
+\fC#include 'functions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_is_lift_on_floor\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains test cases for the function \fBis_lift_on_floor()\fP 
+
+
+.PP
+Definition in file \fBtest_is_lift_on_floor\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void test_is_lift_on_floor (void)"
+Calls the function lift_on_floor\&.c with valid parameters\&. Prints the PASS /FAIL status ,by accessing the return from lift_on_floor function\&. results_is_lift_on_floor file contains the results\&. 
+.PP
+Definition at line 18 of file test_is_lift_on_floor\&.c\&.
+.PP
+.nf
+19 {
+20     struct elevator ele[3];
+21     elevator_count = 3;
+22     FILE *fp;
+23     fp = fopen("test/results/results_is_lift_on_floor\&.txt", "w+");
+24     int arr = is_lift_on_floor(ele, 1);
+25     if (arr != 0)
+26     {
+27         fprintf(fp, "PASS;Input Parameter:Valid;is_lift_on_floor function is accesssed successfully \&.\n");
+28         printf("PASS;Input Parameter:Valid;is_lift_on_floor function is accesssed successfully \&.\n");
+29     }
+30     else
+31     {
+32         fprintf(fp, "FAIL;Input Parameter:Valid;is_lift_on_floor function cannot be accesssed  \&.\n");
+33         printf("PASS;Input Parameter:Valid;is_lift_on_floor function is accesssed successfully \&.\n");
+34     }
+35     fflush(fp);
+36     fclose(fp);
+37 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

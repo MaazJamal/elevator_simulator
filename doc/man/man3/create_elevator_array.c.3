@@ -1,0 +1,116 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/create_elevator_array.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/create_elevator_array.c \- The function creates array for each elevator\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'create_elevator_array\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBelevator\fP * \fBcreate_elevator_array\fP (int no_of_elevators)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The function creates array for each elevator\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - Dpadm049@uottawa.ca 
+.RE
+.PP
+
+.PP
+Definition in file \fBcreate_elevator_array\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "struct \fBelevator\fP* create_elevator_array (int no_of_elevators)"
+Constraints checks the input parameter-no of elevators \&. No of elevators should be in range(1-100)\&. Prints error message if the no of elevators is out of range and if memory allocation fails\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP function takes number of lifts as input\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns the array of elevators\&. 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file create_elevator_array\&.c\&.
+.PP
+.nf
+24 {
+25     
+26     if((no_of_elevators==0)||(no_of_elevators>100)||(no_of_elevators<1))//checks if the input parameter is valid\&.
+27     {
+28         printf("Input parameter -Number of elevators entered is invalid \n");
+29         return 0;
+30     }
+31     struct elevator *ele;
+32     ele=malloc (no_of_elevators * sizeof(struct elevator));//creates memory for the input-no_of_elevators\&.
+33     if(ele==NULL)//checks if the memory allocation is success
+34     {
+35         printf("Memory allocation failed \n");
+36         return 0;
+37     }
+38     else
+39     {
+40         
+41         int i;
+42         int j;
+43         int k;
+44         for(i=0;i<no_of_elevators;i++)//initialising the array elements
+45         {
+46             ele[i]\&.moving=0;
+47             ele[i]\&.between_floor=0;
+48             ele[i]\&.direction_up=true;
+49             ele[i]\&.direction_down=false;
+50             ele[i]\&.stop_at_floor=malloc(floor_count*sizeof(bool));
+51             for(k=0;k<floor_count;k++)
+52             {
+53                 ele[i]\&.stop_at_floor[k]=0;
+54             }
+55             ele[i]\&.passenger_count=0;
+56             ele[i]\&.max_passenger=10;
+57             ele[i]\&.cur_floor=1;
+58             ele[i]\&.timer=0;
+59             ele[i]\&.passenger_arr = malloc(ele[i]\&.max_passenger*sizeof(struct passenger));
+60             for (j=0;j<ele[i]\&.max_passenger;j++)
+61             {
+62             ele[i]\&.passenger_arr[j]\&.in_elevator=0;
+63             ele[i]\&.passenger_arr[j]\&.arrival_time=0;
+64             ele[i]\&.passenger_arr[j]\&.arrival_floor=0;
+65             ele[i]\&.passenger_arr[j]\&.dest_floor=0;
+66             ele[i]\&.passenger_arr[j]\&.id=0;
+67             }
+68             
+69         }
+70     
+71     return ele;
+72     }
+73     
+74 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

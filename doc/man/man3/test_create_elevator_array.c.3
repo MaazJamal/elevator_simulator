@@ -1,0 +1,63 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c \- Contains test cases for \fBcreate_elevator_array()\fP function\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'create_elevator_array\&.h'\fP
+.br
+\fC#include 'functions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_create_elevator_array\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains test cases for \fBcreate_elevator_array()\fP function\&. 
+
+
+.PP
+Definition in file \fBtest_create_elevator_array\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void test_create_elevator_array (void)"
+Calls the function \fBcreate_elevator_array\&.c\fP with valid parameters\&. Prints the PASS /FAIL status ,by accessing the return from create_elevator_array function\&. results_create_elevator_array file contains the results\&. 
+.PP
+Definition at line 20 of file test_create_elevator_array\&.c\&.
+.PP
+.nf
+21 {
+22     struct elevator *elev;
+23     printf("results_create_elevator_array file contains output \n\n ");
+24     FILE *fp;
+25     fp = freopen("test/results/results_create_elevator_array\&.txt", "w+", stdout);
+26     elev = create_elevator_array(4);
+27     if (elev != NULL)
+28     {
+29         printf("PASS;Input Parameter:Valid;array of structure elevator could be accessed \&.\n");
+30     }
+31     else
+32     {
+33         printf("FAIL;Input Parameter:Valid;array of structure elevator could not be accessed \&.\n");
+34     }
+35     fflush(fp);
+36     fclose(fp);
+37 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

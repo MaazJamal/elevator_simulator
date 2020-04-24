@@ -1,8 +1,8 @@
-.TH "remove_passenger_floor.h" 3 "Mon Apr 20 2020" "Elevator simulation" \" -*- nroff -*-
+.TH "C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_floor.h" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-remove_passenger_floor.h \- Removes the passenger details from floor specified\&.Returns 1 on successful deletion of passenger details from specified floor\&.  
+C:/Users/Work/git_repo/elevator_simulator/include/remove_passenger_floor.h \- contains the declaration for the remove_passenger_floor\&.  
 
 .SH SYNOPSIS
 .br
@@ -14,14 +14,50 @@ remove_passenger_floor.h \- Removes the passenger details from floor specified\&
 
 .in +1c
 .ti -1c
-.RI "\fBremove_passenger_floor\fP (struct \fBpassenger\fP *floor[], int cur_floor)"
+.RI "int \fBremove_passenger_floor\fP (struct \fBpassenger\fP *floor[], int cur_floor)"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
-Removes the passenger details from floor specified\&.Returns 1 on successful deletion of passenger details from specified floor\&. 
+contains the declaration for the remove_passenger_floor\&. 
 
 
+.PP
+Definition in file \fBremove_passenger_floor\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int remove_passenger_floor (struct \fBpassenger\fP * floordetails[], int cur_floor)"
+Constraints The program terminates if the input parameter cur_floor(passenger details for this particular floor has to be deleted)is erraneous\&. (i\&.e)cur_floor must be within the range 1-100 and less than the floor_count(Total number of floors in the building ) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP function takes passenger structure and current floor\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns 1 on successful deletion of passenger details from specified floor\&. 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file remove_passenger_floor\&.c\&.
+.PP
+.nf
+24 {
+25 
+26     assert(cur_floor > 0); //checks the value of cur_floor ;if it returns 0- terminates the program
+27     assert(cur_floor <= floor_count);
+28     static int no_of_passengers_removed = 0;
+29     int floor_index = cur_floor - 1; //needed because floor array strt at 0 and elevator floor at 1
+30     struct passenger *temp;
+31     temp = floordetails[floor_index];
+32     floordetails[floor_index] = floordetails[floor_index]->next;
+33     printf("Passenger %d from floor %d removed\&. No of passengers removed: %d\n", temp->id, cur_floor, ++no_of_passengers_removed);
+34     free(temp);
+35     return 1;
+36 }
+.fi
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Elevator simulation from the source code\&.
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

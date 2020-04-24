@@ -35,7 +35,7 @@
 	else
 	{
 		printf("Invalid input\n");
-		input_after_stop();
+		return input_after_stop();
 	}
  }
  

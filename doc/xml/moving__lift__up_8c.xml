@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="moving__lift__up_8c" kind="file" language="C++">
+    <compoundname>moving_lift_up.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="globals_8h" local="yes">../include/globals.h</includes>
+    <includes refid="structures_8h" local="yes">../include/structures.h</includes>
+    <includes refid="moving__lift__up_8h" local="yes">../include/moving_lift_up.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>../include/structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../include/moving_lift_up.h</label>
+        <link refid="moving__lift__up_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c</label>
+        <link refid="moving__lift__up_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../include/globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="moving__lift__up_8c_1a814fa197f450be90c940b6c4593ce1df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int moving_lift_up</definition>
+        <argsstring>(struct elevator elevator_arr[], unsigned int index)</argsstring>
+        <name>moving_lift_up</name>
+        <param>
+          <type>struct <ref refid="structelevator" kindref="compound">elevator</ref></type>
+          <declname>elevator_arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c" line="25" column="5" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c" bodystart="25" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>To set the direction of the lift to Upward direction. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ritika Arora - <ulink url="mailto:ritikaarora@cmail.carleton.ca">ritikaarora@cmail.carleton.ca</ulink></para>
+</simplesect>
+@detail The function is to set the direction of the lift to UP. The function calls with two param[in] an array of elevators of elevator type and an integer value which indicated the index as well as the number of the elevator in the building. The function firstly checks, if the elevator number entered is less than the total number of elevators in the building. If it is greater than the total number of elevators in the building then it will give the error message and will return -1 Otherwise, it will set the direction of that particular elevator to UP.</para>
+<para><simplesect kind="return"><para>integer value 1 if everything goes well. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/structures.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/moving_lift_up.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>moving_lift_up(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elevator_arr[],<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/><ref refid="globals_8h_1a11ee4b54505479cda7e127a7030a76a7" kindref="member">elevator_count</ref>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Index<sp/>is<sp/>greater<sp/>than<sp/>the<sp/>elevator_arr<sp/>size.<sp/>%d<sp/>&gt;=<sp/>%d<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>index,<sp/><ref refid="globals_8h_1a11ee4b54505479cda7e127a7030a76a7" kindref="member">elevator_count</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>elevator_arr[index].<ref refid="structelevator_1a78d725b14370d8b2000a99bd11755ff8" kindref="member">direction_up</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>elevator_arr[index].<ref refid="structelevator_1aa773f94528363621939e5fcc99dcc6ad" kindref="member">direction_down</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c"/>
+  </compounddef>
+</doxygen>

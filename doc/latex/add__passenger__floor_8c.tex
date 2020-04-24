@@ -1,0 +1,84 @@
+\hypertarget{add__passenger__floor_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/src/add\+\_\+passenger\+\_\+floor.c File Reference}
+\label{add__passenger__floor_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/src/add\_passenger\_floor.c@{C:/Users/Work/git\_repo/elevator\_simulator/src/add\_passenger\_floor.c}}
+
+
+Contains the definition for add\+\_\+passenger\+\_\+floor file.  
+
+
+{\ttfamily \#include \char`\"{}add\+\_\+passenger\+\_\+floor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{add__passenger__floor_8c_aba6a961fa1c1d9922c13b66c973fa62d}{add\+\_\+passenger\+\_\+floor}} (struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$floor\mbox{[}$\,$\mbox{]}, int index, struct \mbox{\hyperlink{structpassenger}{passenger}} passenger\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Adds a passenger to the floor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the definition for add\+\_\+passenger\+\_\+floor file. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{add__passenger__floor_8c_aba6a961fa1c1d9922c13b66c973fa62d}\label{add__passenger__floor_8c_aba6a961fa1c1d9922c13b66c973fa62d}} 
+\index{add\_passenger\_floor.c@{add\_passenger\_floor.c}!add\_passenger\_floor@{add\_passenger\_floor}}
+\index{add\_passenger\_floor@{add\_passenger\_floor}!add\_passenger\_floor.c@{add\_passenger\_floor.c}}
+\doxysubsubsection{\texorpdfstring{add\_passenger\_floor()}{add\_passenger\_floor()}}
+{\footnotesize\ttfamily void add\+\_\+passenger\+\_\+floor (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$}]{floor\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{struct \mbox{\hyperlink{structpassenger}{passenger}}}]{passenger\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Adds a passenger to the floor. 
+
+@detail takes a floor array. The index of floor and passenger info. It then allocates a memory location and add the passenger to the passenger queue on that floor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em floor} & an array of pointer of type struct passenger, Used to form passenger queue on each floor. \\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & the index at to add the passenger. \\
+\hline
+\mbox{\texttt{ in}}  & {\em passenger\+\_\+info} & struct passenger that contains the information about the passenger.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void does not return anythin 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file add\+\_\+passenger\+\_\+floor.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     assert(index >= 0);}
+\DoxyCodeLine{28     assert(index < \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}});}
+\DoxyCodeLine{29     \textcolor{keyword}{static} \textcolor{keywordtype}{int} no\_of\_passengers\_added = 0;}
+\DoxyCodeLine{30     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *cur;}
+\DoxyCodeLine{31     cur = floor[index];}
+\DoxyCodeLine{32     \textcolor{keywordflow}{if} (cur == NULL)}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *temp = (\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
+\DoxyCodeLine{35         *temp = passenger\_info;}
+\DoxyCodeLine{36         floor[index] = temp;}
+\DoxyCodeLine{37         floor[index]-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} = NULL;}
+\DoxyCodeLine{38         printf(\textcolor{stringliteral}{"passenger \%d arrived at floor: \%d. No of passengers Added: \%d\(\backslash\)n"}, temp-\/>\mbox{\hyperlink{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}{id}}, index + 1, ++no\_of\_passengers\_added);}
+\DoxyCodeLine{39         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41     \textcolor{keywordflow}{while} (cur-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} != NULL)}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         cur = cur-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}};}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *temp = (\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
+\DoxyCodeLine{47     *temp = passenger\_info;}
+\DoxyCodeLine{48     cur-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} = temp;}
+\DoxyCodeLine{49     temp-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} = NULL;}
+\DoxyCodeLine{50     printf(\textcolor{stringliteral}{"passenger \%d arrived at floor: \%d. No of passengers Added: \%d\(\backslash\)n"}, temp-\/>\mbox{\hyperlink{structpassenger_a25f6b216e5dc0bede72e133edcf4b03f}{id}}, index + 1, ++no\_of\_passengers\_added);}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}

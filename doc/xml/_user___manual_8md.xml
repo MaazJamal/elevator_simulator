@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_user___manual_8md" kind="file" language="Markdown">
+    <compoundname>User_Manual.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Introduction</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Elevator_Simulation<sp/>is<sp/>a<sp/>software<sp/>that<sp/>operates<sp/>any<sp/>number<sp/>of<sp/>elevator<sp/>in<sp/>a<sp/>commercial<sp/>building<sp/>with<sp/>given<sp/>number<sp/>of<sp/>floors.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Please<sp/>refer<sp/>to<sp/>[INSTALL.md](/devel/INSTALL.md)<sp/>file<sp/>for<sp/>installation<sp/>instructions.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>user<sp/>needs<sp/>to<sp/>provide<sp/>the<sp/>software<sp/>with<sp/>a<sp/>text<sp/>file<sp/>containing<sp/>the<sp/>passenger<sp/>request<sp/>detail<sp/>for<sp/>the<sp/>elevator.<sp/>The<sp/>text<sp/>file<sp/>is<sp/>named<sp/>input.txt<sp/>and<sp/>must<sp/>be<sp/>placed<sp/>in<sp/>the<sp/>&quot;data&quot;<sp/>folder.<sp/>The<sp/>relative<sp/>path<sp/>is<sp/>data/input.txt.<sp/>The<sp/>maximum<sp/>number<sp/>of<sp/>floors<sp/>in<sp/>this<sp/>file<sp/>should<sp/>correspond<sp/>to<sp/>what<sp/>the<sp/>user<sp/>enters<sp/>later<sp/>in<sp/>the<sp/>program.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>start<sp/>the<sp/>program<sp/>in<sp/>windows<sp/>either<sp/>click<sp/>on<sp/>elevator.exe<sp/>or<sp/>type<sp/>elevator.exe<sp/>in<sp/>command<sp/>line.<sp/>For<sp/>cygwin/unix<sp/>type<sp/>./elevator<sp/>to<sp/>start<sp/>execution.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>program<sp/>will<sp/>ask<sp/>for<sp/>the<sp/>following<sp/>parameters<sp/>at<sp/>the<sp/>execution<sp/>of<sp/>Elevator_Simulation:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Static<sp/>or<sp/>Dynamic<sp/>version<sp/>:<sp/>Press<sp/>0<sp/>to<sp/>select<sp/>Static<sp/>Version<sp/>or<sp/>1<sp/>to<sp/>select<sp/>Dynaic<sp/>version.<sp/>(Only<sp/>for<sp/>realease<sp/>2<sp/>version<sp/>of<sp/>program.)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Number<sp/>of<sp/>lifts<sp/>:<sp/>Specifies<sp/>the<sp/>number<sp/>lifts<sp/>in<sp/>the<sp/>building<sp/>should<sp/>be<sp/>in<sp/>the<sp/>range<sp/>of<sp/>1<sp/>to<sp/>100.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Number<sp/>of<sp/>elevators:<sp/>Specifies<sp/>the<sp/>number<sp/>elevators<sp/>in<sp/>the<sp/>building<sp/>should<sp/>be<sp/>in<sp/>thr<sp/>range<sp/>of<sp/>1<sp/>to<sp/>100.(10<sp/>for<sp/>dynamic<sp/>simulation.)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Input<sp/>file<sp/>should<sp/>be<sp/>placed<sp/>in<sp/>the<sp/>right<sp/>path.Change<sp/>the<sp/>input<sp/>file<sp/>if<sp/>needed.<sp/>In<sp/>the<sp/>data/<sp/>folder</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>case<sp/>of<sp/>Dynamic<sp/>version<sp/>the<sp/>program<sp/>only<sp/>simulates<sp/>until<sp/>1999<sp/>iterations.<sp/>This<sp/>is<sp/>due<sp/>to<sp/>limitations<sp/>of<sp/>console<sp/>windows,causing<sp/>the<sp/>program<sp/>to<sp/>slow<sp/>down<sp/>due<sp/>to<sp/>printing<sp/>of<sp/>cli_update.<sp/>There<sp/>are<sp/>additional<sp/>inputs<sp/>the<sp/>user<sp/>can<sp/>give<sp/>to<sp/>the<sp/>program<sp/>after<sp/>every<sp/>30th<sp/>or<sp/>200th<sp/>iteration.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Add<sp/>Passenger<sp/>request<sp/>:<sp/>If<sp/>needed<sp/>the<sp/>user<sp/>can<sp/>enter<sp/>details<sp/>of<sp/>a<sp/>passenger<sp/>to<sp/>the<sp/>program.<sp/>That<sp/>will<sp/>be<sp/>added<sp/>to<sp/>the<sp/>queue.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Provide<sp/>emergency<sp/>stop<sp/>in<sp/>which<sp/>the<sp/>elevator<sp/>will<sp/>stop<sp/>at<sp/>next<sp/>floor<sp/>and<sp/>remove<sp/>all<sp/>passengers.<sp/>The<sp/>user<sp/>can<sp/>then<sp/>quit<sp/>or<sp/>continue<sp/>the<sp/>simulation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Enable<sp/>realtime<sp/>mode.<sp/>In<sp/>which<sp/>each<sp/>iteration<sp/>is<sp/>1<sp/>second<sp/>long<sp/>and<sp/>the<sp/>program<sp/>asks<sp/>for<sp/>input<sp/>after<sp/>every<sp/>30th<sp/>iterations.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Do<sp/>not<sp/>ask<sp/>for<sp/>input<sp/>again<sp/>and<sp/>disable<sp/>the<sp/>realtime<sp/>mode.<sp/>So<sp/>that<sp/>the<sp/>program<sp/>can<sp/>run<sp/>without<sp/>interuptions<sp/>until<sp/>completion.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Exit<sp/>the<sp/>simulation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Please<sp/>note<sp/>that<sp/>the<sp/>binary<sp/>is<sp/>located<sp/>in<sp/>project<sp/>`root`<sp/>folder.<sp/>To<sp/>start<sp/>open<sp/>terminal<sp/>and<sp/>type<sp/>in<sp/>root<sp/>directory:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">./elevator</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>windows</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">elevator.exe</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Testing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Unit<sp/>testing<sp/>is<sp/>done<sp/>for<sp/>each<sp/>functions<sp/>defined<sp/>in<sp/>the<sp/>software.<sp/>The<sp/>test<sp/>cases<sp/>can<sp/>be<sp/>run<sp/>using<sp/>the<sp/>command<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">./tests</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>windows</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">tests.exe</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Note:<sp/>You<sp/>must<sp/>have<sp/>compiled<sp/>the<sp/>tests.exe<sp/>program<sp/>as<sp/>well.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Output<sp/>Generation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Output<sp/>files<sp/>travel_log.txt<sp/>and<sp/>waiting_times.txt<sp/><sp/>will<sp/>be<sp/>generated<sp/>and<sp/>placed<sp/>in<sp/>[/data](/devel/data/)<sp/>folder.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">travel_log.txt<sp/>-<sp/>File<sp/>that<sp/>gives<sp/>Passenger*ID,Elevator_ID,Passenger_In<sp/>time,Passenger*<sp/>Entry<sp/>floor,Passenger*Out<sp/>time,Passenger*<sp/>Exit<sp/>floor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">waiting_times.txt<sp/>-<sp/>File<sp/>that<sp/>gives<sp/>Average<sp/>waiting<sp/>time<sp/>of<sp/>Passengers<sp/>and<sp/>Maximum<sp/>waiting<sp/>time<sp/>of<sp/>a<sp/>Passenger.</highlight></codeline>
+    </programlisting>
+    <location file="User_Manual.md"/>
+  </compounddef>
+</doxygen>

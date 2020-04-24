@@ -1,0 +1,82 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/is_lift_on_floor.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/is_lift_on_floor.c \- Reads the elevator structure's attribute between_floors\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'is_lift_on_floor\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBis_lift_on_floor\fP (struct \fBelevator\fP elev[], int index)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Reads the elevator structure's attribute between_floors\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Divyalakshmi Padmanaban - Dpadm049@uottawa.ca 
+.RE
+.PP
+
+.PP
+Definition in file \fBis_lift_on_floor\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int is_lift_on_floor (struct \fBelevator\fP elev[], int index)"
+@ details Constraints Checks if the input parameter index(i\&.e)elevator number;is within the range of number of elevators in building\&. If index is greater than the number of elevators actually present in building;error message will be displayed and returns -1\&. Checks the condition of the lift \&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP function takes the elevator structure and index\&. @ return The function 0 if lift is not on floor elso 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file is_lift_on_floor\&.c\&.
+.PP
+.nf
+23 {
+24     if (index >= elevator_count) //check on the input parameter which cannot be more than the number of elevators in the building\&.
+25     {
+26         fprintf(stderr, "Input parameter -Index is greater than the array ele[]-------- %d >= %d \n", index, elevator_count);
+27         exit(1);
+28         return -1;
+29     }
+30 
+31     if (elev[index]\&.between_floor == 1) //check on the value of between_floors that makes evident if the lift is on floor or in between\&.
+32     {
+33         return 0;
+34     }
+35     else if (elev[index]\&.between_floor == 0)
+36     {
+37         return 1;
+38     }
+39     else
+40     {
+41         fprintf(stderr, "Incorrect elev[index]\&.between_floor Value : %d \n", elev[index]\&.between_floor);
+42         exit(1);
+43     }
+44 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

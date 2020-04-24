@@ -1,3 +1,9 @@
+/** @file test_is_lift_on_floor.c
+ * 
+ * @brief contains test cases for the function is_lift_on_floor()
+ * 
+ * */
+
 #include <stdio.h>
 #include <stdbool.h>
 #include "globals.h"

@@ -1,13 +1,15 @@
-.TH "add_passenger_floor.h" 3 "Mon Apr 20 2020" "Elevator simulation" \" -*- nroff -*-
+.TH "C:/Users/Work/git_repo/elevator_simulator/include/add_passenger_floor.h" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-add_passenger_floor.h \- add passengers to the floor array  
+C:/Users/Work/git_repo/elevator_simulator/include/add_passenger_floor.h \- add passengers to the floor array  
 
 .SH SYNOPSIS
 .br
 .PP
 \fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
 .br
 
 .SS "Functions"
@@ -16,12 +18,70 @@ add_passenger_floor.h \- add passengers to the floor array
 .ti -1c
 .RI "void \fBadd_passenger_floor\fP (struct \fBpassenger\fP *floor[], int index, struct \fBpassenger\fP passenger_info)"
 .br
+.RI "Adds a passenger to the floor\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 add passengers to the floor array 
 
 
+.PP
+Definition in file \fBadd_passenger_floor\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void add_passenger_floor (struct \fBpassenger\fP * floor[], int index, struct \fBpassenger\fP passenger_info)"
+
+.PP
+Adds a passenger to the floor\&. @detail takes a floor array\&. The index of floor and passenger info\&. It then allocates a memory location and add the passenger to the passenger queue on that floor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloor\fP an array of pointer of type struct passenger, Used to form passenger queue on each floor\&. 
+.br
+\fIindex\fP the index at to add the passenger\&. 
+.br
+\fIpassenger_info\fP struct passenger that contains the information about the passenger\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void does not return anythin 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file add_passenger_floor\&.c\&.
+.PP
+.nf
+25 {
+26 
+27     assert(index >= 0);
+28     assert(index < floor_count);
+29     static int no_of_passengers_added = 0;
+30     struct passenger *cur;
+31     cur = floor[index];
+32     if (cur == NULL)
+33     {
+34         struct passenger *temp = (struct passenger *)malloc(sizeof(struct passenger));
+35         *temp = passenger_info;
+36         floor[index] = temp;
+37         floor[index]->next = NULL;
+38         printf("passenger %d arrived at floor: %d\&. No of passengers Added: %d\n", temp->id, index + 1, ++no_of_passengers_added);
+39         return;
+40     }
+41     while (cur->next != NULL)
+42     {
+43         cur = cur->next;
+44     }
+45 
+46     struct passenger *temp = (struct passenger *)malloc(sizeof(struct passenger));
+47     *temp = passenger_info;
+48     cur->next = temp;
+49     temp->next = NULL;
+50     printf("passenger %d arrived at floor: %d\&. No of passengers Added: %d\n", temp->id, index + 1, ++no_of_passengers_added);
+51     return;
+52 }
+.fi
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Elevator simulation from the source code\&.
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

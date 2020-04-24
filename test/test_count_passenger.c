@@ -1,3 +1,10 @@
+/**
+ * @file test_count_passenger.c
+ * 
+ * @brief contains the test function for count_passenger().
+ * 
+ * */
+
 #include <stdio.h>
 #include <stdlib.h>
 

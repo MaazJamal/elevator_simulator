@@ -1,3 +1,9 @@
+/** @file globals.c
+ * 
+ * @brief Contains the global variables used in the program.
+ * 
+ * */
+
 #include "globals.h"
 
 /** Total number of elevators in the bulding*/

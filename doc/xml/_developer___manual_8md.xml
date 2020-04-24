@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_developer___manual_8md" kind="file" language="Markdown">
+    <compoundname>Developer_Manual.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Introduction</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Elevator<sp/>simulation<sp/>is<sp/>a<sp/>software<sp/>to<sp/>simulate<sp/>the<sp/>operations<sp/>of<sp/>multiple<sp/>elevators<sp/>in<sp/>a<sp/>commercial<sp/>building,<sp/>by<sp/>creating<sp/>an<sp/>algorithm.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Requirement</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Software<sp/>simulates<sp/>Elevator<sp/>scheduling<sp/>in<sp/>a<sp/>building<sp/>for<sp/>an<sp/>day<sp/>by<sp/>reading<sp/>the<sp/>input<sp/>file<sp/>with<sp/>Paaseger<sp/>ID,timestamp,start<sp/>and<sp/>destination<sp/>floor.<sp/>The<sp/>text<sp/>file<sp/>must<sp/>be<sp/>stored<sp/>in<sp/>data/input.txt.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Assumption</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>User<sp/>gives<sp/>the<sp/>number<sp/>of<sp/>floors<sp/>and<sp/>elevators<sp/>in<sp/>the<sp/>building,<sp/>the<sp/>value<sp/>should<sp/>be<sp/>less<sp/>than<sp/>or<sp/>equal<sp/>to<sp/>100.<sp/>In<sp/>dynamic<sp/>case<sp/>this<sp/>is<sp/>reduced<sp/>to<sp/>10<sp/>to<sp/>make<sp/>all<sp/>elevators<sp/>fit<sp/>the<sp/>screen.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>elevators<sp/>are<sp/>assumed<sp/>to<sp/>be<sp/>at<sp/>the<sp/>same<sp/>location<sp/>in<sp/>the<sp/>building.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>At<sp/>the<sp/>start<sp/>of<sp/>the<sp/>simulation<sp/>all<sp/>the<sp/>elevators<sp/>are<sp/>assumed<sp/>to<sp/>be<sp/>on<sp/>the<sp/>1st<sp/>floor.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>weight<sp/>of<sp/>each<sp/>passenger<sp/>is<sp/>assumed<sp/>to<sp/>be<sp/>constant.<sp/>This<sp/>allows<sp/>the<sp/>simulator<sp/>to<sp/>establish<sp/>weight<sp/>limits<sp/>as<sp/>the<sp/>number<sp/>of<sp/>passengers<sp/>in<sp/>the<sp/>elevator.<sp/>In<sp/>this<sp/>program<sp/>it<sp/>is<sp/>set<sp/>to<sp/>10.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>A<sp/>fixed<sp/>time<sp/>has<sp/>been<sp/>assumed<sp/>for<sp/>lifts<sp/>to<sp/>move<sp/>from<sp/>x<sp/>floor<sp/>to<sp/>x+1<sp/>and<sp/>x-1<sp/>floors.Each<sp/>elevator<sp/>takes<sp/>3<sp/>seconds<sp/>to<sp/>go<sp/>from<sp/>one<sp/>floor<sp/>to<sp/>another<sp/>floor.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>time<sp/>that<sp/>the<sp/>elevator<sp/>stops<sp/>on<sp/>a<sp/>floor<sp/>depends<sp/>on<sp/>that<sp/>number<sp/>of<sp/>passengers<sp/>getting<sp/>in<sp/>or<sp/>out.<sp/>It<sp/>is<sp/>assumed<sp/>that<sp/>it<sp/>takes<sp/>2<sp/>sec<sp/>for<sp/>a<sp/>passenger<sp/>to<sp/>get<sp/>in<sp/>or<sp/>out.<sp/>So<sp/>the<sp/>stop<sp/>time<sp/>of<sp/>an<sp/>elevator<sp/>at<sp/>a<sp/>floor<sp/>will<sp/>be<sp/>2n,<sp/>where<sp/>n<sp/>is<sp/>the<sp/>number<sp/>of<sp/>passengers<sp/>getting<sp/>in<sp/>or<sp/>out<sp/>of<sp/>the<sp/>lift.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>elevators<sp/>are<sp/>assumed<sp/>to<sp/>have<sp/>a<sp/>single<sp/>entry<sp/>point<sp/>for<sp/>both<sp/>exit<sp/>and<sp/>entry.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Program<sp/>Flow</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>program<sp/>flow<sp/>for<sp/>the<sp/>application<sp/>is<sp/>as<sp/>follows:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>main.c<sp/>file<sp/>calls<sp/>the<sp/>functions<sp/>for<sp/>static_simulation<sp/>and<sp/>in<sp/>release<sp/>2<sp/>dynamc_simulation<sp/>based<sp/>on<sp/>user<sp/>input<sp/>to<sp/>run<sp/>the<sp/>alogorithm.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>static_simulation/dynamc_simulation<sp/>function<sp/>calls:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>input_lifts.c<sp/>to<sp/>get<sp/>number<sp/>of<sp/>lifts<sp/>from<sp/>the<sp/>user.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>input_floors.c<sp/>to<sp/>get<sp/>number<sp/>of<sp/>floors<sp/>from<sp/>the<sp/>user.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>create_elevator_array.c<sp/>to<sp/>create<sp/>array<sp/>for<sp/>every<sp/>elevator.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>create_floor_array.c<sp/>to<sp/>create<sp/>array<sp/>for<sp/>every<sp/>floor<sp/>to<sp/>hold<sp/>waiting<sp/>passeger.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>count_passenger.c<sp/>to<sp/>count<sp/>the<sp/>number<sp/>of<sp/>passenger<sp/>in<sp/>the<sp/>input<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>read_passenger.c<sp/>to<sp/>store<sp/>the<sp/>passenger<sp/>details<sp/>to<sp/>passenger<sp/>structure.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>add_request_queue.c<sp/>to<sp/>add<sp/>passenger<sp/>requests<sp/>to<sp/>a<sp/>queue.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>is_lift_on_floor.c<sp/>to<sp/>check<sp/>the<sp/>lift<sp/>status.<sp/>If<sp/>it<sp/>is<sp/>moving<sp/>or<sp/>not.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>passengers_drop.c<sp/>to<sp/>drop<sp/>the<sp/>passenger<sp/>at<sp/>the<sp/>floor<sp/>returning<sp/>number<sp/>of<sp/>passengers<sp/>dropped.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>passengers_take_in.c<sp/>to<sp/>take<sp/>the<sp/>passenger<sp/>on<sp/>floor<sp/>based<sp/>on<sp/>maiximum<sp/>count<sp/>and<sp/>space<sp/>in<sp/>elevator.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>add_passenger_floor.c<sp/>to<sp/>add<sp/>passenger<sp/>to<sp/>the<sp/>floor<sp/>array.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>remove_passenger_queue.c<sp/>to<sp/>remove<sp/>the<sp/>passenger<sp/>from<sp/>request<sp/>queue.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>moving_lift_down.c<sp/>to<sp/>change<sp/>lift<sp/>direction<sp/>to<sp/>down.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>moving_lift_up.c<sp/>to<sp/>change<sp/>the<sp/>lift<sp/>direction<sp/>to<sp/>up.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>average_waiting_time.c<sp/>to<sp/>calculate<sp/>the<sp/>average<sp/>and<sp/>waiting<sp/>time.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>max_waiting_time.c<sp/>to<sp/>calculate<sp/>maximum<sp/>waiting<sp/>time.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>is_lift_empty.c<sp/>to<sp/>check<sp/>the<sp/>space<sp/>in<sp/>elevator</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>remove_passenger_floor.c<sp/>to<sp/>remove<sp/>the<sp/>passenger<sp/>from<sp/>the<sp/>floor<sp/>array.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>The<sp/>dynamc_simulation<sp/>also<sp/>calls<sp/>these<sp/>functions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>input_static_dynamic.c<sp/>to<sp/>get<sp/>whether<sp/>user<sp/>want<sp/>static<sp/>or<sp/>dynamic<sp/>simulation.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>read_user_input_validate.c<sp/>to<sp/>read<sp/>and<sp/>validate<sp/>the<sp/>inputs<sp/>from<sp/>user<sp/>console<sp/>for<sp/>a<sp/>passenger.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>emergency_stop_handling.c<sp/>to<sp/>to<sp/>bring<sp/>the<sp/>lifts<sp/>to<sp/>nearest<sp/>floor<sp/>incase<sp/>of<sp/>emergency.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>cli_update.c<sp/>to<sp/>display<sp/>elevator<sp/>information<sp/>on<sp/>screen.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>input_after_stop.c<sp/>to<sp/>get<sp/>input<sp/>from<sp/>user<sp/>when<sp/>emergency<sp/>situation<sp/>encountered.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>The<sp/>function<sp/>in<sp/>travel_log_file.c<sp/>is<sp/>used<sp/>to<sp/>write<sp/>the<sp/>two<sp/>output<sp/>files<sp/>to<sp/>the<sp/>data<sp/>folder<sp/>travel_log.txt<sp/>and<sp/>waiting_times.txt.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>program<sp/>implements<sp/>the<sp/>SCAN<sp/>algorithm.<sp/>The<sp/>elevators<sp/>move<sp/>in<sp/>one<sp/>direction<sp/>until<sp/>all<sp/>requests<sp/>along<sp/>it<sp/>path<sp/>are<sp/>completed<sp/>or<sp/>it<sp/>reaches<sp/>the<sp/>end<sp/>(top<sp/>or<sp/>ground<sp/>floor).<sp/>At<sp/>which<sp/>point<sp/>it<sp/>changes<sp/>direction<sp/>and<sp/>waits<sp/>for<sp/>new<sp/>requests<sp/>before<sp/>moving<sp/>again<sp/>in<sp/>required<sp/>direction.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Down<sp/>in<sp/>case<sp/>of<sp/>at<sp/>top<sp/>floor.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Up<sp/>in<sp/>case<sp/>of<sp/>ground<sp/>floor.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Any<sp/>direction<sp/>in<sp/>all<sp/>other<sp/>cases.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>All<sp/>the<sp/>elevators<sp/>start<sp/>at<sp/>ground<sp/>floor<sp/>with<sp/>direction<sp/>of<sp/>travel<sp/>set<sp/>to<sp/>up.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>passenger<sp/>array<sp/>stores<sp/>the<sp/>data<sp/>from<sp/>input<sp/>file.<sp/>This<sp/>data<sp/>is<sp/>then<sp/>added<sp/>to<sp/>passenger_queue<sp/>when<sp/>the<sp/>time<sp/>of<sp/>arrival<sp/>of<sp/>the<sp/>passenger<sp/>=<sp/>the<sp/>time<sp/>of<sp/>the<sp/>simulation.<sp/>This<sp/>is<sp/>done<sp/>at<sp/>very<sp/>start<sp/>of<sp/>the<sp/>main<sp/>while<sp/>loop<sp/>in<sp/>static_simulation<sp/>and<sp/><sp/>dynamic<sp/>simulation<sp/>function.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>This<sp/>is<sp/>followed<sp/>by<sp/>checking<sp/>if<sp/>passenger<sp/>need<sp/>to<sp/>get<sp/>on<sp/>of<sp/>off<sp/>the<sp/>elevator<sp/>at<sp/>the<sp/>floor<sp/>the<sp/>elevator<sp/>is<sp/>currently<sp/>at.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>passenger_queue<sp/>is<sp/>then<sp/>traversed<sp/>to<sp/>check<sp/>if<sp/>any<sp/>passengers<sp/>in<sp/>the<sp/>queue<sp/>can<sp/>have<sp/>their<sp/>requests<sp/>processed.<sp/>Those<sp/>passed<sp/>are<sp/>removed<sp/>from<sp/>queue<sp/>and<sp/>added<sp/>to<sp/>the<sp/>proper<sp/>entry<sp/>in<sp/>floor_array.<sp/>Which<sp/>is<sp/>an<sp/>array<sp/>of<sp/>passenger<sp/>pointers.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>elevator<sp/>timer<sp/>is<sp/>then<sp/>checked<sp/>and<sp/>decremened<sp/>if<sp/>it<sp/>greater<sp/>than<sp/>0.<sp/>If<sp/>it<sp/>is<sp/>equal<sp/>to<sp/>0.<sp/>We<sp/>check<sp/>if<sp/>passengers<sp/>need<sp/>to<sp/>get<sp/>off<sp/>or<sp/>do<sp/>we<sp/>need<sp/>to<sp/>change<sp/>the<sp/>floor<sp/>of<sp/>the<sp/>elevator.<sp/>In<sp/>case<sp/>of<sp/>changing<sp/>floor<sp/>+3<sp/>seconds<sp/>are<sp/>added<sp/>to<sp/>the<sp/>elevator<sp/>timer.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>program<sp/>continues<sp/>until<sp/>the<sp/>iterator<sp/>reaches<sp/>predifined<sp/>values.<sp/>After<sp/>which<sp/>the<sp/>average<sp/>and<sp/>max<sp/>time<sp/>are<sp/>written<sp/>to<sp/>the<sp/>files<sp/>and<sp/>the<sp/>program<sp/>exits.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Complete<sp/>documentation<sp/>of<sp/>the<sp/>source<sp/>code<sp/>can<sp/>be<sp/>found<sp/>[here](/index.html).</highlight></codeline>
+    </programlisting>
+    <location file="Developer_Manual.md"/>
+  </compounddef>
+</doxygen>

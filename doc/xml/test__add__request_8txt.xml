@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__add__request_8txt" kind="file" language="C++">
+    <compoundname>test_add_request.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__add__request_8txt_1a83e3281261d298d9e6ed6dcaf07edf14" prot="public" static="no" mutable="no">
+        <type>PASS</type>
+        <definition>PASS __pad10__</definition>
+        <argsstring></argsstring>
+        <name>__pad10__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_add_request.txt" line="1" column="1" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/test_add_request.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__add__request_8txt_1af456b00b1733a4a4d5fec3f081924b36" prot="public" static="no" mutable="no">
+        <type>PASS returning ptr</type>
+        <definition>PASS returning ptr values succesfully copied returning ptr position unchanged position succesfully added returning ptr is</definition>
+        <argsstring></argsstring>
+        <name>is</name>
+        <initializer>== to new head.
+PASS: ADDING to NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_add_request.txt" line="1" column="20" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/test_add_request.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__add__request_8txt_1a9ba9ee80fce837dda0a8c4fe2dbae096" prot="public" static="no" mutable="no">
+        <type>PASS returning ptr values succesfully copied</type>
+        <definition>PASS returning ptr values succesfully copied returning ptr position unchanged position succesfully added returning ptr position unchanged position succesfully added PASS</definition>
+        <argsstring></argsstring>
+        <name>PASS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_add_request.txt" line="3" column="1" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/test_add_request.txt" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">PASS:<sp/>Addind<sp/>to<sp/>NULL,<sp/>returning<sp/>ptr<sp/>is<sp/>==<sp/>to<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>head.</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">PASS:<sp/>ADDING<sp/>to<sp/>NULL,<sp/>values<sp/>succesfully<sp/>copied.</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">PASS:<sp/>Addind<sp/>to<sp/>2nd,<sp/>returning<sp/>ptr<sp/>is<sp/>==<sp/>to<sp/>old<sp/>head.</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">PASS:<sp/>ADDING<sp/>to<sp/>2nd,<sp/>1st<sp/>position<sp/>unchanged.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">PASS:<sp/>ADDING<sp/>to<sp/>2nd,<sp/>2nd<sp/>position<sp/>succesfully<sp/>added.</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">PASS:<sp/>Addind<sp/>to<sp/>3rd,<sp/>returning<sp/>ptr<sp/>is<sp/>==<sp/>to<sp/>old<sp/>head.</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">PASS:<sp/>ADDING<sp/>to<sp/>3rd,<sp/>1st<sp/>position<sp/>unchanged.</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">PASS:<sp/>ADDING<sp/>to<sp/>3rd,<sp/>2nd<sp/>position<sp/>succesfully<sp/>added.</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">PASS:<sp/>ADDING<sp/>to<sp/>3rd,<sp/>3rd<sp/>position<sp/>succesfully<sp/>added.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_add_request.txt"/>
+  </compounddef>
+</doxygen>

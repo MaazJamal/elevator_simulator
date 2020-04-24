@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dynamic__functions_8h" kind="file" language="C++">
+    <compoundname>dynamic_functions.h</compoundname>
+    <includes refid="cli__update_8h" local="yes">cli_update.h</includes>
+    <includes refid="input__after__stop_8h" local="yes">input_after_stop.h</includes>
+    <includes refid="input__static__dynamic_8h" local="yes">input_static_dynamic.h</includes>
+    <includes refid="emergency__stop__handling_8h" local="yes">emergency_stop_handling.h</includes>
+    <includes refid="read__user__input__validate_8h" local="yes">read_user_input_validate.h</includes>
+    <includedby refid="dynamic__simulation_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</includedby>
+    <includedby refid="main_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/main.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>input_static_dynamic.h</label>
+        <link refid="input__static__dynamic_8h"/>
+      </node>
+      <node id="5">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="2">
+        <label>cli_update.h</label>
+        <link refid="cli__update_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</label>
+        <link refid="dynamic__functions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>input_after_stop.h</label>
+        <link refid="input__after__stop_8h"/>
+      </node>
+      <node id="8">
+        <label>emergency_stop_handling.h</label>
+        <link refid="emergency__stop__handling_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>read_user_input_validate.h</label>
+        <link refid="read__user__input__validate_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</label>
+        <link refid="dynamic__functions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+<para>Simply imports all the headers of the different of dynamic function. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><linebreak/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="4"><highlight class="preprocessor">#ifndef<sp/>__DYNAMIC_FUNCTIONS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__DYNAMIC_FUNCTIONS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cli__update_8h" kindref="compound">cli_update.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input__after__stop_8h" kindref="compound">input_after_stop.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input__static__dynamic_8h" kindref="compound">input_static_dynamic.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="emergency__stop__handling_8h" kindref="compound">emergency_stop_handling.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="read__user__input__validate_8h" kindref="compound">read_user_input_validate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h"/>
+  </compounddef>
+</doxygen>
