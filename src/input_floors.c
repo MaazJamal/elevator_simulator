@@ -22,6 +22,7 @@ int input_floors(void)
 	int local_floor_count;
 
 	printf("Enter the number of floors in the building-VALID INPUTS ARE FROM 1 TO 100\n");
+	puts("This Value should be greater than or equal to maximum floor number in input.txt file.");
 	scanf("%d", &local_floor_count);
 	//Following checks are performed to see if the entered value is erraneous.
 	if (local_floor_count == 0)

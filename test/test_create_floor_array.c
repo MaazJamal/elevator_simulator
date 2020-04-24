@@ -43,9 +43,7 @@ static struct passenger **create_floor_array(int no_of_floors)
 void test_create_floor_array(void)
 {
 	FILE *test_results = fopen("test/results/results_create_floor_array.txt", "w");
-	printf("Enter the floor count\n");
-	int floor_count;
-	scanf("%d", &floor_count);
+	int floor_count = 100;
 	struct passenger **floor_array = create_floor_array(floor_count);
 	if (floor_array != NULL)
 	{

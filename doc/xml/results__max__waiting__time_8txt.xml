@@ -3,11 +3,11 @@
   <compounddef id="results__max__waiting__time_8txt" kind="file" language="C++">
     <compoundname>results_max_waiting_time.txt</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="results__max__waiting__time_8txt_1a22ef4a21fcfb8a56cde9d97312c27eaf" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="results__max__waiting__time_8txt_1aba2b552dae27ef7de7522f0a05640c1b" prot="public" static="no" mutable="no">
         <type>PASS</type>
-        <definition>PASS __pad5__</definition>
+        <definition>PASS __pad6__</definition>
         <argsstring></argsstring>
-        <name>__pad5__</name>
+        <name>__pad6__</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

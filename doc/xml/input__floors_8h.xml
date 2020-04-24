@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Work/git_repo/elevator_simulator/include/input_floors.h" line="10" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/input_floors.c" bodystart="20" bodyend="45" declfile="C:/Users/Work/git_repo/elevator_simulator/include/input_floors.h" declline="10" declcolumn="12"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/input_floors.h" line="10" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/input_floors.c" bodystart="20" bodyend="46" declfile="C:/Users/Work/git_repo/elevator_simulator/include/input_floors.h" declline="10" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

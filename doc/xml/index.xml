@@ -258,7 +258,7 @@
     <member refid="data_2results__inputs__lifts_8txt_1a558eb9ee2abe10d2608bfc3dd38b8f76" kind="variable"><name>Output</name></member>
   </compound>
   <compound refid="results_2results__inputs__lifts_8txt" kind="file"><name>results_inputs_lifts.txt</name>
-    <member refid="results_2results__inputs__lifts_8txt_1adc4d80463bc95cefb29bafbedfa086b8" kind="variable"><name>__pad3__</name></member>
+    <member refid="results_2results__inputs__lifts_8txt_1ac256f97b6d10788874eaed85e2817a04" kind="variable"><name>__pad4__</name></member>
     <member refid="results_2results__inputs__lifts_8txt_1a1134fd552c7fde90fbcd25f77042e025" kind="variable"><name>Output</name></member>
   </compound>
   <compound refid="test__input__after__stop_8txt" kind="file"><name>test_input_after_stop.txt</name>
@@ -296,13 +296,15 @@
   <compound refid="results__create__floor__array_8txt" kind="file"><name>results_create_floor_array.txt</name>
   </compound>
   <compound refid="results__input__after__stop_8txt" kind="file"><name>results_input_after_stop.txt</name>
+    <member refid="results__input__after__stop_8txt_1af96eb54459d5944ad0ad17d75c42d573" kind="variable"><name>__pad2__</name></member>
+    <member refid="results__input__after__stop_8txt_1a29bafdf9f611f06f38efa7346c7e587a" kind="variable"><name>Output</name></member>
   </compound>
   <compound refid="results__input__floors_8txt" kind="file"><name>results_input_floors.txt</name>
-    <member refid="results__input__floors_8txt_1af96eb54459d5944ad0ad17d75c42d573" kind="variable"><name>__pad2__</name></member>
+    <member refid="results__input__floors_8txt_1adc4d80463bc95cefb29bafbedfa086b8" kind="variable"><name>__pad3__</name></member>
     <member refid="results__input__floors_8txt_1a1134fd552c7fde90fbcd25f77042e025" kind="variable"><name>Output</name></member>
   </compound>
   <compound refid="results__is__lift__empty_8txt" kind="file"><name>results_is_lift_empty.txt</name>
-    <member refid="results__is__lift__empty_8txt_1ac256f97b6d10788874eaed85e2817a04" kind="variable"><name>__pad4__</name></member>
+    <member refid="results__is__lift__empty_8txt_1a22ef4a21fcfb8a56cde9d97312c27eaf" kind="variable"><name>__pad5__</name></member>
     <member refid="results__is__lift__empty_8txt_1a558eb9ee2abe10d2608bfc3dd38b8f76" kind="variable"><name>Output</name></member>
   </compound>
   <compound refid="results__is__lift__on__floor_8txt" kind="file"><name>results_is_lift_on_floor.txt</name>
@@ -310,15 +312,28 @@
     <member refid="results__is__lift__on__floor_8txt_1a38b7778b3a9b3139480b45184728aabf" kind="variable"><name>Parameter</name></member>
   </compound>
   <compound refid="results__max__waiting__time_8txt" kind="file"><name>results_max_waiting_time.txt</name>
-    <member refid="results__max__waiting__time_8txt_1a22ef4a21fcfb8a56cde9d97312c27eaf" kind="variable"><name>__pad5__</name></member>
+    <member refid="results__max__waiting__time_8txt_1aba2b552dae27ef7de7522f0a05640c1b" kind="variable"><name>__pad6__</name></member>
     <member refid="results__max__waiting__time_8txt_1a8155ddbc59396381afce1e49ed605cbb" kind="variable"><name>Output</name></member>
   </compound>
   <compound refid="results__read__passenger_8txt" kind="file"><name>results_read_passenger.txt</name>
   </compound>
   <compound refid="results__remove__passenger__floor_8txt" kind="file"><name>results_remove_passenger_floor.txt</name>
   </compound>
+  <compound refid="results__test__add__passenger__floor_8txt" kind="file"><name>results_test_add_passenger_floor.txt</name>
+  </compound>
+  <compound refid="results__test__add__request_8txt" kind="file"><name>results_test_add_request.txt</name>
+    <member refid="results__test__add__request_8txt_1a243dc72ae2c0420b83e87eee4e945980" kind="variable"><name>__pad8__</name></member>
+    <member refid="results__test__add__request_8txt_1af456b00b1733a4a4d5fec3f081924b36" kind="variable"><name>is</name></member>
+    <member refid="results__test__add__request_8txt_1a9ba9ee80fce837dda0a8c4fe2dbae096" kind="variable"><name>PASS</name></member>
+  </compound>
+  <compound refid="results__test__moving__lift__down_8txt" kind="file"><name>results_test_moving_lift_down.txt</name>
+    <member refid="results__test__moving__lift__down_8txt_1a0880fa443bc0adfa6111cdc48ad2397c" kind="variable"><name>changed</name></member>
+    <member refid="results__test__moving__lift__down_8txt_1a21a34217a5e784ee105e64b74a27df58" kind="variable"><name>Return</name></member>
+  </compound>
+  <compound refid="results__test__remove__passenger__queue_8txt" kind="file"><name>results_test_remove_passenger_queue.txt</name>
+  </compound>
   <compound refid="test__add__request_8txt" kind="file"><name>test_add_request.txt</name>
-    <member refid="test__add__request_8txt_1a79de2d10dc7d12dd619d41d762a9b1d7" kind="variable"><name>__pad7__</name></member>
+    <member refid="test__add__request_8txt_1a83e3281261d298d9e6ed6dcaf07edf14" kind="variable"><name>__pad10__</name></member>
     <member refid="test__add__request_8txt_1af456b00b1733a4a4d5fec3f081924b36" kind="variable"><name>is</name></member>
     <member refid="test__add__request_8txt_1a9ba9ee80fce837dda0a8c4fe2dbae096" kind="variable"><name>PASS</name></member>
   </compound>
@@ -329,6 +344,8 @@
   <compound refid="test__passenger__take__in__result_8txt" kind="file"><name>test_passenger_take_in_result.txt</name>
   </compound>
   <compound refid="test__remove__passenger__queue__results_8txt" kind="file"><name>test_remove_passenger_queue_results.txt</name>
+  </compound>
+  <compound refid="test__test__passenger__take__in_8txt" kind="file"><name>test_test_passenger_take_in.txt</name>
   </compound>
   <compound refid="test__add__passenger__floor_8c" kind="file"><name>test_add_passenger_floor.c</name>
     <member refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kind="variable"><name>floor_arr</name></member>

@@ -107,383 +107,386 @@ Definition at line 25 of file dynamic_simulation\&.c\&.
 71                 puts("2- Create an Emergency stop\&.");
 72                 puts("3- Enable/Disable realtime timer\&. ");
 73                 puts("4- Do not ask for input again & Disable realtime timer\&.");
-74                 puts("5- Exit the simulation\&.");
-75                 int user_choice = 0;
-76                 while (scanf("%d", &user_choice) == 0)
-77                 {
-78                     puts("Incorrect Choice Please Try Again\&.");
-79                     scanf("%*[\n]"); //discard all inputs until newline character
-80                 }
-81                 if (user_choice > 0 && user_choice < 6)
-82                 {
-83                     incorrect_choice = false; //made correct choice no exit selection loop\&.
-84                     switch (user_choice)
-85                     {
-86 
-87                     //1- Enter A Passenger Details\&.
-88                     case 1:
-89                         read_user_input_validate(&temp_passenger, t);
-90                         passenger_queue = add_request_queue(passenger_queue, temp_passenger);
-91                         break;
-92                     //2- Create an Emergency stop\&.
-93                     case 2:
-94                         emergency_stop_handling(elevator_arr, &t);
-95                         while ((stop_input = input_after_stop()) == -1)
-96                         { //loop until we get right input
-97                         };
-98                         if (stop_input == 0)
-99                         {
-100                             exit_main_loop = true;
-101                         }
-102                         break;
-103                     case 3:
-104                         enable_realtime = !enable_realtime; //toggle
-105                         if (enable_realtime)
-106                         {
-107                             divisor = 30;
-108                         }
-109                         else
-110                         {
-111                             divisor = 200;
-112                         }
-113                         printf("Set Real-time to : %d\n", enable_realtime);
-114                         break;
-115                     case 4:
-116                         enable_realtime = false;
-117                         enable_user_input = false;
-118                         exit_main_loop = false;
-119                         break;
-120                     case 5:
-121                         exit_main_loop = true;
+74                 puts("5- Do Nothing and continue\&.");
+75                 puts("6- Exit the simulation\&.");
+76                 int user_choice = 0;
+77                 while (scanf("%d", &user_choice) == 0)
+78                 {
+79                     puts("Incorrect Choice Please Try Again\&.");
+80                     scanf("%*[\n]"); //discard all inputs until newline character
+81                 }
+82                 if (user_choice > 0 && user_choice < 7)
+83                 {
+84                     incorrect_choice = false; //made correct choice no exit selection loop\&.
+85                     switch (user_choice)
+86                     {
+87 
+88                     //1- Enter A Passenger Details\&.
+89                     case 1:
+90                         read_user_input_validate(&temp_passenger, t);
+91                         passenger_queue = add_request_queue(passenger_queue, temp_passenger);
+92                         break;
+93                     //2- Create an Emergency stop\&.
+94                     case 2:
+95                         emergency_stop_handling(elevator_arr, &t);
+96                         while ((stop_input = input_after_stop()) == -1)
+97                         { //loop until we get right input
+98                         };
+99                         if (stop_input == 0)
+100                         {
+101                             exit_main_loop = true;
+102                         }
+103                         break;
+104                     case 3:
+105                         enable_realtime = !enable_realtime; //toggle
+106                         if (enable_realtime)
+107                         {
+108                             divisor = 30;
+109                         }
+110                         else
+111                         {
+112                             divisor = 200;
+113                         }
+114                         printf("Set Real-time to : %d\n", enable_realtime);
+115                         break;
+116                     case 4:
+117                         enable_realtime = false;
+118                         enable_user_input = false;
+119                         exit_main_loop = false;
+120                         break;
+121                     case 5:
 122                         break;
-123                     }
-124                 }
-125             }
-126             if (exit_main_loop)
-127             { //exit main loop;
-128                 break;
-129             }
-130         }
-131         //set start time
-132         start_time = time(NULL);
-133         //update the cli
-134         cli_update(elevator_arr, t);
-135 
-136         // Add passenger with current time step to queue
-137         for (int i_pass = prev_time_index; i_pass < passenger_count; i_pass++) //debugged works perfectly
-138         {
-139             if (passenger_array[i_pass]\&.arrival_time < t) //due to emergency stop we can skip some entries
-140             {
-141                 while (passenger_array[prev_time_index]\&.arrival_time < t && prev_time_index < passenger_count)
-142                 {
-143                     prev_time_index++; //increment until we reach passenger with current or greater arrival_time then  t or reach end array\&.
-144                 }
-145             }
-146 
-147             //Assume the passenger_array is sorted by arrival time\&.
-148             //prev_time_index prevents us from starting at previous index
-149             if (passenger_array[i_pass]\&.arrival_time == t)
-150             {
-151 
-152                 passenger_queue = add_request_queue(passenger_queue, passenger_array[i_pass]);
-153                 prev_time_index++;
-154             }
-155             else
-156             {
-157                 break;
-158             }
-159         }
-160 
-161         for (int i = 0; i < elevator_count; i++)
-162         {
+123                     case 6:
+124                         exit_main_loop = true;
+125                         break;
+126                     }
+127                 }
+128             }
+129             if (exit_main_loop)
+130             { //exit main loop;
+131                 break;
+132             }
+133         }
+134         //set start time
+135         start_time = time(NULL);
+136         //update the cli
+137         cli_update(elevator_arr, t);
+138 
+139         // Add passenger with current time step to queue
+140         for (int i_pass = prev_time_index; i_pass < passenger_count; i_pass++) //debugged works perfectly
+141         {
+142             if (passenger_array[i_pass]\&.arrival_time < t) //due to emergency stop we can skip some entries
+143             {
+144                 while (passenger_array[prev_time_index]\&.arrival_time < t && prev_time_index < passenger_count)
+145                 {
+146                     prev_time_index++; //increment until we reach passenger with current or greater arrival_time then  t or reach end array\&.
+147                 }
+148             }
+149 
+150             //Assume the passenger_array is sorted by arrival time\&.
+151             //prev_time_index prevents us from starting at previous index
+152             if (passenger_array[i_pass]\&.arrival_time == t)
+153             {
+154 
+155                 passenger_queue = add_request_queue(passenger_queue, passenger_array[i_pass]);
+156                 prev_time_index++;
+157             }
+158             else
+159             {
+160                 break;
+161             }
+162         }
 163 
-164             if (is_lift_on_floor(elevator_arr, i))
-165             {
-166                 int drop_delay = 0;
-167                 int add_delay = 0;
-168                 int stop_change = elevator_arr[i]\&.cur_floor - 1;
-169                 if (elevator_arr[i]\&.passenger_count > 0)
-170                 {
-171                     if (elevator_arr[i]\&.stop_at_floor[stop_change])
-172                     { //remove any passengers that need to get off
-173                         drop_delay = passengers_drop(elevator_arr, i, elevator_arr[i]\&.cur_floor, t);
-174 
-175                         if (drop_delay > 0 || elevator_arr[i]\&.passenger_count >= elevator_arr[i]\&.max_passenger) //dropped passengers here or lift full
-176                         {
-177                             elevator_arr[i]\&.stop_at_floor[stop_change] = false; //dropped passengers here
-178                         }
-179                     }
-180                 }
-181                 if (elevator_arr[i]\&.passenger_count < elevator_arr[i]\&.max_passenger)
-182                 {
-183 
-184                     add_delay = passengers_take_in(elevator_arr, i, floor_array, elevator_arr[i]\&.cur_floor, t);
-185                     elevator_arr[i]\&.stop_at_floor[stop_change] = false;
-186                     if (floor_array[stop_change] == NULL)
-187                     {
-188                         stop_at_floor_global[stop_change] = false;
-189                     }
-190                     else
-191                     { //happens in case the lift gets full and their are still passengers on floor\&.
-192                         stop_at_floor_global[stop_change] = true;
-193                     }
-194                     elevator_arr[i]\&.stop_at_floor[stop_change] = false; //lift has taken in or dropped passengers or is full and has completed it purpose on floor so we set to false\&.
-195                 }
-196                 int total_delay = 2 * drop_delay + 2 * add_delay;
-197                 elevator_arr[i]\&.timer += total_delay;
-198             }
-199 
-200             struct passenger *cur = passenger_queue;
-201             int index = 0;
-202             while (cur != NULL)
-203             { //iterating over passenger queue
-204 
-205                 bool direction_up = (cur->arrival_floor <= cur->dest_floor); //passenger direction up
-206                 bool direction_down = (cur->arrival_floor >= cur->dest_floor);
-207                 if (elevator_arr[i]\&.direction_up == direction_up || elevator_arr[i]\&.direction_down == direction_down)
-208                 {
-209                     bool is_above = cur->arrival_floor >= elevator_arr[i]\&.cur_floor;
-210                     bool is_below = cur->arrival_floor <= elevator_arr[i]\&.cur_floor;
-211                     if (elevator_arr[i]\&.direction_up == is_above || elevator_arr[i]\&.direction_down == is_below)
-212                     { //elevator can pick this person up
-213                         struct passenger temp = *cur;
-214                         temp\&.next = NULL;                                  // removing this from passenger queue list
-215                         int arrival_floor_index = temp\&.arrival_floor - 1; //-1 because of mismatch between array and input file
-216 
-217                         add_passenger_floor(floor_array, arrival_floor_index, temp);
-218                         stop_at_floor_global[temp\&.arrival_floor - 1] = true;
-219                         passenger_queue = remove_passenger_queue(index, passenger_queue);
-220                         index--; //list is smaller by one node\&.
-221                     }
-222                 }
-223 
-224                 else
-225                 {
-226                     //is elevator at top floor
-227                     if (elevator_arr[i]\&.cur_floor == floor_count)
-228                     {
-229                         //change direction to move down
-230                         int success = moving_lift_down(elevator_arr, i);
-231                         if (success == -1)
-232                         {
-233                             fprintf(stderr, "Could not change direction of elevator to Down\&. \n");
-234                         }
-235                         struct passenger temp = *cur;
-236                         temp\&.next = NULL; // removing this from passenger queue list
-237 
-238                         int arrival_floor_index = temp\&.arrival_floor - 1;
-239                         add_passenger_floor(floor_array, arrival_floor_index, temp);
-240                         stop_at_floor_global[temp\&.arrival_floor - 1] = true;
-241                         passenger_queue = remove_passenger_queue(index, passenger_queue);
-242                         index--; //list is smaller by one node\&.
-243                     }
-244 
-245                     //is elevator at ground floor\&. Can cause issues at start\&.
-246                     else if (elevator_arr[i]\&.cur_floor == 1)
-247                     {
-248                         //change direction to move up
-249                         moving_lift_up(elevator_arr, i);
-250                         struct passenger temp = *cur;
-251                         temp\&.next = NULL; // removing this from passenger queue list
-252 
-253                         int arrival_floor_index = temp\&.arrival_floor - 1;
-254                         add_passenger_floor(floor_array, arrival_floor_index, temp);
-255                         stop_at_floor_global[temp\&.arrival_floor - 1] = true;
-256                         passenger_queue = remove_passenger_queue(index, passenger_queue);
-257                         index--; //list is smaller by one node\&.
-258                     }
-259 
-260                     else //passenger in lift go in opposite direction of the lift
-261                     {
-262                         // bool to check if elevator and passenger inside are travelling in same direction
-263                         bool passenger_elevator_dir = false;
-264                         for (int j = 0; j < elevator_arr[i]\&.passenger_count; j++)
-265                         {
-266                             if (elevator_arr[i]\&.passenger_arr[j]\&.in_elevator)
-267                             {
-268                                 bool up = elevator_arr[i]\&.passenger_arr[j]\&.dest_floor > elevator_arr[i]\&.passenger_arr[j]\&.arrival_floor;
-269                                 if (elevator_arr[i]\&.direction_up == up || elevator_arr[i]\&.direction_down != up)
-270                                 {
-271                                     passenger_elevator_dir = true;
-272                                     break;
-273                                 }
-274                             }
-275                         }
-276 
-277                         //if no passengers are travelling in direction of lift change lift direction
-278                         if (!passenger_elevator_dir)
-279                         {
-280                             if (elevator_arr[i]\&.direction_up)
-281                             {
-282                                 moving_lift_down(elevator_arr, i);
-283                             }
-284                             else if (elevator_arr[i]\&.direction_down)
-285                             {
-286                                 moving_lift_up(elevator_arr, i);
-287                             }
-288 
-289                             struct passenger temp = *cur;
-290                             temp\&.next = NULL; // removing this from passenger queue list
+164         for (int i = 0; i < elevator_count; i++)
+165         {
+166 
+167             if (is_lift_on_floor(elevator_arr, i))
+168             {
+169                 int drop_delay = 0;
+170                 int add_delay = 0;
+171                 int stop_change = elevator_arr[i]\&.cur_floor - 1;
+172                 if (elevator_arr[i]\&.passenger_count > 0)
+173                 {
+174                     if (elevator_arr[i]\&.stop_at_floor[stop_change])
+175                     { //remove any passengers that need to get off
+176                         drop_delay = passengers_drop(elevator_arr, i, elevator_arr[i]\&.cur_floor, t);
+177 
+178                         if (drop_delay > 0 || elevator_arr[i]\&.passenger_count >= elevator_arr[i]\&.max_passenger) //dropped passengers here or lift full
+179                         {
+180                             elevator_arr[i]\&.stop_at_floor[stop_change] = false; //dropped passengers here
+181                         }
+182                     }
+183                 }
+184                 if (elevator_arr[i]\&.passenger_count < elevator_arr[i]\&.max_passenger)
+185                 {
+186 
+187                     add_delay = passengers_take_in(elevator_arr, i, floor_array, elevator_arr[i]\&.cur_floor, t);
+188                     elevator_arr[i]\&.stop_at_floor[stop_change] = false;
+189                     if (floor_array[stop_change] == NULL)
+190                     {
+191                         stop_at_floor_global[stop_change] = false;
+192                     }
+193                     else
+194                     { //happens in case the lift gets full and their are still passengers on floor\&.
+195                         stop_at_floor_global[stop_change] = true;
+196                     }
+197                     elevator_arr[i]\&.stop_at_floor[stop_change] = false; //lift has taken in or dropped passengers or is full and has completed it purpose on floor so we set to false\&.
+198                 }
+199                 int total_delay = 2 * drop_delay + 2 * add_delay;
+200                 elevator_arr[i]\&.timer += total_delay;
+201             }
+202 
+203             struct passenger *cur = passenger_queue;
+204             int index = 0;
+205             while (cur != NULL)
+206             { //iterating over passenger queue
+207 
+208                 bool direction_up = (cur->arrival_floor <= cur->dest_floor); //passenger direction up
+209                 bool direction_down = (cur->arrival_floor >= cur->dest_floor);
+210                 if (elevator_arr[i]\&.direction_up == direction_up || elevator_arr[i]\&.direction_down == direction_down)
+211                 {
+212                     bool is_above = cur->arrival_floor >= elevator_arr[i]\&.cur_floor;
+213                     bool is_below = cur->arrival_floor <= elevator_arr[i]\&.cur_floor;
+214                     if (elevator_arr[i]\&.direction_up == is_above || elevator_arr[i]\&.direction_down == is_below)
+215                     { //elevator can pick this person up
+216                         struct passenger temp = *cur;
+217                         temp\&.next = NULL;                                  // removing this from passenger queue list
+218                         int arrival_floor_index = temp\&.arrival_floor - 1; //-1 because of mismatch between array and input file
+219 
+220                         add_passenger_floor(floor_array, arrival_floor_index, temp);
+221                         stop_at_floor_global[temp\&.arrival_floor - 1] = true;
+222                         passenger_queue = remove_passenger_queue(index, passenger_queue);
+223                         index--; //list is smaller by one node\&.
+224                     }
+225                 }
+226 
+227                 else
+228                 {
+229                     //is elevator at top floor
+230                     if (elevator_arr[i]\&.cur_floor == floor_count)
+231                     {
+232                         //change direction to move down
+233                         int success = moving_lift_down(elevator_arr, i);
+234                         if (success == -1)
+235                         {
+236                             fprintf(stderr, "Could not change direction of elevator to Down\&. \n");
+237                         }
+238                         struct passenger temp = *cur;
+239                         temp\&.next = NULL; // removing this from passenger queue list
+240 
+241                         int arrival_floor_index = temp\&.arrival_floor - 1;
+242                         add_passenger_floor(floor_array, arrival_floor_index, temp);
+243                         stop_at_floor_global[temp\&.arrival_floor - 1] = true;
+244                         passenger_queue = remove_passenger_queue(index, passenger_queue);
+245                         index--; //list is smaller by one node\&.
+246                     }
+247 
+248                     //is elevator at ground floor\&. Can cause issues at start\&.
+249                     else if (elevator_arr[i]\&.cur_floor == 1)
+250                     {
+251                         //change direction to move up
+252                         moving_lift_up(elevator_arr, i);
+253                         struct passenger temp = *cur;
+254                         temp\&.next = NULL; // removing this from passenger queue list
+255 
+256                         int arrival_floor_index = temp\&.arrival_floor - 1;
+257                         add_passenger_floor(floor_array, arrival_floor_index, temp);
+258                         stop_at_floor_global[temp\&.arrival_floor - 1] = true;
+259                         passenger_queue = remove_passenger_queue(index, passenger_queue);
+260                         index--; //list is smaller by one node\&.
+261                     }
+262 
+263                     else //passenger in lift go in opposite direction of the lift
+264                     {
+265                         // bool to check if elevator and passenger inside are travelling in same direction
+266                         bool passenger_elevator_dir = false;
+267                         for (int j = 0; j < elevator_arr[i]\&.passenger_count; j++)
+268                         {
+269                             if (elevator_arr[i]\&.passenger_arr[j]\&.in_elevator)
+270                             {
+271                                 bool up = elevator_arr[i]\&.passenger_arr[j]\&.dest_floor > elevator_arr[i]\&.passenger_arr[j]\&.arrival_floor;
+272                                 if (elevator_arr[i]\&.direction_up == up || elevator_arr[i]\&.direction_down != up)
+273                                 {
+274                                     passenger_elevator_dir = true;
+275                                     break;
+276                                 }
+277                             }
+278                         }
+279 
+280                         //if no passengers are travelling in direction of lift change lift direction
+281                         if (!passenger_elevator_dir)
+282                         {
+283                             if (elevator_arr[i]\&.direction_up)
+284                             {
+285                                 moving_lift_down(elevator_arr, i);
+286                             }
+287                             else if (elevator_arr[i]\&.direction_down)
+288                             {
+289                                 moving_lift_up(elevator_arr, i);
+290                             }
 291 
-292                             int arrival_floor_index = temp\&.arrival_floor - 1;
-293                             add_passenger_floor(floor_array, arrival_floor_index, temp);
-294                             stop_at_floor_global[temp\&.arrival_floor - 1] = true;
-295                             passenger_queue = remove_passenger_queue(index, passenger_queue);
-296                             index--; //list is smaller by one node\&.
-297                         }
-298                     }
-299                 }
-300 
-301                 //potential bug here due to deleting nodes in remove_passenger_queue
-302 
-303                 cur = passenger_queue; //bug fix start
-304                 if (cur != NULL)       //incase we deleted only node queue
-305                 {
-306                     for (int q_index = 0; q_index < index + 1; q_index++)
-307                     {
-308                         cur = cur->next; //iterate until we reach the spot of deletion
-309                     }
-310                 } //bug fix end
-311                 index++;
-312 
-313             } //End of while loop iterating over queue
-314 
-315             //move elevator here
-316             if (elevator_arr[i]\&.passenger_count > 0) //if there are passengers then lift needs to move
-317             {
-318                 elevator_arr[i]\&.moving = true;
-319                 elevator_arr[i]\&.between_floor = true;
-320             }
-321             else
-322             {
-323                 elevator_arr[i]\&.moving = false; //elevator is stopped and empty now
-324                 if (elevator_arr[i]\&.timer != 0)
-325                 {
-326                     elevator_arr[i]\&.between_floor = true; //time for passenger to drop out\&.
-327                 }
-328                 else
-329                 {
-330                     elevator_arr[i]\&.between_floor = false; //elevator is stationary at current floor and can be used again\&.
-331                     if (elevator_arr[i]\&.cur_floor == 1)
-332                     { //elevator at ground floor can only move up\&.
-333                         moving_lift_up(elevator_arr, i);
-334                     }
-335                     else if (elevator_arr[i]\&.cur_floor == floor_count) //At top floor and can only move down
-336                     {
-337                         moving_lift_down(elevator_arr, i);
-338                     }
-339                     else
-340                     { //elevator in middle can go anywhere
-341                         elevator_arr[i]\&.direction_up = true;
-342                         elevator_arr[i]\&.direction_down = true;
-343                     }
-344                 }
-345             }
-346 
-347             if (elevator_arr[i]\&.timer > 0)
-348             {
-349                 elevator_arr[i]\&.timer--;
-350             }
-351             if (elevator_arr[i]\&.timer == 0)
-352             { //we may need to move to another floor
-353                 int current_floor = elevator_arr[i]\&.cur_floor;
-354                 bool passengers_above = false; //are there passengers above for drop or pickup?
-355                 bool passengers_below = false; //are there passengers below for drop or pickup?
-356                 if (elevator_arr[i]\&.direction_up)
-357                 {
-358                     for (int k = current_floor; k < floor_count; k++) //start at current floor and search up
-359                     {                                                 //k = current floor becuse searching up and array numbering starts from 0 so curent_floor as index is 1 floor above
-360                         //if we are below a floor and need to stop on it to drop a passenger\&.
-361                         bool condition_a = elevator_arr[i]\&.stop_at_floor[k];
-362                         // if we are below a floor and neee to stop on it to pick a passenger\&.
-363                         bool condition_b = stop_at_floor_global[k];
-364                         if (condition_a || condition_b)
-365                         {
-366                             passengers_above = true;
-367                             elevator_arr[i]\&.stop_at_floor[k] = true;
-368                             stop_at_floor_global[k] = false; //lift assigned to this floor
-369                             break;
-370                         }
-371                     }
-372                 }
-373                 else if (elevator_arr[i]\&.direction_down)
-374                 {
-375                     for (int k = current_floor - 2; k >= 0; k--)
-376                     { //current_floor-2 because of array numbering and file numbering mismatch
-377                         //if we are above a floor and need to stop on it to drop passengers\&.
-378                         bool condition_a = elevator_arr[i]\&.stop_at_floor[k];
-379                         //if we are above a floor and need to stop on it to pick a passenger\&.
-380                         bool condition_b = stop_at_floor_global[k];
-381                         if (condition_a || condition_b)
-382                         {
-383                             passengers_below = true;
-384                             elevator_arr[i]\&.stop_at_floor[k] = true;
-385                             stop_at_floor_global[k] = false; //lift assigned to this floor
-386 
-387                             break;
-388                         }
-389                     }
-390                 }
-391 
-392                 if (passengers_above)
-393                 {
-394                     current_floor++;
-395                 }
-396                 else if (passengers_below)
-397                 {
-398                     current_floor--;
-399                 }
-400                 elevator_arr[i]\&.cur_floor = current_floor; //changed the floor
-401                 if (elevator_arr[i]\&.stop_at_floor[current_floor - 1] || stop_at_floor_global[current_floor - 1])
-402                 { //do we need to stop at this floor
-403                     elevator_arr[i]\&.moving = false;
-404                     elevator_arr[i]\&.between_floor = false;
-405                     elevator_arr[i]\&.stop_at_floor[current_floor - 1] = true; //setting to true so that the lift stops at this floor
-406                                                                              //stop_at_floor_global[current_floor - 1] = false;
-407                 }
-408                 else if (passengers_above || passengers_below) //we do not need to stop at this floor\&.
-409                 {
-410                     elevator_arr[i]\&.moving = true;
-411                     elevator_arr[i]\&.between_floor = true;
-412                     elevator_arr[i]\&.timer += 3; //add 3 sec till next floor
-413                 }
-414                 else
-415                 {
-416                     elevator_arr[i]\&.moving = false;
-417                     elevator_arr[i]\&.between_floor = false;
-418                 }
-419 
-420                 if (elevator_arr[i]\&.direction_up && !passengers_above)
-421                 { //if no passengers above then lift should change direction to down\&.
-422                     if (current_floor != 1 && elevator_arr[i]\&.passenger_count > 0)
-423                     {
-424                         moving_lift_down(elevator_arr, i);
-425                     }
-426                 }
-427                 else if (elevator_arr[i]\&.direction_down && !passengers_below)
-428                 {
-429                     if (current_floor != floor_count && elevator_arr[i]\&.passenger_count > 0)
-430                     {
-431                         moving_lift_up(elevator_arr, i);
-432                     }
-433                 }
-434             }
-435 
-436         } //end of elevator loop
-437 
-438         end_time = time(NULL);
-439         time_difference = 0;
-440         while (time_difference < 1 && enable_realtime)
-441         { //wait one second
-442             end_time = time(NULL);
-443             time_difference = end_time - start_time;
-444         }
-445         t++;
-446     }
-447     struct passenger dummy;          //placeholder to pass to log\&. it should not be used\&.
-448     travel_log_file(dummy, 0, 0, 3); //choose mode to write max,avg time to file\&.
-449     return 1;
-450 }
+292                             struct passenger temp = *cur;
+293                             temp\&.next = NULL; // removing this from passenger queue list
+294 
+295                             int arrival_floor_index = temp\&.arrival_floor - 1;
+296                             add_passenger_floor(floor_array, arrival_floor_index, temp);
+297                             stop_at_floor_global[temp\&.arrival_floor - 1] = true;
+298                             passenger_queue = remove_passenger_queue(index, passenger_queue);
+299                             index--; //list is smaller by one node\&.
+300                         }
+301                     }
+302                 }
+303 
+304                 //potential bug here due to deleting nodes in remove_passenger_queue
+305 
+306                 cur = passenger_queue; //bug fix start
+307                 if (cur != NULL)       //incase we deleted only node queue
+308                 {
+309                     for (int q_index = 0; q_index < index + 1; q_index++)
+310                     {
+311                         cur = cur->next; //iterate until we reach the spot of deletion
+312                     }
+313                 } //bug fix end
+314                 index++;
+315 
+316             } //End of while loop iterating over queue
+317 
+318             //move elevator here
+319             if (elevator_arr[i]\&.passenger_count > 0) //if there are passengers then lift needs to move
+320             {
+321                 elevator_arr[i]\&.moving = true;
+322                 elevator_arr[i]\&.between_floor = true;
+323             }
+324             else
+325             {
+326                 elevator_arr[i]\&.moving = false; //elevator is stopped and empty now
+327                 if (elevator_arr[i]\&.timer != 0)
+328                 {
+329                     elevator_arr[i]\&.between_floor = true; //time for passenger to drop out\&.
+330                 }
+331                 else
+332                 {
+333                     elevator_arr[i]\&.between_floor = false; //elevator is stationary at current floor and can be used again\&.
+334                     if (elevator_arr[i]\&.cur_floor == 1)
+335                     { //elevator at ground floor can only move up\&.
+336                         moving_lift_up(elevator_arr, i);
+337                     }
+338                     else if (elevator_arr[i]\&.cur_floor == floor_count) //At top floor and can only move down
+339                     {
+340                         moving_lift_down(elevator_arr, i);
+341                     }
+342                     else
+343                     { //elevator in middle can go anywhere
+344                         elevator_arr[i]\&.direction_up = true;
+345                         elevator_arr[i]\&.direction_down = true;
+346                     }
+347                 }
+348             }
+349 
+350             if (elevator_arr[i]\&.timer > 0)
+351             {
+352                 elevator_arr[i]\&.timer--;
+353             }
+354             if (elevator_arr[i]\&.timer == 0)
+355             { //we may need to move to another floor
+356                 int current_floor = elevator_arr[i]\&.cur_floor;
+357                 bool passengers_above = false; //are there passengers above for drop or pickup?
+358                 bool passengers_below = false; //are there passengers below for drop or pickup?
+359                 if (elevator_arr[i]\&.direction_up)
+360                 {
+361                     for (int k = current_floor; k < floor_count; k++) //start at current floor and search up
+362                     {                                                 //k = current floor becuse searching up and array numbering starts from 0 so curent_floor as index is 1 floor above
+363                         //if we are below a floor and need to stop on it to drop a passenger\&.
+364                         bool condition_a = elevator_arr[i]\&.stop_at_floor[k];
+365                         // if we are below a floor and neee to stop on it to pick a passenger\&.
+366                         bool condition_b = stop_at_floor_global[k];
+367                         if (condition_a || condition_b)
+368                         {
+369                             passengers_above = true;
+370                             elevator_arr[i]\&.stop_at_floor[k] = true;
+371                             stop_at_floor_global[k] = false; //lift assigned to this floor
+372                             break;
+373                         }
+374                     }
+375                 }
+376                 else if (elevator_arr[i]\&.direction_down)
+377                 {
+378                     for (int k = current_floor - 2; k >= 0; k--)
+379                     { //current_floor-2 because of array numbering and file numbering mismatch
+380                         //if we are above a floor and need to stop on it to drop passengers\&.
+381                         bool condition_a = elevator_arr[i]\&.stop_at_floor[k];
+382                         //if we are above a floor and need to stop on it to pick a passenger\&.
+383                         bool condition_b = stop_at_floor_global[k];
+384                         if (condition_a || condition_b)
+385                         {
+386                             passengers_below = true;
+387                             elevator_arr[i]\&.stop_at_floor[k] = true;
+388                             stop_at_floor_global[k] = false; //lift assigned to this floor
+389 
+390                             break;
+391                         }
+392                     }
+393                 }
+394 
+395                 if (passengers_above)
+396                 {
+397                     current_floor++;
+398                 }
+399                 else if (passengers_below)
+400                 {
+401                     current_floor--;
+402                 }
+403                 elevator_arr[i]\&.cur_floor = current_floor; //changed the floor
+404                 if (elevator_arr[i]\&.stop_at_floor[current_floor - 1] || stop_at_floor_global[current_floor - 1])
+405                 { //do we need to stop at this floor
+406                     elevator_arr[i]\&.moving = false;
+407                     elevator_arr[i]\&.between_floor = false;
+408                     elevator_arr[i]\&.stop_at_floor[current_floor - 1] = true; //setting to true so that the lift stops at this floor
+409                                                                              //stop_at_floor_global[current_floor - 1] = false;
+410                 }
+411                 else if (passengers_above || passengers_below) //we do not need to stop at this floor\&.
+412                 {
+413                     elevator_arr[i]\&.moving = true;
+414                     elevator_arr[i]\&.between_floor = true;
+415                     elevator_arr[i]\&.timer += 3; //add 3 sec till next floor
+416                 }
+417                 else
+418                 {
+419                     elevator_arr[i]\&.moving = false;
+420                     elevator_arr[i]\&.between_floor = false;
+421                 }
+422 
+423                 if (elevator_arr[i]\&.direction_up && !passengers_above)
+424                 { //if no passengers above then lift should change direction to down\&.
+425                     if (current_floor != 1 && elevator_arr[i]\&.passenger_count > 0)
+426                     {
+427                         moving_lift_down(elevator_arr, i);
+428                     }
+429                 }
+430                 else if (elevator_arr[i]\&.direction_down && !passengers_below)
+431                 {
+432                     if (current_floor != floor_count && elevator_arr[i]\&.passenger_count > 0)
+433                     {
+434                         moving_lift_up(elevator_arr, i);
+435                     }
+436                 }
+437             }
+438 
+439         } //end of elevator loop
+440 
+441         end_time = time(NULL);
+442         time_difference = 0;
+443         while (time_difference < 1 && enable_realtime)
+444         { //wait one second
+445             end_time = time(NULL);
+446             time_difference = end_time - start_time;
+447         }
+448         t++;
+449     }
+450     struct passenger dummy;          //placeholder to pass to log\&. it should not be used\&.
+451     travel_log_file(dummy, 0, 0, 3); //choose mode to write max,avg time to file\&.
+452     return 1;
+453 }
 .fi
 .SH "Author"
 .PP 

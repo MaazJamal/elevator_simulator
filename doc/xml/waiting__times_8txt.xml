@@ -7,8 +7,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="normal">Average<sp/>Waiting<sp/>time<sp/>of<sp/>Passenger:<sp/>0.875000</highlight></codeline>
-<codeline lineno="2"><highlight class="normal">Maximum<sp/>Waiting<sp/>time<sp/>of<sp/>Passenger:<sp/>5.000000</highlight></codeline>
+<codeline lineno="1"><highlight class="normal">Average<sp/>Waiting<sp/>time<sp/>of<sp/>Passenger:<sp/>1.727273</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">Maximum<sp/>Waiting<sp/>time<sp/>of<sp/>Passenger:<sp/>7.000000</highlight></codeline>
     </programlisting>
     <location file="C:/Users/Work/git_repo/elevator_simulator/data/waiting_times.txt"/>
   </compounddef>

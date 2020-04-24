@@ -124,18 +124,16 @@ $(document).ready(function(){initNavTree('test__create__floor__array_8c_source.h
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> test_create_floor_array(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    FILE *test_results = fopen(<span class="stringliteral">&quot;test/results/results_create_floor_array.txt&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    printf(<span class="stringliteral">&quot;Enter the floor count\n&quot;</span>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;<a class="code" href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **floor_array = <a class="code" href="create__floor__array_8h.html#aa7321679c44d6dcf3ff9241a44ab38c1">create_floor_array</a>(<a class="code" href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (floor_array != NULL)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">char</span> temp[100];</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        sprintf(temp, <span class="stringliteral">&quot;PASS: Array created successfully \n&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        printf(temp);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        fprintf(test_results, temp);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a> = 100;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">struct </span><a class="code" href="structpassenger.html">passenger</a> **floor_array = <a class="code" href="create__floor__array_8h.html#aa7321679c44d6dcf3ff9241a44ab38c1">create_floor_array</a>(<a class="code" href="globals_8h.html#adcbcca2d0621f8f94d7ccc4d81ca6f37">floor_count</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (floor_array != NULL)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">char</span> temp[100];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        sprintf(temp, <span class="stringliteral">&quot;PASS: Array created successfully \n&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        printf(temp);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        fprintf(test_results, temp);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="acreate__floor__array_8h_html_aa7321679c44d6dcf3ff9241a44ab38c1"><div class="ttname"><a href="create__floor__array_8h.html#aa7321679c44d6dcf3ff9241a44ab38c1">create_floor_array</a></div><div class="ttdeci">struct passenger ** create_floor_array(int no_of_floors)</div><div class="ttdef"><b>Definition:</b> <a href="create__floor__array_8c_source.html#l00024">create_floor_array.c:24</a></div></div>

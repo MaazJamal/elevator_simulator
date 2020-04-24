@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_create_floor_array.c" line="43" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_create_floor_array.c" bodystart="43" bodyend="57"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_create_floor_array.c" line="43" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_create_floor_array.c" bodystart="43" bodyend="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -125,18 +125,16 @@
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_create_floor_array(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="44"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*test_results<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;test/results/results_create_floor_array.txt&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Enter<sp/>the<sp/>floor<sp/>count\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kindref="member">floor_count</ref>;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kindref="member">floor_count</ref>);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>**floor_array<sp/>=<sp/><ref refid="create__floor__array_8h_1aa7321679c44d6dcf3ff9241a44ab38c1" kindref="member">create_floor_array</ref>(<ref refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kindref="member">floor_count</ref>);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(floor_array<sp/>!=<sp/>NULL)</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp[100];</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(temp,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Array<sp/>created<sp/>successfully<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(temp);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(test_results,<sp/>temp);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kindref="member">floor_count</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>**floor_array<sp/>=<sp/><ref refid="create__floor__array_8h_1aa7321679c44d6dcf3ff9241a44ab38c1" kindref="member">create_floor_array</ref>(<ref refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kindref="member">floor_count</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(floor_array<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp[100];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(temp,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Array<sp/>created<sp/>successfully<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(temp);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(test_results,<sp/>temp);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_create_floor_array.c"/>
   </compounddef>

@@ -3,11 +3,11 @@
   <compounddef id="test__add__request_8txt" kind="file" language="C++">
     <compoundname>test_add_request.txt</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="test__add__request_8txt_1a79de2d10dc7d12dd619d41d762a9b1d7" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="test__add__request_8txt_1a83e3281261d298d9e6ed6dcaf07edf14" prot="public" static="no" mutable="no">
         <type>PASS</type>
-        <definition>PASS __pad7__</definition>
+        <definition>PASS __pad10__</definition>
         <argsstring></argsstring>
-        <name>__pad7__</name>
+        <name>__pad10__</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

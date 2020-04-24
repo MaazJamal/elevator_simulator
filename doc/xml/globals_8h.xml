@@ -31,6 +31,7 @@
     <includedby refid="moving__lift__up_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_up.c</includedby>
     <includedby refid="passengers__drop_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/passengers_drop.c</includedby>
     <includedby refid="passengers__take__in_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/passengers_take_in.c</includedby>
+    <includedby refid="read__passenger_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/read_passenger.c</includedby>
     <includedby refid="read__user__input__validate_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/read_user_input_validate.c</includedby>
     <includedby refid="remove__passenger__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/remove_passenger_floor.c</includedby>
     <includedby refid="test__add__passenger__floor_8c" local="no">C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c</includedby>
@@ -65,6 +66,10 @@
         <childnode refid="39" relation="include">
         </childnode>
       </node>
+      <node id="54">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/read_passenger.c</label>
+        <link refid="read__passenger_8c"/>
+      </node>
       <node id="2">
         <label>C:/Users/Work/git_repo/elevator_simulator/include/add_passenger_floor.h</label>
         <link refid="add__passenger__floor_8h"/>
@@ -83,7 +88,7 @@
         <label>C:/Users/Work/git_repo/elevator_simulator/src/input_floors.c</label>
         <link refid="input__floors_8c"/>
       </node>
-      <node id="55">
+      <node id="56">
         <label>C:/Users/Work/git_repo/elevator_simulator/test/test_moving_lift_down.c</label>
         <link refid="test__moving__lift__down_8c"/>
       </node>
@@ -213,7 +218,7 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="54">
+      <node id="55">
         <label>C:/Users/Work/git_repo/elevator_simulator/src/remove_passenger_floor.c</label>
         <link refid="remove__passenger__floor_8c"/>
       </node>
@@ -302,9 +307,11 @@
         </childnode>
         <childnode refid="53" relation="include">
         </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="55" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
@@ -318,11 +325,11 @@
         </childnode>
         <childnode refid="48" relation="include">
         </childnode>
-        <childnode refid="55" relation="include">
-        </childnode>
         <childnode refid="56" relation="include">
         </childnode>
         <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
         </childnode>
       </node>
       <node id="45">
@@ -391,7 +398,7 @@
         <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="56">
+      <node id="57">
         <label>C:/Users/Work/git_repo/elevator_simulator/test/test_passenger_take_in.c</label>
         <link refid="test__passenger__take__in_8c"/>
       </node>
@@ -415,7 +422,7 @@
         <label>C:/Users/Work/git_repo/elevator_simulator/src/create_floor_array.c</label>
         <link refid="create__floor__array_8c"/>
       </node>
-      <node id="57">
+      <node id="58">
         <label>C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c</label>
         <link refid="test__remove__passenger__floor_8c"/>
       </node>

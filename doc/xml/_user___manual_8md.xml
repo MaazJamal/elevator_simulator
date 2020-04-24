@@ -27,7 +27,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>Number<sp/>of<sp/>lifts<sp/>:<sp/>Specifies<sp/>the<sp/>number<sp/>lifts<sp/>in<sp/>the<sp/>building<sp/>should<sp/>be<sp/>in<sp/>the<sp/>range<sp/>of<sp/>1<sp/>to<sp/>100.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>Number<sp/>of<sp/>elevators:<sp/>Specifies<sp/>the<sp/>number<sp/>elevators<sp/>in<sp/>the<sp/>building<sp/>should<sp/>be<sp/>in<sp/>thr<sp/>range<sp/>of<sp/>1<sp/>to<sp/>100.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Number<sp/>of<sp/>elevators:<sp/>Specifies<sp/>the<sp/>number<sp/>elevators<sp/>in<sp/>the<sp/>building<sp/>should<sp/>be<sp/>in<sp/>thr<sp/>range<sp/>of<sp/>1<sp/>to<sp/>100.(10<sp/>for<sp/>dynamic<sp/>simulation.)</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>Input<sp/>file<sp/>should<sp/>be<sp/>placed<sp/>in<sp/>the<sp/>right<sp/>path.Change<sp/>the<sp/>input<sp/>file<sp/>if<sp/>needed.<sp/>In<sp/>the<sp/>data/<sp/>folder</highlight></codeline>
 <codeline></codeline>

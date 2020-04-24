@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="14" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_create_floor_array.c" bodystart="43" bodyend="57" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="14" declcolumn="13"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="14" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_create_floor_array.c" bodystart="43" bodyend="55" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="14" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="test__functions_8h_1a2bcf734ca4e0469f6d13579f71c25653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

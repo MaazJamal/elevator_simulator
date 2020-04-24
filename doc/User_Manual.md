@@ -18,7 +18,7 @@ The program will ask for the following parameters at the execution of Elevator_S
 
 - Number of lifts : Specifies the number lifts in the building should be in the range of 1 to 100.
 
-- Number of elevators: Specifies the number elevators in the building should be in thr range of 1 to 100.
+- Number of elevators: Specifies the number elevators in the building should be in thr range of 1 to 100.(10 for dynamic simulation.)
 
 - Input file should be placed in the right path.Change the input file if needed. In the data/ folder
 

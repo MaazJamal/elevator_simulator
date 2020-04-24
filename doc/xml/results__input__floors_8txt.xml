@@ -3,11 +3,11 @@
   <compounddef id="results__input__floors_8txt" kind="file" language="C++">
     <compoundname>results_input_floors.txt</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="results__input__floors_8txt_1af96eb54459d5944ad0ad17d75c42d573" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="results__input__floors_8txt_1adc4d80463bc95cefb29bafbedfa086b8" prot="public" static="no" mutable="no">
         <type>PASS</type>
-        <definition>PASS __pad2__</definition>
+        <definition>PASS __pad3__</definition>
         <argsstring></argsstring>
-        <name>__pad2__</name>
+        <name>__pad3__</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
