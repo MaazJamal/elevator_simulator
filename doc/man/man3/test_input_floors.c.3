@@ -1,0 +1,308 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/test/test_input_floors.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/test/test_input_floors.c \- contains the test cases for testing the \fBinput_floors()\fP function\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'input_floors\&.h'\fP
+.br
+\fC#include 'test_functions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_input_floors\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains the test cases for testing the \fBinput_floors()\fP function\&. 
+
+
+.PP
+Definition in file \fBtest_input_floors\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void test_input_floors (void)"
+Calls the function \fBinput_floors\&.c\fP with input from input_input_floors\&.txt\&. Prints the PASS /FAIL status ,by accessing the return from input_floors function\&. results_input_floors file contains the results\&. 
+.PP
+Definition at line 20 of file test_input_floors\&.c\&.
+.PP
+.nf
+21 {
+22     FILE *test_results;
+23     test_results = fopen("test/results/results_input_floors\&.txt", "w");
+24     freopen("test/data/input_input_floors\&.txt", "r", stdin);
+25     int arr[13];
+26     arr[0] = input_floors();
+27     arr[1] = input_floors();
+28     arr[2] = input_floors();
+29     arr[3] = input_floors();
+30     arr[4] = input_floors();
+31     arr[5] = input_floors();
+32     arr[6] = input_floors();
+33     arr[7] = input_floors();
+34     arr[8] = input_floors();
+35     arr[9] = input_floors();
+36     arr[10] = input_floors();
+37     arr[11] = input_floors();
+38     arr[12] = input_floors();
+39     arr[13] = input_floors();
+40 
+41     int case_id = 0;
+42     //Test case 1 -input abcd
+43 
+44     if (arr[0] == -1)
+45     {
+46         char temp[100];
+47         sprintf(temp, "PASS: Input: abcd, Expected Output: -1, Output: %d \&.\n",
+48                 arr[0]);
+49         printf(temp);
+50         fprintf(test_results, temp);
+51     }
+52 
+53     else
+54     {
+55         char temp[100];
+56         sprintf(temp, "FAIL: Input: abcd, Expected Output: -1, Output: %d \&.\n",
+57                 arr[0]);
+58         printf(temp);
+59         fprintf(test_results, temp);
+60     }
+61     //Test case 2- input abcd123
+62     if (arr[1] == -1)
+63     {
+64         char temp[100];
+65         sprintf(temp, "PASS: Input: abcd123, Expected Output: -1, Output: %d \&.\n",
+66                 arr[0]);
+67         printf(temp);
+68         fprintf(test_results, temp);
+69     }
+70 
+71     else
+72     {
+73         char temp[100];
+74         sprintf(temp, "FAIL: Input: abcd123, Expected Output: -1, Output: %d \&.\n",
+75                 arr[0]);
+76         printf(temp);
+77         fprintf(test_results, temp);
+78     }
+79     //Test case 3- input 0
+80     if (arr[2] == -1)
+81     {
+82         char temp[100];
+83         sprintf(temp, "PASS: Input: 0, Expected Output: -1, Output: %d \&.\n",
+84                 arr[0]);
+85         printf(temp);
+86         fprintf(test_results, temp);
+87     }
+88 
+89     else
+90     {
+91         char temp[100];
+92         sprintf(temp, "FAIL: Input: 0, Expected Output: -1, Output: %d \&.\n",
+93                 arr[0]);
+94         printf(temp);
+95         fprintf(test_results, temp);
+96     }
+97     //Test case 4- input -100
+98     if (arr[2] == -1)
+99     {
+100         char temp[100];
+101         sprintf(temp, "PASS: Input: -100, Expected Output: -1, Output: %d \&.\n",
+102                 arr[0]);
+103         printf(temp);
+104         fprintf(test_results, temp);
+105     }
+106 
+107     else
+108     {
+109         char temp[100];
+110         sprintf(temp, "FAIL: Input: -100, Expected Output: -1, Output: %d \&.\n",
+111                 arr[0]);
+112         printf(temp);
+113         fprintf(test_results, temp);
+114     }
+115 
+116     //Test case 5 -input 101
+117     if (arr[4] == -1)
+118     {
+119         char temp[100];
+120         sprintf(temp, "PASS: Input: 101, Expected Output: -1, Output: %d \&.\n",
+121                 arr[4]);
+122         printf(temp);
+123         fprintf(test_results, temp);
+124     }
+125     else
+126     {
+127         char temp[100];
+128         sprintf(temp, "FAIL: Input: 101, Expected Output: -1, Output: %d \&.\n",
+129                 arr[4]);
+130         printf(temp);
+131         fprintf(test_results, temp);
+132     }
+133 
+134     //Test case 6 -input 1
+135     if (arr[5] == 1)
+136     {
+137         char temp[100];
+138         sprintf(temp, "PASS: Input: 1, Expected Output: 1, Output: %d \&.\n",
+139                 arr[5]);
+140         printf(temp);
+141         fprintf(test_results, temp);
+142     }
+143     else
+144     {
+145         char temp[100];
+146         sprintf(temp, "FAIL: Input: 1, Expected Output: 1, Output: %d \&.\n",
+147                 arr[5]);
+148         printf(temp);
+149         fprintf(test_results, temp);
+150     }
+151 
+152     //Test case 7 -input 100
+153     case_id = 6;
+154     if (arr[case_id] == 100)
+155     {
+156         char temp[100];
+157         sprintf(temp, "PASS: Input: 100, Expected Output: 100, Output: %d \&.\n",
+158                 arr[case_id]);
+159         printf(temp);
+160         fprintf(test_results, temp);
+161     }
+162     else
+163     {
+164         char temp[100];
+165         sprintf(temp, "FAIL: Input: 100, Expected Output: 100, Output: %d \&.\n",
+166                 arr[case_id]);
+167         printf(temp);
+168         fprintf(test_results, temp);
+169     }
+170 
+171     //Test case 8 input 50
+172     case_id = 7;
+173     if (arr[case_id] == 50)
+174     {
+175         char temp[100];
+176         sprintf(temp, "PASS: Input: 50, Expected Output: 50, Output: %d \&.\n",
+177                 arr[case_id]);
+178         printf(temp);
+179         fprintf(test_results, temp);
+180     }
+181     else
+182     {
+183         char temp[100];
+184         sprintf(temp, "FAIL: Input: 50, Expected Output: 50, Output: %d \&.\n",
+185                 arr[case_id]);
+186         printf(temp);
+187         fprintf(test_results, temp);
+188     }
+189 
+190     //Test case 9 input 23\&.3
+191     case_id = 8;
+192     if (arr[case_id] == 23)
+193     {
+194         char temp[100];
+195         sprintf(temp, "PASS: Input: 23\&.3, Expected Output: 23, Output: %d \&.\n",
+196                 arr[case_id]);
+197         printf(temp);
+198         fprintf(test_results, temp);
+199     }
+200     else
+201     {
+202         char temp[100];
+203         sprintf(temp, "FAIL: Input: 23\&.3, Expected Output: 23, Output: %d \&.\n",
+204                 arr[case_id]);
+205         printf(temp);
+206         fprintf(test_results, temp);
+207     }
+208 
+209     //Test case 10 input 0\&.9
+210     case_id = 9;
+211     if (arr[case_id] == -1)
+212     {
+213         char temp[100];
+214         sprintf(temp, "PASS: Input: 0\&.9, Expected Output: -1, Output: %d \&.\n",
+215                 arr[case_id]);
+216         printf(temp);
+217         fprintf(test_results, temp);
+218     }
+219     else
+220     {
+221         char temp[100];
+222         sprintf(temp, "FAIL: Input: 0\&.9, Expected Output: -1, Output: %d \&.\n",
+223                 arr[case_id]);
+224         printf(temp);
+225         fprintf(test_results, temp);
+226     }
+227 
+228     //Test case 11 input 1\&.0
+229     case_id = 10;
+230     if (arr[case_id] == 1)
+231     {
+232         char temp[100];
+233         sprintf(temp, "PASS: Input: 1\&.0, Expected Output: 1, Output: %d \&.\n",
+234                 arr[case_id]);
+235         printf(temp);
+236         fprintf(test_results, temp);
+237     }
+238     else
+239     {
+240         char temp[100];
+241         sprintf(temp, "FAIL: Input: 1\&.0, Expected Output: 1, Output: %d \&.\n",
+242                 arr[case_id]);
+243         printf(temp);
+244         fprintf(test_results, temp);
+245     }
+246 
+247     //Test case 12 input 100\&.1
+248     case_id = 11;
+249     if (arr[case_id] == 100)
+250     {
+251         char temp[100];
+252         sprintf(temp, "PASS: Input: 100\&.1, Expected Output: 100, Output: %d \&.\n",
+253                 arr[case_id]);
+254         printf(temp);
+255         fprintf(test_results, temp);
+256     }
+257     else
+258     {
+259         char temp[100];
+260         sprintf(temp, "FAIL: Input: 100\&.1, Expected Output: 100, Output: %d \&.\n",
+261                 arr[case_id]);
+262         printf(temp);
+263         fprintf(test_results, temp);
+264     }
+265 
+266     //Test case 13 input 100\&.0
+267     case_id = 12;
+268     if (arr[case_id] == 100)
+269     {
+270         char temp[100];
+271         sprintf(temp, "PASS: Input: 100\&.0, Expected Output: 100, Output: %d \&.\n",
+272                 arr[case_id]);
+273         printf(temp);
+274         fprintf(test_results, temp);
+275     }
+276     else
+277     {
+278         char temp[100];
+279         sprintf(temp, "FAIL: Input: 100\&.0, Expected Output: 100, Output: %d \&.\n",
+280                 arr[case_id]);
+281         printf(temp);
+282         fprintf(test_results, temp);
+283     }
+284     fflush(test_results);
+285     fclose(test_results);
+286 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

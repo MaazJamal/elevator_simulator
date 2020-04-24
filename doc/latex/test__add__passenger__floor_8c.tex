@@ -1,0 +1,57 @@
+\hypertarget{test__add__passenger__floor_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/test/test\+\_\+add\+\_\+passenger\+\_\+floor.c File Reference}
+\label{test__add__passenger__floor_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_add\_passenger\_floor.c@{C:/Users/Work/git\_repo/elevator\_simulator/test/test\_add\_passenger\_floor.c}}
+
+
+provides blackbox unit testing for add\+\_\+passenenger\+\_\+floor function  
+
+
+{\ttfamily \#include \char`\"{}add\+\_\+passenger\+\_\+floor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$structures.\+h$>$}\newline
+{\ttfamily \#include $<$globals.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__add__passenger__floor_8c_a9b49422a55dfff1e9f6776dd3d771588}\label{test__add__passenger__floor_8c_a9b49422a55dfff1e9f6776dd3d771588}} 
+void {\bfseries test\+\_\+add\+\_\+passenger\+\_\+floor} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$$\ast$ \mbox{\hyperlink{test__add__passenger__floor_8c_a337434ee4f0bca2908b76acbfb59bb06}{floor\+\_\+arr}} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em tests two conditions for add\+\_\+passenger\+\_\+floor function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{test__add__passenger__floor_8c_a91dd7a06610701f5eacee3ae72324ae0}\label{test__add__passenger__floor_8c_a91dd7a06610701f5eacee3ae72324ae0}} 
+struct \mbox{\hyperlink{structpassenger}{passenger}} {\bfseries add\+\_\+passenger\+\_\+dummy1} = \{0, 0, 0, 0, 10, 0\}
+\item 
+\mbox{\Hypertarget{test__add__passenger__floor_8c_a8b620582259a0a4d11b996f583fb71d9}\label{test__add__passenger__floor_8c_a8b620582259a0a4d11b996f583fb71d9}} 
+struct \mbox{\hyperlink{structpassenger}{passenger}} {\bfseries add\+\_\+passenger\+\_\+dummy2} = \{0, 0, 0, 0, 20, 0\}
+\item 
+\mbox{\Hypertarget{test__add__passenger__floor_8c_a3efb0e1a16208deecbd84c15401f7cf8}\label{test__add__passenger__floor_8c_a3efb0e1a16208deecbd84c15401f7cf8}} 
+F\+I\+LE $\ast$ {\bfseries f}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+provides blackbox unit testing for add\+\_\+passenenger\+\_\+floor function 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{test__add__passenger__floor_8c_a337434ee4f0bca2908b76acbfb59bb06}\label{test__add__passenger__floor_8c_a337434ee4f0bca2908b76acbfb59bb06}} 
+\index{test\_add\_passenger\_floor.c@{test\_add\_passenger\_floor.c}!floor\_arr@{floor\_arr}}
+\index{floor\_arr@{floor\_arr}!test\_add\_passenger\_floor.c@{test\_add\_passenger\_floor.c}}
+\doxysubsubsection{\texorpdfstring{floor\_arr}{floor\_arr}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structpassenger}{passenger}}$\ast$$\ast$ floor\+\_\+arr = N\+U\+LL}
+
+
+
+tests two conditions for add\+\_\+passenger\+\_\+floor function. 
+
+The two test cases are adding to an empty floor. Adding to a floor already with an added passenger. The new passenger is added to the end of the floor list. 
+
+Definition at line 27 of file test\+\_\+add\+\_\+passenger\+\_\+floor.\+c.
+

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="results__create__elevator__array_8txt" kind="file" language="C++">
+    <compoundname>results_create_elevator_array.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="results__create__elevator__array_8txt_1a9ba9ee80fce837dda0a8c4fe2dbae096" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>PASS returning ptr values succesfully copied returning ptr position unchanged position succesfully added returning ptr position unchanged position succesfully added PASS</definition>
+        <argsstring></argsstring>
+        <name>PASS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_create_elevator_array.txt" line="1" column="1" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/results_create_elevator_array.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="results__create__elevator__array_8txt_1a38b7778b3a9b3139480b45184728aabf" prot="public" static="no" mutable="no">
+        <type>Input</type>
+        <definition>Input Parameter</definition>
+        <argsstring></argsstring>
+        <name>Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_create_elevator_array.txt" line="1" column="11" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/results_create_elevator_array.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">PASS;Input<sp/>Parameter:Valid;array<sp/>of<sp/>structure<sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>could<sp/>be<sp/>accessed<sp/>.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_create_elevator_array.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,92 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/add_request_queue.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/add_request_queue.c \- contains the definition of add_request_queue  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'add_request_queue\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpassenger\fP * \fBadd_request_queue\fP (struct \fBpassenger\fP *head, struct \fBpassenger\fP passenger_queue)"
+.br
+.RI "Adds a passenger struct to the passenger queue\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains the definition of add_request_queue 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.PP
+Definition in file \fBadd_request_queue\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "struct \fBpassenger\fP* add_request_queue (struct \fBpassenger\fP * head, struct \fBpassenger\fP passenger_queue)"
+
+.PP
+Adds a passenger struct to the passenger queue\&. Adds a passenger to passenger queue\&. This function can be used to make queues for the requests from passengers from the file or on a floor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhead\fP is a pointer to the head of the queue 
+.br
+\fIpassenger_queue\fP passenger struct containing data of the passenger\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+passenger* returns pointer to the updated head of queue if operation is fine\&. head ptr is unchanged if memory cannot be allocated\&. 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file add_request_queue\&.c\&.
+.PP
+.nf
+22 {
+23     struct passenger *temp = (struct passenger *)malloc(sizeof(struct passenger));
+24     *temp = passenger_queue;
+25     struct passenger *cur = head;
+26 
+27     if (temp == NULL)
+28     {
+29         fprintf(stderr, "MEMORY ALLOCATION FAILED IN add_request_queue\&. \n");
+30         fprintf(stderr, "SKIPPING ADDING PASSENGER TO QUEUE");
+31         return head;
+32     }
+33     if (head == NULL)
+34     {
+35         temp->next = NULL;
+36         head = temp;
+37         return head;
+38     }
+39 
+40     while (cur->next != NULL)
+41     {
+42         cur = cur->next;
+43     }
+44     cur->next = temp;
+45     temp->next = NULL;
+46     return head;
+47 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

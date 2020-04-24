@@ -1,8 +1,17 @@
+/** @file test_create_elevator_array.c
+ * 
+ * @brief Contains test cases for create_elevator_array() function.
+ * 
+ * */
+
+
+
 #include <stdio.h>
 #include <stdbool.h>
 #include "structures.h"
 #include "create_elevator_array.h"
 #include "functions.h"
+
 /**
 Calls the function create_elevator_array.c with valid parameters.
 Prints the PASS /FAIL status ,by accessing the  return from create_elevator_array function.

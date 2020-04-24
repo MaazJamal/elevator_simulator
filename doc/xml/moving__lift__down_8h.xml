@@ -3,8 +3,16 @@
   <compounddef id="moving__lift__down_8h" kind="file" language="C++">
     <compoundname>moving_lift_down.h</compoundname>
     <includes refid="structures_8h" local="yes">structures.h</includes>
-    <includedby refid="functions_8h" local="yes">functions.h</includedby>
+    <includedby refid="functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/functions.h</includedby>
+    <includedby refid="moving__lift__down_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_down.c</includedby>
+    <includedby refid="test__moving__lift__down_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_moving_lift_down.c</includedby>
     <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_down.h</label>
+        <link refid="moving__lift__down_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="3">
         <label>stdbool.h</label>
       </node>
@@ -14,23 +22,79 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="1">
-        <label>moving_lift_down.h</label>
-        <link refid="moving__lift__down_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>functions.h</label>
-        <link refid="functions_8h"/>
-      </node>
       <node id="1">
-        <label>moving_lift_down.h</label>
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_down.h</label>
         <link refid="moving__lift__down_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</label>
+        <link refid="test__create__elevator__array_8c"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_moving_lift_down.c</label>
+        <link refid="test__moving__lift__down_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</label>
+        <link refid="static__simulation_8c"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</label>
+        <link refid="test__is__lift__on__floor_8c"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+      <node id="11">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_down.c</label>
+        <link refid="moving__lift__down_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -49,29 +113,45 @@
           <declname>index</declname>
         </param>
         <briefdescription>
+<para>changes the direction of lift to down. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function takes as input an elevator array and changes the direction of the elevator at the specified index position. sets <ref refid="structelevator_1a78d725b14370d8b2000a99bd11755ff8" kindref="member">elevator.direction_up</ref> to false and <ref refid="structelevator_1aa773f94528363621939e5fcc99dcc6ad" kindref="member">elevator.direction_down</ref> to true. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">elevator_arr[]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an array of type struct elevator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Returns -1 if errors in function call and 1 if function runs properly. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="moving_lift_down.h" line="9" column="12" declfile="moving_lift_down.h" declline="9" declcolumn="12"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_down.h" line="11" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_down.c" bodystart="25" bodyend="36" declfile="C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_down.h" declline="11" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>contains declaration for structure moving_lift_down function that changes the direction of lift. the function is defination found in moving_lift_down.c </para>
+<para>contains declaration for moving_lift_down function that changes the direction of lift. the function is defination found in <ref refid="moving__lift__down_8c" kindref="compound">moving_lift_down.c</ref> </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="5"><highlight class="preprocessor">#ifndef<sp/>__MOVING_LIFT_DOWN_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__MOVING_LIFT_DOWN_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>moving_lift_down(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elevator_arr[],<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>__MOVING_LIFT_DOWN_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__MOVING_LIFT_DOWN_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="moving__lift__down_8h_1a71965ccfee77f7e7469f4153836fb7ef" kindref="member">moving_lift_down</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elevator_arr[],<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="moving_lift_down.h"/>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/moving_lift_down.h"/>
   </compounddef>
 </doxygen>

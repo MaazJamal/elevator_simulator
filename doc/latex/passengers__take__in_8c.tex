@@ -1,0 +1,98 @@
+\hypertarget{passengers__take__in_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/src/passengers\+\_\+take\+\_\+in.c File Reference}
+\label{passengers__take__in_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/src/passengers\_take\_in.c@{C:/Users/Work/git\_repo/elevator\_simulator/src/passengers\_take\_in.c}}
+
+
+contains the definition of passengers\+\_\+take\+\_\+in  
+
+
+{\ttfamily \#include \char`\"{}passengers\+\_\+take\+\_\+in.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}remove\+\_\+passenger\+\_\+floor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}travel\+\_\+log\+\_\+file.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{passengers__take__in_8c_ad76f630c9b48489803eeb11079f324a5}{passengers\+\_\+take\+\_\+in}} (struct \mbox{\hyperlink{structelevator}{elevator}} elevator\+\_\+arr\mbox{[}$\,$\mbox{]}, int index, struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$\mbox{\hyperlink{test__add__passenger__floor_8c_a337434ee4f0bca2908b76acbfb59bb06}{floor\+\_\+arr}}\mbox{[}$\,$\mbox{]}, int cur\+\_\+floor, unsigned int event\+\_\+time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains the definition of passengers\+\_\+take\+\_\+in 
+
+\begin{DoxyAuthor}{Author}
+Maaz Jamal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{passengers__take__in_8c_ad76f630c9b48489803eeb11079f324a5}\label{passengers__take__in_8c_ad76f630c9b48489803eeb11079f324a5}} 
+\index{passengers\_take\_in.c@{passengers\_take\_in.c}!passengers\_take\_in@{passengers\_take\_in}}
+\index{passengers\_take\_in@{passengers\_take\_in}!passengers\_take\_in.c@{passengers\_take\_in.c}}
+\doxysubsubsection{\texorpdfstring{passengers\_take\_in()}{passengers\_take\_in()}}
+{\footnotesize\ttfamily int passengers\+\_\+take\+\_\+in (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structelevator}{elevator}}}]{elevator\+\_\+arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{struct \mbox{\hyperlink{structpassenger}{passenger}} $\ast$}]{floor\+\_\+arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{cur\+\_\+floor,  }\item[{unsigned int}]{event\+\_\+time }\end{DoxyParamCaption})}
+
+This function removes adds a passenger from a queue to the elevator\+\_\+array
+
+This function take in an elevator, index of the elevator, array of floor and current\+\_\+floor. and removes the passenger from the floor and adds it to elevator passenger array. ~\newline
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & int value that specifies the index of the elevator. index start at 0. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em elevator\+\_\+arr} & pointer to elevator array. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em floor\+\_\+arr} & array of pointers to passengers on floor. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cur\+\_\+florr} & int value that specifies the current floor. As described in elevator so start at 1 and equal to max\+\_\+floor\+\_\+count. \\
+\hline
+\mbox{\texttt{ in}}  & {\em event\+\_\+time} & unsigned int the time the event has happened. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return the number of passengers added to the elevator. 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file passengers\+\_\+take\+\_\+in.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     assert(index < elevator\_count \&\& index >= 0);}
+\DoxyCodeLine{32     assert(cur\_floor <= floor\_count \&\& cur\_floor > 0);}
+\DoxyCodeLine{33     assert(cur\_floor == elevator\_arr[index].cur\_floor); \textcolor{comment}{//? test the case that both elevator and passenger are at same floor.}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} floor\_index = cur\_floor -\/ 1; \textcolor{comment}{//input file floor start from 1 while floor array is indexed from 0 so this is needed}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} passenger\_capacity = elevator\_arr[index].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} passenger\_added = 0;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < passenger\_capacity; i++)}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{keywordflow}{if} (!(elevator\_arr[index].passenger\_arr[i].\mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\_elevator}}))}
+\DoxyCodeLine{43         \{}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45             \textcolor{keywordflow}{if} (\mbox{\hyperlink{test__add__passenger__floor_8c_a337434ee4f0bca2908b76acbfb59bb06}{floor\_arr}}[floor\_index] != NULL \&\& elevator\_arr[index].\mbox{\hyperlink{globals_8h_aafbf17dfb8c07dadb99b3e0faadef32d}{passenger\_count}} < passenger\_capacity)}
+\DoxyCodeLine{46             \{}
+\DoxyCodeLine{47                 \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} temp = *(\mbox{\hyperlink{test__add__passenger__floor_8c_a337434ee4f0bca2908b76acbfb59bb06}{floor\_arr}}[floor\_index]);}
+\DoxyCodeLine{48                 elevator\_arr[index].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[i] = temp;}
+\DoxyCodeLine{49                 elevator\_arr[index].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}}[i].\mbox{\hyperlink{structpassenger_a8af124b4de91150e204a2374e98ee71f}{in\_elevator}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{50                 elevator\_arr[index].\mbox{\hyperlink{structelevator_a35976c62fece1a1887b39d2761e409e3}{passenger\_count}}++;}
+\DoxyCodeLine{51                 elevator\_arr[index].\mbox{\hyperlink{structelevator_a47d71912bc6a97bcf1a7c8c257ed4df1}{stop\_at\_floor}}[temp.\mbox{\hyperlink{structpassenger_a1cd2d080a6795d30505e8722d329c7e2}{dest\_floor}} -\/ 1] = \textcolor{keyword}{true}; \textcolor{comment}{//stop at this floor from drop off}}
+\DoxyCodeLine{52                 passenger\_added++;}
+\DoxyCodeLine{53                 \mbox{\hyperlink{travel__log__file_8h_af8d5fde3cc01745bf27550d1fb69bf3f}{travel\_log\_file}}(*(\mbox{\hyperlink{test__add__passenger__floor_8c_a337434ee4f0bca2908b76acbfb59bb06}{floor\_arr}}[floor\_index]), event\_time, index, 2); \textcolor{comment}{//choose mode to calculate avg,max times.}}
+\DoxyCodeLine{54                 \mbox{\hyperlink{remove__passenger__floor_8h_a25f8c0d7e3c685b2c1830182e3705df0}{remove\_passenger\_floor}}(\mbox{\hyperlink{test__add__passenger__floor_8c_a337434ee4f0bca2908b76acbfb59bb06}{floor\_arr}}, cur\_floor);}
+\DoxyCodeLine{55             \}}
+\DoxyCodeLine{56             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{57             \{}
+\DoxyCodeLine{58                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{59             \}}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} passenger\_added;}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}

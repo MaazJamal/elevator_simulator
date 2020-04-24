@@ -3,6 +3,9 @@
   <compounddef id="passengers__take__in_8h" kind="file" language="C++">
     <compoundname>passengers_take_in.h</compoundname>
     <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includedby refid="functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/functions.h</includedby>
+    <includedby refid="passengers__take__in_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/passengers_take_in.c</includedby>
+    <includedby refid="test__passenger__take__in_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_passenger_take_in.c</includedby>
     <incdepgraph>
       <node id="3">
         <label>stdbool.h</label>
@@ -14,17 +17,91 @@
         </childnode>
       </node>
       <node id="1">
-        <label>passengers_take_in.h</label>
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/passengers_take_in.h</label>
         <link refid="passengers__take__in_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</label>
+        <link refid="test__create__elevator__array_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</label>
+        <link refid="static__simulation_8c"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</label>
+        <link refid="test__is__lift__on__floor_8c"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_passenger_take_in.c</label>
+        <link refid="test__passenger__take__in_8c"/>
+      </node>
+      <node id="11">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/passengers_take_in.c</label>
+        <link refid="passengers__take__in_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/passengers_take_in.h</label>
+        <link refid="passengers__take__in_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+    </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="passengers__take__in_8h_1a287226a04968c197b9ffc9bfdaf4b85a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="passengers__take__in_8h_1ad76f630c9b48489803eeb11079f324a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int passengers_take_in</definition>
-        <argsstring>(struct elevator elevator_arr[], int index, struct passenger floor_arr[], int cur_floor)</argsstring>
+        <argsstring>(struct elevator elevator_arr[], int index, struct passenger *floor_arr[], int cur_floor, unsigned int event_time)</argsstring>
         <name>passengers_take_in</name>
         <param>
           <type>struct <ref refid="structelevator" kindref="compound">elevator</ref></type>
@@ -36,7 +113,7 @@
           <declname>index</declname>
         </param>
         <param>
-          <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref></type>
+          <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref> *</type>
           <declname>floor_arr</declname>
           <array>[]</array>
         </param>
@@ -44,30 +121,83 @@
           <type>int</type>
           <declname>cur_floor</declname>
         </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>event_time</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>This function removes adds a passenger from a queue to the elevator_array</para>
+<para>This function take in an elevator, index of the elevator, array of floor and current_floor. and removes the passenger from the floor and adds it to elevator passenger array. <linebreak/>
+ <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int value that specifies the index of the elevator. index start at 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">elevator_arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to elevator array. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">floor_arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of pointers to passengers on floor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cur_florr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int value that specifies the current floor. As described in elevator so start at 1 and equal to max_floor_count. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned int the time the event has happened. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the number of passengers added to the elevator. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="passengers_take_in.h" line="10" column="12" declfile="passengers_take_in.h" declline="10" declcolumn="12"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/passengers_take_in.h" line="12" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/passengers_take_in.c" bodystart="28" bodyend="63" declfile="C:/Users/Work/git_repo/elevator_simulator/include/passengers_take_in.h" declline="12" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>contains declarations for passenger_take_in function. Used to add passenger to the provided elevator array entry </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>__PASSENGERS_TAKE_IN_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__PASSENGERS_TAKE_IN_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>passengers_take_in(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elevator_arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>floor_arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cur_floor);</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>__PASSENGERS_TAKE_IN_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__PASSENGERS_TAKE_IN_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="passengers__take__in_8h_1ad76f630c9b48489803eeb11079f324a5" kindref="member">passengers_take_in</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elevator_arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*<ref refid="test__add__passenger__floor_8c_1a337434ee4f0bca2908b76acbfb59bb06" kindref="member">floor_arr</ref>[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cur_floor,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event_time);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="passengers_take_in.h"/>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/passengers_take_in.h"/>
   </compounddef>
 </doxygen>

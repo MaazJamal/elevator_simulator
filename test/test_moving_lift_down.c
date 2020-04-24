@@ -1,3 +1,8 @@
+/** @file test_moving_lift_down.c
+ * 
+ * @brief contains test cases for moving_lift_down.c
+ * */
+
 #include "moving_lift_down.h"
 #include <stdio.h>
 #include "structures.h"
@@ -14,7 +19,7 @@ void test_moving_lift_down(void)
 {
 	struct elevator arr[3];
 	struct elevator temp = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-	FILE *test_results = fopen("test/results/test_moving_lift_down.txt", "w");
+	FILE *test_results = fopen("test/results/results_test_moving_lift_down.txt", "w");
 	arr[1] = temp;
 	arr[2] = temp;
 	arr[0] = temp;

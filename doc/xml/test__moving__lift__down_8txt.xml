@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__moving__lift__down_8txt" kind="file" language="C++">
+    <compoundname>test_moving_lift_down.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__moving__lift__down_8txt_1a0880fa443bc0adfa6111cdc48ad2397c" prot="public" static="no" mutable="no">
+        <type>PASS::Function returned Expected Array out of bound check working PASS::Array values properly</type>
+        <definition>PASS:: Function returned Expected Array out of bound check working PASS:: Array values properly changed</definition>
+        <argsstring></argsstring>
+        <name>changed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_moving_lift_down.txt" line="2" column="30" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/test_moving_lift_down.txt" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__moving__lift__down_8txt_1a21a34217a5e784ee105e64b74a27df58" prot="public" static="no" mutable="no">
+        <type>PASS::Function returned Expected Array out of bound check working PASS::Array values properly</type>
+        <definition>PASS:: Function returned Expected Array out of bound check working PASS:: Array values properly Return</definition>
+        <argsstring></argsstring>
+        <name>Return</name>
+        <initializer>= 1
+PASS:: Rest of Array Unchanged direction_up = 0 .direction_down = 0
+PASS:: Pointer: Function returned -1 Expected -1 . Array out of bound check working.
+PASS:: Pointer: Array values properly changed: direction_up = 0 .						direction_down = 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_moving_lift_down.txt" line="2" column="38" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/results/test_moving_lift_down.txt" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">PASS::<sp/>Function<sp/>returned<sp/>-1<sp/>Expected<sp/>-1<sp/>.<sp/>Array<sp/>out<sp/>of<sp/>bound<sp/>check<sp/>working.</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">PASS::<sp/>Array<sp/>values<sp/>properly<sp/>changed:<sp/>direction_up<sp/>=<sp/>0<sp/>.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>direction_down<sp/>=<sp/>1,<sp/>Return<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">PASS::<sp/>Rest<sp/>of<sp/>Array<sp/>Unchanged<sp/>direction_up<sp/>=<sp/>0<sp/>.direction_down<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">PASS::<sp/>Pointer:<sp/>Function<sp/>returned<sp/>-1<sp/>Expected<sp/>-1<sp/>.<sp/>Array<sp/>out<sp/>of<sp/>bound<sp/>check<sp/>working.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">PASS::<sp/>Pointer:<sp/>Array<sp/>values<sp/>properly<sp/>changed:<sp/>direction_up<sp/>=<sp/>0<sp/>.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>direction_down<sp/>=<sp/>1,<sp/>Return<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">PASS::<sp/>Pointer:<sp/>Rest<sp/>of<sp/>Array<sp/>Unchanged<sp/>direction_up<sp/>=<sp/>0<sp/>.direction_down<sp/>=<sp/>0</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/test_moving_lift_down.txt"/>
+  </compounddef>
+</doxygen>

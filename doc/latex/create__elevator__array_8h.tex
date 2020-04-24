@@ -1,5 +1,5 @@
-\hypertarget{create__elevator__array_8h}{}\doxysection{include/create\+\_\+elevator\+\_\+array.h File Reference}
-\label{create__elevator__array_8h}\index{include/create\_elevator\_array.h@{include/create\_elevator\_array.h}}
+\hypertarget{create__elevator__array_8h}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/include/create\+\_\+elevator\+\_\+array.h File Reference}
+\label{create__elevator__array_8h}\index{C:/Users/Work/git\_repo/elevator\_simulator/include/create\_elevator\_array.h@{C:/Users/Work/git\_repo/elevator\_simulator/include/create\_elevator\_array.h}}
 
 
 declaration for create\+\_\+elevator\+\_\+array function -\/creates an array for elevators with respective to input entered by user.  
@@ -62,7 +62,7 @@ Definition at line 23 of file create\+\_\+elevator\+\_\+array.\+c.
 \DoxyCodeLine{43         \textcolor{keywordtype}{int} k;}
 \DoxyCodeLine{44         \textcolor{keywordflow}{for}(i=0;i<no\_of\_elevators;i++)\textcolor{comment}{//initialising the array elements}}
 \DoxyCodeLine{45         \{}
-\DoxyCodeLine{46             ele[i].moving=0;}
+\DoxyCodeLine{46             ele[i].\mbox{\hyperlink{structelevator_a186590570ed9fee16200f9fffd3a0873}{moving}}=0;}
 \DoxyCodeLine{47             ele[i].\mbox{\hyperlink{structelevator_ab012a8d2102934af9ea97effdeea80cf}{between\_floor}}=0;}
 \DoxyCodeLine{48             ele[i].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}=\textcolor{keyword}{true};}
 \DoxyCodeLine{49             ele[i].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}=\textcolor{keyword}{false};}
@@ -74,7 +74,7 @@ Definition at line 23 of file create\+\_\+elevator\+\_\+array.\+c.
 \DoxyCodeLine{55             ele[i].\mbox{\hyperlink{structelevator_a35976c62fece1a1887b39d2761e409e3}{passenger\_count}}=0;}
 \DoxyCodeLine{56             ele[i].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}}=10;}
 \DoxyCodeLine{57             ele[i].\mbox{\hyperlink{structelevator_a2c87ee6189da284a149438ce8b0acc8d}{cur\_floor}}=1;}
-\DoxyCodeLine{58             ele[i].timer=0;}
+\DoxyCodeLine{58             ele[i].\mbox{\hyperlink{structelevator_a6272f86a10a9c4bf565e184a4537373d}{timer}}=0;}
 \DoxyCodeLine{59             ele[i].\mbox{\hyperlink{structelevator_ab3f0430781fbb878267214945aaf9322}{passenger\_arr}} = malloc(ele[i].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}}*\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
 \DoxyCodeLine{60             \textcolor{keywordflow}{for} (j=0;j<ele[i].\mbox{\hyperlink{structelevator_ae18c23ac67fc1e94d1dd831119d90f6f}{max\_passenger}};j++)}
 \DoxyCodeLine{61             \{}

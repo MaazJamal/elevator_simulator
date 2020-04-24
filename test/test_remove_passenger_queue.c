@@ -1,4 +1,4 @@
-/** @file remove_passenger_queue.c
+/** @file test_remove_passenger_queue.c
  * @brief This file contains function test_remove_passenger_queue() that provides unit testing for function remove_passenger_queue().
  * @author Maaz Jamal
  * */
@@ -20,7 +20,7 @@ FILE *f;
 
 void test_remove_passenger_queue(void)
 {
-	f = fopen("test/results/test_remove_passenger_queue_results.txt", "w");
+	f = fopen("test/results/results_test_remove_passenger_queue.txt", "w");
 	int choice = 0;
 	printf("Choose between the tests: \n");
 	puts("1- Provide an empty list. The program should exit");

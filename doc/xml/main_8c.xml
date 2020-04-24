@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="main_8c" kind="file" language="C++">
+    <compoundname>main.c</compoundname>
+    <includes refid="functions_8h" local="yes">functions.h</includes>
+    <includes refid="dynamic__functions_8h" local="yes">dynamic_functions.h</includes>
+    <includes refid="simulations_8h" local="yes">simulations.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>moving_lift_down.h</label>
+        <link refid="moving__lift__down_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="19">
+        <label>remove_passenger_floor.h</label>
+        <link refid="remove__passenger__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>passengers_drop.h</label>
+        <link refid="passengers__drop_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>add_passenger_floor.h</label>
+        <link refid="add__passenger__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>travel_log_file.h</label>
+        <link refid="travel__log__file_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>is_lift_on_floor.h</label>
+        <link refid="is__lift__on__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>input_static_dynamic.h</label>
+        <link refid="input__static__dynamic_8h"/>
+      </node>
+      <node id="11">
+        <label>input_floors.h</label>
+        <link refid="input__floors_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>add_request_queue.h</label>
+        <link refid="add__request__queue_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>moving_lift_up.h</label>
+        <link refid="moving__lift__up_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>count_passenger.h</label>
+        <link refid="count__passenger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="29">
+        <label>static_simulation.h</label>
+        <link refid="static__simulation_8h"/>
+      </node>
+      <node id="9">
+        <label>create_elevator_array.h</label>
+        <link refid="create__elevator__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>input_lifts.h</label>
+        <link refid="input__lifts_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>cli_update.h</label>
+        <link refid="cli__update_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>read_passenger.h</label>
+        <link refid="read__passenger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>dynamic_functions.h</label>
+        <link refid="dynamic__functions_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>create_floor_array.h</label>
+        <link refid="create__floor__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>passengers_take_in.h</label>
+        <link refid="passengers__take__in_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>input_after_stop.h</label>
+        <link refid="input__after__stop_8h"/>
+      </node>
+      <node id="26">
+        <label>emergency_stop_handling.h</label>
+        <link refid="emergency__stop__handling_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>stdio.h</label>
+      </node>
+      <node id="27">
+        <label>read_user_input_validate.h</label>
+        <link refid="read__user__input__validate_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function serves as an entry point into the program. Allows choice between the two versions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This finction asks the user for selection between static and dynamic simulation of elevator.</para>
+<para><simplesect kind="return"><para>This function returns an integer 0 (Zero) upon successful execution. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/src/main.c" line="26" column="5" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/main.c" bodystart="26" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This function executes the Static and Dynamic version of elevator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal <linebreak/>
+ </para>
+</simplesect>
+<simplesect kind="author"><para>Hariprasad Munusamy </para>
+</simplesect>
+<simplesect kind="author"><para>Divyalakshmi Padmanaban </para>
+</simplesect>
+<simplesect kind="author"><para>Ritika Arora </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="functions_8h" kindref="compound">functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dynamic__functions_8h" kindref="compound">dynamic_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="simulations_8h" kindref="compound">simulations.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>selection<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(selection<sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="comment">//the<sp/>function<sp/>returns<sp/>-1<sp/>on<sp/>wrong<sp/>input.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selection<sp/>=<sp/>input_static_dynamic();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(selection)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="static__simulation_8h_1ad022020e38b9aa37a3e98b761c507a10" kindref="member">static_simulation</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="dynamic__simulation_8h_1afcfe2d3f6e5bbe7b911bb79801fc397e" kindref="member">dynamic_simulation</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Simulation<sp/>Run<sp/>Succesfully.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/src/main.c"/>
+  </compounddef>
+</doxygen>

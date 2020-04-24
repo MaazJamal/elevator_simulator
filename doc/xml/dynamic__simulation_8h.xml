@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dynamic__simulation_8h" kind="file" language="C++">
+    <compoundname>dynamic_simulation.h</compoundname>
+    <includes refid="functions_8h" local="yes">functions.h</includes>
+    <includedby refid="simulations_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</includedby>
+    <incdepgraph>
+      <node id="14">
+        <label>moving_lift_down.h</label>
+        <link refid="moving__lift__down_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="19">
+        <label>remove_passenger_floor.h</label>
+        <link refid="remove__passenger__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>passengers_drop.h</label>
+        <link refid="passengers__drop_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>add_passenger_floor.h</label>
+        <link refid="add__passenger__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>travel_log_file.h</label>
+        <link refid="travel__log__file_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>is_lift_on_floor.h</label>
+        <link refid="is__lift__on__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>input_floors.h</label>
+        <link refid="input__floors_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>add_request_queue.h</label>
+        <link refid="add__request__queue_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>moving_lift_up.h</label>
+        <link refid="moving__lift__up_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>count_passenger.h</label>
+        <link refid="count__passenger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="9">
+        <label>create_elevator_array.h</label>
+        <link refid="create__elevator__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>input_lifts.h</label>
+        <link refid="input__lifts_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>read_passenger.h</label>
+        <link refid="read__passenger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>create_floor_array.h</label>
+        <link refid="create__floor__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>passengers_take_in.h</label>
+        <link refid="passengers__take__in_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dynamic__simulation_8h_1afcfe2d3f6e5bbe7b911bb79801fc397e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dynamic_simulation</definition>
+        <argsstring>(void)</argsstring>
+        <name>dynamic_simulation</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function contains the working logic of the elevator array function for dynamic release. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@detail Contains the logic for the dynamic version. It contains the main logic loop for travel of elevators .The loop for placing passengers on floors and the complete flow of the program. Plus additional functional calls for the dynamic release.</para>
+<para><simplesect kind="return"><para>return 1 for successful completion. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>A boolean array that shows if elevator needs to stop at a floor. to pick a passenger.</para>
+<para>Array conatining Elevators</para>
+<para>Array to pointer of type passenger. Stores passengers on floors.</para>
+<para>stores the passengers from input file.</para>
+<para>main time counter</para>
+<para>A queue of request made by passengers</para>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h" line="13" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c" bodystart="25" bodyend="453" declfile="C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h" declline="13" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>this file contains the declaration of the function <ref refid="dynamic__simulation_8h_1afcfe2d3f6e5bbe7b911bb79801fc397e" kindref="member">dynamic_simulation()</ref> This function runs the dynamic mode of the project. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>__DYNAMIC_SIMULATION_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__DYNAMIC_SIMULATION_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="functions_8h" kindref="compound">functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dynamic__simulation_8h_1afcfe2d3f6e5bbe7b911bb79801fc397e" kindref="member">dynamic_simulation</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h"/>
+  </compounddef>
+</doxygen>

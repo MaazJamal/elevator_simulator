@@ -1,5 +1,5 @@
-\hypertarget{add__request__queue_8h}{}\doxysection{include/add\+\_\+request\+\_\+queue.h File Reference}
-\label{add__request__queue_8h}\index{include/add\_request\_queue.h@{include/add\_request\_queue.h}}
+\hypertarget{add__request__queue_8h}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/include/add\+\_\+request\+\_\+queue.h File Reference}
+\label{add__request__queue_8h}\index{C:/Users/Work/git\_repo/elevator\_simulator/include/add\_request\_queue.h@{C:/Users/Work/git\_repo/elevator\_simulator/include/add\_request\_queue.h}}
 
 
 contains declarations for add\+\_\+request\+\_\+queue function. Used to add passenger to queue  
@@ -61,17 +61,17 @@ Definition at line 21 of file add\+\_\+request\+\_\+queue.\+c.
 \DoxyCodeLine{32     \}}
 \DoxyCodeLine{33     \textcolor{keywordflow}{if} (head == NULL)}
 \DoxyCodeLine{34     \{}
-\DoxyCodeLine{35         temp-\/>next = NULL;}
+\DoxyCodeLine{35         temp-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} = NULL;}
 \DoxyCodeLine{36         head = temp;}
 \DoxyCodeLine{37         \textcolor{keywordflow}{return} head;}
 \DoxyCodeLine{38     \}}
 \DoxyCodeLine{39 }
-\DoxyCodeLine{40     \textcolor{keywordflow}{while} (cur-\/>next != NULL)}
+\DoxyCodeLine{40     \textcolor{keywordflow}{while} (cur-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} != NULL)}
 \DoxyCodeLine{41     \{}
-\DoxyCodeLine{42         cur = cur-\/>next;}
+\DoxyCodeLine{42         cur = cur-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}};}
 \DoxyCodeLine{43     \}}
-\DoxyCodeLine{44     cur-\/>next = temp;}
-\DoxyCodeLine{45     temp-\/>next = NULL;}
+\DoxyCodeLine{44     cur-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} = temp;}
+\DoxyCodeLine{45     temp-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} = NULL;}
 \DoxyCodeLine{46     \textcolor{keywordflow}{return} head;}
 \DoxyCodeLine{47 \}}
 

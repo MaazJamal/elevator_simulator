@@ -1,0 +1,82 @@
+.TH "md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__c_1__users__work_git_repo_elevator_simulator_doc__user__manual \- Introduction 
+Elevator_Simulation is a software that operates any number of elevator in a commercial building with given number of floors\&.
+.SH "Installation"
+.PP
+Please refer to \fCINSTALL\&.md\fP file for installation instructions\&.
+.SH "Usage"
+.PP
+The user needs to provide the software with a text file containing the passenger request detail for the elevator\&. The text file is named input\&.txt and must be placed in the 'data' folder\&. The relative path is data/input\&.txt\&. The maximum number of floors in this file should correspond to what the user enters later in the program\&.
+.PP
+To start the program in windows either click on elevator\&.exe or type elevator\&.exe in command line\&. For cygwin/unix type \&./elevator to start execution\&.
+.PP
+The program will ask for the following parameters at the execution of Elevator_Simulation:
+.PP
+.IP "\(bu" 2
+Static or Dynamic version : Press 0 to select Static Version or 1 to select Dynaic version\&. (Only for realease 2 version of program\&.)
+.IP "\(bu" 2
+Number of lifts : Specifies the number lifts in the building should be in the range of 1 to 100\&.
+.IP "\(bu" 2
+Number of elevators: Specifies the number elevators in the building should be in thr range of 1 to 100\&.
+.IP "\(bu" 2
+Input file should be placed in the right path\&.Change the input file if needed\&. In the data/ folder
+.PP
+.PP
+In case of Dynamic version the program only simulates until 1999 iterations\&. This is due to limitations of console windows,causing the program to slow down due to printing of cli_update\&. There are additional inputs the user can give to the program after every 30th or 200th iteration\&.
+.PP
+.IP "\(bu" 2
+Add Passenger request : If needed the user can enter details of a passenger to the program\&. That will be added to the queue\&.
+.IP "\(bu" 2
+Provide emergency stop in which the elevator will stop at next floor and remove all passengers\&. The user can then quit or continue the simulation\&.
+.IP "\(bu" 2
+Enable realtime mode\&. In which each iteration is 1 second long and the program asks for input after every 30th iterations\&.
+.IP "\(bu" 2
+Do not ask for input again and disable the realtime mode\&. So that the program can run without interuptions until completion\&.
+.IP "\(bu" 2
+Exit the simulation\&.
+.PP
+.PP
+Please note that the binary is located in project \fCroot\fP folder
+.PP
+.PP
+.nf
+\&.elevator
+.fi
+.PP
+.PP
+for windows
+.PP
+.PP
+.nf
+elevator\&.exe
+.fi
+.PP
+.SH "Testing"
+.PP
+Unit testing is done for each functions defined in the software\&. The test cases can be run using the command below:
+.PP
+.PP
+.nf
+\&./tests
+.fi
+.PP
+.PP
+for windows
+.PP
+.PP
+.nf
+tests\&.exe
+.fi
+.PP
+.PP
+Note: You must have compiled the tests\&.exe program as well\&.
+.SH "Output Generation"
+.PP
+Below output files will be generated and placed \fChere\fP
+.PP
+Output file 1 - File that gives Passenger*ID,Elevator_ID,Passenger_In time,Passenger* Entry floor,Passenger*Out time,Passenger* Exit floor
+.PP
+Output file 2 - File that gives Average waiting time of Passengers and Maximum waiting time of a Passenger\&. 

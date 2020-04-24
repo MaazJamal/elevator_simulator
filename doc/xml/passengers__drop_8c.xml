@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="passengers__drop_8c" kind="file" language="C++">
+    <compoundname>passengers_drop.c</compoundname>
+    <includes refid="passengers__drop_8h" local="yes">passengers_drop.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includes refid="travel__log__file_8h" local="yes">travel_log_file.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>passengers_drop.h</label>
+        <link refid="passengers__drop_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>travel_log_file.h</label>
+        <link refid="travel__log__file_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/passengers_drop.c</label>
+        <link refid="passengers__drop_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="passengers__drop_8c_1a11a7b91c4b20588fd46ab8e9c9df46e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int passengers_drop</definition>
+        <argsstring>(struct elevator elevator_arr[], int index, int cur_floor, unsigned int event_time)</argsstring>
+        <name>passengers_drop</name>
+        <param>
+          <type>struct <ref refid="structelevator" kindref="compound">elevator</ref></type>
+          <declname>elevator_arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cur_floor</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>event_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the passenger from the floor and the elevator array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">elevator_arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of struct elevators </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the elevator to operate on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cur_floor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current floor of the elevator </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time this event happened.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function return the number of passengers dropped. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/src/passengers_drop.c" line="27" column="5" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/passengers_drop.c" bodystart="27" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The function takes in the elevator_array. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Hariprasad Munusamy - <ulink url="mailto:HariprasadMunusamy@cmail.carleton.ca">HariprasadMunusamy@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="passengers__drop_8h" kindref="compound">passengers_drop.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="travel__log__file_8h" kindref="compound">travel_log_file.h</ref>&quot;</highlight></codeline>
+<codeline lineno="27" refid="passengers__drop_8c_1a11a7b91c4b20588fd46ab8e9c9df46e1" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="passengers__drop_8c_1a11a7b91c4b20588fd46ab8e9c9df46e1" kindref="member">passengers_drop</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elevator_arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cur_floor,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event_time)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(index<sp/>&lt;=<sp/><ref refid="globals_8h_1a11ee4b54505479cda7e127a7030a76a7" kindref="member">elevator_count</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(cur_floor<sp/>&lt;=<sp/><ref refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kindref="member">floor_count</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(cur_floor<sp/>==<sp/>elevator_arr[index].cur_floor);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>passenger_dropped<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_passenger<sp/>=<sp/>elevator_arr[index].<ref refid="structelevator_1ae18c23ac67fc1e94d1dd831119d90f6f" kindref="member">max_passenger</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Loop<sp/>to<sp/>iterate<sp/>the<sp/>overall<sp/>passengers<sp/>in<sp/>the<sp/>elevator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>max_passenger;<sp/>i++)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpassenger_1a8af124b4de91150e204a2374e98ee71f" kindref="member">in_elevator</ref><sp/>=<sp/>elevator_arr[index].<ref refid="structelevator_1ab3f0430781fbb878267214945aaf9322" kindref="member">passenger_arr</ref>[i].<ref refid="structpassenger_1a8af124b4de91150e204a2374e98ee71f" kindref="member">in_elevator</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(elevator_arr[index].passenger_arr[i].<ref refid="structpassenger_1a1cd2d080a6795d30505e8722d329c7e2" kindref="member">dest_floor</ref><sp/>==<sp/>cur_floor<sp/>&amp;&amp;<sp/><ref refid="structpassenger_1a8af124b4de91150e204a2374e98ee71f" kindref="member">in_elevator</ref>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elevator_arr[index].<ref refid="structelevator_1ab3f0430781fbb878267214945aaf9322" kindref="member">passenger_arr</ref>[i].<ref refid="structpassenger_1a8af124b4de91150e204a2374e98ee71f" kindref="member">in_elevator</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//setting<sp/>the<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elevator_arr[index].<ref refid="structelevator_1a35976c62fece1a1887b39d2761e409e3" kindref="member">passenger_count</ref>--;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>passenger_dropped++;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>temp<sp/>=<sp/>elevator_arr[index].<ref refid="structelevator_1ab3f0430781fbb878267214945aaf9322" kindref="member">passenger_arr</ref>[i];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="travel__log__file_8h_1af8d5fde3cc01745bf27550d1fb69bf3f" kindref="member">travel_log_file</ref>(temp,<sp/>event_time,<sp/>index,<sp/>1);<sp/></highlight><highlight class="comment">//choose<sp/>mode<sp/>to<sp/>write<sp/>to<sp/>travel_log<sp/>as<sp/>we<sp/>are<sp/>removing<sp/>passenger.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>passenger_dropped;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/src/passengers_drop.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__remove__passenger__floor_8c" kind="file" language="C++">
+    <compoundname>test_remove_passenger_floor.c</compoundname>
+    <includes refid="remove__passenger__floor_8h" local="yes">remove_passenger_floor.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>remove_passenger_floor.h</label>
+        <link refid="remove__passenger__floor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c</label>
+        <link refid="test__remove__passenger__floor_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__remove__passenger__floor_8c_1af7e3f763d3fa1ed9e34002b6ab66694b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_remove_passenger_floor</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_remove_passenger_floor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>tests the remove_passenger function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests the removal of two passengers from a floor. The first removal causes the floor to contain the second passenger at start. the second removal replaces the passenger with NULL pointer. <simplesect kind="return"><para>void does not return anything </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c" line="23" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c" bodystart="23" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>contains tests for remove_passenger_floor </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="remove__passenger__floor_8h" kindref="compound">remove_passenger_floor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="test__remove__passenger__floor_8c_1af7e3f763d3fa1ed9e34002b6ab66694b" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__remove__passenger__floor_8c_1af7e3f763d3fa1ed9e34002b6ab66694b" kindref="member">test_remove_passenger_floor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="globals_8h_1adcbcca2d0621f8f94d7ccc4d81ca6f37" kindref="member">floor_count</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>**<sp/>floors<sp/>=(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>**)<sp/>calloc(3,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>*));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>dummy1<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>10,<sp/>0};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>dummy2<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>20,<sp/>0};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">FILE<sp/>*f<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;test/results/results_remove_passenger_floor.txt&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">floors[1]<sp/>=(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">*(floors[1])<sp/>=<sp/>dummy1;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">floors[1]-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">*(floors[1]-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref>)<sp/>=<sp/>dummy2;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="remove__passenger__floor_8h_1a25f8c0d7e3c685b2c1830182e3705df0" kindref="member">remove_passenger_floor</ref>(floors,2);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(floors[1]-&gt;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>==<sp/>dummy2.id){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(f,</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removed<sp/>1st<sp/>Passenger.<sp/>Id<sp/>on<sp/>floor<sp/>is<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>dummy2.id);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removed<sp/>1st<sp/>Passenger.<sp/>Id<sp/>on<sp/>floor<sp/>is<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>dummy2.id);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(f,</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Expected<sp/>Passenger.Id<sp/>%d<sp/>Got<sp/>:<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>dummy2.id,floors[1]-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Expected<sp/>Passenger.Id<sp/>%d<sp/>Got<sp/>:<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>dummy2.id,floors[1]-&gt;<ref refid="structpassenger_1a25f6b216e5dc0bede72e133edcf4b03f" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="remove__passenger__floor_8h_1a25f8c0d7e3c685b2c1830182e3705df0" kindref="member">remove_passenger_floor</ref>(floors,2);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(floors[1]<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(f,</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removed<sp/>2nd<sp/>Passenger.<sp/>Pointing<sp/>to<sp/>NULL<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>floors[1]);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removed<sp/>2nd<sp/>Passenger.<sp/>Pointing<sp/>to<sp/>NULL<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>floors[1]);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(f,</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Expected<sp/>floor<sp/>point<sp/>to<sp/>NULL.Instead<sp/>Got<sp/>:<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>floors[1]);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Expected<sp/>floor<sp/>point<sp/>to<sp/>NULL.Instead<sp/>Got<sp/>:<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>floors[1]);<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">fflush(f);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">fclose(f);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c"/>
+  </compounddef>
+</doxygen>

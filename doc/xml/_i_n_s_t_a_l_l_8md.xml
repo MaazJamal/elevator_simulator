@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_i_n_s_t_a_l_l_8md" kind="file" language="Markdown">
+    <compoundname>INSTALL.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Supported<sp/>Platforms:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Unix,<sp/>Cygwin<sp/>and<sp/>MacOS.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Prerequisite</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GCC<sp/>Compiler,<sp/>GNU<sp/>make.<sp/>mingw<sp/>for<sp/>windows.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>No<sp/>Dependent<sp/>External<sp/>Libraries</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Build<sp/>Project:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Running<sp/>make<sp/>will<sp/>compile<sp/>elevator<sp/>and<sp/>tests<sp/>programs.<sp/>The<sp/>test<sp/>program<sp/>will<sp/>provide<sp/>options<sp/>to<sp/>test<sp/>the<sp/>program<sp/>functions.<sp/>In<sp/>case<sp/>of<sp/>error<sp/>please<sp/>find<sp/>solution<sp/>at<sp/>end<sp/>of<sp/>document.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>just<sp/>want<sp/>the<sp/>elevator<sp/>program.<sp/>run:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>elevator</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>just<sp/>want<sp/>the<sp/>tests<sp/>program.<sp/>run:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>tests</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Excutable<sp/>binaries<sp/>&quot;elevator.exe&quot;<sp/>and<sp/>&quot;tests.exe&quot;(in<sp/>windows)<sp/>files<sp/>will<sp/>be<sp/>placed<sp/>in<sp/>root<sp/>folder<sp/>of<sp/>the<sp/>project.<sp/>For<sp/>cygwin/unix<sp/>type.<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">./elevator</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">or<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/>./tests</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>some<sp/>cases<sp/>the<sp/>compilation<sp/>may<sp/>fail<sp/>with<sp/>the<sp/>error:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Undefined<sp/>Reference<sp/>to<sp/>WinMain</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">or<sp/>similar,<sp/>in<sp/>such<sp/>cases,<sp/>run<sp/>`make`<sp/>command<sp/>again<sp/>or<sp/>compile<sp/>just<sp/>the<sp/>binary<sp/>you<sp/>want<sp/>`make<sp/>elevator`<sp/>or<sp/>`make<sp/>tests`<sp/>This<sp/>program<sp/>will<sp/>compile<sp/>in<sp/>second<sp/>attempt.<sp/></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/INSTALL.md"/>
+  </compounddef>
+</doxygen>

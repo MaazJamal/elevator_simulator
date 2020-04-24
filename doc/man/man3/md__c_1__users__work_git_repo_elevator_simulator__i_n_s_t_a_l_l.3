@@ -1,0 +1,65 @@
+.TH "md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__c_1__users__work_git_repo_elevator_simulator__i_n_s_t_a_l_l \- Installation 
+
+.SH "Supported Platforms:"
+.PP
+Unix, Cygwin and MacOS\&.
+.SH "Prerequisite"
+.PP
+GCC Compiler, GNU make\&. mingw for windows\&.
+.SH "No Dependent External Libraries"
+.PP
+.SH "Build Project:"
+.PP
+Running make will compile elevator and tests programs\&. The test program will provide options to test the program functions\&. In case of error please find solution at end of document\&.
+.PP
+.PP
+.nf
+make
+.fi
+.PP
+.PP
+If you just want the elevator program\&. run:
+.PP
+.PP
+.nf
+make elevator
+.fi
+.PP
+.PP
+If you just want the tests program\&. run:
+.PP
+.PP
+.nf
+make tests
+.fi
+.PP
+.PP
+Excutable binaries 'elevator\&.exe' and 'tests\&.exe'(in windows) files will be placed in root folder of the project\&. For cygwin/unix type\&. 
+.PP
+.nf
+\&./elevator
+
+.fi
+.PP
+.PP
+or 
+.PP
+.nf
+\&./tests
+
+.fi
+.PP
+.PP
+In some cases the compilation may fail with the error: 
+.PP
+.nf
+Undefined Reference to WinMain
+
+.fi
+.PP
+.PP
+or similar, in such cases, run \fCmake\fP command again or compile just the binary you want \fCmake elevator\fP or \fCmake tests\fP This program will compile in second attempt\&. 

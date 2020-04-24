@@ -1,0 +1,38 @@
+\hypertarget{emergency__stop__handling_8c}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/src/emergency\+\_\+stop\+\_\+handling.c File Reference}
+\label{emergency__stop__handling_8c}\index{C:/Users/Work/git\_repo/elevator\_simulator/src/emergency\_stop\_handling.c@{C:/Users/Work/git\_repo/elevator\_simulator/src/emergency\_stop\_handling.c}}
+
+
+On account of emergency stop condition,All the elevators re moved to nearest floor. Passengers are removed from the elevators.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}emergency\+\_\+stop\+\_\+handling.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}passengers\+\_\+drop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cli\+\_\+update.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{emergency__stop__handling_8c_ad5606533884f027a214fb679799e44c0}\label{emergency__stop__handling_8c_ad5606533884f027a214fb679799e44c0}} 
+void {\bfseries emergency\+\_\+stop\+\_\+handling} (struct \mbox{\hyperlink{structelevator}{elevator}} ele\mbox{[}$\,$\mbox{]}, unsigned int $\ast$timer)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+On account of emergency stop condition,All the elevators re moved to nearest floor. Passengers are removed from the elevators. 
+
+\begin{DoxyAuthor}{Author}
+Divyalakshmi Padmanaban -\/ \href{mailto:dpadm049@uottawa.ca}{\texttt{ dpadm049@uottawa.\+ca}} ~\newline
+
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & function takes elevator strucrure and the currect time index of the simulation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns nothing, takes all the lift to next floor and removes all passenger from elevator 
+\end{DoxyReturn}

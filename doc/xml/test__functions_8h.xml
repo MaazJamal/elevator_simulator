@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__functions_8h" kind="file" language="C++">
+    <compoundname>test_functions.h</compoundname>
+    <includedby refid="test__add__request__queue_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_add_request_queue.c</includedby>
+    <includedby refid="test__cases_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</includedby>
+    <includedby refid="test__input__floors_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_input_floors.c</includedby>
+    <includedby refid="test__main_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_main.c</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_input_floors.c</label>
+        <link refid="test__input__floors_8c"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h</label>
+        <link refid="test__functions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_add_request_queue.c</label>
+        <link refid="test__add__request__queue_8c"/>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_main.c</label>
+        <link refid="test__main_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__functions_8h_1ad74350fa86dde458b967dfdc0376e695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_add_request_queue</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_add_request_queue</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="10" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_request_queue.c" bodystart="15" bodyend="154" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="10" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a61a09e5b92af3a8cb9cda4fb57a4e263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_average_waiting_time</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_average_waiting_time</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="11" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_average_waiting_time.c" bodystart="24" bodyend="52" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="11" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a88492fd685c7762b1a24dec14d2a15fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_count_passenger</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_count_passenger</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="12" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_count_passenger.c" bodystart="12" bodyend="189" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="12" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1ade06ed0d844fd993c27589114d35f742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_create_elevator_array</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_create_elevator_array</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls the function <ref refid="create__elevator__array_8c" kindref="compound">create_elevator_array.c</ref> with valid parameters. Prints the PASS /FAIL status ,by accessing the return from create_elevator_array function. results_create_elevator_array file contains the results. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="13" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c" bodystart="20" bodyend="37" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="13" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a2b9df227bce7b4a13be8b33a58295da1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_create_floor_array</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_create_floor_array</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="14" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_create_floor_array.c" bodystart="43" bodyend="55" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="14" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a2bcf734ca4e0469f6d13579f71c25653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_input_after_stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_input_after_stop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="15" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_input_after_stop.c" bodystart="15" bodyend="83" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="15" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1aad7f794f2c2f149969be480e3a07c63a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_input_floors</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_input_floors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls the function <ref refid="input__floors_8c" kindref="compound">input_floors.c</ref> with input from input_input_floors.txt. Prints the PASS /FAIL status ,by accessing the return from input_floors function. results_input_floors file contains the results. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="16" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_input_floors.c" bodystart="20" bodyend="286" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="16" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1ab6ade1c5fd86ec52d551be35a9ae588a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_input_lifts</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_input_lifts</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="17" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_input_lifts.c" bodystart="9" bodyend="271" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="17" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a926014f0f80a9a1b2e20849965d88833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_is_lift_empty</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_is_lift_empty</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="18" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_empty.c" bodystart="35" bodyend="175" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="18" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a3e351f144b937554cd4e0dbd305b5c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_is_lift_on_floor</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_is_lift_on_floor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls the function lift_on_floor.c with valid parameters. Prints the PASS /FAIL status ,by accessing the return from lift_on_floor function. results_is_lift_on_floor file contains the results. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="19" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c" bodystart="18" bodyend="37" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="19" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a227294b48a939fdc568affbe6dc363be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_max_waiting_time</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_max_waiting_time</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="20" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_max_waiting_time.c" bodystart="24" bodyend="52" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="20" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a0f6a08318c4b7fe437805450023e9ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_moving_lift_down</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_moving_lift_down</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function test the function moving_lift_down. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function tests array out of bounds check. Change elevator direction test. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="21" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_moving_lift_down.c" bodystart="18" bodyend="143" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="21" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a66ac24529cf3761ded8cb64941a99b91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_passenger_take_in</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_passenger_take_in</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="22" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_passenger_take_in.c" bodystart="24" bodyend="55" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="22" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a9eb76830492cd4f4aaa12a45a6bb81b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_read_passenger</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_read_passenger</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="23" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_read_passenger.c" bodystart="106" bodyend="227" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="23" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a0e1286ef4fbc1b7fa890bc2f1f0e2174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_remove_passenger_queue</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_remove_passenger_queue</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="24" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="21" bodyend="56" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="24" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a38108d7e56fd0e399b32c70e40e4debf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_cli_update</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_cli_update</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="25" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_cli_update.c" bodystart="27" bodyend="48" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="25" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1a98d532dd62b0f989f6e39cabf5d72fa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_add_passenger_floor</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_add_passenger_floor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="26" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_add_passenger_floor.c" bodystart="31" bodyend="39" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="26" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__functions_8h_1af7e3f763d3fa1ed9e34002b6ab66694b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_remove_passenger_floor</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_remove_passenger_floor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>tests the remove_passenger function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests the removal of two passengers from a floor. The first removal causes the floor to contain the second passenger at start. the second removal replaces the passenger with NULL pointer. <simplesect kind="return"><para>void does not return anything </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" line="27" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_floor.c" bodystart="23" bodyend="55" declfile="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h" declline="27" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>contains the function declarations for all the test_functions </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>__TEST_FUNCTIONS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__TEST_FUNCTIONS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_add_request_queue(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_average_waiting_time(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_count_passenger(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__functions_8h_1ade06ed0d844fd993c27589114d35f742" kindref="member">test_create_elevator_array</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_create_floor_array(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_input_after_stop(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__functions_8h_1aad7f794f2c2f149969be480e3a07c63a" kindref="member">test_input_floors</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_input_lifts(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_is_lift_empty(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__functions_8h_1a3e351f144b937554cd4e0dbd305b5c03" kindref="member">test_is_lift_on_floor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_max_waiting_time(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__functions_8h_1a0f6a08318c4b7fe437805450023e9ae0" kindref="member">test_moving_lift_down</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_passenger_take_in(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_read_passenger(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_remove_passenger_queue(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_cli_update(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_add_passenger_floor(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__functions_8h_1af7e3f763d3fa1ed9e34002b6ab66694b" kindref="member">test_remove_passenger_floor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/include/test_functions.h"/>
+  </compounddef>
+</doxygen>

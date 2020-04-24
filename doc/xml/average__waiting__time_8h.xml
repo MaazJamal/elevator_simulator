@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="average__waiting__time_8h" kind="file" language="C++">
+    <compoundname>average_waiting_time.h</compoundname>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <includedby refid="average__waiting__time_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/average_waiting_time.c</includedby>
+    <includedby refid="travel__log__file_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/travel_log_file.c</includedby>
+    <includedby refid="test__average__waiting__time_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_average_waiting_time.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/average_waiting_time.h</label>
+        <link refid="average__waiting__time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/average_waiting_time.h</label>
+        <link refid="average__waiting__time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_average_waiting_time.c</label>
+        <link refid="test__average__waiting__time_8c"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/average_waiting_time.c</label>
+        <link refid="average__waiting__time_8c"/>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/travel_log_file.c</label>
+        <link refid="travel__log__file_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="average__waiting__time_8h_1abbde5e2aad5b56ac7da77b34c7d2ea20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float average_waiting_time</definition>
+        <argsstring>(float time_difference)</argsstring>
+        <name>average_waiting_time</name>
+        <param>
+          <type>float</type>
+          <declname>time_difference</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/average_waiting_time.h" line="13" column="14" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/average_waiting_time.c" bodystart="29" bodyend="44" declfile="C:/Users/Work/git_repo/elevator_simulator/include/average_waiting_time.h" declline="13" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Has the declaration for the average_waiting_time function @detail The function has one input parameter: time_difference which is the difference between the time passenger arrived and the time he got into the elevator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="return"><para>float returns the average time taken by the passengers waiting to get into the elevator </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>AVERAGE_WAITING_TIME_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AVERAGE_WAITING_TIME_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>average_waiting_time(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time_difference);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>AVERAGE_WAITING_TIME_H_INCLUDED</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/average_waiting_time.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md__developer__manual" kind="page">
+    <compoundname>md_Developer_Manual</compoundname>
+    <title>Introduction</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Elevator simulation is a software to simulate the operations of multiple elevators in a commercial building, by creating an algorithm.</para>
+<sect1 id="md__developer__manual_1autotoc_md1">
+<title>Requirement</title>
+<para>Software simulates Elevator scheduling in a building for an day by reading the input file with Paaseger ID,timestamp,start and destination floor. The text file must be stored in data/input.txt.</para>
+</sect1>
+<sect1 id="md__developer__manual_1autotoc_md2">
+<title>Assumption</title>
+<para><itemizedlist>
+<listitem><para>User gives the number of floors and elevators in the building, the value should be less than or equal to 100. In dynamic case this is reduced to 10 to make all elevators fit the screen.</para>
+</listitem><listitem><para>The elevators are assumed to be at the same location in the building.</para>
+</listitem><listitem><para>At the start of the simulation all the elevators are assumed to be on the 1st floor.</para>
+</listitem><listitem><para>The weight of each passenger is assumed to be constant. This allows the simulator to establish weight limits as the number of passengers in the elevator. In this program it is set to 10.</para>
+</listitem><listitem><para>A fixed time has been assumed for lifts to move from x floor to x+1 and x-1 floors.Each elevator takes 3 seconds to go from one floor to another floor.</para>
+</listitem><listitem><para>The time that the elevator stops on a floor depends on that number of passengers getting in or out. It is assumed that it takes 2 sec for a passenger to get in or out. So the stop time of an elevator at a floor will be 2n, where n is the number of passengers getting in or out of the lift.</para>
+</listitem><listitem><para>The elevators are assumed to have a single entry point for both exit and entry.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__developer__manual_1autotoc_md3">
+<title>Program Flow</title>
+<para>The program flow for the application is as follows:</para>
+<para><itemizedlist>
+<listitem><para>The <ref refid="main_8c" kindref="compound">main.c</ref> file calls the functions for static_simulation and in release 2 dynamc_simulation based on user input to run the alogorithm.</para>
+</listitem><listitem><para>The static_simulation/dynamc_simulation function calls:<itemizedlist>
+<listitem><para>The function in <ref refid="input__lifts_8c" kindref="compound">input_lifts.c</ref> to get number of lifts from the user.</para>
+</listitem><listitem><para>The function in <ref refid="input__floors_8c" kindref="compound">input_floors.c</ref> to get number of floors from the user.</para>
+</listitem><listitem><para>The function in <ref refid="create__elevator__array_8c" kindref="compound">create_elevator_array.c</ref> to create array for every elevator.</para>
+</listitem><listitem><para>The function in <ref refid="create__floor__array_8c" kindref="compound">create_floor_array.c</ref> to create array for every floor to hold waiting passeger.</para>
+</listitem><listitem><para>The function in <ref refid="count__passenger_8c" kindref="compound">count_passenger.c</ref> to count the number of passenger in the input file.</para>
+</listitem><listitem><para>The function in <ref refid="read__passenger_8c" kindref="compound">read_passenger.c</ref> to store the passenger details to passenger structure.</para>
+</listitem><listitem><para>The function in <ref refid="add__request__queue_8c" kindref="compound">add_request_queue.c</ref> to add passenger requests to a queue.</para>
+</listitem><listitem><para>The function in <ref refid="is__lift__on__floor_8c" kindref="compound">is_lift_on_floor.c</ref> to check the lift status. If it is moving or not.</para>
+</listitem><listitem><para>The function in <ref refid="passengers__drop_8c" kindref="compound">passengers_drop.c</ref> to drop the passenger at the floor returning number of passengers dropped.</para>
+</listitem><listitem><para>The function in <ref refid="passengers__take__in_8c" kindref="compound">passengers_take_in.c</ref> to take the passenger on floor based on maiximum count and space in elevator.</para>
+</listitem><listitem><para>The function in <ref refid="add__passenger__floor_8c" kindref="compound">add_passenger_floor.c</ref> to add passenger to the floor array.</para>
+</listitem><listitem><para>The function in <ref refid="remove__passenger__queue_8c" kindref="compound">remove_passenger_queue.c</ref> to remove the passenger from request queue.</para>
+</listitem><listitem><para>The function in <ref refid="moving__lift__down_8c" kindref="compound">moving_lift_down.c</ref> to change lift direction to down.</para>
+</listitem><listitem><para>The function in <ref refid="moving__lift__up_8c" kindref="compound">moving_lift_up.c</ref> to change the lift direction to up.</para>
+</listitem><listitem><para>The function in <ref refid="average__waiting__time_8c" kindref="compound">average_waiting_time.c</ref> to calculate the average and waiting time.</para>
+</listitem><listitem><para>The function in <ref refid="max__waiting__time_8c" kindref="compound">max_waiting_time.c</ref> to calculate maximum waiting time.</para>
+</listitem><listitem><para>The function in <ref refid="is__lift__empty_8c" kindref="compound">is_lift_empty.c</ref> to check the space in elevator</para>
+</listitem><listitem><para>The function in <ref refid="remove__passenger__floor_8c" kindref="compound">remove_passenger_floor.c</ref> to remove the passenger from the floor array. The dynamc_simulation also calls these functions:</para>
+</listitem><listitem><para>The function in <ref refid="input__static__dynamic_8c" kindref="compound">input_static_dynamic.c</ref> to get whether user want static or dynamic simulation.</para>
+</listitem><listitem><para>The function in <ref refid="read__user__input__validate_8c" kindref="compound">read_user_input_validate.c</ref> to read and validate the inputs from user console for a passenger.</para>
+</listitem><listitem><para>The function in <ref refid="emergency__stop__handling_8c" kindref="compound">emergency_stop_handling.c</ref> to to bring the lifts to nearest floor incase of emergency.</para>
+</listitem><listitem><para>The function in <ref refid="cli__update_8c" kindref="compound">cli_update.c</ref> to display elevator information on screen.</para>
+</listitem><listitem><para>The function in <ref refid="input__after__stop_8c" kindref="compound">input_after_stop.c</ref> to get input from user when emergency situation encountered.</para>
+</listitem><listitem><para>The function in <ref refid="travel__log__file_8c" kindref="compound">travel_log_file.c</ref> is used to write the two output files to the data folder travel_log.txt and waiting_times.txt.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>The program implements the SCAN algorithm. The elevators move in one direction until all requests along it path are completed or it reaches the end (top or ground floor). At which point it changes direction and waits for new requests before moving again in required direction.<itemizedlist>
+<listitem><para>Down in case of at top floor.</para>
+</listitem><listitem><para>Up in case of ground floor.</para>
+</listitem><listitem><para>Any direction in all other cases.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>All the elevators start at ground floor with direction of travel set to up.</para>
+</listitem><listitem><para>The passenger array stores the data from input file. This data is then added to passenger_queue when the time of arrival of the passenger = the time of the simulation. This is done at very start of the main while loop in static_simulation and dynamic simulation function.</para>
+</listitem><listitem><para>This is followed by checking if passenger need to get on of off the elevator at the floor the elevator is currently at.</para>
+</listitem><listitem><para>The passenger_queue is then traversed to check if any passengers in the queue can have their requests processed. Those passed are removed from queue and added to the proper entry in floor_array. Which is an array of passenger pointers.</para>
+</listitem><listitem><para>The elevator timer is then checked and decremened if it greater than 0. If it is equal to 0. We check if passengers need to get off or do we need to change the floor of the elevator. In case of changing floor +3 seconds are added to the elevator timer.</para>
+</listitem><listitem><para>The program continues until the iterator reaches predifined values. After which the average and max time are written to the files and the program exits. </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__developer__manual_1autotoc_md4">
+<title>Documentation</title>
+<para>Complete documentation of the source code can be found <ulink url="/index.html">here</ulink>. </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="emergency__stop__handling_8h" kind="file" language="C++">
+    <compoundname>emergency_stop_handling.h</compoundname>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <includedby refid="dynamic__functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</includedby>
+    <includedby refid="emergency__stop__handling_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/emergency_stop_handling.h</label>
+        <link refid="emergency__stop__handling_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c</label>
+        <link refid="emergency__stop__handling_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</label>
+        <link refid="dynamic__functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/emergency_stop_handling.h</label>
+        <link refid="emergency__stop__handling_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="emergency__stop__handling_8h_1ad5606533884f027a214fb679799e44c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void emergency_stop_handling</definition>
+        <argsstring>(struct elevator ele[], unsigned int *timer)</argsstring>
+        <name>emergency_stop_handling</name>
+        <param>
+          <type>struct <ref refid="structelevator" kindref="compound">elevator</ref></type>
+          <declname>ele</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/emergency_stop_handling.h" line="13" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c" bodystart="22" bodyend="92" declfile="C:/Users/Work/git_repo/elevator_simulator/include/emergency_stop_handling.h" declline="13" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>contains declaration for the emergency_stop_handling() function. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Divyalakshmi Padmanaban </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>__EMERGENCY_STOP_HANDLING_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__EMERGENCY_STOP_HANDLING_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>emergency_stop_handling(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>ele[],</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*timer);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/emergency_stop_handling.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>C:/Users/Work/git_repo/elevator_simulator/include</compoundname>
+    <innerfile refid="add__passenger__floor_8h">add_passenger_floor.h</innerfile>
+    <innerfile refid="add__request__queue_8h">add_request_queue.h</innerfile>
+    <innerfile refid="average__waiting__time_8h">average_waiting_time.h</innerfile>
+    <innerfile refid="cli__update_8h">cli_update.h</innerfile>
+    <innerfile refid="count__passenger_8h">count_passenger.h</innerfile>
+    <innerfile refid="create__elevator__array_8h">create_elevator_array.h</innerfile>
+    <innerfile refid="create__floor__array_8h">create_floor_array.h</innerfile>
+    <innerfile refid="dynamic__functions_8h">dynamic_functions.h</innerfile>
+    <innerfile refid="dynamic__simulation_8h">dynamic_simulation.h</innerfile>
+    <innerfile refid="emergency__stop__handling_8h">emergency_stop_handling.h</innerfile>
+    <innerfile refid="functions_8h">functions.h</innerfile>
+    <innerfile refid="globals_8h">globals.h</innerfile>
+    <innerfile refid="input__after__stop_8h">input_after_stop.h</innerfile>
+    <innerfile refid="input__floors_8h">input_floors.h</innerfile>
+    <innerfile refid="input__lifts_8h">input_lifts.h</innerfile>
+    <innerfile refid="input__static__dynamic_8h">input_static_dynamic.h</innerfile>
+    <innerfile refid="is__lift__empty_8h">is_lift_empty.h</innerfile>
+    <innerfile refid="is__lift__on__floor_8h">is_lift_on_floor.h</innerfile>
+    <innerfile refid="max__waiting__time_8h">max_waiting_time.h</innerfile>
+    <innerfile refid="moving__lift__down_8h">moving_lift_down.h</innerfile>
+    <innerfile refid="moving__lift__up_8h">moving_lift_up.h</innerfile>
+    <innerfile refid="passengers__drop_8h">passengers_drop.h</innerfile>
+    <innerfile refid="passengers__take__in_8h">passengers_take_in.h</innerfile>
+    <innerfile refid="read__passenger_8h">read_passenger.h</innerfile>
+    <innerfile refid="read__user__input__validate_8h">read_user_input_validate.h</innerfile>
+    <innerfile refid="remove__passenger__floor_8h">remove_passenger_floor.h</innerfile>
+    <innerfile refid="remove__passenger__queue_8h">remove_passenger_queue.h</innerfile>
+    <innerfile refid="simulations_8h">simulations.h</innerfile>
+    <innerfile refid="static__simulation_8h">static_simulation.h</innerfile>
+    <innerfile refid="structures_8h">structures.h</innerfile>
+    <innerfile refid="travel__log__file_8h">travel_log_file.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/"/>
+  </compounddef>
+</doxygen>

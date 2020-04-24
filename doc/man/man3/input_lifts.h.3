@@ -1,24 +1,97 @@
-.TH "input_lifts.h" 3 "Mon Apr 20 2020" "Elevator simulation" \" -*- nroff -*-
+.TH "C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-input_lifts.h \- Inputs the number of lifts from user\&.  
+C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h \- contains declaration for the \fBinput_lifts()\fP function\&.  
 
 .SH SYNOPSIS
 .br
 .PP
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "int \fBinput_lifts\fP (void)"
+.RI "int \fBinput_lifts\fP (int mode)"
 .br
+.RI "Prompt the user to enter the number of lifts and takes the input\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-Inputs the number of lifts from user\&. 
+contains declaration for the \fBinput_lifts()\fP function\&. 
 
 
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.PP
+Definition in file \fBinput_lifts\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int input_lifts (int mode)"
+
+.PP
+Prompt the user to enter the number of lifts and takes the input\&. The function prompts the user to enter the number of lifts\&. If the lift count is less than one or greater than 100 (mode 0) or 10 (mode 1)the function displays an error message and returns -1\&. If the user enters anything other than a numeric entry\&. The function displays and error message, discards all inputs in stdin stream and returns -1\&. If the user enters numeric value\&. It accepts the only Whole number part of the entry and returns the entered whole number value\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP integer to select mode\&. mode 0 for 100 max, 1 for 10 max numbers\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Returns -1 if errors in input and integer if input is fine\&. 
+.RE
+.PP
+if the scanf does not read anything, clear from the stdin buffer and return -1
+.PP
+Definition at line 28 of file input_lifts\&.c\&.
+.PP
+.nf
+29 {
+30     int temp;
+31     puts("Please Enter an integer number for the number of Elevator in building\&.");
+32     int bounds = 0;
+33     if (mode == 0)
+34     {
+35         puts("Valid entries are 1-100");
+36         bounds = 100;
+37     }
+38     if (mode == 1)
+39     {
+40         puts("Valid entries are 1-10");
+41         bounds = 10;
+42     }
+43     int result = scanf("%d", &temp);
+44     //printf("This is result %d \n",result);
+45 
+47     if (result == 0)
+48     {
+49         puts("Non-integer input entered\&. Please enter an integer\&.\n");
+50         temp = -1;
+51     }
+52     else if (temp < 1)
+53     {
+54         puts("Value entered is less than 1");
+55         temp = -1;
+56     }
+57     else if (temp > bounds)
+58     {
+59         printf("Value entered is greater than %d\n", bounds);
+60         temp = -1;
+61     }
+62     scanf("%*[^\n]"); //discards the leftover inputs in stdin buffer
+63     return temp;
+64 }
+.fi
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Elevator simulation from the source code\&.
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

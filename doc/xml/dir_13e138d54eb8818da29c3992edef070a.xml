@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_13e138d54eb8818da29c3992edef070a" kind="dir">
+    <compoundname>C:/Users/Work/git_repo/elevator_simulator/test</compoundname>
+    <innerdir refid="dir_79674a933289b4de086b67d9586e47c8">C:/Users/Work/git_repo/elevator_simulator/test/data</innerdir>
+    <innerdir refid="dir_68def62d34bdcd9a1f109a12da3cfb88">C:/Users/Work/git_repo/elevator_simulator/test/include</innerdir>
+    <innerdir refid="dir_1a47db7a17f096df444be21df609812a">C:/Users/Work/git_repo/elevator_simulator/test/results</innerdir>
+    <innerfile refid="test__add__passenger__floor_8c">test_add_passenger_floor.c</innerfile>
+    <innerfile refid="test__add__request__queue_8c">test_add_request_queue.c</innerfile>
+    <innerfile refid="test__average__waiting__time_8c">test_average_waiting_time.c</innerfile>
+    <innerfile refid="test__cases_8c">test_cases.c</innerfile>
+    <innerfile refid="test__cli__update_8c">test_cli_update.c</innerfile>
+    <innerfile refid="test__count__passenger_8c">test_count_passenger.c</innerfile>
+    <innerfile refid="test__create__elevator__array_8c">test_create_elevator_array.c</innerfile>
+    <innerfile refid="test__create__floor__array_8c">test_create_floor_array.c</innerfile>
+    <innerfile refid="test__input__after__stop_8c">test_input_after_stop.c</innerfile>
+    <innerfile refid="test__input__floors_8c">test_input_floors.c</innerfile>
+    <innerfile refid="test__input__lifts_8c">test_input_lifts.c</innerfile>
+    <innerfile refid="test__is__lift__empty_8c">test_is_lift_empty.c</innerfile>
+    <innerfile refid="test__is__lift__on__floor_8c">test_is_lift_on_floor.c</innerfile>
+    <innerfile refid="test__main_8c">test_main.c</innerfile>
+    <innerfile refid="test__max__waiting__time_8c">test_max_waiting_time.c</innerfile>
+    <innerfile refid="test__moving__lift__down_8c">test_moving_lift_down.c</innerfile>
+    <innerfile refid="test__passenger__take__in_8c">test_passenger_take_in.c</innerfile>
+    <innerfile refid="test__read__passenger_8c">test_read_passenger.c</innerfile>
+    <innerfile refid="test__remove__passenger__floor_8c">test_remove_passenger_floor.c</innerfile>
+    <innerfile refid="test__remove__passenger__queue_8c">test_remove_passenger_queue.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/"/>
+  </compounddef>
+</doxygen>

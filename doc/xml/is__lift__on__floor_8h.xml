@@ -2,6 +2,104 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="is__lift__on__floor_8h" kind="file" language="C++">
     <compoundname>is_lift_on_floor.h</compoundname>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <includedby refid="functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/functions.h</includedby>
+    <includedby refid="is__lift__on__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/is_lift_on_floor.c</includedby>
+    <includedby refid="test__is__lift__on__floor_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/is_lift_on_floor.h</label>
+        <link refid="is__lift__on__floor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</label>
+        <link refid="test__create__elevator__array_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/is_lift_on_floor.h</label>
+        <link refid="is__lift__on__floor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</label>
+        <link refid="static__simulation_8c"/>
+      </node>
+      <node id="11">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/is_lift_on_floor.c</label>
+        <link refid="is__lift__on__floor_8c"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</label>
+        <link refid="test__is__lift__on__floor_8c"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+    </invincdepgraph>
       <sectiondef kind="func">
       <memberdef kind="function" id="is__lift__on__floor_8h_1a8331ecca3b0a14f407e7e9e354d01998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -20,10 +118,20 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>@ details Constraints Checks if the input parameter index(i.e)elevator number;is within the range of number of elevators in building. If index is greater than the number of elevators actually present in building;error message will be displayed and returns -1. Checks the condition of the lift . <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function takes the elevator structure and index. @ return The function 0 if lift is not on floor elso 0. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="is_lift_on_floor.h" line="7" column="12" declfile="is_lift_on_floor.h" declline="7" declcolumn="12"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/is_lift_on_floor.h" line="10" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/is_lift_on_floor.c" bodystart="22" bodyend="44" declfile="C:/Users/Work/git_repo/elevator_simulator/include/is_lift_on_floor.h" declline="10" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -36,10 +144,13 @@
 <codeline lineno="4"><highlight class="preprocessor">#ifndef<sp/>__IS_LIFT_ON_FLOOR_H__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__IS_LIFT_ON_FLOOR_H__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_lift_on_floor(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elev[]<sp/>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endifgit<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="is__lift__on__floor_8h_1a8331ecca3b0a14f407e7e9e354d01998" kindref="member">is_lift_on_floor</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>elev[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="is_lift_on_floor.h"/>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/is_lift_on_floor.h"/>
   </compounddef>
 </doxygen>

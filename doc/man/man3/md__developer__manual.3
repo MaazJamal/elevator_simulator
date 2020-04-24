@@ -1,0 +1,110 @@
+.TH "md__developer__manual" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__developer__manual \- Introduction 
+Elevator simulation is a software to simulate the operations of multiple elevators in a commercial building, by creating an algorithm\&.
+.SH "Requirement"
+.PP
+Software simulates Elevator scheduling in a building for an day by reading the input file with Paaseger ID,timestamp,start and destination floor\&. The text file must be stored in data/input\&.txt\&.
+.SH "Assumption"
+.PP
+.IP "\(bu" 2
+User gives the number of floors and elevators in the building, the value should be less than or equal to 100\&. In dynamic case this is reduced to 10 to make all elevators fit the screen\&.
+.IP "\(bu" 2
+The elevators are assumed to be at the same location in the building\&.
+.IP "\(bu" 2
+At the start of the simulation all the elevators are assumed to be on the 1st floor\&.
+.IP "\(bu" 2
+The weight of each passenger is assumed to be constant\&. This allows the simulator to establish weight limits as the number of passengers in the elevator\&. In this program it is set to 10\&.
+.IP "\(bu" 2
+A fixed time has been assumed for lifts to move from x floor to x+1 and x-1 floors\&.Each elevator takes 3 seconds to go from one floor to another floor\&.
+.IP "\(bu" 2
+The time that the elevator stops on a floor depends on that number of passengers getting in or out\&. It is assumed that it takes 2 sec for a passenger to get in or out\&. So the stop time of an elevator at a floor will be 2n, where n is the number of passengers getting in or out of the lift\&.
+.IP "\(bu" 2
+The elevators are assumed to have a single entry point for both exit and entry\&.
+.PP
+.SH "Program Flow"
+.PP
+The program flow for the application is as follows:
+.PP
+.IP "\(bu" 2
+The \fBmain\&.c\fP file calls the functions for static_simulation and in release 2 dynamc_simulation based on user input to run the alogorithm\&.
+.IP "\(bu" 2
+The static_simulation/dynamc_simulation function calls:
+.IP "  \(bu" 4
+The function in \fBinput_lifts\&.c\fP to get number of lifts from the user\&.
+.IP "  \(bu" 4
+The function in \fBinput_floors\&.c\fP to get number of floors from the user\&.
+.IP "  \(bu" 4
+The function in \fBcreate_elevator_array\&.c\fP to create array for every elevator\&.
+.IP "  \(bu" 4
+The function in \fBcreate_floor_array\&.c\fP to create array for every floor to hold waiting passeger\&.
+.IP "  \(bu" 4
+The function in \fBcount_passenger\&.c\fP to count the number of passenger in the input file\&.
+.IP "  \(bu" 4
+The function in \fBread_passenger\&.c\fP to store the passenger details to passenger structure\&.
+.IP "  \(bu" 4
+The function in \fBadd_request_queue\&.c\fP to add passenger requests to a queue\&.
+.IP "  \(bu" 4
+The function in \fBis_lift_on_floor\&.c\fP to check the lift status\&. If it is moving or not\&.
+.IP "  \(bu" 4
+The function in \fBpassengers_drop\&.c\fP to drop the passenger at the floor returning number of passengers dropped\&.
+.IP "  \(bu" 4
+The function in \fBpassengers_take_in\&.c\fP to take the passenger on floor based on maiximum count and space in elevator\&.
+.IP "  \(bu" 4
+The function in \fBadd_passenger_floor\&.c\fP to add passenger to the floor array\&.
+.IP "  \(bu" 4
+The function in \fBremove_passenger_queue\&.c\fP to remove the passenger from request queue\&.
+.IP "  \(bu" 4
+The function in \fBmoving_lift_down\&.c\fP to change lift direction to down\&.
+.IP "  \(bu" 4
+The function in \fBmoving_lift_up\&.c\fP to change the lift direction to up\&.
+.IP "  \(bu" 4
+The function in \fBaverage_waiting_time\&.c\fP to calculate the average and waiting time\&.
+.IP "  \(bu" 4
+The function in \fBmax_waiting_time\&.c\fP to calculate maximum waiting time\&.
+.IP "  \(bu" 4
+The function in \fBis_lift_empty\&.c\fP to check the space in elevator
+.IP "  \(bu" 4
+The function in \fBremove_passenger_floor\&.c\fP to remove the passenger from the floor array\&. The dynamc_simulation also calls these functions:
+.IP "  \(bu" 4
+The function in \fBinput_static_dynamic\&.c\fP to get whether user want static or dynamic simulation\&.
+.IP "  \(bu" 4
+The function in \fBread_user_input_validate\&.c\fP to read and validate the inputs from user console for a passenger\&.
+.IP "  \(bu" 4
+The function in \fBemergency_stop_handling\&.c\fP to to bring the lifts to nearest floor incase of emergency\&.
+.IP "  \(bu" 4
+The function in \fBcli_update\&.c\fP to display elevator information on screen\&.
+.IP "  \(bu" 4
+The function in \fBinput_after_stop\&.c\fP to get input from user when emergency situation encountered\&.
+.IP "  \(bu" 4
+The function in \fBtravel_log_file\&.c\fP is used to write the two output files to the data folder travel_log\&.txt and waiting_times\&.txt\&.
+.PP
+
+.IP "\(bu" 2
+The program implements the SCAN algorithm\&. The elevators move in one direction until all requests along it path are completed or it reaches the end (top or ground floor)\&. At which point it changes direction and waits for new requests before moving again in required direction\&.
+.IP "  \(bu" 4
+Down in case of at top floor\&.
+.IP "  \(bu" 4
+Up in case of ground floor\&.
+.IP "  \(bu" 4
+Any direction in all other cases\&.
+.PP
+
+.IP "\(bu" 2
+All the elevators start at ground floor with direction of travel set to up\&.
+.IP "\(bu" 2
+The passenger array stores the data from input file\&. This data is then added to passenger_queue when the time of arrival of the passenger = the time of the simulation\&. This is done at very start of the main while loop in static_simulation and dynamic simulation function\&.
+.IP "\(bu" 2
+This is followed by checking if passenger need to get on of off the elevator at the floor the elevator is currently at\&.
+.IP "\(bu" 2
+The passenger_queue is then traversed to check if any passengers in the queue can have their requests processed\&. Those passed are removed from queue and added to the proper entry in floor_array\&. Which is an array of passenger pointers\&.
+.IP "\(bu" 2
+The elevator timer is then checked and decremened if it greater than 0\&. If it is equal to 0\&. We check if passengers need to get off or do we need to change the floor of the elevator\&. In case of changing floor +3 seconds are added to the elevator timer\&.
+.IP "\(bu" 2
+The program continues until the iterator reaches predifined values\&. After which the average and max time are written to the files and the program exits\&. 
+.PP
+.SH "Documentation"
+.PP
+Complete documentation of the source code can be found \fChere\fP\&. 

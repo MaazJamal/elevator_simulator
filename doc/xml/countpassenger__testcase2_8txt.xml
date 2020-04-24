@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="countpassenger__testcase2_8txt" kind="file" language="C++">
+    <compoundname>countpassenger_testcase2.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/data/countpassenger_testcase2.txt"/>
+  </compounddef>
+</doxygen>

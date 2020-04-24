@@ -1,6 +1,6 @@
 /**
- * @file input_lifts.c
- * @brief contains the definition of input_lifts
+ * @file passengers_take_in.c
+ * @brief contains the definition of passengers_take_in
  * 
  * @author Maaz Jamal
  * 

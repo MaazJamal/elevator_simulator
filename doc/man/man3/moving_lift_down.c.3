@@ -1,0 +1,79 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_down.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/src/moving_lift_down.c \- contains the definition of moving_lift_down  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'moving_lift_down\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmoving_lift_down\fP (struct \fBelevator\fP elevator_arr[], unsigned int index)"
+.br
+.RI "changes the direction of lift to down\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains the definition of moving_lift_down 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Maaz Jamal 
+.RE
+.PP
+
+.PP
+Definition in file \fBmoving_lift_down\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int moving_lift_down (struct \fBelevator\fP elevator_arr[], unsigned int index)"
+
+.PP
+changes the direction of lift to down\&. This function takes as input an elevator array and changes the direction of the elevator at the specified index position\&. sets \fBelevator\&.direction_up\fP to false and \fBelevator\&.direction_down\fP to true\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelevator_arr[]\fP an array of type struct elevator 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Returns -1 if errors in function call and 1 if function runs properly\&. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file moving_lift_down\&.c\&.
+.PP
+.nf
+26 {
+27 
+28     if (index >= elevator_count)
+29     {
+30         fprintf(stderr, "index >= elevator_arr size\&. %d >= %d \n", index, elevator_count);
+31         return -1;
+32     }
+33     elevator_arr[index]\&.direction_up = false;
+34     elevator_arr[index]\&.direction_down = true;
+35     return 1;
+36 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

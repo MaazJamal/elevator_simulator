@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__remove__passenger__queue_8c" kind="file" language="C++">
+    <compoundname>test_remove_passenger_queue.c</compoundname>
+    <includes refid="remove__passenger__queue_8h" local="yes">remove_passenger_queue.h</includes>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>remove_passenger_queue.h</label>
+        <link refid="remove__passenger__queue_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c</label>
+        <link refid="test__remove__passenger__queue_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__remove__passenger__queue_8c_1a662b7669bfb962286682058828691a19" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpassenger" kindref="compound">passenger</ref></type>
+        <definition>struct passenger temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <initializer>= {0, 0, 0, 0, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="16" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__remove__passenger__queue_8c_1a3efb0e1a16208deecbd84c15401f7cf8" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="19" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__remove__passenger__queue_8c_1a617b005383213bfd374f747c63d1acc8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void case_1</definition>
+        <argsstring>(void)</argsstring>
+        <name>case_1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function tests case when empty head is passed. The function passes and empty head pointer to remove_passenger_queue. The function should cause the program to exit with assetion error. <simplesect kind="return"><para>void does not return anything.<itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="63" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="63" bodyend="67" declfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" declline="11" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__remove__passenger__queue_8c_1adff4968e340aecbd5b4c445208fca9f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void case_2</definition>
+        <argsstring>(void)</argsstring>
+        <name>case_2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function tests case when negtive index is passed. The function passes a negative index to remove_passenger_queue. The function should cause the program to exit with assetion error. <simplesect kind="return"><para>void does not return anything.<itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="74" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="74" bodyend="80" declfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" declline="12" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__remove__passenger__queue_8c_1a61fdcc5cc9a999a7fac4bdeb5788e257" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void case_3</definition>
+        <argsstring>(void)</argsstring>
+        <name>case_3</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function tests case when index greater than length is passed. The function passes a index greater than queue length to remove_passenger_queue. The function should cause the program to exit with assetion error. <simplesect kind="return"><para>void does not return anything.<itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="87" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="87" bodyend="96" declfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" declline="13" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__remove__passenger__queue_8c_1a3c456cbb8c1b0588aa93f3f737571662" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void case_4</definition>
+        <argsstring>(void)</argsstring>
+        <name>case_4</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function tests case one node queue is passed. The function passes a one node queue and index 0 to remove_passenger_queue. The function tests if resultant pointer points to NULL. <simplesect kind="return"><para>void does not return anything.<itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="103" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="103" bodyend="121" declfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" declline="14" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__remove__passenger__queue_8c_1a1c5bc670f5cc4f0952f8df398ae079ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void case_5</definition>
+        <argsstring>(void)</argsstring>
+        <name>case_5</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function tests case three node queue is passed. The function passes a three node queue and index 1 to remove_passenger_queue. The function tests if middle pointer is removed from queue. <simplesect kind="return"><para>void does not return anything.<itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="128" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="128" bodyend="167" declfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" declline="15" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__remove__passenger__queue_8c_1a19ddddd2d940aff616e7153485e63c32" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void case_6</definition>
+        <argsstring>(void)</argsstring>
+        <name>case_6</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function tests case three node queue is passed. The function passes a three node queue and index 2 to remove_passenger_queue. The function tests if tail pointer is remomved from the queue. <simplesect kind="return"><para>void does not return anything.<itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="174" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="174" bodyend="217" declfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" declline="16" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="test__remove__passenger__queue_8c_1a0e1286ef4fbc1b7fa890bc2f1f0e2174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_remove_passenger_queue</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_remove_passenger_queue</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" line="21" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c" bodystart="21" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains function test_remove_passenger_queue() that provides unit testing for function <ref refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kindref="member">remove_passenger_queue()</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="remove__passenger__queue_8h" kindref="compound">remove_passenger_queue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_1(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_2(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_3(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_4(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_5(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_6(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>temp<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">FILE<sp/>*f;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_remove_passenger_queue(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>f<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;test/results/results_test_remove_passenger_queue.txt&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>choice<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Choose<sp/>between<sp/>the<sp/>tests:<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;1-<sp/>Provide<sp/>an<sp/>empty<sp/>list.<sp/>The<sp/>program<sp/>should<sp/>exit&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;2-<sp/>Input<sp/>index<sp/>is<sp/>negative<sp/>number.<sp/>The<sp/>program<sp/>should<sp/>exit.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;3-<sp/>Provide<sp/>a<sp/>2<sp/>node<sp/>linked<sp/>list<sp/>and<sp/>input<sp/>index<sp/>=2.<sp/>The<sp/>program<sp/>should<sp/>exit.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;4-<sp/>Provide<sp/>list<sp/>with<sp/>just<sp/>one<sp/>node.<sp/>The<sp/>function<sp/>returns<sp/>NULL<sp/>pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;4-<sp/>Provide<sp/>list<sp/>with<sp/>3<sp/>nodes<sp/>and<sp/>index<sp/>=1.<sp/>Return<sp/>head<sp/>pointer<sp/>with<sp/>middle<sp/>node<sp/>removed.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;4-<sp/>Provide<sp/>list<sp/>with<sp/>3<sp/>nodes<sp/>and<sp/>index=2.<sp/>Return<sp/>head<sp/>pointer<sp/>with<sp/>tail<sp/>node<sp/>removed.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>&amp;choice);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(choice)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case_1();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case_2();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case_3();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case_4();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case_5();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case_6();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;incorrect<sp/>input<sp/>run<sp/>program<sp/>again&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>fflush(f);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(f);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_1(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*head<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kindref="member">remove_passenger_queue</ref>(0,<sp/>head);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_2(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*head<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>*head<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kindref="member">remove_passenger_queue</ref>(-2,<sp/>head);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_3(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*head<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>*head<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*second<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>*second<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>second;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>second-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kindref="member">remove_passenger_queue</ref>(2,<sp/>head);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_4(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*head<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>*head<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*result<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kindref="member">remove_passenger_queue</ref>(0,<sp/>head);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>result<sp/>points<sp/>to<sp/>NULL<sp/>%p<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>result);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>result<sp/>points<sp/>to<sp/>NULL<sp/>%p<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>result);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>result<sp/>points<sp/>to<sp/>%p<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>result);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>result<sp/>points<sp/>to<sp/>%p<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>result);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>fflush(f);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_5(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*head<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>*head<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*second<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>*second<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*third<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>second;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>second-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>third;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>third-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*result<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*middle<sp/>=<sp/>second;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kindref="member">remove_passenger_queue</ref>(1,<sp/>head);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>head)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>middle<sp/>element<sp/>return<sp/>points<sp/>to<sp/>head<sp/>%p<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>head);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>middle<sp/>element<sp/>return<sp/>points<sp/>to<sp/>head<sp/>%p<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>head);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>middle<sp/>element<sp/>result<sp/>does<sp/>not<sp/>points<sp/>to<sp/><sp/>head<sp/>%p<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>head);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>middle<sp/>element<sp/>result<sp/>does<sp/>not<sp/>points<sp/>to<sp/><sp/>head<sp/>%p<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>head);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>==<sp/>middle)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>middle<sp/>element<sp/>MIDDLE<sp/>ELEMENT<sp/>NOT<sp/>REMOVED<sp/>PROPERLY.<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>middle<sp/>element<sp/>MIDDLE<sp/>ELEMENT<sp/>NOT<sp/>REMOVED<sp/>PROPERLY.<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>==<sp/>third)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>middle<sp/>element<sp/>MIDDLE<sp/>ELEMENT<sp/>REMOVED<sp/>PROPERLY<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>middle<sp/>element<sp/>MIDDLE<sp/>ELEMENT<sp/>REMOVED<sp/>PROPERLY<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>middle<sp/>element<sp/><sp/>MIDDLE<sp/>ELEMENT<sp/>NOT<sp/>REMOVED<sp/>PROPERLY<sp/>HEAD<sp/>NOT<sp/>POINT<sp/>TO<sp/>THIRD<sp/>ELEMENT<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>middle<sp/>element<sp/><sp/>MIDDLE<sp/>ELEMENT<sp/>NOT<sp/>REMOVED<sp/>PROPERLY<sp/>HEAD<sp/>NOT<sp/>POINT<sp/>TO<sp/>THIRD<sp/>ELEMENT<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>fflush(f);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>case_6(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*head<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>*head<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*second<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>*second<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*third<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref>));</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>second;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>second-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>third;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>third-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>*result<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="remove__passenger__queue_8h_1aaf649634b0615e3c784050409bd55e58" kindref="member">remove_passenger_queue</ref>(2,<sp/>head);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>head)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>tail<sp/>return<sp/>points<sp/>to<sp/>head<sp/>%p<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>head);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>tail<sp/>return<sp/>points<sp/>to<sp/>head<sp/>%p<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>head);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>tail<sp/>result<sp/>does<sp/>not<sp/>points<sp/>to<sp/><sp/>head<sp/>%p<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>head);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>tail<sp/>result<sp/>does<sp/>not<sp/>points<sp/>to<sp/><sp/>head<sp/>%p<sp/>%p\n&quot;</highlight><highlight class="normal">,<sp/>result,<sp/>head);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>==<sp/>second)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>tail<sp/>Head<sp/>points<sp/>to<sp/>second<sp/>node.<sp/>Structure<sp/>maintained.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>tail<sp/>Head<sp/>points<sp/>to<sp/>second<sp/>node.<sp/>Structure<sp/>maintained.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>tail<sp/>Head<sp/>does<sp/>not<sp/>point<sp/>to<sp/>second<sp/>node.<sp/>Sturucture<sp/>not<sp/>maintained.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>tail<sp/>Head<sp/>does<sp/>not<sp/>point<sp/>to<sp/>second<sp/>node.<sp/>Sturucture<sp/>not<sp/>maintained.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(head-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref>-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>==<sp/>NULL<sp/>&amp;&amp;<sp/>second-&gt;<ref refid="structpassenger_1a74a0c954cb7d0e4590b0a2715a768348" kindref="member">next</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>tail<sp/>Last<sp/>Element<sp/>Removed<sp/>Succesfully.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Removing<sp/>tail<sp/>Last<sp/>Element<sp/>Removed<sp/>Succesfully.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>tail<sp/>Last<sp/>Element<sp/>Not<sp/>Removed<sp/>Succesfully.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Removing<sp/>tail<sp/>Last<sp/>Element<sp/>Not<sp/>Removed<sp/>Succesfully.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>fflush(f);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_remove_passenger_queue.c"/>
+  </compounddef>
+</doxygen>

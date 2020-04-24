@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="cli__update_8h" kind="file" language="C++">
+    <compoundname>cli_update.h</compoundname>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <includedby refid="dynamic__functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</includedby>
+    <includedby refid="cli__update_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/cli_update.c</includedby>
+    <includedby refid="emergency__stop__handling_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c</includedby>
+    <includedby refid="test__cli__update_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_cli_update.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h</label>
+        <link refid="cli__update_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/emergency_stop_handling.c</label>
+        <link refid="emergency__stop__handling_8c"/>
+      </node>
+      <node id="7">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cli_update.c</label>
+        <link refid="test__cli__update_8c"/>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/cli_update.c</label>
+        <link refid="cli__update_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h</label>
+        <link refid="cli__update_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_functions.h</label>
+        <link refid="dynamic__functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cli__update_8h_1a61dffc3815d70e783c61e48ec93bb2c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cli_update</definition>
+        <argsstring>(struct elevator arr[], unsigned int loop_time)</argsstring>
+        <name>cli_update</name>
+        <param>
+          <type>struct <ref refid="structelevator" kindref="compound">elevator</ref></type>
+          <declname>arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>loop_time</declname>
+        </param>
+        <briefdescription>
+<para>Updates the command line interface with the elevator data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the screen and repopulates it with the updated elevator data. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>struct elevator that is an array of elevators. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Checks if we are in unix/cygwin environment or windows environment</para>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h" line="12" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/cli_update.c" bodystart="19" bodyend="69" declfile="C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h" declline="12" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>contains declarations for cli_update function. Used to update the command line interface of the function. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>__CLI_UPDATE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CLI_UPDATE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cli__update_8h_1a61dffc3815d70e783c61e48ec93bb2c9" kindref="member">cli_update</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>arr[],<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>loop_time);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/cli_update.h"/>
+  </compounddef>
+</doxygen>

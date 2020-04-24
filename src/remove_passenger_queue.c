@@ -1,3 +1,11 @@
+/** @file remove_passenger_queue.c
+ * 
+ * @brief contains the definition of remove_passenger_queue(). This function
+ * is removes a passenger from the passenger_queue.
+ * 
+ * @author Maaz Jamal.
+ * */
+
 #include "remove_passenger_queue.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -17,12 +25,12 @@
 struct passenger *remove_passenger_queue(int index, struct passenger *head)
 {
 
-    assert(head != NULL); //?< Precondition that head not be Null
-    assert(index > -1);   //?< Precondition that index not be negative
+    assert(head != NULL); //!< Precondition that head not be Null
+    assert(index > -1);   //!< Precondition that index not be negative
 
     static int removal_count = 0;
     struct passenger *temp = NULL;
-    struct passenger *cur = head; //?< stores the current position of pointer to be used in while loop
+    struct passenger *cur = head; //!< stores the current position of pointer to be used in while loop
     if (index == 0)
     {
         temp = head;

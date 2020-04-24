@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="results__remove__passenger__floor_8txt" kind="file" language="C++">
+    <compoundname>results_remove_passenger_floor.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">PASS:<sp/>Removed<sp/>1st<sp/>Passenger.<sp/>Id<sp/>on<sp/>floor<sp/>is<sp/>20</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">PASS:<sp/>Removed<sp/>2nd<sp/>Passenger.<sp/>Pointing<sp/>to<sp/>NULL<sp/>0000000000000000</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/results/results_remove_passenger_floor.txt"/>
+  </compounddef>
+</doxygen>

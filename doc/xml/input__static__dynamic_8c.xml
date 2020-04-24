@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="input__static__dynamic_8c" kind="file" language="C++">
+    <compoundname>input_static_dynamic.c</compoundname>
+    <includes refid="input__static__dynamic_8h" local="yes">../include/input_static_dynamic.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>../include/input_static_dynamic.h</label>
+        <link refid="input__static__dynamic_8h"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/input_static_dynamic.c</label>
+        <link refid="input__static__dynamic_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="input__static__dynamic_8c_1a67da0c3768f671c95fda28d1d1f3fd43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int input_static_dynamic</definition>
+        <argsstring>(void)</argsstring>
+        <name>input_static_dynamic</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/src/input_static_dynamic.c" line="24" column="5" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/input_static_dynamic.c" bodystart="24" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Prompts user for type of simulation they want to run. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>@Author Ritika Arora</para>
+<para>@detail Asks user the type of simulation he wants to run. For, static, he has to press 1 and for dynamic, he has to press 2. If 1 is entered by the user, then it will assign 0 to the local variable simulation_type. If 2 is entered, then it assigns 1 to the variable.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function takes no inputs</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">simulation_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contains the value to be returned to decide which type of simulation runs.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Returns 0 for static simulation, 1 for dynamic simulation and -1 for invalid input. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/input_static_dynamic.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_static_dynamic(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input,simulation_type;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;What<sp/>type<sp/>of<sp/>simulation<sp/>you<sp/>want<sp/>to<sp/>run?<sp/>\n<sp/>Press<sp/>1<sp/>for<sp/>Static<sp/>or<sp/>2<sp/>for<sp/>Dynamic?\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>&amp;input);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input<sp/>==<sp/>1){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>simulation_type<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input<sp/>==2){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>simulation_type<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Entered<sp/>invalid<sp/>value.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>simulation_type<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;%*[^\n]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>simulation_type;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/src/input_static_dynamic.c"/>
+  </compounddef>
+</doxygen>

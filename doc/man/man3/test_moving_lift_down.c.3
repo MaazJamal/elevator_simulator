@@ -1,0 +1,174 @@
+.TH "C:/Users/Work/git_repo/elevator_simulator/test/test_moving_lift_down.c" 3 "Fri Apr 24 2020" "Version 2.0" "Elevator Simulator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Work/git_repo/elevator_simulator/test/test_moving_lift_down.c \- contains test cases for \fBmoving_lift_down\&.c\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'moving_lift_down\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'structures\&.h'\fP
+.br
+\fC#include 'globals\&.h'\fP
+.br
+\fC#include 'stdlib\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_moving_lift_down\fP (void)"
+.br
+.RI "This function test the function moving_lift_down\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains test cases for \fBmoving_lift_down\&.c\fP 
+
+
+.PP
+Definition in file \fBtest_moving_lift_down\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void test_moving_lift_down (void)"
+
+.PP
+This function test the function moving_lift_down\&. Function tests array out of bounds check\&. Change elevator direction test\&. 
+.PP
+Definition at line 18 of file test_moving_lift_down\&.c\&.
+.PP
+.nf
+19 {
+20     struct elevator arr[3];
+21     struct elevator temp = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+22     FILE *test_results = fopen("test/results/results_test_moving_lift_down\&.txt", "w");
+23     arr[1] = temp;
+24     arr[2] = temp;
+25     arr[0] = temp;
+26 
+27     elevator_count = 3;
+28     char *pass = "PASS:";
+29     char *fail = "FAIL:";
+30 
+31     int result = moving_lift_down(arr, 3);
+32 
+33     if (result == -1)
+34     {
+35         char temp[100];
+36         sprintf(temp, "%s: Function returned %d Expected -1 \&. Array out of bound check working\&.\n",
+37                 pass, result);
+38         printf(temp);
+39         fprintf(test_results, temp);
+40     }
+41     else
+42     {
+43         char temp[100];
+44         sprintf(temp, "%s: Array values properly changed: direction_up = %d \&.\
+45                         direction_down = %d, Return = %d\n",
+46                 fail, arr[2]\&.direction_up, arr[2]\&.direction_down, result);
+47         printf(temp);
+48         fprintf(test_results, temp);
+49     }
+50 
+51     result = moving_lift_down(arr, 2);
+52     if (result != -1)
+53     {
+54         result = arr[2]\&.direction_up == 0 && arr[2]\&.direction_down == 1;
+55     }
+56     if (result == -1)
+57     {
+58         char temp[100];
+59         sprintf(temp, "%s: Function returned %d Expected 1\&.\n",
+60                 fail, result);
+61         printf(temp);
+62         fprintf(test_results, temp);
+63     }
+64     else
+65     {
+66         char temp[100];
+67         sprintf(temp, "%s: Array values properly changed: direction_up = %d \&.\
+68                         direction_down = %d, Return = %d\n",
+69                 pass, arr[2]\&.direction_up, arr[2]\&.direction_down, result);
+70         printf(temp);
+71         fprintf(test_results, temp);
+72     }
+73 
+74     result = arr[1]\&.direction_up == 0 && arr[1]\&.direction_down == 0;
+75     if (result == 1)
+76     {
+77         char temp[100];
+78         sprintf(temp, "%s: Rest of Array Unchanged direction_up = %d \&."
+79                       "direction_down = %d\n",
+80                 pass, arr[1]\&.direction_up, arr[1]\&.direction_down);
+81         printf(temp);
+82         fprintf(test_results, temp);
+83     }
+84 
+85     //Reapeat the tests but with ptr to a dynamicall allovated array
+86 
+87     struct elevator *ptr_arr = malloc(sizeof(struct elevator) * 3);
+88 
+89     result = moving_lift_down(ptr_arr, 3);
+90     if (result == -1)
+91     {
+92         char temp[100];
+93         sprintf(temp, "%s: Pointer: Function returned %d Expected -1 \&. Array out of bound check working\&.\n",
+94                 pass, result);
+95         printf(temp);
+96         fprintf(test_results, temp);
+97     }
+98     else
+99     {
+100         char temp[100];
+101         sprintf(temp, "%s: Pointer: Array values properly changed: direction_up = %d \&.\
+102                         direction_down = %d, Return = %d\n",
+103                 fail, ptr_arr[2]\&.direction_up, ptr_arr[2]\&.direction_down, result);
+104         printf(temp);
+105         fprintf(test_results, temp);
+106     }
+107 
+108     result = moving_lift_down(ptr_arr, 2);
+109     if (result != -1)
+110     {
+111         result = ptr_arr[2]\&.direction_up == 0 && ptr_arr[2]\&.direction_down == 1;
+112     }
+113     if (result == -1)
+114     {
+115         char temp[100];
+116         sprintf(temp, "%s: Pointer: Function returned %d Expected 1\&.\n",
+117                 fail, result);
+118         printf(temp);
+119         fprintf(test_results, temp);
+120     }
+121     else
+122     {
+123         char temp[100];
+124         sprintf(temp, "%s: Pointer: Array values properly changed: direction_up = %d \&.\
+125                         direction_down = %d, Return = %d\n",
+126                 pass, ptr_arr[2]\&.direction_up, ptr_arr[2]\&.direction_down, result);
+127         printf(temp);
+128         fprintf(test_results, temp);
+129     }
+130 
+131     result = ptr_arr[1]\&.direction_up == 0 && ptr_arr[1]\&.direction_down == 0;
+132     if (result == 1)
+133     {
+134         char temp[100];
+135         sprintf(temp, "%s: Pointer: Rest of Array Unchanged direction_up = %d \&."
+136                       "direction_down = %d\n",
+137                 pass, ptr_arr[1]\&.direction_up, ptr_arr[1]\&.direction_down);
+138         printf(temp);
+139         fprintf(test_results, temp);
+140     }
+141     fflush(test_results);
+142     fclose(test_results);
+143 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Elevator Simulator from the source code\&.

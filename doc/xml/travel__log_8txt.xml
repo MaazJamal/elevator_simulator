@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="travel__log_8txt" kind="file" language="C++">
+    <compoundname>travel_log.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="travel__log_8txt_1a13142be4174e7e78acda88137cfdb5d1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Passenger_ID</definition>
+        <argsstring></argsstring>
+        <name>Passenger_ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" line="1" column="1" bodyfile="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="travel__log_8txt_1a92528789c1376ffa35f205b215fac99e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Elevator_ID</definition>
+        <argsstring></argsstring>
+        <name>Elevator_ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" line="1" column="13" bodyfile="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="travel__log_8txt_1a3312ffcd70403d7a0bf59b7829a5063b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Passenger_In_time</definition>
+        <argsstring></argsstring>
+        <name>Passenger_In_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" line="1" column="24" bodyfile="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="travel__log_8txt_1a924d1803c69999330228fc5ccc5d19f9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Passenger_Entry_floor</definition>
+        <argsstring></argsstring>
+        <name>Passenger_Entry_floor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" line="1" column="41" bodyfile="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="travel__log_8txt_1af5f8757522bc2c1fbbecd6f8a6784db2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Passenger_Out_time</definition>
+        <argsstring></argsstring>
+        <name>Passenger_Out_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" line="1" column="62" bodyfile="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="travel__log_8txt_1a22f33f78ac824ec321a240fbf01cca2a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Passenger_Exit_floor</definition>
+        <argsstring></argsstring>
+        <name>Passenger_Exit_floor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" line="1" column="80" bodyfile="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Passenger_ID,Elevator_ID,Passenger_In_time,Passenger_Entry_floor,Passenger_Out_time,Passenger_Exit_floor</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">2,2,2,1,4,2</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">3,0,3,2,6,3</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">4,0,4,3,10,4</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">1,1,1,1,12,5</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">100,1,1,1,12,5</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">8,4,10,3,13,4</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">6,0,6,4,16,5</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">5,1,5,5,19,4</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">9,5,14,1,25,5</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">7,0,7,4,28,1</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">10,6,25,2,29,1</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/data/travel_log.txt"/>
+  </compounddef>
+</doxygen>

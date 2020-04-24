@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="test__max__waiting__time_8c" kind="file" language="C++">
+    <compoundname>test_max_waiting_time.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="globals_8h" local="yes">../include/globals.h</includes>
+    <includes refid="max__waiting__time_8h" local="yes">../include/max_waiting_time.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_max_waiting_time.c</label>
+        <link refid="test__max__waiting__time_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../include/globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="4">
+        <label>../include/max_waiting_time.h</label>
+        <link refid="max__waiting__time_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__max__waiting__time_8c_1a227294b48a939fdc568affbe6dc363be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_max_waiting_time</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_max_waiting_time</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_max_waiting_time.c" line="24" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/test/test_max_waiting_time.c" bodystart="24" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tests the max_waiting_time function if working fine or not </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ritika Arora</para>
+</simplesect>
+@detail The function is to test max_waiting_time function for given inputs, the function returns right values or not. The max_waiting_time function is called with different inputs and its output is stored in one local variable. The max_time local variable should give the maximum of all the inputs given. The function checks if the max_time stores maximum of the inputs given to the max_waiting_time function , then the test passes and prints the result on console as well as writes on a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">No</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input is given to the function</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void The function returns nothing. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/max_waiting_time.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_max_waiting_time(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*test_results<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;test/results/results_max_waiting_time.txt&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time1<sp/>=<sp/>120;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time2<sp/>=<sp/>249;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time3<sp/>=<sp/>300;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time4<sp/>=<sp/>130;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_time;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>max_time<sp/>=<sp/>max_waiting_time(time1);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>max_time<sp/>=<sp/>max_waiting_time(time2);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>max_time<sp/>=<sp/>max_waiting_time(time3);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>max_time<sp/>=<sp/>max_waiting_time(time4);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(max_time<sp/>==<sp/>300)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>result[100];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(result,<sp/></highlight><highlight class="stringliteral">&quot;PASS:<sp/>Input:<sp/>120,<sp/>249,<sp/>300,<sp/>130,<sp/>Expected<sp/>Output:<sp/>300,<sp/>Output:<sp/>%f<sp/>.\n&quot;</highlight><highlight class="normal">,<sp/>max_time);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(result);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(test_results,<sp/>result);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>result[100];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(result,<sp/></highlight><highlight class="stringliteral">&quot;FAIL:<sp/>Input:<sp/>120,<sp/>249,<sp/>300,<sp/>130,<sp/>Expected<sp/>Output:<sp/>300,<sp/>Output:<sp/>%f<sp/>.\n&quot;</highlight><highlight class="normal">,<sp/>max_time);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(result);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(test_results,<sp/>result);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/test/test_max_waiting_time.c"/>
+  </compounddef>
+</doxygen>

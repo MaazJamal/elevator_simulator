@@ -2,51 +2,162 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="input__lifts_8h" kind="file" language="C++">
     <compoundname>input_lifts.h</compoundname>
-    <includedby refid="functions_8h" local="yes">functions.h</includedby>
-    <invincdepgraph>
+    <includes refid="structures_8h" local="yes">structures.h</includes>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <includedby refid="functions_8h" local="yes">C:/Users/Work/git_repo/elevator_simulator/include/functions.h</includedby>
+    <includedby refid="input__lifts_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/src/input_lifts.c</includedby>
+    <includedby refid="test__input__lifts_8c" local="yes">C:/Users/Work/git_repo/elevator_simulator/test/test_input_lifts.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
       <node id="2">
-        <label>functions.h</label>
-        <link refid="functions_8h"/>
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
       </node>
       <node id="1">
-        <label>input_lifts.h</label>
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h</label>
         <link refid="input__lifts_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_create_elevator_array.c</label>
+        <link refid="test__create__elevator__array_8c"/>
+      </node>
+      <node id="11">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/input_lifts.c</label>
+        <link refid="input__lifts_8c"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/simulations.h</label>
+        <link refid="simulations_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/dynamic_simulation.h</label>
+        <link refid="dynamic__simulation_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/static_simulation.c</label>
+        <link refid="static__simulation_8c"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_input_lifts.c</label>
+        <link refid="test__input__lifts_8c"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_is_lift_on_floor.c</label>
+        <link refid="test__is__lift__on__floor_8c"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/Work/git_repo/elevator_simulator/test/test_cases.c</label>
+        <link refid="test__cases_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h</label>
+        <link refid="input__lifts_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/dynamic_simulation.c</label>
+        <link refid="dynamic__simulation_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="input__lifts_8h_1aaf6e4f946cf083fed7f3b265e3421eb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="input__lifts_8h_1a91439303ceb8c122f314f7b5203352df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int input_lifts</definition>
-        <argsstring>(void)</argsstring>
+        <argsstring>(int mode)</argsstring>
         <name>input_lifts</name>
         <param>
-          <type>void</type>
+          <type>int</type>
+          <declname>mode</declname>
         </param>
         <briefdescription>
+<para>Prompt the user to enter the number of lifts and takes the input. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function prompts the user to enter the number of lifts. If the lift count is less than one or greater than 100 (mode 0) or 10 (mode 1)the function displays an error message and returns -1. If the user enters anything other than a numeric entry. The function displays and error message, discards all inputs in stdin stream and returns -1. If the user enters numeric value. It accepts the only Whole number part of the entry and returns the entered whole number value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integer to select mode. mode 0 for 100 max, 1 for 10 max numbers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Returns -1 if errors in input and integer if input is fine. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
+<para>if the scanf does not read anything, clear from the stdin buffer and return -1</para>
         </inbodydescription>
-        <location file="input_lifts.h" line="7" column="12" declfile="input_lifts.h" declline="7" declcolumn="12"/>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h" line="13" column="12" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/input_lifts.c" bodystart="28" bodyend="64" declfile="C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h" declline="13" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Inputs the number of lifts from user. </para>
+<para>contains declaration for the <ref refid="input__lifts_8h_1a91439303ceb8c122f314f7b5203352df" kindref="member">input_lifts()</ref> function. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="4"><highlight class="preprocessor">#ifndef<sp/>__INPUT_LIFTS_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INPUT_LIFTS_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_lifts(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>__INPUT_LIFTS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INPUT_LIFTS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="structures_8h" kindref="compound">structures.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="input__lifts_8h_1a91439303ceb8c122f314f7b5203352df" kindref="member">input_lifts</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="input_lifts.h"/>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/include/input_lifts.h"/>
   </compounddef>
 </doxygen>

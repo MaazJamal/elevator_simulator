@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="cli__update_8c" kind="file" language="C++">
+    <compoundname>cli_update.c</compoundname>
+    <includes refid="cli__update_8h" local="yes">cli_update.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>C:/Users/Work/git_repo/elevator_simulator/src/cli_update.c</label>
+        <link refid="cli__update_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+      </node>
+      <node id="2">
+        <label>cli_update.h</label>
+        <link refid="cli__update_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cli__update_8c_1a61dffc3815d70e783c61e48ec93bb2c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cli_update</definition>
+        <argsstring>(struct elevator arr[], unsigned int loop_time)</argsstring>
+        <name>cli_update</name>
+        <param>
+          <type>struct <ref refid="structelevator" kindref="compound">elevator</ref></type>
+          <declname>arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>loop_time</declname>
+        </param>
+        <briefdescription>
+<para>Updates the command line interface with the elevator data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the screen and repopulates it with the updated elevator data. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>struct elevator that is an array of elevators. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Checks if we are in unix/cygwin environment or windows environment</para>
+        </inbodydescription>
+        <location file="C:/Users/Work/git_repo/elevator_simulator/src/cli_update.c" line="19" column="6" bodyfile="C:/Users/Work/git_repo/elevator_simulator/src/cli_update.c" bodystart="19" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>contains declaration for cli_update function. Which displays elevator information. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Maaz Jamal </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cli__update_8h" kindref="compound">cli_update.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="cli__update_8c_1a61dffc3815d70e783c61e48ec93bb2c9" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cli__update_8c_1a61dffc3815d70e783c61e48ec93bb2c9" kindref="member">cli_update</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structelevator" kindref="compound">elevator</ref><sp/>arr[],</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>loop_time)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor">#if<sp/>__unix__<sp/>||<sp/>__CYGWIN__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;clear&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;cls&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;Elevator\tTime\tFloor\tPassengers\tDirection\tMoving\t&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_floor<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>direction_down<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>direction_up<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next_floor_time<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>moving<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>direction[5]<sp/>=<sp/>{</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>move_or_no[4]<sp/>=<sp/>{</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">,};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="globals_8h_1a11ee4b54505479cda7e127a7030a76a7" kindref="member">elevator_count</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_floor<sp/>=<sp/>arr[i].<ref refid="structelevator_1a2c87ee6189da284a149438ce8b0acc8d" kindref="member">cur_floor</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpassenger" kindref="compound">passenger</ref><sp/>=<sp/>arr[i].<ref refid="structelevator_1a35976c62fece1a1887b39d2761e409e3" kindref="member">passenger_count</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>direction_down<sp/>=<sp/>arr[i].<ref refid="structelevator_1aa773f94528363621939e5fcc99dcc6ad" kindref="member">direction_down</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>direction_up<sp/>=<sp/>arr[i].<ref refid="structelevator_1a78d725b14370d8b2000a99bd11755ff8" kindref="member">direction_up</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_floor_time<sp/>=<sp/>arr[i].<ref refid="structelevator_1a6272f86a10a9c4bf565e184a4537373d" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moving<sp/>=<sp/>arr[i].<ref refid="structelevator_1a186590570ed9fee16200f9fffd3a0873" kindref="member">moving</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction_up<sp/>&amp;&amp;<sp/>direction_down)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(direction,<sp/></highlight><highlight class="stringliteral">&quot;ANY&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction_up)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(direction,<sp/></highlight><highlight class="stringliteral">&quot;UP&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(direction,<sp/></highlight><highlight class="stringliteral">&quot;DOWN&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(moving)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(move_or_no,<sp/></highlight><highlight class="stringliteral">&quot;YES&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(move_or_no,<sp/></highlight><highlight class="stringliteral">&quot;NO&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\t\t%d\t%d\t%d\t\t%s\t\t%s\n&quot;</highlight><highlight class="normal">,<sp/>i,<sp/>next_floor_time,<sp/>current_floor,<sp/><ref refid="structpassenger" kindref="compound">passenger</ref>,<sp/>direction,<sp/>move_or_no);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SIMULATION<sp/>TIME:<sp/>%d\n&quot;</highlight><highlight class="normal">,loop_time);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Work/git_repo/elevator_simulator/src/cli_update.c"/>
+  </compounddef>
+</doxygen>

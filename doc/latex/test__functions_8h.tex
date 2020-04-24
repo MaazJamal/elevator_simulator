@@ -1,5 +1,5 @@
-\hypertarget{test__functions_8h}{}\doxysection{test/include/test\+\_\+functions.h File Reference}
-\label{test__functions_8h}\index{test/include/test\_functions.h@{test/include/test\_functions.h}}
+\hypertarget{test__functions_8h}{}\doxysection{C\+:/\+Users/\+Work/git\+\_\+repo/elevator\+\_\+simulator/test/include/test\+\_\+functions.h File Reference}
+\label{test__functions_8h}\index{C:/Users/Work/git\_repo/elevator\_simulator/test/include/test\_functions.h@{C:/Users/Work/git\_repo/elevator\_simulator/test/include/test\_functions.h}}
 
 
 contains the function declarations for all the test\+\_\+functions  
@@ -48,7 +48,15 @@ void {\bfseries test\+\_\+read\+\_\+passenger} (void)
 \item 
 \mbox{\Hypertarget{test__functions_8h_a0e1286ef4fbc1b7fa890bc2f1f0e2174}\label{test__functions_8h_a0e1286ef4fbc1b7fa890bc2f1f0e2174}} 
 void {\bfseries test\+\_\+remove\+\_\+passenger\+\_\+queue} (void)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__functions_8h_a38108d7e56fd0e399b32c70e40e4debf}\label{test__functions_8h_a38108d7e56fd0e399b32c70e40e4debf}} 
+void {\bfseries test\+\_\+cli\+\_\+update} (void)
+\item 
+\mbox{\Hypertarget{test__functions_8h_a98d532dd62b0f989f6e39cabf5d72fa2}\label{test__functions_8h_a98d532dd62b0f989f6e39cabf5d72fa2}} 
+void {\bfseries test\+\_\+add\+\_\+passenger\+\_\+floor} (void)
+\item 
+void \mbox{\hyperlink{test__functions_8h_af7e3f763d3fa1ed9e34002b6ab66694b}{test\+\_\+remove\+\_\+passenger\+\_\+floor}} (void)
+\begin{DoxyCompactList}\small\item\em tests the remove\+\_\+passenger function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -65,27 +73,27 @@ contains the function declarations for all the test\+\_\+functions
 
 Calls the function \mbox{\hyperlink{create__elevator__array_8c}{create\+\_\+elevator\+\_\+array.\+c}} with valid parameters. Prints the P\+A\+SS /\+F\+A\+IL status ,by accessing the return from create\+\_\+elevator\+\_\+array function. results\+\_\+create\+\_\+elevator\+\_\+array file contains the results. 
 
-Definition at line 11 of file test\+\_\+create\+\_\+elevator\+\_\+array.\+c.
+Definition at line 20 of file test\+\_\+create\+\_\+elevator\+\_\+array.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{12 \{}
-\DoxyCodeLine{13     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} *elev;}
-\DoxyCodeLine{14     printf(\textcolor{stringliteral}{"results\_create\_elevator\_array file contains output \(\backslash\)n\(\backslash\)n "});}
-\DoxyCodeLine{15     FILE *fp;}
-\DoxyCodeLine{16     fp = freopen(\textcolor{stringliteral}{"test/results/results\_create\_elevator\_array.txt"}, \textcolor{stringliteral}{"w+"}, stdout);}
-\DoxyCodeLine{17     elev = \mbox{\hyperlink{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}{create\_elevator\_array}}(4);}
-\DoxyCodeLine{18     \textcolor{keywordflow}{if} (elev != NULL)}
-\DoxyCodeLine{19     \{}
-\DoxyCodeLine{20         printf(\textcolor{stringliteral}{"PASS;Input Parameter:Valid;array of structure elevator could be accessed .\(\backslash\)n"});}
-\DoxyCodeLine{21     \}}
-\DoxyCodeLine{22     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{23     \{}
-\DoxyCodeLine{24         printf(\textcolor{stringliteral}{"FAIL;Input Parameter:Valid;array of structure elevator could not be accessed .\(\backslash\)n"});}
-\DoxyCodeLine{25     \}}
-\DoxyCodeLine{26     fflush(fp);}
-\DoxyCodeLine{27     fclose(fp);}
-\DoxyCodeLine{28 \}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} *elev;}
+\DoxyCodeLine{23     printf(\textcolor{stringliteral}{"results\_create\_elevator\_array file contains output \(\backslash\)n\(\backslash\)n "});}
+\DoxyCodeLine{24     FILE *fp;}
+\DoxyCodeLine{25     fp = freopen(\textcolor{stringliteral}{"test/results/results\_create\_elevator\_array.txt"}, \textcolor{stringliteral}{"w+"}, stdout);}
+\DoxyCodeLine{26     elev = \mbox{\hyperlink{create__elevator__array_8h_a76f1fbfc724e769255d728ae2f2f1ae1}{create\_elevator\_array}}(4);}
+\DoxyCodeLine{27     \textcolor{keywordflow}{if} (elev != NULL)}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         printf(\textcolor{stringliteral}{"PASS;Input Parameter:Valid;array of structure elevator could be accessed .\(\backslash\)n"});}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         printf(\textcolor{stringliteral}{"FAIL;Input Parameter:Valid;array of structure elevator could not be accessed .\(\backslash\)n"});}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     fflush(fp);}
+\DoxyCodeLine{36     fclose(fp);}
+\DoxyCodeLine{37 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{test__functions_8h_aad7f794f2c2f149969be480e3a07c63a}\label{test__functions_8h_aad7f794f2c2f149969be480e3a07c63a}} 
@@ -96,276 +104,276 @@ Definition at line 11 of file test\+\_\+create\+\_\+elevator\+\_\+array.\+c.
 
 Calls the function \mbox{\hyperlink{input__floors_8c}{input\+\_\+floors.\+c}} with input from input\+\_\+input\+\_\+floors.\+txt. Prints the P\+A\+SS /\+F\+A\+IL status ,by accessing the return from input\+\_\+floors function. results\+\_\+input\+\_\+floors file contains the results. 
 
-Definition at line 13 of file test\+\_\+input\+\_\+floors.\+c.
+Definition at line 20 of file test\+\_\+input\+\_\+floors.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{14 \{}
-\DoxyCodeLine{15     FILE *test\_results;}
-\DoxyCodeLine{16     test\_results = fopen(\textcolor{stringliteral}{"test/results/results\_input\_floors.txt"}, \textcolor{stringliteral}{"w"});}
-\DoxyCodeLine{17     freopen(\textcolor{stringliteral}{"test/data/input\_input\_floors.txt"}, \textcolor{stringliteral}{"r"}, stdin);}
-\DoxyCodeLine{18     \textcolor{keywordtype}{int} arr[13];}
-\DoxyCodeLine{19     arr[0] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{20     arr[1] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{21     arr[2] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{22     arr[3] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{23     arr[4] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{24     arr[5] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{25     arr[6] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{26     arr[7] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{27     arr[8] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{28     arr[9] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{29     arr[10] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{30     arr[11] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{31     arr[12] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{32     arr[13] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{34     \textcolor{keywordtype}{int} case\_id = 0;}
-\DoxyCodeLine{35     \textcolor{comment}{//Test case 1 -\/input abcd}}
-\DoxyCodeLine{36 }
-\DoxyCodeLine{37     \textcolor{keywordflow}{if} (arr[0] == -\/1)}
-\DoxyCodeLine{38     \{}
-\DoxyCodeLine{39         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{40         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: abcd, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{41                 arr[0]);}
-\DoxyCodeLine{42         printf(temp);}
-\DoxyCodeLine{43         fprintf(test\_results, temp);}
-\DoxyCodeLine{44     \}}
-\DoxyCodeLine{45 }
-\DoxyCodeLine{46     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{47     \{}
-\DoxyCodeLine{48         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{49         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: abcd, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{50                 arr[0]);}
-\DoxyCodeLine{51         printf(temp);}
-\DoxyCodeLine{52         fprintf(test\_results, temp);}
-\DoxyCodeLine{53     \}}
-\DoxyCodeLine{54     \textcolor{comment}{//Test case 2-\/ input abcd123}}
-\DoxyCodeLine{55     \textcolor{keywordflow}{if} (arr[1] == -\/1)}
-\DoxyCodeLine{56     \{}
-\DoxyCodeLine{57         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{58         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: abcd123, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{59                 arr[0]);}
-\DoxyCodeLine{60         printf(temp);}
-\DoxyCodeLine{61         fprintf(test\_results, temp);}
-\DoxyCodeLine{62     \}}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{65     \{}
-\DoxyCodeLine{66         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{67         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: abcd123, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{68                 arr[0]);}
-\DoxyCodeLine{69         printf(temp);}
-\DoxyCodeLine{70         fprintf(test\_results, temp);}
-\DoxyCodeLine{71     \}}
-\DoxyCodeLine{72     \textcolor{comment}{//Test case 3-\/ input 0}}
-\DoxyCodeLine{73     \textcolor{keywordflow}{if} (arr[2] == -\/1)}
-\DoxyCodeLine{74     \{}
-\DoxyCodeLine{75         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{76         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 0, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{77                 arr[0]);}
-\DoxyCodeLine{78         printf(temp);}
-\DoxyCodeLine{79         fprintf(test\_results, temp);}
-\DoxyCodeLine{80     \}}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{82     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{83     \{}
-\DoxyCodeLine{84         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{85         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 0, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{86                 arr[0]);}
-\DoxyCodeLine{87         printf(temp);}
-\DoxyCodeLine{88         fprintf(test\_results, temp);}
-\DoxyCodeLine{89     \}}
-\DoxyCodeLine{90     \textcolor{comment}{//Test case 4-\/ input -\/100}}
-\DoxyCodeLine{91     \textcolor{keywordflow}{if} (arr[2] == -\/1)}
-\DoxyCodeLine{92     \{}
-\DoxyCodeLine{93         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{94         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: -\/100, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{95                 arr[0]);}
-\DoxyCodeLine{96         printf(temp);}
-\DoxyCodeLine{97         fprintf(test\_results, temp);}
-\DoxyCodeLine{98     \}}
-\DoxyCodeLine{99 }
-\DoxyCodeLine{100     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{101     \{}
-\DoxyCodeLine{102         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{103         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: -\/100, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{104                 arr[0]);}
-\DoxyCodeLine{105         printf(temp);}
-\DoxyCodeLine{106         fprintf(test\_results, temp);}
-\DoxyCodeLine{107     \}}
-\DoxyCodeLine{108 }
-\DoxyCodeLine{109     \textcolor{comment}{//Test case 5 -\/input 101}}
-\DoxyCodeLine{110     \textcolor{keywordflow}{if} (arr[4] == -\/1)}
-\DoxyCodeLine{111     \{}
-\DoxyCodeLine{112         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{113         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 101, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{114                 arr[4]);}
-\DoxyCodeLine{115         printf(temp);}
-\DoxyCodeLine{116         fprintf(test\_results, temp);}
-\DoxyCodeLine{117     \}}
-\DoxyCodeLine{118     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{119     \{}
-\DoxyCodeLine{120         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{121         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 101, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{122                 arr[4]);}
-\DoxyCodeLine{123         printf(temp);}
-\DoxyCodeLine{124         fprintf(test\_results, temp);}
-\DoxyCodeLine{125     \}}
-\DoxyCodeLine{126 }
-\DoxyCodeLine{127     \textcolor{comment}{//Test case 6 -\/input 1}}
-\DoxyCodeLine{128     \textcolor{keywordflow}{if} (arr[5] == 1)}
-\DoxyCodeLine{129     \{}
-\DoxyCodeLine{130         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{131         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 1, Expected Output: 1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{132                 arr[5]);}
-\DoxyCodeLine{133         printf(temp);}
-\DoxyCodeLine{134         fprintf(test\_results, temp);}
-\DoxyCodeLine{135     \}}
-\DoxyCodeLine{136     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{137     \{}
-\DoxyCodeLine{138         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{139         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 1, Expected Output: 1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{140                 arr[5]);}
-\DoxyCodeLine{141         printf(temp);}
-\DoxyCodeLine{142         fprintf(test\_results, temp);}
-\DoxyCodeLine{143     \}}
-\DoxyCodeLine{144 }
-\DoxyCodeLine{145     \textcolor{comment}{//Test case 7 -\/input 100}}
-\DoxyCodeLine{146     case\_id = 6;}
-\DoxyCodeLine{147     \textcolor{keywordflow}{if} (arr[case\_id] == 100)}
-\DoxyCodeLine{148     \{}
-\DoxyCodeLine{149         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{150         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 100, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{151                 arr[case\_id]);}
-\DoxyCodeLine{152         printf(temp);}
-\DoxyCodeLine{153         fprintf(test\_results, temp);}
-\DoxyCodeLine{154     \}}
-\DoxyCodeLine{155     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{156     \{}
-\DoxyCodeLine{157         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{158         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 100, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{159                 arr[case\_id]);}
-\DoxyCodeLine{160         printf(temp);}
-\DoxyCodeLine{161         fprintf(test\_results, temp);}
-\DoxyCodeLine{162     \}}
-\DoxyCodeLine{163 }
-\DoxyCodeLine{164     \textcolor{comment}{//Test case 8 input 50}}
-\DoxyCodeLine{165     case\_id = 7;}
-\DoxyCodeLine{166     \textcolor{keywordflow}{if} (arr[case\_id] == 50)}
-\DoxyCodeLine{167     \{}
-\DoxyCodeLine{168         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{169         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 50, Expected Output: 50, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{170                 arr[case\_id]);}
-\DoxyCodeLine{171         printf(temp);}
-\DoxyCodeLine{172         fprintf(test\_results, temp);}
-\DoxyCodeLine{173     \}}
-\DoxyCodeLine{174     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{175     \{}
-\DoxyCodeLine{176         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{177         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 50, Expected Output: 50, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{178                 arr[case\_id]);}
-\DoxyCodeLine{179         printf(temp);}
-\DoxyCodeLine{180         fprintf(test\_results, temp);}
-\DoxyCodeLine{181     \}}
-\DoxyCodeLine{182 }
-\DoxyCodeLine{183     \textcolor{comment}{//Test case 9 input 23.3}}
-\DoxyCodeLine{184     case\_id = 8;}
-\DoxyCodeLine{185     \textcolor{keywordflow}{if} (arr[case\_id] == 23)}
-\DoxyCodeLine{186     \{}
-\DoxyCodeLine{187         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{188         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 23.3, Expected Output: 23, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{189                 arr[case\_id]);}
-\DoxyCodeLine{190         printf(temp);}
-\DoxyCodeLine{191         fprintf(test\_results, temp);}
-\DoxyCodeLine{192     \}}
-\DoxyCodeLine{193     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{194     \{}
-\DoxyCodeLine{195         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{196         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 23.3, Expected Output: 23, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{197                 arr[case\_id]);}
-\DoxyCodeLine{198         printf(temp);}
-\DoxyCodeLine{199         fprintf(test\_results, temp);}
-\DoxyCodeLine{200     \}}
-\DoxyCodeLine{201 }
-\DoxyCodeLine{202     \textcolor{comment}{//Test case 10 input 0.9}}
-\DoxyCodeLine{203     case\_id = 9;}
-\DoxyCodeLine{204     \textcolor{keywordflow}{if} (arr[case\_id] == -\/1)}
-\DoxyCodeLine{205     \{}
-\DoxyCodeLine{206         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{207         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 0.9, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{208                 arr[case\_id]);}
-\DoxyCodeLine{209         printf(temp);}
-\DoxyCodeLine{210         fprintf(test\_results, temp);}
-\DoxyCodeLine{211     \}}
-\DoxyCodeLine{212     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{213     \{}
-\DoxyCodeLine{214         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{215         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 0.9, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{216                 arr[case\_id]);}
-\DoxyCodeLine{217         printf(temp);}
-\DoxyCodeLine{218         fprintf(test\_results, temp);}
-\DoxyCodeLine{219     \}}
-\DoxyCodeLine{220 }
-\DoxyCodeLine{221     \textcolor{comment}{//Test case 11 input 1.0}}
-\DoxyCodeLine{222     case\_id = 10;}
-\DoxyCodeLine{223     \textcolor{keywordflow}{if} (arr[case\_id] == 1)}
-\DoxyCodeLine{224     \{}
-\DoxyCodeLine{225         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{226         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 1.0, Expected Output: 1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{227                 arr[case\_id]);}
-\DoxyCodeLine{228         printf(temp);}
-\DoxyCodeLine{229         fprintf(test\_results, temp);}
-\DoxyCodeLine{230     \}}
-\DoxyCodeLine{231     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{232     \{}
-\DoxyCodeLine{233         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{234         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 1.0, Expected Output: 1, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{235                 arr[case\_id]);}
-\DoxyCodeLine{236         printf(temp);}
-\DoxyCodeLine{237         fprintf(test\_results, temp);}
-\DoxyCodeLine{238     \}}
-\DoxyCodeLine{239 }
-\DoxyCodeLine{240     \textcolor{comment}{//Test case 12 input 100.1}}
-\DoxyCodeLine{241     case\_id = 11;}
-\DoxyCodeLine{242     \textcolor{keywordflow}{if} (arr[case\_id] == 100)}
-\DoxyCodeLine{243     \{}
-\DoxyCodeLine{244         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{245         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 100.1, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{246                 arr[case\_id]);}
-\DoxyCodeLine{247         printf(temp);}
-\DoxyCodeLine{248         fprintf(test\_results, temp);}
-\DoxyCodeLine{249     \}}
-\DoxyCodeLine{250     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{251     \{}
-\DoxyCodeLine{252         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{253         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 100.1, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{254                 arr[case\_id]);}
-\DoxyCodeLine{255         printf(temp);}
-\DoxyCodeLine{256         fprintf(test\_results, temp);}
-\DoxyCodeLine{257     \}}
-\DoxyCodeLine{258 }
-\DoxyCodeLine{259     \textcolor{comment}{//Test case 13 input 100.0}}
-\DoxyCodeLine{260     case\_id = 12;}
-\DoxyCodeLine{261     \textcolor{keywordflow}{if} (arr[case\_id] == 100)}
-\DoxyCodeLine{262     \{}
-\DoxyCodeLine{263         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{264         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 100.0, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{265                 arr[case\_id]);}
-\DoxyCodeLine{266         printf(temp);}
-\DoxyCodeLine{267         fprintf(test\_results, temp);}
-\DoxyCodeLine{268     \}}
-\DoxyCodeLine{269     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{270     \{}
-\DoxyCodeLine{271         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{272         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 100.0, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
-\DoxyCodeLine{273                 arr[case\_id]);}
-\DoxyCodeLine{274         printf(temp);}
-\DoxyCodeLine{275         fprintf(test\_results, temp);}
-\DoxyCodeLine{276     \}}
-\DoxyCodeLine{277     fflush(test\_results);}
-\DoxyCodeLine{278     fclose(test\_results);}
-\DoxyCodeLine{279 \}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     FILE *test\_results;}
+\DoxyCodeLine{23     test\_results = fopen(\textcolor{stringliteral}{"test/results/results\_input\_floors.txt"}, \textcolor{stringliteral}{"w"});}
+\DoxyCodeLine{24     freopen(\textcolor{stringliteral}{"test/data/input\_input\_floors.txt"}, \textcolor{stringliteral}{"r"}, stdin);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} arr[13];}
+\DoxyCodeLine{26     arr[0] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{27     arr[1] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{28     arr[2] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{29     arr[3] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{30     arr[4] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{31     arr[5] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{32     arr[6] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{33     arr[7] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{34     arr[8] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{35     arr[9] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{36     arr[10] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{37     arr[11] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{38     arr[12] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{39     arr[13] = \mbox{\hyperlink{input__floors_8h_ac21b8029a111342aa5dde9daa28b65cb}{input\_floors}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} case\_id = 0;}
+\DoxyCodeLine{42     \textcolor{comment}{//Test case 1 -\/input abcd}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordflow}{if} (arr[0] == -\/1)}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{47         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: abcd, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{48                 arr[0]);}
+\DoxyCodeLine{49         printf(temp);}
+\DoxyCodeLine{50         fprintf(test\_results, temp);}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{56         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: abcd, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{57                 arr[0]);}
+\DoxyCodeLine{58         printf(temp);}
+\DoxyCodeLine{59         fprintf(test\_results, temp);}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61     \textcolor{comment}{//Test case 2-\/ input abcd123}}
+\DoxyCodeLine{62     \textcolor{keywordflow}{if} (arr[1] == -\/1)}
+\DoxyCodeLine{63     \{}
+\DoxyCodeLine{64         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{65         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: abcd123, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{66                 arr[0]);}
+\DoxyCodeLine{67         printf(temp);}
+\DoxyCodeLine{68         fprintf(test\_results, temp);}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{72     \{}
+\DoxyCodeLine{73         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{74         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: abcd123, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{75                 arr[0]);}
+\DoxyCodeLine{76         printf(temp);}
+\DoxyCodeLine{77         fprintf(test\_results, temp);}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79     \textcolor{comment}{//Test case 3-\/ input 0}}
+\DoxyCodeLine{80     \textcolor{keywordflow}{if} (arr[2] == -\/1)}
+\DoxyCodeLine{81     \{}
+\DoxyCodeLine{82         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{83         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 0, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{84                 arr[0]);}
+\DoxyCodeLine{85         printf(temp);}
+\DoxyCodeLine{86         fprintf(test\_results, temp);}
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{90     \{}
+\DoxyCodeLine{91         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{92         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 0, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{93                 arr[0]);}
+\DoxyCodeLine{94         printf(temp);}
+\DoxyCodeLine{95         fprintf(test\_results, temp);}
+\DoxyCodeLine{96     \}}
+\DoxyCodeLine{97     \textcolor{comment}{//Test case 4-\/ input -\/100}}
+\DoxyCodeLine{98     \textcolor{keywordflow}{if} (arr[2] == -\/1)}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{101         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: -\/100, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{102                 arr[0]);}
+\DoxyCodeLine{103         printf(temp);}
+\DoxyCodeLine{104         fprintf(test\_results, temp);}
+\DoxyCodeLine{105     \}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{108     \{}
+\DoxyCodeLine{109         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{110         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: -\/100, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{111                 arr[0]);}
+\DoxyCodeLine{112         printf(temp);}
+\DoxyCodeLine{113         fprintf(test\_results, temp);}
+\DoxyCodeLine{114     \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \textcolor{comment}{//Test case 5 -\/input 101}}
+\DoxyCodeLine{117     \textcolor{keywordflow}{if} (arr[4] == -\/1)}
+\DoxyCodeLine{118     \{}
+\DoxyCodeLine{119         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{120         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 101, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{121                 arr[4]);}
+\DoxyCodeLine{122         printf(temp);}
+\DoxyCodeLine{123         fprintf(test\_results, temp);}
+\DoxyCodeLine{124     \}}
+\DoxyCodeLine{125     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{126     \{}
+\DoxyCodeLine{127         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{128         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 101, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{129                 arr[4]);}
+\DoxyCodeLine{130         printf(temp);}
+\DoxyCodeLine{131         fprintf(test\_results, temp);}
+\DoxyCodeLine{132     \}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \textcolor{comment}{//Test case 6 -\/input 1}}
+\DoxyCodeLine{135     \textcolor{keywordflow}{if} (arr[5] == 1)}
+\DoxyCodeLine{136     \{}
+\DoxyCodeLine{137         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{138         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 1, Expected Output: 1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{139                 arr[5]);}
+\DoxyCodeLine{140         printf(temp);}
+\DoxyCodeLine{141         fprintf(test\_results, temp);}
+\DoxyCodeLine{142     \}}
+\DoxyCodeLine{143     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{144     \{}
+\DoxyCodeLine{145         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{146         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 1, Expected Output: 1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{147                 arr[5]);}
+\DoxyCodeLine{148         printf(temp);}
+\DoxyCodeLine{149         fprintf(test\_results, temp);}
+\DoxyCodeLine{150     \}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152     \textcolor{comment}{//Test case 7 -\/input 100}}
+\DoxyCodeLine{153     case\_id = 6;}
+\DoxyCodeLine{154     \textcolor{keywordflow}{if} (arr[case\_id] == 100)}
+\DoxyCodeLine{155     \{}
+\DoxyCodeLine{156         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{157         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 100, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{158                 arr[case\_id]);}
+\DoxyCodeLine{159         printf(temp);}
+\DoxyCodeLine{160         fprintf(test\_results, temp);}
+\DoxyCodeLine{161     \}}
+\DoxyCodeLine{162     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{163     \{}
+\DoxyCodeLine{164         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{165         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 100, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{166                 arr[case\_id]);}
+\DoxyCodeLine{167         printf(temp);}
+\DoxyCodeLine{168         fprintf(test\_results, temp);}
+\DoxyCodeLine{169     \}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171     \textcolor{comment}{//Test case 8 input 50}}
+\DoxyCodeLine{172     case\_id = 7;}
+\DoxyCodeLine{173     \textcolor{keywordflow}{if} (arr[case\_id] == 50)}
+\DoxyCodeLine{174     \{}
+\DoxyCodeLine{175         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{176         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 50, Expected Output: 50, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{177                 arr[case\_id]);}
+\DoxyCodeLine{178         printf(temp);}
+\DoxyCodeLine{179         fprintf(test\_results, temp);}
+\DoxyCodeLine{180     \}}
+\DoxyCodeLine{181     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{182     \{}
+\DoxyCodeLine{183         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{184         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 50, Expected Output: 50, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{185                 arr[case\_id]);}
+\DoxyCodeLine{186         printf(temp);}
+\DoxyCodeLine{187         fprintf(test\_results, temp);}
+\DoxyCodeLine{188     \}}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190     \textcolor{comment}{//Test case 9 input 23.3}}
+\DoxyCodeLine{191     case\_id = 8;}
+\DoxyCodeLine{192     \textcolor{keywordflow}{if} (arr[case\_id] == 23)}
+\DoxyCodeLine{193     \{}
+\DoxyCodeLine{194         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{195         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 23.3, Expected Output: 23, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{196                 arr[case\_id]);}
+\DoxyCodeLine{197         printf(temp);}
+\DoxyCodeLine{198         fprintf(test\_results, temp);}
+\DoxyCodeLine{199     \}}
+\DoxyCodeLine{200     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{201     \{}
+\DoxyCodeLine{202         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{203         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 23.3, Expected Output: 23, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{204                 arr[case\_id]);}
+\DoxyCodeLine{205         printf(temp);}
+\DoxyCodeLine{206         fprintf(test\_results, temp);}
+\DoxyCodeLine{207     \}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209     \textcolor{comment}{//Test case 10 input 0.9}}
+\DoxyCodeLine{210     case\_id = 9;}
+\DoxyCodeLine{211     \textcolor{keywordflow}{if} (arr[case\_id] == -\/1)}
+\DoxyCodeLine{212     \{}
+\DoxyCodeLine{213         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{214         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 0.9, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{215                 arr[case\_id]);}
+\DoxyCodeLine{216         printf(temp);}
+\DoxyCodeLine{217         fprintf(test\_results, temp);}
+\DoxyCodeLine{218     \}}
+\DoxyCodeLine{219     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{220     \{}
+\DoxyCodeLine{221         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{222         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 0.9, Expected Output: -\/1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{223                 arr[case\_id]);}
+\DoxyCodeLine{224         printf(temp);}
+\DoxyCodeLine{225         fprintf(test\_results, temp);}
+\DoxyCodeLine{226     \}}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228     \textcolor{comment}{//Test case 11 input 1.0}}
+\DoxyCodeLine{229     case\_id = 10;}
+\DoxyCodeLine{230     \textcolor{keywordflow}{if} (arr[case\_id] == 1)}
+\DoxyCodeLine{231     \{}
+\DoxyCodeLine{232         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{233         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 1.0, Expected Output: 1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{234                 arr[case\_id]);}
+\DoxyCodeLine{235         printf(temp);}
+\DoxyCodeLine{236         fprintf(test\_results, temp);}
+\DoxyCodeLine{237     \}}
+\DoxyCodeLine{238     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{239     \{}
+\DoxyCodeLine{240         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{241         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 1.0, Expected Output: 1, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{242                 arr[case\_id]);}
+\DoxyCodeLine{243         printf(temp);}
+\DoxyCodeLine{244         fprintf(test\_results, temp);}
+\DoxyCodeLine{245     \}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247     \textcolor{comment}{//Test case 12 input 100.1}}
+\DoxyCodeLine{248     case\_id = 11;}
+\DoxyCodeLine{249     \textcolor{keywordflow}{if} (arr[case\_id] == 100)}
+\DoxyCodeLine{250     \{}
+\DoxyCodeLine{251         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{252         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 100.1, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{253                 arr[case\_id]);}
+\DoxyCodeLine{254         printf(temp);}
+\DoxyCodeLine{255         fprintf(test\_results, temp);}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{258     \{}
+\DoxyCodeLine{259         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{260         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 100.1, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{261                 arr[case\_id]);}
+\DoxyCodeLine{262         printf(temp);}
+\DoxyCodeLine{263         fprintf(test\_results, temp);}
+\DoxyCodeLine{264     \}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266     \textcolor{comment}{//Test case 13 input 100.0}}
+\DoxyCodeLine{267     case\_id = 12;}
+\DoxyCodeLine{268     \textcolor{keywordflow}{if} (arr[case\_id] == 100)}
+\DoxyCodeLine{269     \{}
+\DoxyCodeLine{270         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{271         sprintf(temp, \textcolor{stringliteral}{"PASS: Input: 100.0, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{272                 arr[case\_id]);}
+\DoxyCodeLine{273         printf(temp);}
+\DoxyCodeLine{274         fprintf(test\_results, temp);}
+\DoxyCodeLine{275     \}}
+\DoxyCodeLine{276     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{277     \{}
+\DoxyCodeLine{278         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{279         sprintf(temp, \textcolor{stringliteral}{"FAIL: Input: 100.0, Expected Output: 100, Output: \%d .\(\backslash\)n"},}
+\DoxyCodeLine{280                 arr[case\_id]);}
+\DoxyCodeLine{281         printf(temp);}
+\DoxyCodeLine{282         fprintf(test\_results, temp);}
+\DoxyCodeLine{283     \}}
+\DoxyCodeLine{284     fflush(test\_results);}
+\DoxyCodeLine{285     fclose(test\_results);}
+\DoxyCodeLine{286 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{test__functions_8h_a3e351f144b937554cd4e0dbd305b5c03}\label{test__functions_8h_a3e351f144b937554cd4e0dbd305b5c03}} 
@@ -376,29 +384,29 @@ Definition at line 13 of file test\+\_\+input\+\_\+floors.\+c.
 
 Calls the function lift\+\_\+on\+\_\+floor.\+c with valid parameters. Prints the P\+A\+SS /\+F\+A\+IL status ,by accessing the return from lift\+\_\+on\+\_\+floor function. results\+\_\+is\+\_\+lift\+\_\+on\+\_\+floor file contains the results. 
 
-Definition at line 13 of file test\+\_\+is\+\_\+lift\+\_\+on\+\_\+floor.\+c.
+Definition at line 18 of file test\+\_\+is\+\_\+lift\+\_\+on\+\_\+floor.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{14 \{}
-\DoxyCodeLine{15     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} ele[3];}
-\DoxyCodeLine{16     \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} = 3;}
-\DoxyCodeLine{17     FILE *fp;}
-\DoxyCodeLine{18     fp = fopen(\textcolor{stringliteral}{"test/results/results\_is\_lift\_on\_floor.txt"}, \textcolor{stringliteral}{"w+"});}
-\DoxyCodeLine{19     \textcolor{keywordtype}{int} arr = \mbox{\hyperlink{is__lift__on__floor_8h_a8331ecca3b0a14f407e7e9e354d01998}{is\_lift\_on\_floor}}(ele, 1);}
-\DoxyCodeLine{20     \textcolor{keywordflow}{if} (arr != 0)}
-\DoxyCodeLine{21     \{}
-\DoxyCodeLine{22         fprintf(fp, \textcolor{stringliteral}{"PASS;Input Parameter:Valid;is\_lift\_on\_floor function is accesssed successfully .\(\backslash\)n"});}
-\DoxyCodeLine{23         printf(\textcolor{stringliteral}{"PASS;Input Parameter:Valid;is\_lift\_on\_floor function is accesssed successfully .\(\backslash\)n"});}
-\DoxyCodeLine{24     \}}
-\DoxyCodeLine{25     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} ele[3];}
+\DoxyCodeLine{21     \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} = 3;}
+\DoxyCodeLine{22     FILE *fp;}
+\DoxyCodeLine{23     fp = fopen(\textcolor{stringliteral}{"test/results/results\_is\_lift\_on\_floor.txt"}, \textcolor{stringliteral}{"w+"});}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} arr = \mbox{\hyperlink{is__lift__on__floor_8h_a8331ecca3b0a14f407e7e9e354d01998}{is\_lift\_on\_floor}}(ele, 1);}
+\DoxyCodeLine{25     \textcolor{keywordflow}{if} (arr != 0)}
 \DoxyCodeLine{26     \{}
-\DoxyCodeLine{27         fprintf(fp, \textcolor{stringliteral}{"FAIL;Input Parameter:Valid;is\_lift\_on\_floor function cannot be accesssed  .\(\backslash\)n"});}
+\DoxyCodeLine{27         fprintf(fp, \textcolor{stringliteral}{"PASS;Input Parameter:Valid;is\_lift\_on\_floor function is accesssed successfully .\(\backslash\)n"});}
 \DoxyCodeLine{28         printf(\textcolor{stringliteral}{"PASS;Input Parameter:Valid;is\_lift\_on\_floor function is accesssed successfully .\(\backslash\)n"});}
 \DoxyCodeLine{29     \}}
-\DoxyCodeLine{30     fflush(fp);}
-\DoxyCodeLine{31     fclose(fp);}
-\DoxyCodeLine{32 \}}
+\DoxyCodeLine{30     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         fprintf(fp, \textcolor{stringliteral}{"FAIL;Input Parameter:Valid;is\_lift\_on\_floor function cannot be accesssed  .\(\backslash\)n"});}
+\DoxyCodeLine{33         printf(\textcolor{stringliteral}{"PASS;Input Parameter:Valid;is\_lift\_on\_floor function is accesssed successfully .\(\backslash\)n"});}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     fflush(fp);}
+\DoxyCodeLine{36     fclose(fp);}
+\DoxyCodeLine{37 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{test__functions_8h_a0f6a08318c4b7fe437805450023e9ae0}\label{test__functions_8h_a0f6a08318c4b7fe437805450023e9ae0}} 
@@ -413,134 +421,188 @@ This function test the function moving\+\_\+lift\+\_\+down.
 
 Function tests array out of bounds check. Change elevator direction test. 
 
-Definition at line 13 of file test\+\_\+moving\+\_\+lift\+\_\+down.\+c.
+Definition at line 18 of file test\+\_\+moving\+\_\+lift\+\_\+down.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{14 \{}
-\DoxyCodeLine{15     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} arr[3];}
-\DoxyCodeLine{16     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} temp = \{0, 0, 0, 0, 0, 0, 0, 0, 0, 0\};}
-\DoxyCodeLine{17     FILE *test\_results = fopen(\textcolor{stringliteral}{"test/results/test\_moving\_lift\_down.txt"}, \textcolor{stringliteral}{"w"});}
-\DoxyCodeLine{18     arr[1] = temp;}
-\DoxyCodeLine{19     arr[2] = temp;}
-\DoxyCodeLine{20     arr[0] = temp;}
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22     \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} = 3;}
-\DoxyCodeLine{23     \textcolor{keywordtype}{char} *pass = \textcolor{stringliteral}{"PASS:"};}
-\DoxyCodeLine{24     \textcolor{keywordtype}{char} *fail = \textcolor{stringliteral}{"FAIL:"};}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26     \textcolor{keywordtype}{int} result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(arr, 3);}
-\DoxyCodeLine{27 }
-\DoxyCodeLine{28     \textcolor{keywordflow}{if} (result == -\/1)}
-\DoxyCodeLine{29     \{}
-\DoxyCodeLine{30         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{31         sprintf(temp, \textcolor{stringliteral}{"\%s: Function returned \%d Expected -\/1 . Array out of bound check working.\(\backslash\)n"},}
-\DoxyCodeLine{32                 pass, result);}
-\DoxyCodeLine{33         printf(temp);}
-\DoxyCodeLine{34         fprintf(test\_results, temp);}
-\DoxyCodeLine{35     \}}
-\DoxyCodeLine{36     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{37     \{}
-\DoxyCodeLine{38         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{39         sprintf(temp, \textcolor{stringliteral}{"\%s: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
-\DoxyCodeLine{40 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
-\DoxyCodeLine{41                 fail, arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
-\DoxyCodeLine{42         printf(temp);}
-\DoxyCodeLine{43         fprintf(test\_results, temp);}
-\DoxyCodeLine{44     \}}
-\DoxyCodeLine{45 }
-\DoxyCodeLine{46     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(arr, 2);}
-\DoxyCodeLine{47     \textcolor{keywordflow}{if} (result != -\/1)}
-\DoxyCodeLine{48     \{}
-\DoxyCodeLine{49         result = arr[2].direction\_up == 0 \&\& arr[2].direction\_down == 1;}
-\DoxyCodeLine{50     \}}
-\DoxyCodeLine{51     \textcolor{keywordflow}{if} (result == -\/1)}
-\DoxyCodeLine{52     \{}
-\DoxyCodeLine{53         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{54         sprintf(temp, \textcolor{stringliteral}{"\%s: Function returned \%d Expected 1.\(\backslash\)n"},}
-\DoxyCodeLine{55                 fail, result);}
-\DoxyCodeLine{56         printf(temp);}
-\DoxyCodeLine{57         fprintf(test\_results, temp);}
-\DoxyCodeLine{58     \}}
-\DoxyCodeLine{59     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{60     \{}
-\DoxyCodeLine{61         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{62         sprintf(temp, \textcolor{stringliteral}{"\%s: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
-\DoxyCodeLine{63 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
-\DoxyCodeLine{64                 pass, arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
-\DoxyCodeLine{65         printf(temp);}
-\DoxyCodeLine{66         fprintf(test\_results, temp);}
-\DoxyCodeLine{67     \}}
-\DoxyCodeLine{68 }
-\DoxyCodeLine{69     result = arr[1].direction\_up == 0 \&\& arr[1].direction\_down == 0;}
-\DoxyCodeLine{70     \textcolor{keywordflow}{if} (result == 1)}
-\DoxyCodeLine{71     \{}
-\DoxyCodeLine{72         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{73         sprintf(temp, \textcolor{stringliteral}{"\%s: Rest of Array Unchanged direction\_up = \%d ."}}
-\DoxyCodeLine{74                       \textcolor{stringliteral}{"direction\_down = \%d\(\backslash\)n"},}
-\DoxyCodeLine{75                 pass, arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}});}
-\DoxyCodeLine{76         printf(temp);}
-\DoxyCodeLine{77         fprintf(test\_results, temp);}
-\DoxyCodeLine{78     \}}
-\DoxyCodeLine{79 }
-\DoxyCodeLine{80     \textcolor{comment}{//Reapeat the tests but with ptr to a dynamicall allovated array}}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{82     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} *ptr\_arr = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structelevator}{elevator}}) * 3);}
-\DoxyCodeLine{83 }
-\DoxyCodeLine{84     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(ptr\_arr, 3);}
-\DoxyCodeLine{85     \textcolor{keywordflow}{if} (result == -\/1)}
-\DoxyCodeLine{86     \{}
-\DoxyCodeLine{87         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{88         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Function returned \%d Expected -\/1 . Array out of bound check working.\(\backslash\)n"},}
-\DoxyCodeLine{89                 pass, result);}
-\DoxyCodeLine{90         printf(temp);}
-\DoxyCodeLine{91         fprintf(test\_results, temp);}
-\DoxyCodeLine{92     \}}
-\DoxyCodeLine{93     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{94     \{}
-\DoxyCodeLine{95         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{96         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
-\DoxyCodeLine{97 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
-\DoxyCodeLine{98                 fail, ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
-\DoxyCodeLine{99         printf(temp);}
-\DoxyCodeLine{100         fprintf(test\_results, temp);}
-\DoxyCodeLine{101     \}}
-\DoxyCodeLine{102 }
-\DoxyCodeLine{103     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(ptr\_arr, 2);}
-\DoxyCodeLine{104     \textcolor{keywordflow}{if} (result != -\/1)}
-\DoxyCodeLine{105     \{}
-\DoxyCodeLine{106         result = ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}} == 0 \&\& ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}} == 1;}
-\DoxyCodeLine{107     \}}
-\DoxyCodeLine{108     \textcolor{keywordflow}{if} (result == -\/1)}
-\DoxyCodeLine{109     \{}
-\DoxyCodeLine{110         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{111         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Function returned \%d Expected 1.\(\backslash\)n"},}
-\DoxyCodeLine{112                 fail, result);}
-\DoxyCodeLine{113         printf(temp);}
-\DoxyCodeLine{114         fprintf(test\_results, temp);}
-\DoxyCodeLine{115     \}}
-\DoxyCodeLine{116     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{117     \{}
-\DoxyCodeLine{118         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{119         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
-\DoxyCodeLine{120 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
-\DoxyCodeLine{121                 pass, ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
-\DoxyCodeLine{122         printf(temp);}
-\DoxyCodeLine{123         fprintf(test\_results, temp);}
-\DoxyCodeLine{124     \}}
-\DoxyCodeLine{125 }
-\DoxyCodeLine{126     result = ptr\_arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}} == 0 \&\& ptr\_arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}} == 0;}
-\DoxyCodeLine{127     \textcolor{keywordflow}{if} (result == 1)}
-\DoxyCodeLine{128     \{}
-\DoxyCodeLine{129         \textcolor{keywordtype}{char} temp[100];}
-\DoxyCodeLine{130         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Rest of Array Unchanged direction\_up = \%d ."}}
-\DoxyCodeLine{131                       \textcolor{stringliteral}{"direction\_down = \%d\(\backslash\)n"},}
-\DoxyCodeLine{132                 pass, ptr\_arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}});}
-\DoxyCodeLine{133         printf(temp);}
-\DoxyCodeLine{134         fprintf(test\_results, temp);}
-\DoxyCodeLine{135     \}}
-\DoxyCodeLine{136     fflush(test\_results);}
-\DoxyCodeLine{137     fclose(test\_results);}
-\DoxyCodeLine{138 \}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} arr[3];}
+\DoxyCodeLine{21     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} temp = \{0, 0, 0, 0, 0, 0, 0, 0, 0, 0\};}
+\DoxyCodeLine{22     FILE *test\_results = fopen(\textcolor{stringliteral}{"test/results/results\_test\_moving\_lift\_down.txt"}, \textcolor{stringliteral}{"w"});}
+\DoxyCodeLine{23     arr[1] = temp;}
+\DoxyCodeLine{24     arr[2] = temp;}
+\DoxyCodeLine{25     arr[0] = temp;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \mbox{\hyperlink{globals_8h_a11ee4b54505479cda7e127a7030a76a7}{elevator\_count}} = 3;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{char} *pass = \textcolor{stringliteral}{"PASS:"};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{char} *fail = \textcolor{stringliteral}{"FAIL:"};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(arr, 3);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordflow}{if} (result == -\/1)}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{36         sprintf(temp, \textcolor{stringliteral}{"\%s: Function returned \%d Expected -\/1 . Array out of bound check working.\(\backslash\)n"},}
+\DoxyCodeLine{37                 pass, result);}
+\DoxyCodeLine{38         printf(temp);}
+\DoxyCodeLine{39         fprintf(test\_results, temp);}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{44         sprintf(temp, \textcolor{stringliteral}{"\%s: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
+\DoxyCodeLine{45 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
+\DoxyCodeLine{46                 fail, arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
+\DoxyCodeLine{47         printf(temp);}
+\DoxyCodeLine{48         fprintf(test\_results, temp);}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(arr, 2);}
+\DoxyCodeLine{52     \textcolor{keywordflow}{if} (result != -\/1)}
+\DoxyCodeLine{53     \{}
+\DoxyCodeLine{54         result = arr[2].direction\_up == 0 \&\& arr[2].direction\_down == 1;}
+\DoxyCodeLine{55     \}}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if} (result == -\/1)}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{59         sprintf(temp, \textcolor{stringliteral}{"\%s: Function returned \%d Expected 1.\(\backslash\)n"},}
+\DoxyCodeLine{60                 fail, result);}
+\DoxyCodeLine{61         printf(temp);}
+\DoxyCodeLine{62         fprintf(test\_results, temp);}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{67         sprintf(temp, \textcolor{stringliteral}{"\%s: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
+\DoxyCodeLine{68 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
+\DoxyCodeLine{69                 pass, arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
+\DoxyCodeLine{70         printf(temp);}
+\DoxyCodeLine{71         fprintf(test\_results, temp);}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     result = arr[1].direction\_up == 0 \&\& arr[1].direction\_down == 0;}
+\DoxyCodeLine{75     \textcolor{keywordflow}{if} (result == 1)}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{78         sprintf(temp, \textcolor{stringliteral}{"\%s: Rest of Array Unchanged direction\_up = \%d ."}}
+\DoxyCodeLine{79                       \textcolor{stringliteral}{"direction\_down = \%d\(\backslash\)n"},}
+\DoxyCodeLine{80                 pass, arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}});}
+\DoxyCodeLine{81         printf(temp);}
+\DoxyCodeLine{82         fprintf(test\_results, temp);}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{comment}{//Reapeat the tests but with ptr to a dynamicall allovated array}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{keyword}{struct }\mbox{\hyperlink{structelevator}{elevator}} *ptr\_arr = malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structelevator}{elevator}}) * 3);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(ptr\_arr, 3);}
+\DoxyCodeLine{90     \textcolor{keywordflow}{if} (result == -\/1)}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{93         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Function returned \%d Expected -\/1 . Array out of bound check working.\(\backslash\)n"},}
+\DoxyCodeLine{94                 pass, result);}
+\DoxyCodeLine{95         printf(temp);}
+\DoxyCodeLine{96         fprintf(test\_results, temp);}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{101         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
+\DoxyCodeLine{102 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
+\DoxyCodeLine{103                 fail, ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
+\DoxyCodeLine{104         printf(temp);}
+\DoxyCodeLine{105         fprintf(test\_results, temp);}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     result = \mbox{\hyperlink{moving__lift__down_8h_a71965ccfee77f7e7469f4153836fb7ef}{moving\_lift\_down}}(ptr\_arr, 2);}
+\DoxyCodeLine{109     \textcolor{keywordflow}{if} (result != -\/1)}
+\DoxyCodeLine{110     \{}
+\DoxyCodeLine{111         result = ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}} == 0 \&\& ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}} == 1;}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113     \textcolor{keywordflow}{if} (result == -\/1)}
+\DoxyCodeLine{114     \{}
+\DoxyCodeLine{115         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{116         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Function returned \%d Expected 1.\(\backslash\)n"},}
+\DoxyCodeLine{117                 fail, result);}
+\DoxyCodeLine{118         printf(temp);}
+\DoxyCodeLine{119         fprintf(test\_results, temp);}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{122     \{}
+\DoxyCodeLine{123         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{124         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Array values properly changed: direction\_up = \%d .\(\backslash\)}}
+\DoxyCodeLine{125 \textcolor{stringliteral}{                        direction\_down = \%d, Return = \%d\(\backslash\)n"},}
+\DoxyCodeLine{126                 pass, ptr\_arr[2].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[2].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}}, result);}
+\DoxyCodeLine{127         printf(temp);}
+\DoxyCodeLine{128         fprintf(test\_results, temp);}
+\DoxyCodeLine{129     \}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     result = ptr\_arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}} == 0 \&\& ptr\_arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}} == 0;}
+\DoxyCodeLine{132     \textcolor{keywordflow}{if} (result == 1)}
+\DoxyCodeLine{133     \{}
+\DoxyCodeLine{134         \textcolor{keywordtype}{char} temp[100];}
+\DoxyCodeLine{135         sprintf(temp, \textcolor{stringliteral}{"\%s: Pointer: Rest of Array Unchanged direction\_up = \%d ."}}
+\DoxyCodeLine{136                       \textcolor{stringliteral}{"direction\_down = \%d\(\backslash\)n"},}
+\DoxyCodeLine{137                 pass, ptr\_arr[1].\mbox{\hyperlink{structelevator_a78d725b14370d8b2000a99bd11755ff8}{direction\_up}}, ptr\_arr[1].\mbox{\hyperlink{structelevator_aa773f94528363621939e5fcc99dcc6ad}{direction\_down}});}
+\DoxyCodeLine{138         printf(temp);}
+\DoxyCodeLine{139         fprintf(test\_results, temp);}
+\DoxyCodeLine{140     \}}
+\DoxyCodeLine{141     fflush(test\_results);}
+\DoxyCodeLine{142     fclose(test\_results);}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__functions_8h_af7e3f763d3fa1ed9e34002b6ab66694b}\label{test__functions_8h_af7e3f763d3fa1ed9e34002b6ab66694b}} 
+\index{test\_functions.h@{test\_functions.h}!test\_remove\_passenger\_floor@{test\_remove\_passenger\_floor}}
+\index{test\_remove\_passenger\_floor@{test\_remove\_passenger\_floor}!test\_functions.h@{test\_functions.h}}
+\doxysubsubsection{\texorpdfstring{test\_remove\_passenger\_floor()}{test\_remove\_passenger\_floor()}}
+{\footnotesize\ttfamily void test\+\_\+remove\+\_\+passenger\+\_\+floor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+tests the remove\+\_\+passenger function. 
+
+Tests the removal of two passengers from a floor. The first removal causes the floor to contain the second passenger at start. the second removal replaces the passenger with N\+U\+LL pointer. \begin{DoxyReturn}{Returns}
+void does not return anything 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file test\+\_\+remove\+\_\+passenger\+\_\+floor.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                       \{}
+\DoxyCodeLine{24 \mbox{\hyperlink{globals_8h_adcbcca2d0621f8f94d7ccc4d81ca6f37}{floor\_count}} = 3;}
+\DoxyCodeLine{25 \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}}** floors =(\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}}**) calloc(3,\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}*));}
+\DoxyCodeLine{26 \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} dummy1 = \{0, 0, 0, 0, 10, 0\};}
+\DoxyCodeLine{27 \textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}} dummy2 = \{0, 0, 0, 0, 20, 0\};}
+\DoxyCodeLine{28 FILE *f = fopen(\textcolor{stringliteral}{"test/results/results\_remove\_passenger\_floor.txt"}, \textcolor{stringliteral}{"w+"});}
+\DoxyCodeLine{29 floors[1] =(\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}}*) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
+\DoxyCodeLine{30 *(floors[1]) = dummy1;}
+\DoxyCodeLine{31 floors[1]-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}} = (\textcolor{keyword}{struct }\mbox{\hyperlink{structpassenger}{passenger}}*) malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structpassenger}{passenger}}));}
+\DoxyCodeLine{32 *(floors[1]-\/>\mbox{\hyperlink{structpassenger_a74a0c954cb7d0e4590b0a2715a768348}{next}}) = dummy2;}
+\DoxyCodeLine{33 \mbox{\hyperlink{remove__passenger__floor_8h_a25f8c0d7e3c685b2c1830182e3705df0}{remove\_passenger\_floor}}(floors,2);}
+\DoxyCodeLine{34 \textcolor{keywordflow}{if}(floors[1]-\/>\textcolor{keywordtype}{id} == dummy2.id)\{}
+\DoxyCodeLine{35     fprintf(f,\textcolor{stringliteral}{"PASS: Removed 1st Passenger. Id on floor is \%d\(\backslash\)n"}, dummy2.id);}
+\DoxyCodeLine{36     printf(\textcolor{stringliteral}{"PASS: Removed 1st Passenger. Id on floor is \%d\(\backslash\)n"}, dummy2.id);}
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{38 \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{39     fprintf(f,\textcolor{stringliteral}{"FAIL: Expected Passenger.Id \%d Got : \%d\(\backslash\)n"}, dummy2.id,floors[1]-\/>id);}
+\DoxyCodeLine{40     printf(\textcolor{stringliteral}{"FAIL: Expected Passenger.Id \%d Got : \%d\(\backslash\)n"}, dummy2.id,floors[1]-\/>id);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \}}
+\DoxyCodeLine{43 \mbox{\hyperlink{remove__passenger__floor_8h_a25f8c0d7e3c685b2c1830182e3705df0}{remove\_passenger\_floor}}(floors,2);}
+\DoxyCodeLine{44 \textcolor{keywordflow}{if}(floors[1] == NULL)\{}
+\DoxyCodeLine{45     fprintf(f,\textcolor{stringliteral}{"PASS: Removed 2nd Passenger. Pointing to NULL \%p\(\backslash\)n"}, floors[1]);}
+\DoxyCodeLine{46     printf(\textcolor{stringliteral}{"PASS: Removed 2nd Passenger. Pointing to NULL \%p\(\backslash\)n"}, floors[1]);}
+\DoxyCodeLine{47 \}}
+\DoxyCodeLine{48 \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{49     fprintf(f,\textcolor{stringliteral}{"FAIL: Expected floor point to NULL.Instead Got : \%p\(\backslash\)n"}, floors[1]);}
+\DoxyCodeLine{50     printf(\textcolor{stringliteral}{"FAIL: Expected floor point to NULL.Instead Got : \%p\(\backslash\)n"}, floors[1]); }
+\DoxyCodeLine{51 \}}
+\DoxyCodeLine{52 fflush(f);}
+\DoxyCodeLine{53 fclose(f);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \}}
 
 \end{DoxyCode}

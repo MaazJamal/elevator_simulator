@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include "read_passenger.h"
 #include "structures.h"
+#include "globals.h"
 /** @details Constraints If the file does not exists ,the function displays a error message.
  *The input file is checked for valid values for passenegr id in range (1-99) and print error message if the values are out of range.
  *The input file is checked for valid values for arrival time in range (1-150)and print error message if the values are out of range
@@ -88,7 +89,7 @@ void read_passenger(struct passenger p[])
 
 			p[i].arrival_floor = atoi(c);
 			count++;
-			if ((p[i].arrival_floor == 0) || (p[i].arrival_floor > 100) || (p[i].arrival_floor < 1))
+			if ((p[i].arrival_floor == 0) || (p[i].arrival_floor > floor_count) || (p[i].arrival_floor < 1))
 			{
 				printf("p[%d].arrival_floor column contains invalid data  in file (i.e)%d\n", i, p[i].arrival_floor);
 				exit(1); //program ends incase of erraneous data.
