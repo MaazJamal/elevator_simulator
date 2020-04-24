@@ -39,7 +39,7 @@ void read_user_input_validate(struct passenger *passenger_info, unsigned int tim
 
                 if(passenger_id <=0){
                     printf("Invalid passenger id entered");
-                    correct_id == 0;
+                    correct_id = 0;
                     continue;
                 }
                 correct_id = 1;
@@ -55,7 +55,7 @@ void read_user_input_validate(struct passenger *passenger_info, unsigned int tim
 
                 if(arrival_floor<=0 || arrival_floor > floor_count){
                     printf("Invalid arrival floor entered!!");
-                    correct_arrival_floor == 0;
+                    correct_arrival_floor = 0;
                     continue;
                 }
                 correct_arrival_floor = 1;
@@ -72,15 +72,16 @@ void read_user_input_validate(struct passenger *passenger_info, unsigned int tim
 
                 if(dest_floor<=0 || dest_floor > floor_count){
                     printf("Invalid arrival floor entered!!");
-                    correct_dest_floor == 0;
+                    correct_dest_floor = 0;
                     continue;
                 }
                 correct_dest_floor = 1;
         }
-    passenger_info.id = passenger_id;
-    passenger_info.arrival_floor = arrival_floor;
-    passenger_info.dest_floor = dest_floor;
-    passenger_info.arrival_time = timer;
+    passenger_info->id = passenger_id;
+    passenger_info->arrival_floor = arrival_floor;
+    passenger_info->dest_floor = dest_floor;
+    passenger_info->arrival_time = timer;
+    passenger_info->in_elevator = 0; //is not added to elevator
 
 //    printf("Passenger details entered are:\n");
 //    printf("Id:%d\n",passenger_info.id);

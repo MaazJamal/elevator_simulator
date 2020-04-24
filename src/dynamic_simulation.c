@@ -47,11 +47,74 @@ int dynamic_simulation(void)
 
 	int prev_time_index = 0;
 
+	bool enable_realtime = true;   // Realtime or full-speed;
+	bool enable_user_input = true; // ask user for input or not;
+	bool exit_main_loop = false;   // should we exit main loop if user orders simulation stop
 	time_t start_time;
 	time_t end_time;
 	int time_difference = 0;
 	while (t < 1000) //86400 for whole day
 	{
+
+		if (t % 50 == 0 && enable_user_input)
+		{														  //choices
+			struct passenger temp_passenger = {0, 0, 0, 0, 0, 0}; //To store the user entered passenger
+			int stop_input = 0;
+			bool incorrect_choice = true;
+			while (incorrect_choice)
+			{
+				puts("CHOSE AMONG THE FOLLOWING CHOICES:");
+				puts("1- Enter A Passenger Details.");
+				puts("2- Create an Emergency stop.");
+				puts("3- Enable/Disable realtime timer.");
+				puts("4- Do not ask for input again & Disable realtime timer.");
+				puts("5- Exit the simulation.");
+				int user_choice = 0;
+				while (scanf("%d", &user_choice) == 0)
+				{
+					puts("Incorrect Choice Please Try Again.");
+					scanf("%*[\n]"); //discard all inputs until newline character
+				}
+				if (user_choice > 0 && user_choice < 6)
+				{
+					incorrect_choice = false; //made correct choice no exit selection loop.
+					switch (user_choice)
+					{
+
+					//1- Enter A Passenger Details.
+					case 1:
+						read_user_input_validate(&temp_passenger, &t);
+						passenger_queue = add_request_queue(passenger_queue, temp_passenger);
+						break;
+					//2- Create an Emergency stop.
+					case 2:
+						emergency_stop_handling(elevator_arr, t);
+						while ((stop_input = input_after_stop() != -1))
+						{ //loop until we get right input
+						};
+						if (stop_input == 0)
+						{
+							exit_main_loop = true;
+						}
+						break;
+					case 3:
+						enable_realtime = !enable_realtime; //toggle
+						printf("Set Real-time to : %d\n", enable_realtime);
+						break;
+					case 4:
+						enable_realtime = false;
+						enable_user_input = false;
+						break;
+					case 5:
+						exit_main_loop = true;
+						break;
+					}
+				}
+			}
+			if(exit_main_loop){ //exit main loop;
+				break;
+			}
+		}
 		//set start time
 		start_time = time(NULL);
 		//update the cli
@@ -261,10 +324,6 @@ int dynamic_simulation(void)
 				}
 			}
 
-			if (t > 100)
-			{
-				int remove_this = 0;
-			}
 			if (elevator_arr[i].timer > 0)
 			{
 				elevator_arr[i].timer--;
@@ -358,10 +417,11 @@ int dynamic_simulation(void)
 
 		end_time = time(NULL);
 		time_difference = 0;
-		// while(time_difference < 1){ //wait one second
-		// end_time = time(NULL);
-		// time_difference = end_time - start_time;
-		// }
+		while (time_difference < 1 && enable_realtime)
+		{ //wait one second
+			end_time = time(NULL);
+			time_difference = end_time - start_time;
+		}
 		t++;
 	}
 	struct passenger dummy;			 //placeholder to pass to log. it should not be used.
